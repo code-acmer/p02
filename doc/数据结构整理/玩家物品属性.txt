@@ -1,0 +1,58 @@
+*表示新加字段
+1、增加		玩家物品表：goods
+	id				编号
+	player_id		玩家ID
+	goods_id		物品ID
+	type			物品类型：10装备道具，15宝石道具，20护符道具，25丹药道具，30灵兽道具，35任务道具，40技能类，45生产材料，80其他类，81庄园道具；参照base_goods_type表
+	subtype			物品子类型：装备子类型：1剑，2刀，3弓，4扇，5头盔，6铠甲，7戒指，8项链，9护肩，10腰带，11鞋子。
+								增益子类型：1 药品，2 经验。 
+								具体参照base_goods_subtype表
+	equip_type		装备类型：0为个人的物品，不为0时，记录的是帮派id,表示物品在该帮派仓库
+	bind			是否绑定：0、不绑定,1、使用后绑定，2、已绑定
+	price_type		价格类型：1、铜钱，2、元宝，3、绑定元宝
+	price			物品购买价格
+	trade			物品是否可以交易：0、可交易，1、不可交易
+	sell_price		物品出售价格
+	sell			物品是否可出售：0、可出售，1、不可出售
+	isdrop			物品是否可丢弃：0、可丢弃，1、不可丢弃
+	level			等级限制，0、无等级
+	career			职业限制，0、为不限制，1、剑侠，2、刀客，3、飞羽，4、方士
+	hp				生命值
+	attack			攻击
+	def			防御
+	magic_attack	法术攻击
+	magic_def	法术防御
+	stunt_attack	绝技攻击
+	stunt_def	绝技防御
+	hit				命中
+	dodge			躲闪
+	crit			暴击
+	parry			格挡
+	counter			反击
+	force			武力
+	magic			法术
+	stunt			绝技
+	suit_id			套装ID：0、不是套装，具体参照套装属性表
+	color			物品颜色：0白色，1绿色，2蓝色，3紫色，4橙
+	strengthen_level	装备强化等级
+	strengthen_step		装备强化阶级(装备强化等级每10级为1阶)
+	hole			开孔数
+	hole1_goods_id	孔1镶嵌的宝石ID			
+	hole2_goods_id	孔2镶嵌的宝石ID
+	hole3_goods_id	孔3镶嵌的宝石ID
+	grade			冶炼系数
+	location		物品所在位置：1背包1，2背包2，3背包3，4仓库，	
+	cell			物品所在的格子
+	num				物品个数
+	other_data		保存额外数据
+	expire_time		过期时间
+	effect_num		物品作用数值：仅使用于护符类物品，其他物品该字段值为0
+
+2、增加		玩家装备冶炼属性表：equip_practise_attribute
+	practise_id		冶炼记录编号
+	player_id		玩家ID
+	gid				物品ID(对应goods表的Id)
+	goods_id		基础物品ID(对应base_goods表的Id)
+	practise_attr_list	冶炼属性：格式[{属性ID，属性星级，属性数值}，{属性2ID，属性2星级，属性2数值}，...]
+
+

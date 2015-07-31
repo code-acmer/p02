@@ -1,0 +1,27 @@
+数据表设计
+
+竞技场
+arena_member    竞技场成员
+id
+player_id :     玩家ID
+player_name:    名字
+player_sex      性别
+player_lv:      等级()
+rank:    				排名()
+times     			今日可挑战剩余次数
+winning_streak  连胜
+cd              冷却时间
+fight_force     战力
+
+
+竞技场战报	
+arena_report
+
+id
+time,
+player_id
+other_player_id
+other_player_name
+rank_change_type
+rank
+process_battle_id

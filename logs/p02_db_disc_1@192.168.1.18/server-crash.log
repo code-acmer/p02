@@ -1,0 +1,46 @@
+2014-12-03 11:27:05 =ERROR REPORT====
+** Generic server gen_web_test terminating 
+** Last message in was stop
+** When Server state == 5603468
+** Reason for termination == 
+** {function_clause,[{gen_web_test,handle_call,[stop,{<0.1259.0>,#Ref<0.0.0.27366>},5603468],[{file,"gen_web_test.erl"},{line,22}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,580}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+2014-12-03 11:27:05 =CRASH REPORT====
+  crasher:
+    initial call: gen_web_test:init/1
+    pid: <0.1261.0>
+    registered_name: gen_web_test
+    exception exit: {{function_clause,[{gen_web_test,handle_call,[stop,{<0.1259.0>,#Ref<0.0.0.27366>},5603468],[{file,"gen_web_test.erl"},{line,22}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,580}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]},[{gen_server,terminate,6,[{file,"gen_server.erl"},{line,746}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [<0.1259.0>]
+    messages: []
+    links: [<0.1259.0>]
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 610
+    stack_size: 27
+    reductions: 143
+  neighbours:
+    neighbour: [{pid,<0.1259.0>},{registered_name,[]},{initial_call,{erlang,apply,2}},{current_function,{gen,do_call,4}},{ancestors,[]},{messages,[]},{links,[<0.33.0>,<0.1261.0>]},{dictionary,[]},{trap_exit,false},{status,waiting},{heap_size,376},{stack_size,35},{reductions,1012}]
+2014-12-03 11:27:19 =ERROR REPORT====
+** Generic server gen_web_test terminating 
+** Last message in was stop
+** When Server state == 5963916
+** Reason for termination == 
+** {function_clause,[{gen_web_test,handle_call,[stop,{<0.1263.0>,#Ref<0.0.0.28891>},5963916],[{file,"gen_web_test.erl"},{line,22}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,580}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+2014-12-03 11:27:19 =CRASH REPORT====
+  crasher:
+    initial call: gen_web_test:init/1
+    pid: <0.1265.0>
+    registered_name: gen_web_test
+    exception exit: {{function_clause,[{gen_web_test,handle_call,[stop,{<0.1263.0>,#Ref<0.0.0.28891>},5963916],[{file,"gen_web_test.erl"},{line,22}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,580}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]},[{gen_server,terminate,6,[{file,"gen_server.erl"},{line,746}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [<0.1263.0>]
+    messages: []
+    links: [<0.1263.0>]
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 610
+    stack_size: 27
+    reductions: 143
+  neighbours:
+    neighbour: [{pid,<0.1263.0>},{registered_name,[]},{initial_call,{erlang,apply,2}},{current_function,{gen,do_call,4}},{ancestors,[]},{messages,[]},{links,[<0.33.0>,<0.1265.0>]},{dictionary,[]},{trap_exit,false},{status,waiting},{heap_size,376},{stack_size,35},{reductions,1012}]

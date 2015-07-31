@@ -1,0 +1,70 @@
+-ifndef(DEFINE_INFO_45_HRL).
+-define(DEFINE_INFO_45_HRL, true).
+
+-include("define_info_0.hrl").
+
+
+-define(INFO_PARTNER_RECRUIT_SUCCESS,           45000).   %% 伙伴招募成功
+-define(INFO_PARTNER_RECRUIT_FAILED,            45001).   %% 伙伴招募失败
+-define(INFO_PARTNER_RECRUIT_TEAM_EXCEED,       45002).   %% 队伍人数已达上限，无法招募
+-define(INFO_PARTNER_RECRUIT_WRONG_PARTNER,     45003).   %% 错误的武将数据，无法招募
+-define(INFO_PARTNER_ALEADY_GOT,                45004).   %% 该武将已在队伍中
+-define(INFO_PARTNER_NOT_FOUND,                 45005).   %% 武将获取失败，无法进行此操作
+-define(INFO_PARTNER_NOT_ENOUGH_SOUL,           45006).   %% 武将武魂不足，无法进行此操作
+-define(INFO_PARTNER_QUALITY_TOO_LOW,           45007).   %% 目标武将品质较低，无法进行此操作
+-define(INFO_PARTNER_CANNOT_BE_RECRUITED,       45008).   %% 该武将还不在招募列表中，无法招募
+-define(INFO_PARTNER_HAVE_BE_RECRUITED,         45009).   %% 已经招募过该武将了，无法再招募
+-define(INFO_RANK_UPGRADE_SUCCESS,              45010).   %% 军衔进阶成功
+-define(INFO_RANK_UPGRADE_FAILED,               45011).   %% 军衔进阶失败
+-define(INFO_RANK_INIT_INFO_NOT_FOUND,          45012).   %% 初始军衔数据获取失败
+-define(INFO_RANK_UPGRADE_CHECK_SUCCESS,        45020).   %% 当前有军衔可进阶
+-define(INFO_RANK_UPGRADE_CHECK_FAILED,         45021).   %% 军衔进阶检测失败
+-define(INFO_RANK_UPGRADE_PRESTIGE_TOO_LOW,     45022).   %% 声望不足，无法进阶
+-define(INFO_RANK_UPGRADE_LEVEL_TOO_LOW,        45023).   %% 等级不足，无法进阶
+-define(INFO_RANK_UPGRADE_NEXT_NOT_FOUND,       45024).   %% 升级军衔未找到，无法进阶
+-define(INFO_PARTNER_INQUIRE_SUCCESS,           45030).   %% 伙伴详细信息查询成功
+-define(INFO_PARTNER_INQUIRE_FAILED,            45031).   %% 伙伴详细信息查询失败
+-define(INFO_PARTNER_INQUIRE_HERO_EMPTY,        45032).   %% 群英传信息为空
+-define(INFO_PARTNER_NEW_PARTNER_FOR_RECRUIT,   45033).   %% 新的伙伴 [%s] 可以招募了
+-define(INFO_PARTNER_CONVERT_TO_BEYOND_POINT,   45034).   %% 由于存在更高品质的伙伴， [%s] 已经转换成 %s 突破点
+-define(INFO_PARTNER_RECRUIT_SUCCESS_TO_TEAM,   45035).   %% 恭喜您成功招募 [%s] ，请到已有武将中查询
+-define(INFO_PARTNER_RECRUIT_UPGRADE,           45036).   %% 恭喜您， [%s] 已经成功进阶
+-define(INFO_PARTNER_SOUL_PARTNER_IN,           45037).   %% 新的伙伴 [%s] 加入队伍
+-define(INFO_PARTNER_SOUL_PARTNER_CONVERT,      45038).   %% 恭喜您获得武将%s · [%s] ，该武将已经自动转换成 %s 将魂（您可以通过将魂来升阶）。
+-define(INFO_PARTNER_FREE_SUCCESS,              45040).   %% 伙伴解散成功
+-define(INFO_PARTNER_FREE_FAILED,               45041).   %% 伙伴解散失败
+-define(INFO_PARTNER_NOT_IN_TEAM,               45042).   %% 伙伴不在队伍中，无法解散
+-define(INFO_PARTNER_CHEERS_SUCCESS,            45050).   %% 酒馆进酒成功
+-define(INFO_PARTNER_CHEERS_FAILED,             45051).   %% 材料不足，酒馆进酒失败
+-define(INFO_PARTNER_TAVERN_NOT_FOUND,          45052).   %% 玩家酒馆数据获取失败，无法进行此操作
+-define(INFO_PARTNER_CHEERS_NOT_COOLDOWN,       45053).   %% 进酒冷却中，请稍后再尝试
+-define(INFO_PARTNER_CHEERS_TIMES_OUT,          45054).   %% 米酒进酒次数已经使用完毕，请明日再试
+-define(INFO_PARTNER_CHEERS_WRONG_TYPE,         45055).   %% 错误的进酒类型，无法进行进酒操作
+-define(INFO_PARTNER_BLUE_CHEERS_TIMES_OUT,     45056).   %% 汾酒进酒次数已经使用完毕，请明日再试
+-define(INFO_PARTNER_PURPLE_CHEERS_TIMES_OUT,   45057).   %% 杜康进酒次数已经使用完毕，请明日再试
+-define(INFO_PARTNER_BEYOND_SUCCESS,            45060).   %% [%s] 突破成功，武力 + 1，智力 + 1，绝学 + 1
+-define(INFO_PARTNER_BEYOND_FAILED,             45061).   %% 突破失败
+-define(INFO_PARTNER_NOT_ENOUGH_BEYOND_POINT,   45062).   %% 突破点不足
+-define(INFO_PARTNER_RERECRUIT_SUCCESS,         45070).   %% 伙伴归队成功
+-define(INFO_PARTNER_RERECRUIT_FAILED,          45071).   %% 伙伴归队失败
+-define(INFO_PARTNER_CANNOT_BE_RERECRUIT,       45072).   %% 该伙伴不可归队
+-define(INFO_PARTNER_TRAIN_SUCCESS,             45080).   %% [%s] 完成历练，经验 + %s
+-define(INFO_PARTNER_TRAIN_FAILED,              45081).   %% 伙伴历练失败
+-define(INFO_PARTNER_TRAIN_INFO_NOT_FOUND,      45082).   %% 玩家历练数据获取失败
+-define(INFO_BASE_TRAIN_INFO_NOT_FOUND,         45083).   %% 历练场景数据获取失败
+-define(INFO_PARTNER_WRONG_TRAIN_POSITION,      45084).   %% 错误的历练场景信息，无法进行此操作
+-define(INFO_PARTNER_POSITION_NOT_OPENED,       45085).   %% 历练场景未开放，无法进行此操作
+-define(INFO_PARTNER_TRAIN_NOT_CD,              45086).   %% 该历练场景还未冷却，无法进行此操作
+-define(INFO_PARTNER_TRAIN_TIMES_OUT,           45087).   %% 今日的历练次数已经使用完毕
+-define(INFO_PARTNER_TRAIN_MAX_QUALITY,         45088).   %% 历练品质已经是最高了
+-define(INFO_PARTNER_NEW_TRAIN_SUCCESS,         45090).   %% 开启新的历练场景成功
+-define(INFO_PARTNER_NEW_TRAIN_FAILED,          45091).   %% 开启新的历练场景失败
+-define(INFO_PARTNER_TRAIN_OPENED,              45092).   %% 所有的历练场景均已经开启过了
+-define(INFO_PARTNER_ADVANCED_SUCCESS,          45100).   %% 封禅成功
+-define(INFO_PARTNER_ADVANCED_FAILED,           45101).   %% 封禅失败
+-define(INFO_PARTNER_NOT_BLUE,                  45102).   %% 非觉醒武将，无法使用该功能
+-define(INFO_PARTNER_ADVANCED_TIMES_OUT,        45103).   %% 今日已经使用过此类封禅了
+
+
+-endif.
+

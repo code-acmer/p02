@@ -1,0 +1,339 @@
+﻿================ 战斗信息 ===========
+分类号:80
+描述:战斗信息
+
+##################### 发起战斗(个人副本) ####################
+协议号:80001
+c >> s:
+    int:64 防守方ID(角色ID/怪物群ID)
+    int:8  被攻击方类型(1怪物 2角色)
+s >> c:
+	int:32					协议结果
+    int:64					战报ID
+    int:8					战报结果
+    int:8					战斗评价
+    int:32					复本id
+    int:32					战报系统Version
+    int:8 					是否可跳过
+	int:32					攻击方id
+    int:64					攻击方唯一id
+    int:32 					攻击方阵法ID
+	int:16  				攻击方成员数量
+	array[
+		int:64				战斗单位唯一ID          
+		int:32				战斗单位id          
+		string				名字          
+		int:8				成员等级          
+		int:8				成员在阵法位置          
+		int:32				成员最大血气值          
+		int:32				成员气血值          
+		int:32				成员气势值          
+		int:64				成员的技能ID          
+		int:32				成员资源ID          
+		int:8				职业          
+		int:32				攻击方的技能特效资源ID          
+		int:32				被攻击方的技能特效资源ID
+		int:16				Buff Cnt
+		array[
+			int:8       	buff类型
+            int:8       	剩余回合数
+            int:32       	buff_id
+		]
+    ]
+    int:32  				防御方ID
+    int:64  				防御方唯一ID
+    int:32  				防御方阵法ID
+	int:16					防御方成员数量
+    array[
+		int:64				战斗单位唯一ID          
+		int:32				战斗单位id          
+		string				名字          
+		int:8				成员等级          
+		int:8				成员在阵法位置          
+		int:32				成员最大血气值          
+		int:32				成员气血值          
+		int:32				成员气势值          
+		int:64				成员的技能ID          
+		int:32				成员资源ID          
+		int:8				职业          
+		int:32				攻击方的技能特效资源ID          
+		int:32				被攻击方的技能特效资源ID
+		int:16				Buff Cnt
+		array[
+			int:8       	buff类型
+            int:8       	剩余回合数
+            int:32       	buff_id
+		]
+    ],
+						以下为战斗过程
+	int:16      		战斗回合数
+	array[
+		int:64			回合唯一标识
+		int:32			第几回合
+		int:8			攻击发起者位置
+		int:8			攻击类型        |1普通攻击|2绝技攻击
+		int:8			攻击输出类型    |1近战输出|2远程输出|3谋略输出
+		int:64			攻击者uid
+		int:64			使用的技能 绝技攻击与普通攻击都为技能攻击
+		int:16          攻击目标数量
+		array[
+			int:8       攻击目标类型 |1主目标|2次目标
+			int:8       所站位置
+			int:32       角色id
+		],
+		int:16			回合前产生的效果数
+		array[
+			int:8
+			int:64
+			int:8
+			int:8
+			int:16		造成的属性变化
+			array[
+				int:32			Hp
+                int:32			Rage|Mp
+                int:32			标记|
+									1->flag_death
+									2->flag_frozen
+									...
+				int:8			连击回合数
+                int:16			buffs
+                array[
+                    int:8       buff类型
+                    int:8       剩余回合数
+                    int:32       buff_id
+                ]
+            ]
+		]
+		int:16			===>回合前产生的效果数
+		array[
+			int:8
+			int:64
+			int:8
+			int:8
+			int:16		造成的属性变化
+			array[
+				int:32			Hp
+                int:32			Rage|Mp
+                int:32			标记|
+									1->flag_death
+									2->flag_frozen
+									...
+				int:8			连击回合数
+                int:16			buffs
+                array[
+                    int:8       buff类型
+                    int:8       剩余回合数
+                    int:32       buff_id
+                ]
+            ]
+		]
+		int:16			===>攻击前产生的效果
+		array[
+			int:8
+			int:64
+			int:8
+			int:8
+			int:16		造成的属性变化
+			array[
+				int:32			Hp
+                int:32			Rage|Mp
+                int:32			标记|
+									1->flag_death
+									2->flag_frozen
+									...
+				int:8			连击回合数
+                int:16			buffs cnt
+                array[
+                    int:8       buff类型
+                    int:8       剩余回合数
+                    int:32       buff_id
+                ]
+            ]
+		]
+		int:16			===>防御前产生的效果
+		array[
+			int:8
+			int:64
+			int:8
+			int:8
+			int:16		造成的属性变化
+			array[
+				int:32			Hp
+                int:32			Rage|Mp
+                int:32			标记|
+									1->flag_death
+									2->flag_frozen
+									...
+				int:8			连击回合数
+                int:16			buffs
+                array[
+                    int:8       buff类型
+                    int:8       剩余回合数
+                    int:32       buff_id
+                ]
+            ]
+		]
+		int:16			===>技能伤害造成的效果
+		array[
+			int:8
+			int:64
+			int:8
+			int:8
+			int:16		造成的属性变化
+			array[
+				int:32			Hp
+                int:32			Rage|Mp
+                int:32			标记|
+									1->flag_death
+									2->flag_frozen
+									...
+				int:8			连击回合数
+                int:16			buffs
+                array[
+                    int:8       buff类型
+                    int:8       剩余回合数
+                    int:32       buff_id
+                ]
+            ]
+		]
+		int:16			===>攻击中攻击方产生的效果
+		array[
+			int:8
+			int:64
+			int:8
+			int:8
+			int:16		造成的属性变化
+			array[
+				int:32			Hp
+                int:32			Rage|Mp
+                int:32			标记|
+									1->flag_death
+									2->flag_frozen
+									...
+				int:8			连击回合数
+                int:16			buffs
+                array[
+                    int:8       buff类型
+                    int:8       剩余回合数
+                    int:32       buff_id
+                ]
+            ]
+		]
+		int:16			===>防御中防御产生的效果
+		array[
+			int:8
+			int:64
+			int:8
+			int:8
+			int:16		造成的属性变化
+			array[
+				int:32			Hp
+                int:32			Rage|Mp
+                int:32			标记|
+									1->flag_death
+									2->flag_frozen
+									...
+				int:8			连击回合数
+                int:16			buffs
+                array[
+                    int:8       buff类型
+                    int:8       剩余回合数
+                    int:32       buff_id
+                ]
+            ]
+		]
+		int:16			===>攻击完成后防御方生产的效果
+		array[
+			int:8
+			int:64
+			int:8
+			int:8
+			int:16		造成的属性变化
+			array[
+				int:32			Hp
+                int:32			Rage|Mp
+                int:32			标记|
+									1->flag_death
+									2->flag_frozen
+									...
+				int:8			连击回合数
+                int:16			buffs
+                array[
+                    int:8       buff类型
+                    int:8       剩余回合数
+                    int:32       buff_id
+                ]
+            ]
+		]
+		int:16			===》攻击完成后攻击方产生的效果
+		array[
+			int:8
+			int:64
+			int:8
+			int:8
+			int:16		造成的属性变化
+			array[
+				int:32			Hp
+                int:32			Rage|Mp
+                int:32			标记|
+									1->flag_death
+									2->flag_frozen
+									...
+				int:8			连击回合数
+                int:16			buffs
+                array[
+                    int:8       buff类型
+                    int:8       剩余回合数
+                    int:32       buff_id
+                ]
+            ]
+		]
+		int:16			===>技能攻击附加效果
+		array[
+			int:8
+			int:64
+			int:8
+			int:8
+			int:16		造成的属性变化
+			array[
+				int:32			Hp
+                int:32			Rage|Mp
+                int:32			标记|
+									1->flag_death
+									2->flag_frozen
+									...
+				int:8			连击回合数
+                int:16			buffs
+                array[
+                    int:8       buff类型
+                    int:8       剩余回合数
+                    int:32       buff_id
+                ]
+            ]
+		]
+		int:16			===>回合结束时生产的效果
+		array[
+			int:8
+			int:64
+			int:8
+			int:8
+			int:16		造成的属性变化
+			array[
+				int:32			Hp
+                int:32			Rage|Mp
+                int:32			标记|
+									1->flag_death
+									2->flag_frozen
+									...
+				int:8			连击回合数
+                int:16			buffs
+                array[
+                    int:8       buff类型
+                    int:8       剩余回合数
+                    int:32       buff_id
+                ]
+            ]
+		]
+	]
+	
+		

@@ -1,0 +1,296 @@
+2015-02-03 15:05:55 =CRASH REPORT====
+  crasher:
+    initial call: application_master:init/4
+    pid: <0.327.0>
+    registered_name: []
+    exception exit: {{{schema_integrity_check_failed,[{current_attrs_error,[id,version,player_id,sum,per_gold,last_send,over_time,dirty],[id,version,player_id,sum,per_gold,day_num,recharge_gold_num,rest_num,all_num,last_send,over_time,dirty]}]},{server_app,start,[normal,[]]}},[{application_master,init,4,[{file,"application_master.erl"},{line,133}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [<0.326.0>]
+    messages: [{'EXIT',<0.328.0>,normal}]
+    links: [<0.326.0>,<0.7.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 376
+    stack_size: 27
+    reductions: 106
+  neighbours:
+2015-02-03 15:06:01 =CRASH REPORT====
+  crasher:
+    initial call: application_master:init/4
+    pid: <0.508.0>
+    registered_name: []
+    exception exit: {{{schema_integrity_check_failed,[{current_attrs_error,[id,version,player_id,sum,per_gold,last_send,over_time,dirty],[id,version,player_id,sum,per_gold,day_num,recharge_gold_num,rest_num,all_num,last_send,over_time,dirty]}]},{server_app,start,[normal,[]]}},[{application_master,init,4,[{file,"application_master.erl"},{line,133}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [<0.507.0>]
+    messages: [{'EXIT',<0.509.0>,normal}]
+    links: [<0.507.0>,<0.7.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 376
+    stack_size: 27
+    reductions: 106
+  neighbours:
+2015-02-03 15:06:52 =CRASH REPORT====
+  crasher:
+    initial call: application_master:init/4
+    pid: <0.508.0>
+    registered_name: []
+    exception exit: {{{schema_integrity_check_failed,[{current_attrs_error,[id,version,player_id,sum,per_gold,last_send,over_time,dirty],[id,version,player_id,sum,per_gold,day_num,recharge_gold_num,rest_num,all_num,last_send,over_time,dirty]}]},{server_app,start,[normal,[]]}},[{application_master,init,4,[{file,"application_master.erl"},{line,133}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [<0.507.0>]
+    messages: [{'EXIT',<0.509.0>,normal}]
+    links: [<0.507.0>,<0.7.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 376
+    stack_size: 27
+    reductions: 105
+  neighbours:
+2015-02-03 15:08:09 =CRASH REPORT====
+  crasher:
+    initial call: application_master:init/4
+    pid: <0.168.0>
+    registered_name: []
+    exception exit: {{{schema_integrity_check_failed,[{current_attrs_error,[id,version,player_id,sum,per_gold,last_send,over_time,dirty],[id,version,player_id,sum,per_gold,day_num,recharge_gold_num,rest_num,all_num,last_send,over_time,dirty]}]},{server_app,start,[normal,[]]}},[{application_master,init,4,[{file,"application_master.erl"},{line,133}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [<0.167.0>]
+    messages: [{'EXIT',<0.169.0>,normal}]
+    links: [<0.167.0>,<0.7.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 376
+    stack_size: 27
+    reductions: 106
+  neighbours:
+2015-02-03 15:09:45 =ERROR REPORT====
+Mnesia('p02_db_disc_1@192.168.1.135'): ** ERROR ** (core dumped to file: "/home/li/server_p02/MnesiaCore.p02_db_disc_1@192.168.1.135_1422_947385_278344")
+ ** FATAL ** {error,{"Cannot open dets table",relationship,[{file,"/home/li/server_p02/mnesia/p02_db_disc_1@192.168.1.135/relationship.DAT"},{type,set},{keypos,2},{repair,true},{ram_file,true}],{not_a_dets_file,"/home/li/server_p02/mnesia/p02_db_disc_1@192.168.1.135/relationship.DAT"}}}
+2015-02-03 15:09:55 =ERROR REPORT====
+Mnesia('p02_db_disc_1@192.168.1.135'): ** ERROR ** mnesia_event got unexpected event: {'EXIT',<0.117.0>,killed}
+2015-02-03 15:09:55 =CRASH REPORT====
+  crasher:
+    initial call: gen_event:init_it/6
+    pid: <0.114.0>
+    registered_name: mnesia_event
+    exception exit: {killed,[{gen_event,terminate_server,4,[{file,"gen_event.erl"},{line,304}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [mnesia_sup,<0.112.0>]
+    messages: []
+    links: []
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 1598
+    stack_size: 27
+    reductions: 637
+  neighbours:
+2015-02-03 15:09:55 =CRASH REPORT====
+  crasher:
+    initial call: application_master:init/4
+    pid: <0.111.0>
+    registered_name: []
+    exception exit: {{killed,{mnesia_sup,start,[normal,[]]}},[{application_master,init,4,[{file,"application_master.erl"},{line,133}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [<0.110.0>]
+    messages: [{'EXIT',<0.112.0>,normal}]
+    links: [<0.110.0>,<0.7.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 376
+    stack_size: 27
+    reductions: 113
+  neighbours:
+2015-02-03 15:10:04 =ERROR REPORT====
+Mnesia('p02_db_disc_1@192.168.1.135'): ** ERROR ** (core dumped to file: "/home/li/server_p02/MnesiaCore.p02_db_disc_1@192.168.1.135_1422_947404_755123")
+ ** FATAL ** {error,{"Cannot open dets table",relationship,[{file,"/home/li/server_p02/mnesia/p02_db_disc_1@192.168.1.135/relationship.DAT"},{type,set},{keypos,2},{repair,true},{ram_file,true}],{not_a_dets_file,"/home/li/server_p02/mnesia/p02_db_disc_1@192.168.1.135/relationship.DAT"}}}
+2015-02-03 15:10:14 =ERROR REPORT====
+Mnesia('p02_db_disc_1@192.168.1.135'): ** ERROR ** mnesia_event got unexpected event: {'EXIT',<0.117.0>,killed}
+2015-02-03 15:10:14 =CRASH REPORT====
+  crasher:
+    initial call: gen_event:init_it/6
+    pid: <0.114.0>
+    registered_name: mnesia_event
+    exception exit: {killed,[{gen_event,terminate_server,4,[{file,"gen_event.erl"},{line,304}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [mnesia_sup,<0.112.0>]
+    messages: []
+    links: []
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 1598
+    stack_size: 27
+    reductions: 637
+  neighbours:
+2015-02-03 15:10:14 =CRASH REPORT====
+  crasher:
+    initial call: application_master:init/4
+    pid: <0.111.0>
+    registered_name: []
+    exception exit: {{killed,{mnesia_sup,start,[normal,[]]}},[{application_master,init,4,[{file,"application_master.erl"},{line,133}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [<0.110.0>]
+    messages: [{'EXIT',<0.112.0>,normal}]
+    links: [<0.110.0>,<0.7.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 376
+    stack_size: 27
+    reductions: 113
+  neighbours:
+2015-02-03 15:10:35 =ERROR REPORT====
+Mnesia('p02_db_disc_1@192.168.1.135'): ** ERROR ** (core dumped to file: "/home/li/server_p02/MnesiaCore.p02_db_disc_1@192.168.1.135_1422_947435_420360")
+ ** FATAL ** {error,{"Cannot open dets table",relationship,[{file,"/home/li/server_p02/mnesia/p02_db_disc_1@192.168.1.135/relationship.DAT"},{type,set},{keypos,2},{repair,true},{ram_file,true}],{not_a_dets_file,"/home/li/server_p02/mnesia/p02_db_disc_1@192.168.1.135/relationship.DAT"}}}
+2015-02-03 15:10:45 =ERROR REPORT====
+Mnesia('p02_db_disc_1@192.168.1.135'): ** ERROR ** mnesia_event got unexpected event: {'EXIT',<0.117.0>,killed}
+2015-02-03 15:11:55 =ERROR REPORT====
+Mnesia('p02_db_disc_1@192.168.1.135'): ** ERROR ** (core dumped to file: "/home/li/server_p02/MnesiaCore.p02_db_disc_1@192.168.1.135_1422_947515_657603")
+ ** FATAL ** {error,{"Cannot open dets table",relationship,[{file,"/home/li/server_p02/mnesia/p02_db_disc_1@192.168.1.135/relationship.DAT"},{type,set},{keypos,2},{repair,true},{ram_file,true}],{not_a_dets_file,"/home/li/server_p02/mnesia/p02_db_disc_1@192.168.1.135/relationship.DAT"}}}
+2015-02-03 15:12:05 =ERROR REPORT====
+Mnesia('p02_db_disc_1@192.168.1.135'): ** ERROR ** mnesia_event got unexpected event: {'EXIT',<0.117.0>,killed}
+2015-02-03 15:12:05 =CRASH REPORT====
+  crasher:
+    initial call: gen_event:init_it/6
+    pid: <0.114.0>
+    registered_name: mnesia_event
+    exception exit: {killed,[{gen_event,terminate_server,4,[{file,"gen_event.erl"},{line,304}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [mnesia_sup,<0.112.0>]
+    messages: []
+    links: []
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 1598
+    stack_size: 27
+    reductions: 637
+  neighbours:
+2015-02-03 15:12:05 =CRASH REPORT====
+  crasher:
+    initial call: application_master:init/4
+    pid: <0.111.0>
+    registered_name: []
+    exception exit: {{killed,{mnesia_sup,start,[normal,[]]}},[{application_master,init,4,[{file,"application_master.erl"},{line,133}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [<0.110.0>]
+    messages: [{'EXIT',<0.112.0>,normal}]
+    links: [<0.110.0>,<0.7.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 376
+    stack_size: 27
+    reductions: 113
+  neighbours:
+2015-02-03 15:12:39 =CRASH REPORT====
+  crasher:
+    initial call: application_master:init/4
+    pid: <0.168.0>
+    registered_name: []
+    exception exit: {{{schema_integrity_check_failed,[{current_attrs_error,[id,version,player_id,sum,per_gold,last_send,over_time,dirty],[id,version,player_id,sum,per_gold,day_num,recharge_gold_num,rest_num,all_num,last_send,over_time,dirty]}]},{server_app,start,[normal,[]]}},[{application_master,init,4,[{file,"application_master.erl"},{line,133}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [<0.167.0>]
+    messages: [{'EXIT',<0.169.0>,normal}]
+    links: [<0.167.0>,<0.7.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 376
+    stack_size: 27
+    reductions: 106
+  neighbours:
+2015-02-03 15:14:39 =CRASH REPORT====
+  crasher:
+    initial call: application_master:init/4
+    pid: <0.634.0>
+    registered_name: []
+    exception exit: {{{schema_integrity_check_failed,[{current_attrs_error,[id,version,player_id,sum,per_gold,last_send,over_time,dirty],[id,version,player_id,sum,per_gold,day_num,recharge_gold_num,rest_num,all_num,last_send,over_time,dirty]}]},{server_app,start,[normal,[]]}},[{application_master,init,4,[{file,"application_master.erl"},{line,133}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [<0.633.0>]
+    messages: [{'EXIT',<0.635.0>,normal}]
+    links: [<0.633.0>,<0.7.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 376
+    stack_size: 27
+    reductions: 106
+  neighbours:
+2015-02-03 16:30:43 =ERROR REPORT====
+** Generic server <0.702.0> terminating 
+** Last message in was {tcp,#Port<0.12876>,[6,142,119,130,4,232,51,197,160,40,71|<<>>]}
+** When Server state == {client,<0.704.0>,110000002,1,"49505227","p03_robot_1",0,1,#Port<0.12876>,{127,0,0,1},82326469,1422951968,<0.702.0>,1422951928,[{player,110000002,17,"49505227","p03_robot_1",<<"cb94702f">>,1,1,0,0,0,0,0,1,2000,0,200,0,0,0,200,0,0,0,0,20,0,100,0,0,0,0,0,0,0,0,1,0,0,{31000101,0},[],[],[],[],[],0,0,0,0,0,[],0,0,0,0,0,0,[],0,0,0,0}]}
+** Reason for termination == 
+** {{badmatch,{error,<<>>}},[{tcp_client_handler,handle_info,2,[{file,"src/listener/tcp_client_handler.erl"},{line,212}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,599}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+2015-02-03 16:30:43 =CRASH REPORT====
+  crasher:
+    initial call: tcp_client_handler:init/1
+    pid: <0.702.0>
+    registered_name: []
+    exception exit: {{{badmatch,{error,<<>>}},[{tcp_client_handler,handle_info,2,[{file,"src/listener/tcp_client_handler.erl"},{line,212}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,599}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]},[{gen_server,terminate,6,[{file,"gen_server.erl"},{line,746}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [listener_sup_tcp_client_handler,tcp_client_handler_listener_sup,server]
+    messages: []
+    links: [<0.562.0>]
+    dictionary: [{hmisc_rand_seed,{12006,7674,11780}}]
+    trap_exit: true
+    status: running
+    heap_size: 6772
+    stack_size: 27
+    reductions: 57793
+  neighbours:
+2015-02-03 16:30:43 =SUPERVISOR REPORT====
+     Supervisor: {local,listener_sup_tcp_client_handler}
+     Context:    child_terminated
+     Reason:     {{badmatch,{error,<<>>}},[{tcp_client_handler,handle_info,2,[{file,"src/listener/tcp_client_handler.erl"},{line,212}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,599}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+     Offender:   [{pid,<0.702.0>},{name,undefined},{mfargs,{tcp_client_handler,start_link,undefined}},{restart_type,temporary},{shutdown,2000},{child_type,worker}]
+
+2015-02-03 16:31:18 =ERROR REPORT====
+** Generic server <0.727.0> terminating 
+** Last message in was {tcp,#Port<0.14060>,[6,142,119,130,4,232,51,197,160,40,48|<<>>]}
+** When Server state == {client,undefined,0,0,0,undefined,0,1,#Port<0.14060>,{127,0,0,1},undefined,undefined,<0.727.0>,1422952278,[]}
+** Reason for termination == 
+** {{badmatch,{error,<<>>}},[{tcp_client_handler,handle_info,2,[{file,"src/listener/tcp_client_handler.erl"},{line,212}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,599}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+2015-02-03 16:31:18 =CRASH REPORT====
+  crasher:
+    initial call: tcp_client_handler:init/1
+    pid: <0.727.0>
+    registered_name: []
+    exception exit: {{{badmatch,{error,<<>>}},[{tcp_client_handler,handle_info,2,[{file,"src/listener/tcp_client_handler.erl"},{line,212}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,599}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]},[{gen_server,terminate,6,[{file,"gen_server.erl"},{line,746}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [listener_sup_tcp_client_handler,tcp_client_handler_listener_sup,server]
+    messages: []
+    links: [<0.562.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 1598
+    stack_size: 27
+    reductions: 4448
+  neighbours:
+2015-02-03 16:31:18 =SUPERVISOR REPORT====
+     Supervisor: {local,listener_sup_tcp_client_handler}
+     Context:    child_terminated
+     Reason:     {{badmatch,{error,<<>>}},[{tcp_client_handler,handle_info,2,[{file,"src/listener/tcp_client_handler.erl"},{line,212}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,599}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+     Offender:   [{pid,<0.727.0>},{name,undefined},{mfargs,{tcp_client_handler,start_link,undefined}},{restart_type,temporary},{shutdown,2000},{child_type,worker}]
+
+2015-02-03 16:33:30 =ERROR REPORT====
+** Generic server <0.728.0> terminating 
+** Last message in was {tcp,#Port<0.14069>,[6,142,119,130,37,136,2,180,160,40,44|<<>>]}
+** When Server state == {client,<0.704.0>,110000002,1,"49505227","p03_robot_1",0,1,#Port<0.14069>,{127,0,0,1},629670580,1422952387,<0.728.0>,1422952373,[{player,110000002,17,"49505227","p03_robot_1",<<"cb94702f">>,1,1,0,0,0,0,0,1,2000,0,200,0,0,0,200,0,0,0,0,20,0,100,0,0,1,1422951986,0,1,0,1422951981,1,0,0,{31000101,0},[],[],[],[],[],0,0,0,0,0,[],0,0,0,0,0,1,[],0,0,0,0}]}
+** Reason for termination == 
+** {{badmatch,{error,<<>>}},[{tcp_client_handler,handle_info,2,[{file,"src/listener/tcp_client_handler.erl"},{line,212}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,599}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+2015-02-03 16:33:30 =CRASH REPORT====
+  crasher:
+    initial call: tcp_client_handler:init/1
+    pid: <0.728.0>
+    registered_name: []
+    exception exit: {{{badmatch,{error,<<>>}},[{tcp_client_handler,handle_info,2,[{file,"src/listener/tcp_client_handler.erl"},{line,212}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,599}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]},[{gen_server,terminate,6,[{file,"gen_server.erl"},{line,746}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [listener_sup_tcp_client_handler,tcp_client_handler_listener_sup,server]
+    messages: []
+    links: [<0.562.0>]
+    dictionary: [{hmisc_rand_seed,{29247,13122,27109}}]
+    trap_exit: true
+    status: running
+    heap_size: 2586
+    stack_size: 27
+    reductions: 11129
+  neighbours:
+2015-02-03 16:33:30 =SUPERVISOR REPORT====
+     Supervisor: {local,listener_sup_tcp_client_handler}
+     Context:    child_terminated
+     Reason:     {{badmatch,{error,<<>>}},[{tcp_client_handler,handle_info,2,[{file,"src/listener/tcp_client_handler.erl"},{line,212}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,599}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+     Offender:   [{pid,<0.728.0>},{name,undefined},{mfargs,{tcp_client_handler,start_link,undefined}},{restart_type,temporary},{shutdown,2000},{child_type,worker}]
+

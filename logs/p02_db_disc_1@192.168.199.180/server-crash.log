@@ -1,0 +1,275 @@
+2015-01-03 18:42:32 =CRASH REPORT====
+  crasher:
+    initial call: mod_counter:init/1
+    pid: <0.722.0>
+    registered_name: []
+    exception exit: {{{badmatch,false},[{mod_counter,init,1,[{file,"src/mod/mod_counter.erl"},{line,64}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,306}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]},[{gen_server,init_it,6,[{file,"gen_server.erl"},{line,330}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [server_sup,server]
+    messages: []
+    links: [<0.170.0>]
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 610
+    stack_size: 27
+    reductions: 433
+  neighbours:
+2015-01-03 18:42:32 =CRASH REPORT====
+  crasher:
+    initial call: application_master:init/4
+    pid: <0.168.0>
+    registered_name: []
+    exception exit: {{bad_return,{{server_app,start,[normal,[]]},{'EXIT',{{badmatch,{error,{{{badmatch,false},[{mod_counter,init,1,[{file,"src/mod/mod_counter.erl"},{line,64}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,306}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]},{child,undefined,mod_counter,{mod_counter,start_link,[]},permanent,10000,worker,[mod_counter]}}}},[{server_sup,start_child,2,[{file,"src/server_sup.erl"},{line,41}]},{server_app,start_child_srv,0,[{file,"src/server_app.erl"},{line,156}]},{server_app,start,2,[{file,"src/server_app.erl"},{line,105}]},{application_master,start_it_old,4,[{file,"application_master.erl"},{line,272}]}]}}}},[{application_master,init,4,[{file,"application_master.erl"},{line,133}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [<0.167.0>]
+    messages: [{'EXIT',<0.169.0>,normal}]
+    links: [<0.167.0>,<0.7.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 1598
+    stack_size: 27
+    reductions: 209
+  neighbours:
+2015-04-14 16:05:12 =CRASH REPORT====
+  crasher:
+    initial call: mod_cross_pvp:init/1
+    pid: <0.960.0>
+    registered_name: []
+    exception exit: {{timeout,{gen_leader,leader_call,[gproc_dist,{reg,{n,g,mod_cross_pvp},undefined,<0.960.0>}]}},[{gen_leader,leader_call,2,[{file,"src/gen_leader.erl"},{line,359}]},{gproc_dist,leader_call,1,[{file,"src/gproc_dist.erl"},{line,825}]},{gproc,reg,1,[{file,"src/gproc.erl"},{line,610}]},{gproc,register_name,2,[{file,"src/gproc.erl"},{line,1200}]},{gen,name_register,1,[{file,"gen.erl"},{line,299}]},{gen,init_it,7,[{file,"gen.erl"},{line,126}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [server_sup,server]
+    messages: []
+    links: [<0.174.0>]
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 610
+    stack_size: 27
+    reductions: 128
+  neighbours:
+2015-04-14 16:05:12 =CRASH REPORT====
+  crasher:
+    initial call: application_master:init/4
+    pid: <0.172.0>
+    registered_name: []
+    exception exit: {{bad_return,{{server_app,start,[normal,[]]},{'EXIT',{{badmatch,{error,{{timeout,{gen_leader,leader_call,[gproc_dist,{reg,{n,g,mod_cross_pvp},undefined,<0.960.0>}]}},{child,undefined,mod_cross_pvp,{mod_cross_pvp,start_link,[]},permanent,10000,worker,[mod_cross_pvp]}}}},[{server_sup,start_child,2,[{file,"src/server_sup.erl"},{line,42}]},{server_app,start_child,0,[{file,"src/server_app.erl"},{line,109}]},{server_app,start,2,[{file,"src/server_app.erl"},{line,54}]},{application_master,start_it_old,4,[{file,"application_master.erl"},{line,272}]}]}}}},[{application_master,init,4,[{file,"application_master.erl"},{line,133}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [<0.171.0>]
+    messages: [{'EXIT',<0.173.0>,normal}]
+    links: [<0.171.0>,<0.7.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 1598
+    stack_size: 27
+    reductions: 206
+  neighbours:
+2015-04-14 16:05:36 =CRASH REPORT====
+  crasher:
+    initial call: mod_cross_pvp:init/1
+    pid: <0.890.0>
+    registered_name: []
+    exception exit: {{timeout,{gen_leader,leader_call,[gproc_dist,{reg,{n,g,mod_cross_pvp},undefined,<0.890.0>}]}},[{gen_leader,leader_call,2,[{file,"src/gen_leader.erl"},{line,359}]},{gproc_dist,leader_call,1,[{file,"src/gproc_dist.erl"},{line,825}]},{gproc,reg,1,[{file,"src/gproc.erl"},{line,610}]},{gproc,register_name,2,[{file,"src/gproc.erl"},{line,1200}]},{gen,name_register,1,[{file,"gen.erl"},{line,299}]},{gen,init_it,7,[{file,"gen.erl"},{line,126}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [server_sup,server]
+    messages: []
+    links: [<0.701.0>]
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 610
+    stack_size: 27
+    reductions: 128
+  neighbours:
+2015-04-14 16:05:36 =CRASH REPORT====
+  crasher:
+    initial call: application_master:init/4
+    pid: <0.695.0>
+    registered_name: []
+    exception exit: {{bad_return,{{server_app,start,[normal,[]]},{'EXIT',{{badmatch,{error,{{timeout,{gen_leader,leader_call,[gproc_dist,{reg,{n,g,mod_cross_pvp},undefined,<0.890.0>}]}},{child,undefined,mod_cross_pvp,{mod_cross_pvp,start_link,[]},permanent,10000,worker,[mod_cross_pvp]}}}},[{server_sup,start_child,2,[{file,"src/server_sup.erl"},{line,42}]},{server_app,start_child,0,[{file,"src/server_app.erl"},{line,109}]},{server_app,start,2,[{file,"src/server_app.erl"},{line,54}]},{application_master,start_it_old,4,[{file,"application_master.erl"},{line,272}]}]}}}},[{application_master,init,4,[{file,"application_master.erl"},{line,133}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [<0.694.0>]
+    messages: [{'EXIT',<0.696.0>,normal}]
+    links: [<0.694.0>,<0.7.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 1598
+    stack_size: 27
+    reductions: 206
+  neighbours:
+2015-04-14 16:06:18 =CRASH REPORT====
+  crasher:
+    initial call: mod_cross_pvp:init/1
+    pid: <0.731.0>
+    registered_name: []
+    exception exit: {{timeout,{gen_leader,leader_call,[gproc_dist,{reg,{n,g,mod_cross_pvp},undefined,<0.731.0>}]}},[{gen_leader,leader_call,2,[{file,"src/gen_leader.erl"},{line,359}]},{gproc_dist,leader_call,1,[{file,"src/gproc_dist.erl"},{line,825}]},{gproc,reg,1,[{file,"src/gproc.erl"},{line,610}]},{gproc,register_name,2,[{file,"src/gproc.erl"},{line,1200}]},{gen,name_register,1,[{file,"gen.erl"},{line,299}]},{gen,init_it,7,[{file,"gen.erl"},{line,126}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [server_sup,server]
+    messages: []
+    links: [<0.572.0>]
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 610
+    stack_size: 27
+    reductions: 128
+  neighbours:
+2015-04-14 16:06:18 =CRASH REPORT====
+  crasher:
+    initial call: application_master:init/4
+    pid: <0.555.0>
+    registered_name: []
+    exception exit: {{bad_return,{{server_app,start,[normal,[]]},{'EXIT',{{badmatch,{error,{{timeout,{gen_leader,leader_call,[gproc_dist,{reg,{n,g,mod_cross_pvp},undefined,<0.731.0>}]}},{child,undefined,mod_cross_pvp,{mod_cross_pvp,start_link,[]},permanent,10000,worker,[mod_cross_pvp]}}}},[{server_sup,start_child,2,[{file,"src/server_sup.erl"},{line,42}]},{server_app,start_child,0,[{file,"src/server_app.erl"},{line,109}]},{server_app,start,2,[{file,"src/server_app.erl"},{line,54}]},{application_master,start_it_old,4,[{file,"application_master.erl"},{line,272}]}]}}}},[{application_master,init,4,[{file,"application_master.erl"},{line,133}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [<0.554.0>]
+    messages: [{'EXIT',<0.556.0>,normal}]
+    links: [<0.554.0>,<0.7.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 1598
+    stack_size: 27
+    reductions: 206
+  neighbours:
+2015-04-14 16:09:46 =CRASH REPORT====
+  crasher:
+    initial call: mod_cross_pvp:init/1
+    pid: <0.731.0>
+    registered_name: []
+    exception exit: {{timeout,{gen_leader,leader_call,[gproc_dist,{reg,{n,g,mod_cross_pvp},undefined,<0.731.0>}]}},[{gen_leader,leader_call,2,[{file,"src/gen_leader.erl"},{line,359}]},{gproc_dist,leader_call,1,[{file,"src/gproc_dist.erl"},{line,825}]},{gproc,reg,1,[{file,"src/gproc.erl"},{line,610}]},{gproc,register_name,2,[{file,"src/gproc.erl"},{line,1200}]},{gen,name_register,1,[{file,"gen.erl"},{line,299}]},{gen,init_it,7,[{file,"gen.erl"},{line,126}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [server_sup,server]
+    messages: []
+    links: [<0.530.0>]
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 610
+    stack_size: 27
+    reductions: 128
+  neighbours:
+2015-04-14 16:09:46 =CRASH REPORT====
+  crasher:
+    initial call: application_master:init/4
+    pid: <0.489.0>
+    registered_name: []
+    exception exit: {{bad_return,{{server_app,start,[normal,[]]},{'EXIT',{{badmatch,{error,{{timeout,{gen_leader,leader_call,[gproc_dist,{reg,{n,g,mod_cross_pvp},undefined,<0.731.0>}]}},{child,undefined,mod_cross_pvp,{mod_cross_pvp,start_link,[]},permanent,10000,worker,[mod_cross_pvp]}}}},[{server_sup,start_child,2,[{file,"src/server_sup.erl"},{line,42}]},{server_app,start_child,0,[{file,"src/server_app.erl"},{line,109}]},{server_app,start,2,[{file,"src/server_app.erl"},{line,54}]},{application_master,start_it_old,4,[{file,"application_master.erl"},{line,272}]}]}}}},[{application_master,init,4,[{file,"application_master.erl"},{line,133}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [<0.488.0>]
+    messages: [{'EXIT',<0.490.0>,normal}]
+    links: [<0.488.0>,<0.7.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 1598
+    stack_size: 27
+    reductions: 206
+  neighbours:
+2015-04-14 16:09:46 =ERROR REPORT====
+Error in process <0.2.0> on node 'p02_db_disc_1@192.168.199.180' with exit value: {{nocatch,{error,{cannot_start_application,server,{bad_return,{{server_app,start,[normal,[]]},{'EXIT',{{badmatch,{error,{{timeout,{gen_leader,leader_call,[gproc_dist,{reg,{n,g,mod_cross_pvp},undefined,<0.731.0>}]}},{child... 
+
+2015-04-14 17:02:20 =CRASH REPORT====
+  crasher:
+    initial call: mod_cross_pvp:init/1
+    pid: <0.729.0>
+    registered_name: []
+    exception exit: {{timeout,{gen_leader,leader_call,[gproc_dist,{reg,{n,g,mod_cross_pvp},undefined,<0.729.0>}]}},[{gen_leader,leader_call,2,[{file,"src/gen_leader.erl"},{line,359}]},{gproc_dist,leader_call,1,[{file,"src/gproc_dist.erl"},{line,825}]},{gproc,reg,1,[{file,"src/gproc.erl"},{line,610}]},{gproc,register_name,2,[{file,"src/gproc.erl"},{line,1200}]},{gen,name_register,1,[{file,"gen.erl"},{line,299}]},{gen,init_it,7,[{file,"gen.erl"},{line,126}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [server_sup,server]
+    messages: []
+    links: [<0.557.0>]
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 610
+    stack_size: 27
+    reductions: 128
+  neighbours:
+2015-04-14 17:02:20 =CRASH REPORT====
+  crasher:
+    initial call: application_master:init/4
+    pid: <0.545.0>
+    registered_name: []
+    exception exit: {{bad_return,{{server_app,start,[normal,[]]},{'EXIT',{{badmatch,{error,{{timeout,{gen_leader,leader_call,[gproc_dist,{reg,{n,g,mod_cross_pvp},undefined,<0.729.0>}]}},{child,undefined,mod_cross_pvp,{mod_cross_pvp,start_link,[]},permanent,10000,worker,[mod_cross_pvp]}}}},[{server_sup,start_child,2,[{file,"src/server_sup.erl"},{line,42}]},{server_app,start_child,0,[{file,"src/server_app.erl"},{line,109}]},{server_app,start,2,[{file,"src/server_app.erl"},{line,54}]},{application_master,start_it_old,4,[{file,"application_master.erl"},{line,272}]}]}}}},[{application_master,init,4,[{file,"application_master.erl"},{line,133}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [<0.544.0>]
+    messages: [{'EXIT',<0.546.0>,normal}]
+    links: [<0.544.0>,<0.7.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 1598
+    stack_size: 27
+    reductions: 206
+  neighbours:
+2015-04-14 20:35:46 =CRASH REPORT====
+  crasher:
+    initial call: mod_player:init/1
+    pid: <0.858.0>
+    registered_name: []
+    exception exit: {{timeout,{gen_leader,leader_call,[gproc_dist,{reg,{n,g,{player,1}},undefined,<0.858.0>}]}},[{gen_leader,leader_call,2,[{file,"src/gen_leader.erl"},{line,359}]},{gproc_dist,leader_call,1,[{file,"src/gproc_dist.erl"},{line,825}]},{gproc,reg,1,[{file,"src/gproc.erl"},{line,610}]},{gproc,register_name,2,[{file,"src/gproc.erl"},{line,1200}]},{gen,name_register,1,[{file,"gen.erl"},{line,299}]},{gen,init_it,7,[{file,"gen.erl"},{line,126}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [player_sup_1,player_center_sup,server_sup,server]
+    messages: []
+    links: [<0.642.0>]
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 610
+    stack_size: 27
+    reductions: 147
+  neighbours:
+2015-04-14 20:35:53 =CRASH REPORT====
+  crasher:
+    initial call: mod_player:init/1
+    pid: <0.863.0>
+    registered_name: []
+    exception exit: {{timeout,{gen_leader,leader_call,[gproc_dist,{reg,{n,g,{player,2}},undefined,<0.863.0>}]}},[{gen_leader,leader_call,2,[{file,"src/gen_leader.erl"},{line,359}]},{gproc_dist,leader_call,1,[{file,"src/gproc_dist.erl"},{line,825}]},{gproc,reg,1,[{file,"src/gproc.erl"},{line,610}]},{gproc,register_name,2,[{file,"src/gproc.erl"},{line,1200}]},{gen,name_register,1,[{file,"gen.erl"},{line,299}]},{gen,init_it,7,[{file,"gen.erl"},{line,126}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [player_sup_1,player_center_sup,server_sup,server]
+    messages: []
+    links: [<0.642.0>]
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 610
+    stack_size: 27
+    reductions: 125
+  neighbours:
+2015-04-14 20:36:08 =CRASH REPORT====
+  crasher:
+    initial call: mod_player:init/1
+    pid: <0.865.0>
+    registered_name: []
+    exception exit: {{timeout,{gen_leader,leader_call,[gproc_dist,{reg,{n,g,{player,1}},undefined,<0.865.0>}]}},[{gen_leader,leader_call,2,[{file,"src/gen_leader.erl"},{line,359}]},{gproc_dist,leader_call,1,[{file,"src/gproc_dist.erl"},{line,825}]},{gproc,reg,1,[{file,"src/gproc.erl"},{line,610}]},{gproc,register_name,2,[{file,"src/gproc.erl"},{line,1200}]},{gen,name_register,1,[{file,"gen.erl"},{line,299}]},{gen,init_it,7,[{file,"gen.erl"},{line,126}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [player_sup_1,player_center_sup,server_sup,server]
+    messages: []
+    links: [<0.642.0>]
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 610
+    stack_size: 27
+    reductions: 125
+  neighbours:
+2015-04-14 20:36:34 =CRASH REPORT====
+  crasher:
+    initial call: mod_player:init/1
+    pid: <0.867.0>
+    registered_name: []
+    exception exit: {{timeout,{gen_leader,leader_call,[gproc_dist,{reg,{n,g,{player,1}},undefined,<0.867.0>}]}},[{gen_leader,leader_call,2,[{file,"src/gen_leader.erl"},{line,359}]},{gproc_dist,leader_call,1,[{file,"src/gproc_dist.erl"},{line,825}]},{gproc,reg,1,[{file,"src/gproc.erl"},{line,610}]},{gproc,register_name,2,[{file,"src/gproc.erl"},{line,1200}]},{gen,name_register,1,[{file,"gen.erl"},{line,299}]},{gen,init_it,7,[{file,"gen.erl"},{line,126}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [player_sup_1,player_center_sup,server_sup,server]
+    messages: []
+    links: [<0.642.0>]
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 610
+    stack_size: 27
+    reductions: 125
+  neighbours:
+2015-04-14 20:37:03 =CRASH REPORT====
+  crasher:
+    initial call: mod_player:init/1
+    pid: <0.871.0>
+    registered_name: []
+    exception exit: {{timeout,{gen_leader,leader_call,[gproc_dist,{reg,{n,g,{player,3}},undefined,<0.871.0>}]}},[{gen_leader,leader_call,2,[{file,"src/gen_leader.erl"},{line,359}]},{gproc_dist,leader_call,1,[{file,"src/gproc_dist.erl"},{line,825}]},{gproc,reg,1,[{file,"src/gproc.erl"},{line,610}]},{gproc,register_name,2,[{file,"src/gproc.erl"},{line,1200}]},{gen,name_register,1,[{file,"gen.erl"},{line,299}]},{gen,init_it,7,[{file,"gen.erl"},{line,126}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [player_sup_1,player_center_sup,server_sup,server]
+    messages: []
+    links: [<0.642.0>]
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 610
+    stack_size: 27
+    reductions: 147
+  neighbours:

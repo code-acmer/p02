@@ -1,0 +1,1323 @@
+2010-09-27	黄晓明：
+修改数据库表:
+	新添玩家经脉表meridian
+	修改经脉基础属性表base_meridian
+
+2010-09-27 麦显荣：
+修改数据库表：
+	player，
+	添加字段：quit_guild_time
+	用于记录玩家退出帮派的时间记录
+
+2010-09-27 邓惠强
+修改数据库表：
+	player，
+	修改status字段,增加2战斗中、3死亡的注释
+	
+2010-09-28 黄志江
+修改数据库表：
+	goods 删除stren_his 删除add_ratio字段
+	修改base_goods_strengthen表数据
+	
+2010-09-29 麦显荣
+修改数据库表：
+	修改player	增加 guild_title，guild_depart_name，guild_depart_id
+	修改guild_member	增加	guild_depart_name，guild_depart_id
+	修改guild,减少disband_flag, disband_confirm_time（直接标识为不用）,
+	添加guild，depart_names（用于保存堂的名字）
+	修改视图：view_guild_member，修改为如下（添加了`a`.`guild_depart_name` AS `guild_depart_name`,`a`.`guild_depart_id` AS `guild_depart_id`,）
+
+2010-10-06 黄志江
+修改数据表
+	goods_attribute 增加 anti_wind anti_fire anti_water anti_thunder
+	
+2010-10-07 黄志江
+修改数据表
+	base_goods_attribute  添加土抗性 anti_soil
+	base_goods 表添加土抗 anti_soil
+	base_mon 添加土抗性  anti_soil
+	goods 添加土抗性  anti_soil
+	goods_attribute 表添加土抗  anti_soil
+	player 表添加土抗  anti_soil
+	
+2010-10-08 黄志江
+修改数据表
+	base_goods_add_attribute 重新设计
+	goods_attribute 添加多个属性
+
+2010-10-09 黄晓明
+修改数据表
+	meridian 表 修改经脉和灵根的顺序、名称
+
+2010-10-09 麦显荣
+修改数据表
+	guild_member
+	添加	donate_funds	本成员累积总共捐献资金数
+	视图view_guild_member
+	添加	donate_funds	本成员累积总共捐献资金数
+	guild
+	添加	exp		帮派经验值
+			skills 	剩余的帮派技能点，用于帮派技能升级，帮派没升级一级，增加2个技能点
+2010 -10-09 黄志江
+	goods_attribute 表添加 forza,agile,wit,physique
+	
+2010-10-11 麦显荣
+修改数据表
+	guild
+	添加
+	storage_num			当前仓库大小
+	storage_limit		仓库容量
+	upgrade_last_time	帮派最近升级的开始时间
+	删除
+	qq	QQ群
+	telnet	帮派宣言
+	initiator_id	创始人ID
+	initiator_name	创始人昵称
+新建一个表
+	guild_skills_attribute 帮派技能属性表
+		guild_id	帮派ID
+		skill_id	技能ID,1：帮派仓库，2：帮派福利，3：人口
+		skill_name	能技名字
+		skill_level	技能等级
+
+2010-10-12	麦显荣
+修改数据表注释
+	goods
+		color	物品颜色，0 白色，1 绿色，2 蓝色，3 金色，4 紫色
+
+2010 -10-12 黄志江
+重新设计表结构
+	base_goods_inlay
+
+	
+2010-10-13	麦显荣
+新建一个表
+	sale_goods	物品拍卖表
+		id				拍卖纪录ID
+		sale_type		拍卖类型（1，实物；2，元宝）
+		goods_id		物品ID	当ID为0时，表示拍卖的为元宝
+		goods_name		物品名字
+		goods_type		物品类型	当类型为0时，表示拍卖的为元宝
+		goods_subtype	物品子类型	当子类型为0时，表示拍卖的为元宝
+		player_id		拍卖的玩家ID
+		player_name		拍卖的玩家名字
+		gold			元宝（拍卖的物品是元宝时，此值存在数值，不是元宝时，此值为0）
+		career			职业
+		goods_level		物品等级
+		goods_color		物品颜色
+		price_type		拍卖价格类型：1铜钱，2元宝
+		price			拍卖价格
+		sale_time		拍卖时间：6小时，12小时，24小时
+		sale_start_time	拍卖开始时间
+		deduct_price	保护费
+		sale_succ_type	是否已经拍卖成功：0没被拍卖，1被拍卖了
+		dest_player_id	拍卖获得者ID
+		dest_player_name拍卖获得者名字
+2010-10 -13 黄志江
+修改表
+base_goods_add_attribute 添加identify字段
+goods 表添加 career字段 ALTER TABLE `goods` ADD `career` TINYINT( 1 ) UNSIGNED NOT NULL DEFAULT '0' COMMENT '职业0无限制 12345' AFTER `bind` 
+
+2010-10-15 麦显荣
+修改表
+	sale_goods	物品拍卖表
+	删除
+	sale_succ_type	是否已经拍卖成功：0没被拍卖，1被拍卖了
+	dest_player_id	拍卖获得者ID
+	dest_player_name拍卖获得者名字
+
+2010 -10 -15 黄志江
+goods_attribute 表添加goods_id 属性
+
+2010-10-15
+base_task 表添加 accept_time字段
+2010-10-16 麦显荣
+修改表
+	sale_goods
+	添加
+		base_goods_id	品物基本类型ID
+		
+2010-10-16 麦显荣
+修改表
+	sale_goods
+	修改
+	base_goods_id 	改为	goods_id
+	goods_id		改为	gid
+	money			改为	num
+	
+2010-10-18	麦显荣
+修改表
+	sale_goods
+		goods_color	改为	goods_color 类型 int	长度11	有符号
+				注释	物品颜色，0 白色，1 绿色，2 蓝色，3 金色，4 紫色;-1 为不限
+	base_goods
+	修改
+	color	注释	改为	物品颜色，0 白色，1 绿色，2 蓝色，3 金色，4 紫色
+2010-10-18 黄志江
+修改表 
+		base_goods_practise
+		
+2010-10-18	麦显荣
+修改表
+	sale_goods
+		goods_color	改为	goods_color 类型  smallint(5) unsigned 
+				 注释	物品颜色，0 白色，1 绿色，2 蓝色，3 金色，4 紫色;99 为不限
+2010-10-19	黄志江
+修改表pet base_pet
+
+2010-10-19	麦显荣
+修改表
+	sale_goods
+		goods_color	改为	goods_color 类型  smallint(5) unsigned 
+				 注释	物品颜色，0 白色，1 绿色，2 蓝色，3 金色，4 紫色;99 为不限
+2010-10-20	麦显荣	 
+修改表
+	guild
+	删除
+	disband_flag			解散标记，0为正常，1为正在解散
+	disband_confirm_time	解散确认时间
+	disband_deadline_time	掉级后的自动解散时间
+	contribution_daily		每日收取的建设值
+	contribution_threshold	建设值上限
+	contribution			建设值
+	修改
+			contribution_get_nexttime	下次收取建设值时间
+	改为 	consume_get_nexttime		下次收取帮派消耗的时间	
+	
+	view_guild_member
+	删除
+		`a`.`paid_get_lasttime` AS `paid_get_lasttime`,
+		
+	guild_member
+	删除
+		paid_get_lasttime
+	guild_skills_attribute
+	添加
+		id	记录ID
+		
+2010 -10 -20 黄志江
+修改表 pet 
+		base_pet
+
+2010-10-21小明
+添加在线奖励玩家表 online_gift
+添加在线奖励物品表base_online_gift
+修改玩家表 添加任务上限标识：daily_task_limit
+
+2010 -10 -21 黄志江
+修改表 pet
+
+2010-10-25小明
+修改了base_meridian,base_online_gift
+
+2010-10-29 麦显荣
+表
+	guild_invite
+	添加
+		recommander_id 推荐人Id
+		
+2010-10-29 黄志江
+添加表 goods_buff 
+
+2010-11-02 麦显荣
+添加表
+	log_sale 物品拍卖日志表（记录成功拍卖的物品，元宝，铜钱）
+		id			日志记录Id
+		sale_id		拍卖纪录Id
+		buyer_id	买家Id
+		saler_id	卖家Id
+		buyer_name 	买家名字
+		saler_name	卖家名字
+		deal_time	成交时间
+		gid			物品Id
+		goods_id	物品基本类型Id
+		goods_name	物品名字
+		num			数量
+		price_type	拍卖价格类型：1铜钱，2元宝
+		price		拍卖价格
+		
+	log_trade	物品交易日志表 （记录玩家间交易的物品，元宝，铜钱）
+		id
+		donor_id	给予者Id
+		gainer_id	获得者Id
+		donor_name	给予者名字
+		gainer_name	获得者名字
+		deal_time	交易时间
+		gid			物品Id
+		goods_id	物品基本类型Id
+		type		类型
+		num			数量
+		
+2010-11-17 麦显荣
+	box_goods			诛邪系统物品信息表
+		id					信息表记录Id
+		hole_type			妖洞类型：1，百年妖洞；2，千年妖洞；3，万年妖洞
+		goods_id			物品基本类型Id
+		pro					掉落概率
+		num_limit			最大掉落数量限制
+		num_current			当前已经掉落的数量
+		goods_id_replace	当掉落的数量超过限制时用于替代的物品基本类型Id
+		show_type			是否发系统公告和全服显示记录：1，显示；0，不显示
+	
+	log_box_open	诛邪系统打开妖洞丢落的装备的记录
+		id				日志记录Id
+		player_id		玩家Id
+		player_name		玩家名字
+		hole_type		妖洞类型：1，百年妖洞；2，千年妖洞；3，万年妖洞
+		goods_id		物品基本类型Id
+		goods_name		物品名称
+		gid				物品gid
+		
+2010-11-18 麦显荣
+数据表 log_box_open
+		添加
+			show_type			是否发系统公告和全服显示记录：1，显示；0，不显示
+			
+2010-11-19 麦显荣
+数据表 log_box_open
+		添加
+			num			开的物品数量
+		
+		
+2010-11-23黄晓明
+修改数据表字段名称：task_bag,task_log中的role_id修改为player_id
+ALTER TABLE `task_bag`  CHANGE COLUMN `role_id` `player_id` INT(11) NOT NULL COMMENT '角色id' AFTER `id`;
+ALTER TABLE `task_log`  CHANGE COLUMN `role_id` `player_id` INT(11) NOT NULL COMMENT '角色id' FIRST; 
+
+2010-11-26 李中智
+新建表 infant_ctrl 防沉迷控制表（根据身份证号码）
+		idcard_num		身份证号码
+		total_game_time		防沉迷累计登陆时间(unix time)
+		last_logout_time	上次登陆时间(unix time)
+新建表 infant_ctrl_byuser 防沉迷控制表（根据账户号码）
+		accid			未填身份证信息而被纳入防沉迷保护的账户
+		total_game_time		防沉迷累计登陆时间(unix time)
+		last_logout_time	上次登陆时间(unix time)
+user表添加字段 	idcard_status 	身份证验证状态，0表示没填身份证信息，1表示成年人，2表示未成年人，3表示暂时未填身份证信息
+		idcard_num	身份证号码(只记录未成年人身份证号码)
+
+2010-11-29黄晓明
+怪物表添加采集状态 
+ALTER TABLE `base_mon`  ADD COLUMN `pid_collect` SMALLINT(5) NULL DEFAULT NULL COMMENT '采集进程Pid' AFTER `pid_battle`;
+
+ALTER TABLE `base_mon`  CHANGE COLUMN `pid_collect` `pid_collect` SMALLINT(5) NULL DEFAULT NULL COMMENT '采集进程Pid' AFTER `unique_key`,  ADD COLUMN `collect_status` SMALLINT(5) NULL DEFAULT NULL COMMENT '采集状态' AFTER `pid_collect`;
+
+2010-11-30 黄志江
+base_goods_attribute 添加气血上限，法力上限
+base_goods_suit_attribute ，base_goods_suit 表结构重设计。
+
+2010-11-30	黄晓明
+玩家表添加护送NPC任务
+ALTER TABLE `player`  CHANGE COLUMN `daily_task_limit` `daily_task_limit` TINYINT(8) UNSIGNED NULL DEFAULT '0' COMMENT '日常任务可接上限' AFTER `pet_upgrade_que_num`,  ADD COLUMN `task_convoy_npc` SMALLINT(5) UNSIGNED NOT NULL DEFAULT '0' COMMENT '护送NPC' AFTER `carry_timestamp`,  ADD COLUMN `task_convoy_timestamp` BIGINT(20) UNSIGNED NOT NULL DEFAULT '0' COMMENT '护送时间' AFTER `task_convoy_npc`;
+
+2010-12-01 麦显荣
+ALTER TABLE `base_box_goods`
+DROP COLUMN `num_current`,
+MODIFY COLUMN `goods_id_replace`  int(11) UNSIGNED NOT NULL DEFAULT 0 COMMENT '当掉落的数量超过限制时用于替代的物品基本类型Id' AFTER `num_limit`;
+
+2010-12-1 黄志江
+删除数据表 base_goods_attribute_rule,base_goods_hole,base_goods_prefix,base_goods_prefix_attribute,base_goods_quality_backout,base_goods_quality_upgrade
+修改表 base_goods_suit 数据  
+base_goods_suit_attribute 添加wit字段
+
+2010-12-02 麦显荣
+ALTER TABLE `guild`
+MODIFY COLUMN `name`  varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT '' COMMENT '族氏名称' AFTER `id`,
+MODIFY COLUMN `announce`  varchar(100) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT '' COMMENT '氏族公告' AFTER `name`,
+MODIFY COLUMN `chief_id`  int(11) UNSIGNED NULL DEFAULT 0 COMMENT '现任族长ID' AFTER `announce`,
+MODIFY COLUMN `chief_name`  varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT '' COMMENT '现任族长昵称' AFTER `chief_id`,
+MODIFY COLUMN `upgrade_last_time`  int(11) UNSIGNED NOT NULL DEFAULT 0 COMMENT '氏族最近升级的开始时间' AFTER `level`,
+MODIFY COLUMN `skills`  int(11) UNSIGNED NOT NULL DEFAULT 0 COMMENT '剩余的氏族技能点，用于氏族技能升级，氏族每升级一级，增加2个技能点' AFTER `reputation`,
+MODIFY COLUMN `exp`  int(11) UNSIGNED NOT NULL DEFAULT 0 COMMENT '氏族经验值' AFTER `skills`,
+MODIFY COLUMN `funds`  int(11) UNSIGNED NULL DEFAULT 0 COMMENT '氏族资金' AFTER `exp`,
+MODIFY COLUMN `consume_get_nexttime`  int(11) UNSIGNED NULL DEFAULT 0 COMMENT '下次收取氏族消耗的时间' AFTER `storage_limit`,
+COMMENT='氏族';
+
+ALTER TABLE `guild_apply`
+MODIFY COLUMN `guild_id`  int(11) UNSIGNED NULL DEFAULT 0 COMMENT '申请氏族ID' AFTER `id`,
+COMMENT='氏族申请';
+
+ALTER TABLE `guild_invite`
+MODIFY COLUMN `guild_id`  int(11) UNSIGNED NULL DEFAULT 0 COMMENT '氏族ID' AFTER `id`,
+COMMENT='氏族邀请';
+
+ALTER TABLE `guild_member`
+MODIFY COLUMN `guild_id`  int(11) UNSIGNED NOT NULL DEFAULT 0 COMMENT '氏族ID' AFTER `id`,
+MODIFY COLUMN `guild_name`  varchar(50) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT '' COMMENT '氏族名称' AFTER `guild_id`,
+COMMENT='氏族成员';
+
+
+ALTER TABLE `guild_skills_attribute`
+MODIFY COLUMN `guild_id`  int(11) UNSIGNED NOT NULL DEFAULT 0 COMMENT '氏族ID' AFTER `id`,
+MODIFY COLUMN `skill_id`  int(11) UNSIGNED NOT NULL DEFAULT 0 COMMENT '技能ID，1：氏族仓库，2：氏族福利，3：人口' AFTER `guild_id`,
+COMMENT='氏族技能属性表';
+
+
+2010-12-3 李中智
+新建表 exc 凝神修炼记录
+		player_id		用户ID
+		exc_status		玩家状态（1元宝修炼中、2铜钱修炼中、3不在修炼中）
+		this_beg_time		修炼开始时间(unixtime)
+		this_end_time		修炼结束时间(unixtime)
+		this_exc_time		本次修炼时间(min)
+		total_exc_time		当天累计修炼时间(min)
+		pre_pay_coin		当前修炼预付铜钱
+		pre_pay_gold		当前修炼预付元宝
+		last_logout_time		修炼中的玩家的上次离线时间
+		
+2010-12-3 刘贻章
+player 增加字段
+       coin_sum  %%铜钱总和(=coin+bcoin) 用于mongodb的排行榜
+	   
+2010-12-07 麦显荣
+log_box_open
+    添加字段
+     	open_time	   得到该物品时的时间
+     	
+2010-12-8 李中智
+player
+		添加字段
+		store_num		仓库最大容量
+
+2010-12-9 刘贻章
+	base_npc 字段 icon 修改为int
+       
+2010-12-14	麦显荣
+添加表
+ log_box_player
+
+2010-12-14 黄晓明
+任务表添加对话触发奖励字段
+ALTER TABLE `base_task`  ADD COLUMN `talk_item` TEXT NOT NULL COMMENT '对话获得物品' AFTER `content`;
+update base_task set talk_item='[]';
+
+2010-12-17 黄志江
+添加表
+log_shop log_use log_stren log_identify log_merge log_practise
+
+2010-12-17 邓惠强
+添加表
+DROP TABLE IF EXISTS `mon_drop_analytics`;
+CREATE TABLE `mon_drop_analytics` (
+`id` INT( 11 ) NOT NULL AUTO_INCREMENT ,
+`mon_id` INT( 11 ) UNSIGNED NOT NULL COMMENT '怪物ID ',
+`mon_name` VARCHAR( 50 ) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '怪物名',
+`player_id` INT( 11 ) UNSIGNED NOT NULL COMMENT '玩家ID',
+`player_name` VARCHAR( 50 ) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '玩家名',
+`goods_id` INT( 11 ) UNSIGNED NOT NULL COMMENT '物品ID',
+`goods_name` VARCHAR( 50 ) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '物品名',
+`goods_color` TINYINT( 1 ) UNSIGNED NOT NULL COMMENT '物品品质',
+`drop_time` INT( 11 ) UNSIGNED NOT NULL COMMENT '掉落时间',
+PRIMARY KEY ( `id` )
+) ENGINE = InnoDB CHARACTER SET utf8 COLLATE utf8_general_ci COMMENT='怪物掉落统计表';
+
+2010-12-18 李中智
+新建表 sys_acm 系统公告及提示记录表
+		id						公告ID
+		acm_type			系统公告的类型（0：循环公告和聊天区公告、1：循环公告、2：聊天区公告）
+		begtime				公告开始时间（unixtime格式、0为立即开始）
+		endtime				系统公告停止时间（unixtime格式、9999999999则永不停止）
+		acm_ivl				公告发送间隔（单位：秒、0为不发送）
+		nexttime			下次发送时间，同时作为累加器（untime格式、0为尚未发送）
+		content				公告内容
+
+2010-12-24 李中智
+新建表 stc_min 每分钟在线统计
+		id						记录ID
+		time					统计时间(unixtime)
+		online_num		在线人数
+2010-12-24黄晓明
+玩家表添加在线领取礼物标记
+ALTER TABLE `player`  ADD COLUMN `online_gift` SMALLINT(5) UNSIGNED NOT NULL DEFAULT '0' COMMENT '在线礼物领取标记'AFTER `store_num`;
+
+2010-12-26 李中智
+新建表 stc_create_page 进入创建角色页面的统计
+		id						记录ID
+		cp_time				进入创建角色页面的时间
+
+2010-12-28 李中智
+表 goods 添加字段
+		score						装备评价
+ALTER TABLE `player`  ADD COLUMN `online_gift` SMALLINT(5) UNSIGNED NOT NULL DEFAULT '0' COMMENT '在线礼物领取标记'AFTER `store_num`;
+
+2010-12-28 麦显荣
+新建表：
+   player_sys_setting '玩家系统设置'
+
+2010-12-30 黄晓明
+新建表 base_target_gift 目标奖励基础表
+CREATE TABLE `base_target_gift` (
+	`day` INT(10) NOT NULL DEFAULT '0' COMMENT '天数',
+	`name` VARCHAR(50) NOT NULL DEFAULT '0' COMMENT '名称',
+	`time_limit` INT(10) NOT NULL DEFAULT '0' COMMENT '时间限制',
+	`target` TEXT NOT NULL COMMENT '成就目标',
+	`gift` TEXT NOT NULL COMMENT '礼物列表',
+	`gift_certificate` INT(10) NOT NULL DEFAULT '0' COMMENT '礼券',
+	`explanation` TEXT NOT NULL COMMENT ' 领取说明',
+	`tip` TEXT NOT NULL COMMENT '提示',
+	PRIMARY KEY (`day`)
+)
+COMMENT='目标奖励基础表'
+COLLATE='utf8_general_ci'
+ENGINE=InnoDB
+ROW_FORMAT=DEFAULT
+
+新建表target_gift 目标奖励玩家表
+CREATE TABLE `target_gift` (
+	`id` INT(11) NOT NULL AUTO_INCREMENT,
+	`player_id` INT(10) NOT NULL DEFAULT '0' COMMENT '玩家id',
+	`first` SMALLINT(8) NOT NULL DEFAULT '0' COMMENT '第一天',
+	`second` SMALLINT(8) NOT NULL DEFAULT '0' COMMENT '第二天',
+	`third` SMALLINT(8) NOT NULL DEFAULT '0' COMMENT '第三天',
+	`fourth` SMALLINT(8) NOT NULL DEFAULT '0' COMMENT '第四天',
+	`fifth` SMALLINT(8) NOT NULL DEFAULT '0' COMMENT '第五天',
+	`sixth` SMALLINT(8) NOT NULL DEFAULT '0' COMMENT '第六天',
+	`seventh` SMALLINT(8) NOT NULL DEFAULT '0' COMMENT '第七天',
+	`eighth` SMALLINT(8) NOT NULL DEFAULT '0' COMMENT '第八天',
+	`ninth` SMALLINT(8) NOT NULL DEFAULT '0' COMMENT '第九天',
+	`tenth` SMALLINT(8) NOT NULL DEFAULT '0' COMMENT '第十天',
+	PRIMARY KEY (`id`),
+	INDEX `player_id` (`player_id`)
+)
+COMMENT='目标奖励玩家表'
+COLLATE='utf8_general_ci'
+ENGINE=InnoDB
+ROW_FORMAT=DEFAULT
+AUTO_INCREMENT=11
+
+玩家表添加一个目标奖励标记字段 target_gift
+ALTER TABLE `player`  ADD COLUMN `target_gift` SMALLINT(5) UNSIGNED NOT NULL DEFAULT '0' COMMENT '目标奖励标记' AFTER `online_gift`;
+
+2010-12-30 黄志江
+修改表结构 log_compose ; log_stren;log_backout;log_inlay
+
+2010-12-31 李中智
+修改表结构 relationship; 删除字段 intimacy, in_group; 增加字段 time_form 建交时间
+
+2011-01-04 李中智
+添加表
+	log_exc 凝神修炼日志表
+		id							日志记录Id
+		player_id				用户Id
+		this_beg_time		修炼开始时间(unixtime)
+		this_end_time		修炼结束时间(unixtime)
+		this_exc_time 	本次修炼时间(min)
+		total_exc_time	当天累计修炼时间(min)
+		last_logout_time	修炼中的玩家的上次离线时间
+		act_exc_time			实际修炼时间
+		
+2011-01-05 李中智
+修改表 mail 
+		修改 goods_id		改为 gid
+		增加 goodtype_id 物品类型id
+2011-01-05 麦显荣
+表修改：
+sale_goods 表删除 sale_time，deduct_price字段
+2011-01-05 黄志江
+添加表
+log_uplevel,cards表	
+
+2011-01-05 麦显荣
+表修改：
+sale_goods 表添加 sale_time字段
+
+2011-01-08 增加 player_hook_setting表
+CREATE TABLE IF NOT EXISTS `player_hook_setting` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `player_id` int(11) unsigned NOT NULL DEFAULT '0' COMMENT '玩家ID',
+  `hook_config` varchar(250) CHARACTER SET utf8 NOT NULL DEFAULT '[]' COMMENT '挂机设置',
+  `last_hook_time` int(11) NOT NULL DEFAULT '0' COMMENT '上次领取免费挂机的时间',
+  `free_time` int(11) unsigned NOT NULL DEFAULT '0' COMMENT '免费挂机的时间',
+  `buy_time` int(11) unsigned NOT NULL DEFAULT '0' COMMENT '购买挂机的时间',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='挂机设置表' 
+
+
+2010-1-12黄晓明
+添加经脉修炼日志表
+CREATE TABLE `log_meridian` (
+	`id` INT(11) NOT NULL AUTO_INCREMENT,
+	`player_id` INT(11) NULL DEFAULT '0' COMMENT '玩家id',
+	`mer_id` SMALLINT(8) NULL DEFAULT '0' COMMENT '经脉id',
+	`mer_lv` SMALLINT(8) NULL DEFAULT '0' COMMENT '经脉等级',
+	`timestamp` BIGINT(20) NULL DEFAULT '0' COMMENT '修炼时间',
+	PRIMARY KEY (`id`)
+)
+COMMENT='经脉修炼日志'
+COLLATE='utf8_general_ci'
+ENGINE=InnoDB
+ROW_FORMAT=DEFAULT
+AUTO_INCREMENT=2
+
+2010-1-13 黄志江
+修改表 log_pay 添加几个字段
+
+2011-01-19颜学海 
+新增消费日志记录表
+2011-01-19颜学海 
+新增消费日志记录表
+CREATE TABLE `log_consume` (
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT '自增id',
+  `pid` int(11) NOT NULL DEFAULT '0' COMMENT '角色id',
+  `mod` int(2) NOT NULL DEFAULT '0' COMMENT '消费父类型',
+  `pit` int(4) NOT NULL DEFAULT '0' COMMENT '消费点',
+  `type` varchar(10) CHARACTER SET utf8 NOT NULL DEFAULT '""' COMMENT '费消类型',
+  `num` int(11) NOT NULL DEFAULT '0' COMMENT '数目',
+  `oper` int(1) NOT NULL DEFAULT '0' COMMENT '操作类型,1是增加0减少',
+  `ct` int(11) NOT NULL DEFAULT '0' COMMENT '消费时间',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1 COMMENT='所有的消费日志';
+
+2011-01-19 麦显荣
+表修改：
+log_trade
+添加字段
+  `donor_coin_bef`  '给予者原来铜钱数',
+  `donor_gold_bef`  '给予者原来元宝数',
+  `gainer_coin_bef`  '接受者原来铜钱数',
+  `gainer_gold_bef`  '接受者原来元宝数',
+  `donor_coin_aft`  '给予者交易后铜钱数',
+  `donor_gold_aft`  '给予者交易后元宝数',
+  `gainer_coin_aft`  '接受者交易后铜钱数',
+  `gainer_gold_aft`  '接受者交易后元宝数',
+
+2011-01-21 黄志江
+添加表 login_prize 登录补偿奖励表
+
+2011-01-21 麦显荣
+log_trade 添加
+  `buyer_gold_bef` int(11) NOT NULL DEFAULT '0' COMMENT '买家购买物品之前的元宝数',
+  `buyer_gold_aft` int(11) NOT NULL DEFAULT '0' COMMENT '买家购买物品之后的元宝数',
+  `buyer_coin_bef` int(11) NOT NULL DEFAULT '0' COMMENT '买家购买物品之前的铜钱数',
+  `buyer_coin_aft` int(11) NOT NULL DEFAULT '0' COMMENT '买家购买物品之后的铜钱数',
+sale_goods 添加
+`md5_key` varchar(32) NOT NULL DEFAULT '' COMMENT '客户端发送的md5验证串',
+
+
+2011-01-25 李中智
+新建表： daily_bless '好友祝福记录'
+  `id`  	'记录ID',
+  `player_id`  	'用户ID',
+  `times`  	'每日已用祝福次数',
+  `bless_time`  '每天第一次祝福的时间',
+  
+2011-01-26 黄志江
+新建表 log_suitmerge 紫装融合记录表 
+
+2011-02-10 李中智
+添加表
+	log_exc_exp 凝神修炼经验日志表
+		id							日志记录Id
+		player_id				用户Id
+		this_beg_time		修炼开始时间(unixtime)
+		this_end_time		修炼结束时间(unixtime)
+		this_exc_time 	本次修炼时间(min)
+		exc_time_min		实际修炼时间(min)
+		nowtime					当前时间
+		exp_inc					增加的经验值
+2011-02-14黄晓明 添加委托任务表
+CREATE TABLE `task_consign` (
+	`id` INT(11) UNSIGNED NOT NULL AUTO_INCREMENT,
+	`player_id` INT(11) UNSIGNED NOT NULL DEFAULT '0' COMMENT '玩家id',
+	`task_id` INT(11) UNSIGNED NOT NULL DEFAULT '0' COMMENT '任务id',
+	`exp` INT(11) UNSIGNED NOT NULL DEFAULT '0' COMMENT '经验',
+	`spt` INT(11) UNSIGNED NOT NULL DEFAULT '0' COMMENT '灵力',
+	`cul` INT(11) UNSIGNED NOT NULL DEFAULT '0' COMMENT '修为',
+	`gold` INT(11) UNSIGNED NOT NULL DEFAULT '0' COMMENT '元宝',
+	`times` SMALLINT(8) UNSIGNED NOT NULL DEFAULT '0' COMMENT '委托次数',
+	`timestamp` BIGINT(20) UNSIGNED NOT NULL DEFAULT '0' COMMENT '委托时间',
+	PRIMARY KEY (`id`),
+	INDEX `player_id` (`player_id`),
+	INDEX `task_id` (`task_id`, `player_id`)
+)
+COMMENT='委托任务表'
+COLLATE='utf8_general_ci'
+ENGINE=InnoDB
+ROW_FORMAT=DEFAULT
+
+2011-02-14 邓惠强
+player表添加字段
+	ALTER TABLE  `player` ADD  `arena` INT( 11 ) UNSIGNED NOT NULL DEFAULT  '0' COMMENT  '竞技场积分';
+	ALTER TABLE  `player` ADD  `arena_win` INT( 11 ) UNSIGNED NOT NULL DEFAULT  '0' COMMENT  '竞技场获胜次数';
+删除player表不需要字段	
+	ALTER TABLE `player`
+		DROP  `att`,
+		DROP `ten`,
+		DROP `hp_num`,
+		DROP `mp_num`;
+		
+2011-02-15 麦显荣
+修改两个表的注释
+ALTER TABLE `base_goods`
+MODIFY COLUMN `equip_type`  mediumint(8) UNSIGNED NOT NULL DEFAULT 0 COMMENT '装备类型：0为个人的物品，不为0时，记录的是氏族id,表示物品在该氏族仓库' AFTER `subtype`;
+
+ALTER TABLE `goods`
+MODIFY COLUMN `equip_type`  mediumint(8) UNSIGNED NOT NULL DEFAULT 0 COMMENT '装备类型：0为个人的物品，不为0时，记录的是氏族id,表示物品在该氏族仓库' AFTER `subtype`,
+MODIFY COLUMN `location`  smallint(5) UNSIGNED NOT NULL DEFAULT 0 COMMENT '物品所在位置，1 装备一，2暂没用，3 暂没用, 4 背包，5 仓库，6任务物品，7诛邪仓库 ，8氏族仓库' AFTER `hole3_goods`;
+在mysql数据库中执行 update base_goods set equip_type = 0
+在mongo中执行db.goods.update({id:{$gt:0}},{$set:{equip_type:0}},upsert=true, multi=true);
+
+2011-02-16 黄志江
+添加表 base_goods_idecompose 装备分解规则表
+添加表 log_throw 装备删除记录表
+
+2011-02-16 李中智
+添加表 log_mail 邮件收发日志
+
+2011-02-16 颜学海 
+添加竞技场总排行
+CREATE TABLE `arena` (
+  `id` int(11) NOT NULL auto_increment COMMENT '主键',
+  `player_id` int(11) NOT NULL default '0' COMMENT '色角id',
+  `nickname` varchar(50) NOT NULL default '' COMMENT '色角昵称',
+  `realm` tinyint(1) NOT NULL default '0' COMMENT '落部',
+  `career` tinyint(1) NOT NULL default '0' COMMENT '职业',
+  `lv` smallint(5) NOT NULL default '0' COMMENT '级等',
+  `wins` smallint(4) NOT NULL default '0' COMMENT '获胜次数',
+  `score` smallint(6) NOT NULL default '0' COMMENT '积分',
+  PRIMARY KEY  (`id`),
+  KEY `player_id` (`player_id`),
+  KEY `wins` (`wins`),
+  KEY `score` (`score`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='竞技场'
+
+添加竞技场周排行
+CREATE TABLE `arena_week` (
+  `id` int(11) NOT NULL auto_increment COMMENT '主键',
+  `player_id` int(11) NOT NULL default '0' COMMENT '角色id',
+  `nickname` varchar(50) NOT NULL default '' COMMENT '玩家昵称',
+  `realm` tinyint(1) NOT NULL default '0' COMMENT '落部',
+  `career` tinyint(1) NOT NULL default '0' COMMENT '职业',
+  `lv` smallint(5) NOT NULL default '0' COMMENT '级等',
+  `area` smallint(2) NOT NULL default '0' COMMENT '战区',
+  `camp` tinyint(1) NOT NULL default '0' COMMENT '所在方(1天龙,2地龙)',
+  `type` tinyint(1) NOT NULL default '0' COMMENT '败胜 (1败,2胜)',
+  `score` smallint(6) NOT NULL default '0' COMMENT '积分',
+  `ctime` int(11) NOT NULL default '0' COMMENT '创建时间',
+  PRIMARY KEY  (`id`),
+  KEY `player_id` (`player_id`),
+  KEY `area` (`area`),
+  KEY `type` (`type`),
+  KEY `ctime` (`ctime`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='竞技场周排行'
+
+2011-02-17 麦显荣
+添加表
+guild_manor_cd  记录玩家使用氏族特权回氏族领地的时间汇总表（此表用于后期扩展）
+
+2011-02-18 麦显荣
+添加表
+log_warehouse_flowdir  氏族仓库的物品流向记录
+log_sale_dir   物品拍卖流向日志表（记录拍卖的物品或者元宝铜钱的流向日志）
+2011-02-21 麦显荣
+guild_manor_cd
+添加字段 scene 记录进入领地之前的场景Id
+2011-02-24 麦显荣
+修改base_npc
+ALTER TABLE `base_npc`
+MODIFY COLUMN `npctype`  mediumint(8) UNSIGNED NOT NULL DEFAULT 0 COMMENT '0:没有类型1:帮2:技3:仓4:杂5:商6:铁7:宝8:兽9:传10:镖11:药12:修13:委14:竞5:鉴16:移17:荣18:师20:荣21:台' AFTER `icon`;
+
+2011-02-25 颜学海
+master_charts添加sex字段
+2010-03-01 麦显荣
+修改表注释
+ALTER TABLE `base_npc`
+MODIFY COLUMN `npctype`  mediumint(8) UNSIGNED NOT NULL DEFAULT 0 COMMENT '0:没有类型1:帮2:技3:仓4:杂5:商6:铁7:宝8:兽9:传10:镖11:药12:修13:委14:战15:鉴16:移17:荣18:师20:荣21:台' AFTER `icon`;
+
+2011-03-01黄晓明 委托任务
+CREATE TABLE `consign_task` (
+	`id` INT(11) NOT NULL AUTO_INCREMENT,
+	`pid` INT(11) NOT NULL DEFAULT '0' COMMENT '玩家id',
+	`tid` INT(11) NOT NULL DEFAULT '0' COMMENT '任务id',
+	`name` VARCHAR(30) NOT NULL DEFAULT '' COMMENT '任务名称',
+	`lv` SMALLINT(11) NOT NULL DEFAULT '0' COMMENT '任务等级',
+	`t1` BIGINT(11) NOT NULL DEFAULT '0' COMMENT '委托到期时间',
+	`state` TINYINT(4) NOT NULL DEFAULT '0' COMMENT '任务状态',
+	`gid_1` INT(11) NOT NULL DEFAULT '0' COMMENT '物品奖励1',
+	`n_1` SMALLINT(11) NOT NULL DEFAULT '0' COMMENT '物品奖励1数量',
+	`gid_2` INT(11) NOT NULL DEFAULT '0' COMMENT '物品奖励2',
+	`n_2` SMALLINT(11) NOT NULL DEFAULT '0' COMMENT '物品奖励2数量',
+	`mt` TINYINT(11) NOT NULL DEFAULT '0' COMMENT '金钱类型',
+	`n_3` INT(11) NOT NULL DEFAULT '0' COMMENT '金钱数量',
+	`t2` BIGINT(20) NOT NULL DEFAULT '0' COMMENT '发布委托时间',
+	`aid` INT(11) NOT NULL DEFAULT '0' COMMENT '接受任务玩家id',
+	`t3` BIGINT(20) NOT NULL DEFAULT '0' COMMENT '接受任务时间',
+	`autoid` INT(11) NOT NULL DEFAULT '0' COMMENT '任务表的自增id',
+	PRIMARY KEY (`id`),
+	INDEX `pid` (`pid`),
+	INDEX `tid` (`tid`)
+)
+COMMENT='玩家委托任务列表'
+COLLATE='utf8_general_ci'
+ENGINE=InnoDB
+ROW_FORMAT=DEFAULT
+
+CREATE TABLE `consign_player` (
+	`id` INT(11) NOT NULL AUTO_INCREMENT,
+	`pid` INT(11) NULL DEFAULT '0' COMMENT '玩家id',
+	`publish` INT(11) NULL DEFAULT '0' COMMENT '发布次数',
+	`pt` BIGINT(20) NULL DEFAULT '0' COMMENT '发布时间戳',
+	`accept` INT(11) NULL DEFAULT '0' COMMENT '接受次数',
+	`at` BIGINT(20) NULL DEFAULT '0' COMMENT '接受时间戳',
+	`timestamp` BIGINT(20) NULL DEFAULT '0' COMMENT '时间戳',
+	`exp` INT(10) NULL DEFAULT '0' COMMENT '经验',
+	`spt` INT(10) NULL DEFAULT '0' COMMENT '灵力',
+	`cul` INT(10) NULL DEFAULT '0' COMMENT '修为',
+	`coin` INT(10) NULL DEFAULT '0' COMMENT '铜钱',
+	`bcoin` INT(10) NULL DEFAULT '0' COMMENT '绑定铜',
+	`ge` INT(10) NULL DEFAULT '0' COMMENT '氏族经验',
+	`gc` INT(10) NULL DEFAULT '0' COMMENT '氏族贡献',
+	PRIMARY KEY (`id`),
+	INDEX `pid` (`pid`)
+)
+COMMENT='委托玩家列表'
+COLLATE='utf8_general_ci'
+ENGINE=InnoDB
+ROW_FORMAT=DEFAULT
+
+
+CREATE TABLE `carry` (
+	`id` INT(10) NOT NULL AUTO_INCREMENT,
+	`pid` INT(10) NOT NULL DEFAULT '0' COMMENT '玩家id',
+	`carry` INT(10) NOT NULL DEFAULT '0' COMMENT '运镖次数',
+	`carry_time` INT(20) NOT NULL DEFAULT '0' COMMENT '运镖时间',
+	`bandits` INT(10) NOT NULL DEFAULT '0' COMMENT '劫镖次数',
+	`bandits_time` INT(20) NOT NULL DEFAULT '0' COMMENT '劫镖时间',
+	PRIMARY KEY (`id`),
+	INDEX `pid` (`pid`)
+)
+COMMENT='玩家运劫镖次数表'
+COLLATE='utf8_general_ci'
+ENGINE=InnoDB
+ROW_FORMAT=DEFAULT
+
+%%修改任务表，添加任务类型字段
+ALTER TABLE `task_bag`  ADD COLUMN `type` TINYINT NOT NULL DEFAULT '0' COMMENT '任务类型' AFTER `mark`;
+ALTER TABLE `task_bag`  CHANGE COLUMN `id` `id` INT(11) NOT NULL DEFAULT '0' COMMENT '唯一标识id(运行时生成)' FIRST;
+ALTER TABLE `task_bag`  CHANGE COLUMN `id` `id` INT(11) NOT NULL AUTO_INCREMENT COMMENT '唯一标识id(运行时生成)' FIRST,  ADD PRIMARY KEY (`id`);=======
+
+2011-3-3 黄晓明添加经脉灵根修炼日志表
+CREATE TABLE `log_linggen` (
+	`id` INT(11) NOT NULL AUTO_INCREMENT,
+	`pid` INT(11) NOT NULL DEFAULT '0' COMMENT '玩家id ',
+	`mid` INT(11) NOT NULL DEFAULT '0' COMMENT '经脉id',
+	`old` INT(11) NOT NULL DEFAULT '0' COMMENT '旧灵根值',
+	`new` INT(11) NOT NULL DEFAULT '0' COMMENT '新灵根值',
+	`pt` INT(11) NOT NULL DEFAULT '0' COMMENT '是否使用保护符',
+	`re` INT(11) NOT NULL DEFAULT '0' COMMENT '是否成功',
+	`time` INT(11) NOT NULL DEFAULT '0' COMMENT '修炼时间',
+	PRIMARY KEY (`id`)
+)
+COMMENT='经脉灵根提升日志'
+COLLATE='utf8_general_ci'
+ENGINE=InnoDB
+ROW_FORMAT=DEFAULT
+
+2011-3-4 封神台相关表
+fst_god	封神台霸主表
+log_fst 封神台日志
+log_fst_mail 封神台邮件记录
+
+2011 -02-05 麦显荣
+添加表 box_scene 记录玩家进入的诛邪副本场景数据
+
+2011 -03-09 邓惠强
+base_mon表有更改
+ALTER TABLE  `base_mon` CHANGE  `bleed_timer`  `relation` VARCHAR( 200 ) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT  '[]' COMMENT  '关系';
+UPDATE base_mon SET relation =  '[]';
+
+2011-03-11 麦显荣
+ALTER TABLE `log_box_open`
+MODIFY COLUMN `gid`  int(11) UNSIGNED NOT NULL DEFAULT 0 COMMENT '物品gid,如果是从秘境里出来的物品，则此处填0' AFTER `goods_name`;
+
+2011-03-15 黄晓明
+ALTER TABLE `base_task`  ADD COLUMN `honor` INT(1) UNSIGNED NOT NULL DEFAULT '0' COMMENT '荣誉' AFTER `contrib`;
+
+2011-03-16 邓惠强
+ALTER TABLE  `base_goods_drop_rule` CHANGE  `time_rule`  `extra` TINYINT( 1 ) UNSIGNED NOT NULL DEFAULT  '0' COMMENT  '特殊掉落，1特殊';
+UPDATE  `base_goods_drop_rule` SET  `extra` =0;
+
+2011-03-16 邓惠强
+ALTER TABLE  `player_hook_setting` DROP  `last_hook_time` ,
+DROP  `free_time` ,
+DROP  `buy_time` ;
+
+
+2011-03-23黄晓明 添加在线离线福利表
+CREATE TABLE `online_award` (
+	`id` INT(11) NOT NULL AUTO_INCREMENT,
+	`pid` INT(11) NOT NULL DEFAULT '0' COMMENT '玩家id',
+	`day` INT(11) NOT NULL DEFAULT '1' COMMENT '连续上线天数',
+	`d_t` BIGINT(20) NOT NULL DEFAULT '0' COMMENT '连续上线时间戳',
+	`g4` INT(11) NOT NULL DEFAULT '0' COMMENT '第四天物品',
+	`g4_m` TINYINT(4) NOT NULL DEFAULT '0' COMMENT '第四天物品领取标记',
+	`g8` INT(11) NOT NULL DEFAULT '0' COMMENT '第八天物品',
+	`g8_m` TINYINT(4) NOT NULL DEFAULT '0' COMMENT '第八天物品领取标记',
+	`g12` INT(11) NOT NULL DEFAULT '0' COMMENT '第十二天物品',
+	`g12_m` TINYINT(4) NOT NULL DEFAULT '0' COMMENT '第十二天物品领取标记',
+	`hour` INT(11) NOT NULL DEFAULT '0' COMMENT '当天在线时间(S)',
+	`h_t` BIGINT(20) NOT NULL DEFAULT '0' COMMENT '天时间戳',
+	`h_m` TINYINT(4) NOT NULL DEFAULT '0' COMMENT '天奖励领取时间戳',
+	`week` INT(11) NOT NULL DEFAULT '0' COMMENT '每周在线时间(S)',
+	`w_t` BIGINT(20) NOT NULL DEFAULT '0' COMMENT '周时间戳',
+	`w_m` TINYINT(4) NOT NULL DEFAULT '0' COMMENT '周奖励领取标记',
+	`mon` INT(11) NOT NULL DEFAULT '0' COMMENT '当月在线时间(S)',
+	`m_t` BIGINT(20) NOT NULL DEFAULT '0' COMMENT '月时间戳',
+	`m_m` TINYINT(4) NOT NULL DEFAULT '0' COMMENT '月奖励领取标记',
+	PRIMARY KEY (`id`),
+	INDEX `pid` (`pid`)
+)
+COMMENT='连续在线奖励表'
+COLLATE='utf8_general_ci'
+ENGINE=InnoDB
+ROW_FORMAT=DEFAULT
+
+CREATE TABLE `offline_award` (
+	`id` INT(11) NOT NULL AUTO_INCREMENT,
+	`pid` INT(11) NOT NULL DEFAULT '0' COMMENT '玩家id',
+	`total` INT(11) NOT NULL DEFAULT '0' COMMENT '总累积时间',
+	`exc_t` BIGINT(20) NOT NULL DEFAULT '0' COMMENT '当天凝神时间',
+	`offline_t` BIGINT(20) NOT NULL DEFAULT '0' COMMENT '离线时间',
+	PRIMARY KEY (`id`),
+	INDEX `pid` (`pid`)
+)
+COMMENT='离线经验累积表'
+COLLATE='utf8_general_ci'
+ENGINE=InnoDB
+ROW_FORMAT=DEFAULT
+
+2011-03-24黄晓明
+ALTER TABLE `online_award`  ADD COLUMN `lv` INT(11) NOT NULL DEFAULT '0' COMMENT '玩家等级' AFTER `pid`;
+
+2011-03-24 麦显荣
+修改氏族表
+guild  
+   添加  lct_boss, boss_sv,修改 reputation 为 氏族当前拥有的技能令数
+修改 guild_manor_cd表
+     添加 welfare 字段
+修改base_scene表
+     字段type注释修改
+2011-03-28 麦显荣
+添加表
+	log_box_throw 诛邪仓库丢弃物品日志
+
+
+2011-3-30黄晓明 
+任务基础表添加氏族资金字段
+ALTER TABLE `base_task`  ADD COLUMN `guild_coin` INT(11) UNSIGNED NOT NULL DEFAULT '0' COMMENT '帮会资金' AFTER `guild_exp`;
+氏族表添加氏族运镖时间字段
+ALTER TABLE `guild`  ADD COLUMN `carry` BIGINT(20) NOT NULL DEFAULT '0' COMMENT '氏族运镖时间' AFTER `depart_names`;
+ALTER TABLE `guild`  ADD COLUMN `bandits` BIGINT(20) NOT NULL DEFAULT '0' COMMENT '氏族劫镖时间' AFTER `carry`;
+
+2011-4-1 麦显荣
+添加表：
+log_goods_counter
+做玩家的物品使用限制记录,当需要限制玩家在特定时间内使用物品数量时，可使用此表记录
+
+2011-4-18
+添加答题基础表CREATE TABLE `base_answer` (
+  `id` int(8) NOT NULL auto_increment COMMENT '主键',
+  `reply` varchar(2) NOT NULL default '' COMMENT '答案',
+  `quest` varchar(1000) NOT NULL default '' COMMENT '问题 ',
+  `opt1` varchar(250) default '' COMMENT '项选1',
+  `opt2` varchar(250) default '' COMMENT '项选2',
+  `opt3` varchar(250) default '' COMMENT '项选3',
+  `opt4` varchar(250) default '' COMMENT '项选4',
+  `order` int(11) NOT NULL default '0' COMMENT '序号',
+  PRIMARY KEY  (`id`),
+  UNIQUE KEY `id` (`id`),
+  UNIQUE KEY `order` (`order`)
+) ENGINE=InnoDB AUTO_INCREMENT=2349 DEFAULT CHARSET=utf8 COMMENT='答题';
+
+答题日志表
+CREATE TABLE `log_answer` (
+  `id` int(11) NOT NULL auto_increment COMMENT '主键',
+  `pid` int(11) NOT NULL default '0' COMMENT '角色id',
+  `score` int(3) default '0' COMMENT '积分',
+  `exp` int(11) default '0' COMMENT '经验',
+  `spirit` int(11) default '0' COMMENT '灵力',
+  `ctime` int(11) default '0' COMMENT '创建时间',
+  PRIMARY KEY  (`id`),
+  UNIQUE KEY `id` (`id`),
+  UNIQUE KEY `pid` (`pid`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
+
+2011-4-12
+黄晓明 灵兽表添加成长值字段
+ALTER TABLE `pet`  ADD COLUMN `grow` TINYINT(1) UNSIGNED NOT NULL DEFAULT '0' COMMENT '成长值' AFTER `aptitude`;
+ALTER TABLE `pet`  CHANGE COLUMN `status` `status` TINYINT(1) UNSIGNED NOT NULL DEFAULT '0' COMMENT '状态值 0 休眠 1出战2训练' AFTER `grow`;
+ALTER TABLE `pet`  ADD COLUMN `goods_num` TINYINT(4) NOT NULL DEFAULT '0' COMMENT '训练口粮数量' AFTER `time`, 
+ADD COLUMN `money_type` TINYINT(4) NOT NULL DEFAULT '0' COMMENT '训练使用金钱类型' AFTER `goods_num`, 
+ADD COLUMN `money_num` INT(11) NOT NULL DEFAULT '0' COMMENT '训练使用金钱数目' AFTER `money_type`;
+ALTER TABLE `pet`  ADD COLUMN `train` INT(11) NOT NULL DEFAULT '0' COMMENT '训练到期时间' AFTER `money_num`;
+ALTER TABLE `pet`  CHANGE COLUMN `train` `train` BIGINT(20) NOT NULL DEFAULT '0' COMMENT '训练到期时间' AFTER `money_num`;
+ALTER TABLE `pet`  ADD COLUMN `auto_up` TINYINT(1) NOT NULL DEFAULT '0' COMMENT '是否自动升级' AFTER `money_num`;
+ALTER TABLE `pet`  CHANGE COLUMN `train` `train_start` BIGINT(20) NOT NULL DEFAULT '0' COMMENT '训练到期时间' AFTER `auto_up`, 
+ ADD COLUMN `train_end` BIGINT(20) NOT NULL DEFAULT '0' COMMENT '训练到期时间' AFTER `train_start`;
+ 
+ ALTER TABLE `task_log`  ADD COLUMN `type` TINYINT(8) NOT NULL DEFAULT '0' COMMENT '任务类型' AFTER `task_id`;
+ 
+2011-4-25 麦显荣
+修改guild表
+修改guild_member表
+修改view_guild_member视图
+
+2011-4-26 邓惠强
+CREATE TABLE IF NOT EXISTS `log_arena` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `player_id` int(11) unsigned NOT NULL COMMENT '玩家ID',
+  `nickname` varchar(50) NOT NULL COMMENT '昵称',
+  `zone` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT '战区',
+  `bid` smallint(5) unsigned NOT NULL DEFAULT '0' COMMENT '战场ID',
+  `stime` int(11) unsigned NOT NULL DEFAULT '0' COMMENT '通知进入战场时间',
+  `jtime` int(11) unsigned NOT NULL DEFAULT '0' COMMENT '报名时间',
+  `etime` int(11) unsigned NOT NULL DEFAULT '0' COMMENT '进入战场时间',
+  `ltime` int(11) unsigned NOT NULL DEFAULT '0' COMMENT '主动离开战场时间',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COMMENT='战场日志' AUTO_INCREMENT=1 ;
+
+ALTER TABLE  `arena` ADD  `att` INT( 11 ) UNSIGNED NOT NULL DEFAULT  '0' COMMENT  '攻击' AFTER  `lv` ,
+ADD  `sex` TINYINT( 1 ) UNSIGNED NOT NULL DEFAULT  '0' COMMENT  '性别' AFTER  `att`;
+
+2011-4-27 邓惠强
+CREATE TABLE IF NOT EXISTS `log_gold_coin` (
+`id` INT( 11 ) NOT NULL AUTO_INCREMENT ,
+`gold` INT( 11 ) UNSIGNED NOT NULL DEFAULT  '0' COMMENT  '元宝剩余量',
+`coin` INT( 11 ) UNSIGNED NOT NULL DEFAULT  '0' COMMENT  '铜钱剩余量',
+`utime` INT( 11 ) UNSIGNED NOT NULL DEFAULT  '0' COMMENT  '更新时间',
+PRIMARY KEY (  `id` )
+) ENGINE = INNODB CHARACTER SET utf8 COLLATE utf8_general_ci COMMENT =  '每天元宝（交易铜）剩余量';
+
+2011-4-28 麦显荣
+建表
+log_sky_p 记录玩家参加氏族战的时间日志
+log_sky_apply 记录氏族战报名的时间记录
+sky_award  记录氏族战参战人员的奖励情况
+
+sky_award  记录氏族战参战人员的奖励情况
+
+2011-4-29 麦显荣
+表guild_member 添加 gr
+视图 view_guild_member添加 gr
+删除 sky_award表
+
+
+2011-4-29黄晓明
+跑商表，日志表
+CREATE TABLE `business` (
+	`id` INT(11) NOT NULL AUTO_INCREMENT,
+	`player_id` INT(11) NOT NULL DEFAULT '0' COMMENT '玩家id',
+	`times` TINYINT(8) NOT NULL DEFAULT '0' COMMENT '跑商次数',
+	`timestamp` BIGINT(20) NOT NULL DEFAULT '0' COMMENT '跑商时间戳',
+	`color` TINYINT(4) NOT NULL DEFAULT '4' COMMENT '商车颜色',
+	`lv` INT(11) NOT NULL DEFAULT '0' COMMENT '玩家等级',
+	`current` TINYINT(4) NOT NULL DEFAULT '0' COMMENT '当前被劫次数',
+	`free` TINYINT(4) NOT NULL DEFAULT '0' COMMENT '免费刷新次数',
+	`free_time` BIGINT(20) NOT NULL DEFAULT '0' COMMENT '免费刷新时间',
+	`once` TINYINT(4) NOT NULL DEFAULT '0' COMMENT '中途免费一次',
+	`total` SMALLINT(8) NOT NULL DEFAULT '0' COMMENT '总次数',
+	PRIMARY KEY (`id`),
+	INDEX `player_id` (`player_id`)
+)
+COMMENT='跑商表'
+COLLATE='utf8_general_ci'
+ENGINE=InnoDB;
+
+CREATE TABLE `log_business_robbed` (
+	`id` INT(11) NOT NULL AUTO_INCREMENT,
+	`player_id` INT(11) NOT NULL DEFAULT '0' COMMENT '打劫者id',
+	`robbed_id` INT(11) NOT NULL DEFAULT '0' COMMENT '被劫者id',
+	`color` TINYINT(4) NOT NULL DEFAULT '0' COMMENT '商车颜色',
+	`timestamp` BIGINT(20) NOT NULL DEFAULT '0' COMMENT '时间戳',
+	PRIMARY KEY (`id`),
+	INDEX `player_id` (`player_id`),
+	INDEX `robbed_id` (`robbed_id`)
+)
+COMMENT='劫商日志表'
+COLLATE='utf8_general_ci'
+ENGINE=InnoDB;
+CREATE TABLE `log_refresh_car` (
+	`id` INT(11) NOT NULL AUTO_INCREMENT,
+	`pid` INT(11) NOT NULL DEFAULT '0' COMMENT '玩家id',
+	`type` TINYINT(4) NOT NULL DEFAULT '0' COMMENT '刷新类型',
+	`times` TINYINT(8) NOT NULL DEFAULT '0' COMMENT '刷新次数',
+	`color` TINYINT(8) NOT NULL DEFAULT '0' COMMENT '颜色',
+	`timestamp` BIGINT(20) NOT NULL DEFAULT '0' COMMENT '时间',
+	PRIMARY KEY (`id`),
+	INDEX `pid` (`pid`)
+)
+COMMENT='刷新商车日志'
+COLLATE='utf8_general_ci'
+ENGINE=InnoDB;
+
+2011-5-5 邓惠强
+ALTER TABLE `base_mon`
+  DROP `hp_num`,
+  DROP `mp_num`;
+ALTER TABLE  `base_mon` DROP  `hate`;
+
+2011-5-7 麦显荣
+ALTER TABLE `base_mon`
+MODIFY COLUMN `type`  tinyint(1) UNSIGNED ZEROFILL NULL DEFAULT 1 COMMENT '1普通怪、2精英怪、3野外BOSS、4副本怪、5副本BOSS、6采集怪、7捕捉怪、9诛邪怪,10塔怪(物攻)、11~15塔怪(属攻)，20塔怪boss(物攻)、21~25塔怪boss(属攻),30,31神岛怪,98TD小怪,99TD(boss),100TD守卫,101TD镇妖剑' AFTER `relation`;
+
+ALTER TABLE `base_scene`
+MODIFY COLUMN `type`  int(1) NOT NULL DEFAULT 0 COMMENT '0:城镇, 1:野外场景, 2:副本, 5:氏族领地, 6:竞技场, 7:封神台,8:秘境,9:神岛' AFTER `sid`;
+
+2011-5-9 黄志江
+添加log_ore 表
+
+2011-05-11 麦显荣
+log_sky_apply 表添加 gd索引
+2011-05-16 黄志江
+添加表log_goods_list
+2011-05-17 黄志江
+添加表log_goods_diff
+
+黄晓明2011-05-24
+CREATE TABLE `log_invite` (
+	`id` INT(10) NOT NULL AUTO_INCREMENT,
+	`pid` INT(11) NOT NULL DEFAULT '0',
+	`inviteid` INT(11) NOT NULL DEFAULT '0',
+	`mult` TINYINT(4) NOT NULL DEFAULT '0',
+	`time` BIGINT(20) NOT NULL DEFAULT '0',
+	PRIMARY KEY (`id`)
+)
+COMMENT='远古情缘邀请日志'
+COLLATE='utf8_general_ci'
+ENGINE=InnoDB;
+
+
+
+
+##怪物表添玩家列表字段
+ALTER TABLE `base_mon`  ADD COLUMN `player_list` VARCHAR(200) NULL DEFAULT '[]' COMMENT '玩家列表' AFTER `collect_status`;
+
+CREATE TABLE `log_hero_card` (
+	`id` INT(10) NOT NULL AUTO_INCREMENT,
+	`pid` INT(10) NOT NULL DEFAULT '0',
+	`lv` SMALLINT(8) NOT NULL DEFAULT '0',
+	`color` TINYINT(4) NOT NULL DEFAULT '0',
+	`timestamp` BIGINT(20) NOT NULL DEFAULT '0',
+	PRIMARY KEY (`id`)
+)
+COMMENT='英雄帖使用日志'
+COLLATE='utf8_general_ci'
+ENGINE=InnoDB;
+
+CREATE TABLE `base_hero_card` (
+	`id` INT(10) NOT NULL AUTO_INCREMENT,
+	`lv` SMALLINT(8) NOT NULL DEFAULT '0' COMMENT '等级',
+	`color` TINYINT(4) NOT NULL DEFAULT '0' COMMENT '颜色',
+	`exp` INT(10) NOT NULL DEFAULT '0' COMMENT '经验',
+	`spt` INT(10) NOT NULL DEFAULT '0' COMMENT '灵力',
+	PRIMARY KEY (`id`)
+)
+COMMENT='英雄帖奖励表'
+COLLATE='utf8_general_ci'
+ENGINE=InnoDB
+AUTO_INCREMENT=2;
+CREATE TABLE `hero_card` (
+	`id` INT(10) NOT NULL AUTO_INCREMENT,
+	`pid` INT(11) NOT NULL DEFAULT '0' COMMENT '玩家id',
+	`times` TINYINT(4) NOT NULL DEFAULT '0' COMMENT '次数',
+	`lv` SMALLINT(8) NOT NULL DEFAULT '0' COMMENT '玩家等级',
+	`color` TINYINT(4) NOT NULL DEFAULT '0' COMMENT '颜色',
+	`timestamp` BIGINT(20) NOT NULL DEFAULT '0' COMMENT '时间戳',
+	PRIMARY KEY (`id`),
+	INDEX `pid` (`pid`)
+)
+COMMENT='英雄帖'
+COLLATE='utf8_general_ci'
+ENGINE=InnoDB;
+
+
+2011-05-26黄晓明 删除怪物表保存玩家信息的字段
+ALTER TABLE `base_mon`  DROP COLUMN `player_list`;
+
+2011-05-30情缘表添加魅力称号字段
+ALTER TABLE `love`  ADD COLUMN `title` TINYINT(8) NOT NULL COMMENT '被邀请人信息称号id' AFTER `invitee`,  ADD COLUMN `title_time` BIGINT(20) NOT NULL COMMENT '称号到期时间' AFTER `title`;
+ALTER TABLE `love`  DROP INDEX `pid`,  ADD INDEX `pid` (`pid`),  ADD INDEX `title` (`title`, `charm`);
+
+
+2011-05-30 邓惠强 修改怪物表字段
+ALTER TABLE `base_mon` CHANGE `collect_status` `status` SMALLINT( 5 ) NULL DEFAULT NULL COMMENT '怪物状态'
+
+2011-05-31 邓惠强 修改怪物表字段
+ALTER TABLE  `base_mon` ADD  `extra_exp` INT( 11 ) UNSIGNED NOT NULL DEFAULT  '0' COMMENT  '额外经验' AFTER  `exp`
+
+2011-06-01黄晓明 替换目标数据表
+CREATE TABLE `target_gift` (
+	`id` INT(11) NOT NULL AUTO_INCREMENT,
+	`player_id` INT(10) NOT NULL DEFAULT '0' COMMENT '玩家id',
+	`first` SMALLINT(8) NOT NULL DEFAULT '0' COMMENT '第一天1',
+	`first_two` SMALLINT(8) NOT NULL DEFAULT '0' COMMENT '第一天2',
+	`first_three` SMALLINT(8) NOT NULL DEFAULT '0' COMMENT '第一天3',
+	`first_four` SMALLINT(8) NOT NULL DEFAULT '0' COMMENT '第一天4',
+	`first_five` SMALLINT(8) NOT NULL DEFAULT '0' COMMENT '第一天5',
+	`second` SMALLINT(8) NOT NULL DEFAULT '0' COMMENT '第二天1',
+	`second_two` SMALLINT(8) NOT NULL DEFAULT '0' COMMENT '第二天2',
+	`second_three` SMALLINT(8) NOT NULL DEFAULT '0' COMMENT '第二天3',
+	`second_four` SMALLINT(8) NOT NULL DEFAULT '0' COMMENT '第二天4',
+	`second_five` SMALLINT(8) NOT NULL DEFAULT '0' COMMENT '第二天5',
+	`third` SMALLINT(8) NOT NULL DEFAULT '0' COMMENT '第三天1',
+	`third_two` SMALLINT(8) NOT NULL DEFAULT '0' COMMENT '第三天2',
+	`third_three` SMALLINT(8) NOT NULL DEFAULT '0' COMMENT '第三天3',
+	`third_four` SMALLINT(8) NOT NULL DEFAULT '0' COMMENT '第三天4',
+	`third_five` SMALLINT(8) NOT NULL DEFAULT '0' COMMENT '第三天5',
+	`fourth` SMALLINT(8) NOT NULL DEFAULT '0' COMMENT '第四天1',
+	`fourth_two` SMALLINT(8) NOT NULL DEFAULT '0' COMMENT '第四天2',
+	`fourth_three` SMALLINT(8) NOT NULL DEFAULT '0' COMMENT '第四天3',
+	`fourth_four` SMALLINT(8) NOT NULL DEFAULT '0' COMMENT '第四天4',
+	`fifth` SMALLINT(8) NOT NULL DEFAULT '0' COMMENT '第五天1',
+	`fifth_two` SMALLINT(8) NOT NULL DEFAULT '0' COMMENT '第五天2',
+	`fifth_three` SMALLINT(8) NOT NULL DEFAULT '0' COMMENT '第五天3',
+	`sixth` SMALLINT(8) NOT NULL DEFAULT '0' COMMENT '第六天1',
+	`sixth_two` SMALLINT(8) NOT NULL DEFAULT '0' COMMENT '第六天2',
+	`sixth_three` SMALLINT(8) NOT NULL DEFAULT '0' COMMENT '第六天3',
+	`seventh` SMALLINT(8) NOT NULL DEFAULT '0' COMMENT '第七天1',
+	`seventh_two` SMALLINT(8) NOT NULL DEFAULT '0' COMMENT '第七天2',
+	`seventh_three` SMALLINT(8) NOT NULL DEFAULT '0' COMMENT '第七天3',
+	`eighth` SMALLINT(8) NOT NULL DEFAULT '0' COMMENT '第八天1',
+	`eighth_two` SMALLINT(8) NOT NULL DEFAULT '0' COMMENT '第八天2',
+	`ninth` SMALLINT(8) NOT NULL DEFAULT '0' COMMENT '第九天1',
+	`ninth_two` SMALLINT(8) NOT NULL DEFAULT '0' COMMENT '第八天2',
+	`tenth` SMALLINT(8) NOT NULL DEFAULT '0' COMMENT '第十天',
+	PRIMARY KEY (`id`),
+	INDEX `player_id` (`player_id`),
+	INDEX `id` (`id`)
+)
+COMMENT='目标奖励玩家表'
+COLLATE='utf8_general_ci'
+ENGINE=InnoDB;
+
+2011-06-01 邓惠强
+ALTER TABLE  `base_mon` DROP  `pid_collect`;
+ALTER TABLE  `base_mon` CHANGE  `extra_exp`  `hook_exp` INT( 11 ) UNSIGNED NOT NULL DEFAULT  '0' COMMENT  '挂机经验';
+ALTER TABLE  `base_mon` ADD  `hook_spirit` INT( 11 ) UNSIGNED NOT NULL DEFAULT  '0' COMMENT  '挂机灵力' AFTER  `spirit`;
+ALTER TABLE `log_kick_off` ADD `nickname` VARCHAR( 200 ) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '名称' AFTER `uid`;
+ALTER TABLE `log_kick_off` CHANGE `k_type` `k_type` INT( 11 ) UNSIGNED NOT NULL DEFAULT '0' COMMENT '踢出类型:1废号,2发包异常,3超时,7心跳包异常,8走路异常,9切换场景异常';
+ALTER TABLE `base_mon` DROP `escape_type` , DROP `escape_hp` , DROP `escape_speed` ;
+
+
+2011-06-01 麦显荣
+添加表 player_other 记录玩家的额外字段数据
+
+
+2011-06-08黄晓明，仙侣情缘任务相关表
+CREATE TABLE `base_privity` (
+	`id` INT(10) NOT NULL AUTO_INCREMENT,
+	`question` TEXT NOT NULL COMMENT '题目',
+	`a` VARCHAR(50) NOT NULL COMMENT '答案a ',
+	`b` VARCHAR(50) NOT NULL COMMENT '答案b ',
+	`c` VARCHAR(50) NOT NULL COMMENT '答案c',
+	PRIMARY KEY (`id`)
+)
+COMMENT='默契度题库'
+COLLATE='utf8_general_ci'
+ENGINE=InnoDB;
+
+CREATE TABLE `love` (
+	`id` INT(10) NOT NULL AUTO_INCREMENT,
+	`pid` INT(11) NOT NULL DEFAULT '0' COMMENT '玩家id',
+	`charm` INT(11) NOT NULL DEFAULT '0' COMMENT '魅力值',
+	`refresh` BIGINT(20) NOT NULL DEFAULT '0' COMMENT '刷新时间间隔',
+	`status` TINYINT(4) NOT NULL DEFAULT '0' COMMENT '当前状态',
+	`duration` BIGINT(20) NOT NULL DEFAULT '0' COMMENT '持续时间',
+	`mult` TINYINT(8) NOT NULL DEFAULT '1' COMMENT '经验倍数',
+	`times` TINYINT(4) NOT NULL DEFAULT '0' COMMENT '被邀请次数',
+	`timestamp` BIGINT(20) NOT NULL DEFAULT '0' COMMENT '时间戳',
+	`invitee` TEXT NOT NULL COMMENT '被邀请人信息[id,name,career,realm,sex]',
+	`title` INT(10) NOT NULL DEFAULT '0' COMMENT '被邀请人信息称号id',
+	`title_time` BIGINT(20) NOT NULL DEFAULT '0' COMMENT '称号到期时间',
+	`privity_info` TEXT NOT NULL COMMENT '默契度测试信息',
+	PRIMARY KEY (`id`),
+	INDEX `pid` (`pid`),
+	INDEX `status` (`status`, `pid`, `times`),
+	INDEX `title` (`title`, `charm`)
+)
+COMMENT='仙侣情缘'
+COLLATE='utf8_general_ci'
+ENGINE=InnoDB;
+
+
+添加base_goods_fashion.sql时装表
+DROP TABLE IF EXISTS `base_goods_fashion`;
+CREATE TABLE `base_goods_fashion` (
+  `id` int(11) NOT NULL auto_increment COMMENT '自增id',
+  `goods_id` int(10) unsigned NOT NULL default '0' COMMENT '物品类型编号',
+  `max_crit` int(5) default '0' COMMENT '暴击上限',
+  `min_crit` int(5) default '0' COMMENT '暴击下限',
+  `max_dodge` int(5) default '0' COMMENT '躲避上限',
+  `min_dodge` int(5) default '0' COMMENT '躲避下限',
+  `max_hit` int(5) default '0' COMMENT '命中上限',
+  `min_hit` int(5) default '0' COMMENT '命中下限',
+  `max_mp` int(11) default '0' COMMENT '法力上限',
+  `min_mp` int(11) default '0' COMMENT '法力下限',
+  `max_physique` int(5) default '0' COMMENT '体质上限',
+  `min_physique` int(5) default '0' COMMENT '体质下限',
+  `max_attack` int(5) default '0' COMMENT '最大攻击',
+  `min_attack` int(5) default '0' COMMENT '最小攻击',
+  `max_anti_all` int(5) default '0' COMMENT '风雷水火土抗上限',
+  `min_anti_all` int(5) default '0' COMMENT '风雷水火土抗下限',
+  `max_forza` int(5) default '0' COMMENT '最大力量',
+  `min_forza` int(5) default '0' COMMENT '最小力量',
+  `max_wit` int(5) default '0' COMMENT '最大智力',
+  `min_wit` int(5) default '0' COMMENT '最小智力',
+  `max_agile` int(5) default '0' COMMENT '最大敏捷',
+  `min_agile` int(5) default '0' COMMENT '最小敏捷',
+  `max_anti_wind` int(5) default '0' COMMENT '最大风抗',
+  `min_anti_wind` int(5) default '0' COMMENT '最小风抗',
+  `max_anti_thunder` int(5) default '0' COMMENT '最大雷抗',
+  `min_anti_thunder` int(5) default '0' COMMENT '最小雷抗',
+  `max_anti_water` int(5) default '0' COMMENT '最大水抗',
+  `min_anti_water` int(5) default '0' COMMENT '最小水抗',
+  `max_anti_fire` int(5) default '0' COMMENT '最大火抗',
+  `min_anti_fire` int(5) default '0' COMMENT '最小火抗',
+  `max_anti_soil` int(5) default '0' COMMENT '最大土抗',
+  `min_anti_soil` int(5) default '0' COMMENT '最小土抗',
+  `max_att_per` int(3) default '0' COMMENT '最大攻击百分比',
+  `min_att_per` int(3) default '0' COMMENT '最小攻击百分比',
+  `max_hp` int(11) default '0' COMMENT '最大气血',
+  `min_hp` int(11) default '0' COMMENT '最小气血',
+  PRIMARY KEY  (`id`),
+  KEY `goods_id` (`goods_id`),
+  KEY `id` (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=238 DEFAULT CHARSET=utf8 COMMENT='时装基础数据表';
+
+添加 log_fashion.sql 时装洗炼日志 
+
+DROP TABLE IF EXISTS `log_fashion`;
+CREATE TABLE `log_fashion` (
+  `id` int(11) NOT NULL auto_increment COMMENT '自增id',
+  `player_id` int(11) unsigned NOT NULL COMMENT '色色id',
+  `gid` int(11) NOT NULL COMMENT '物品id',
+  `stone_id` int(11) NOT NULL COMMENT '洗炼石id',
+  `cost` int(11) default NULL COMMENT '花费',
+  `old_pro` varchar(50) NOT NULL default '' COMMENT '洗炼前属性',
+  `new_pro` varchar(50) NOT NULL default '' COMMENT '洗炼后属性',
+  `is_oper` tinyint(1) NOT NULL default '0' COMMENT '是否替换(0未替换，1已经替换)',
+  `washct` int(11) default '0' COMMENT '洗炼时间 ',
+  `operct` int(11) default '0' COMMENT '换替时间',
+  PRIMARY KEY  (`id`),
+  KEY `id` (`id`),
+  KEY `player_id` (`player_id`),
+  KEY `gid` (`gid`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='时装日志';
+
+
+2011-06-15 麦显荣
+guild
+添加字段
+	`sky_award` '标注氏族参加氏族战后的奖励',
+	`a_plist`  '玩家获取氏族战物品奖励的数量列表',
+
+2011-06-15 钟凯旌
+pet
+添加字段
+	`chenge` tinyint(1) default '0' COMMENT '是否化形（0:未化形，其他:已经化形）',
+  	`skill_5` int(11) default '0' COMMENT '技能5id',
+	
+2011-06-16黄晓明
+灵兽放生表添加技能，成长值等字段
+ALTER TABLE `log_free_pet`  CHANGE COLUMN `pid` `pid` INT(10) NOT NULL DEFAULT '0' COMMENT '玩家id' AFTER `id`,  CHANGE COLUMN `pet_id` `pet_id` INT(10) NOT NULL DEFAULT '0' COMMENT '灵兽类型id' AFTER `pid`,  CHANGE COLUMN `lv` `lv` INT(10) NOT NULL DEFAULT '0' COMMENT '灵兽等级' AFTER `pet_id`,  CHANGE COLUMN `apt` `apt` INT(10) NOT NULL DEFAULT '0' COMMENT '灵兽资质' AFTER `lv`,  ADD COLUMN `grow` INT(10) NOT NULL DEFAULT '0' COMMENT '灵兽成长' AFTER `apt`,  ADD COLUMN `skill_1` INT(10) NOT NULL DEFAULT '0' COMMENT '技能1' AFTER `grow`,  ADD COLUMN `skill_2` INT(10) NOT NULL DEFAULT '0' COMMENT '技能2' AFTER `skill_1`,  ADD COLUMN `skill_3` INT(10) NOT NULL DEFAULT '0' COMMENT '技能3' AFTER `skill_2`,  ADD COLUMN `skill_4` INT(10) NOT NULL DEFAULT '0' COMMENT '技能4' AFTER `skill_3`,  ADD COLUMN `skill_5` INT(10) NOT NULL DEFAULT '0' COMMENT '技能5' AFTER `skill_4`,  ADD COLUMN `timestamp` BIGINT(20) NOT NULL DEFAULT '0' COMMENT '放生时间' AFTER `skill_5`;

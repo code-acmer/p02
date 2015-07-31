@@ -1,0 +1,63 @@
+-ifndef(DEFINE_INFO_0_HRL).
+-define(DEFINE_INFO_0_HRL, true).
+
+%-include("define_info_0.hrl").
+
+-define(INFO_UNKNOWN,                           1).       %% 未知错误
+-define(INFO_DB_ERROR,                          2).       %% 数据库操作失败
+-define(INFO_NOT_ENOUGH_VIGOR,                  3).       %% 没有足够的体力
+-define(INFO_NOT_ENOUGH_GOLD,                   4).       %% 元宝不足，无法进行此操作
+-define(INFO_NOT_ENOUGH_COIN,                   5).       %% 金钱不足，无法进行此操作
+-define(INFO_NOT_ENOUGH_PRESTIGE,               6).       %% 声望不足，无法进行此操作
+-define(INFO_COST_MONEY_ERR,                    7).       %% 消耗不能是负数
+-define(INFO_FUNCTION_NOT_OPENED,               8).       %% 功能尚未开放
+-define(INFO_OPERATE_TOO_FREQUENTLY,            9).       %% 操作过于频繁，请稍后再试
+-define(INFO_NO_VIP,                            10).      %% 非VIP用户无法进行此操作
+-define(INFO_VIP_LEVEL_TOO_LOW,                 11).      %% VIP等级不足，无法进行此操作
+-define(INFO_NOT_SUPPORT_COST_MONEY_TYPE,       12).      %% 不支持的消耗类型
+-define(INFO_NOT_ENOUGH_SCORE_1,                13).      %% 竞技积分不足，无法进行此操作
+-define(INFO_NOT_ENOUGH_LEVEL,                  14).      %% 等级不足，无法进行此操作
+-define(INFO_NOT_ENOUGH_NUM,                    15).      %% 数量不足，无法进行此操作
+-define(INFO_NOT_FOR_USE,                       16).      %% 该物品无法使用
+-define(INFO_SERVER_STOPPED,                    17).      %% 服务器维护中，请稍后…
+-define(INFO_LOGIN_OTHER,                       18).      %% 帐号在其它地方登录，您已断开连接
+-define(INFO_SERVER_KICK_OUT,                   19).      %% 您的帐号异常，请联系GM
+-define(INFO_CUSTOM_MESSAGE,                    20).      %% %s
+-define(INFO_NOT_ENOUGH_COST,                   21).      %% 消耗不足
+-define(INFO_CONF_ERR,                          22).      %% 配置错误
+-define(INFO_NOT_ENOUGH_COMBAT_POINT,           23).      %% 竞技点不足
+-define(INFO_NOT_LEGAL_INT,                     24).      %% 非法的数据
+-define(INFO_OK,                                25).      %% 操作成功
+-define(INFO_NOT_ENOUGH_HONOR,                  26).      %% 天赋点不足
+-define(INFO_SERVER_DATA_ERROR,                 27).      %% 服务器数据异常
+-define(INFO_PLAYER_PROCESS_ERROR,              28).      %% 玩家进程异常
+-define(INFO_NOT_ENOUGH_SEAL,                   29).      %% 征途印章不足
+-define(INFO_NOT_ENOUGH_CROSS_COIN,             30).      %% 荣誉印章不足
+-define(INFO_NOT_ENOUGH_LEAGUE_SEAL,            31).      %% 公会印章不足
+-define(INFO_NOT_ENOUGH_ARENA_COIN,             32).      %% 挑战印章不足
+-define(INFO_NOT_ENOUGH_Q_COIN,                 33).      %% Q币券不足
+-define(INFO_WRONG_OWNER,                       250).     %% 物品所属错误，无法进行此操作
+-define(INFO_NOT_EQUIPMENT,                     251).     %% 非装备，无法进行此操作
+-define(INFO_NOT_GOODS,                         252).     %% 错误的物品信息，无法进行此操作
+-define(INFO_NOT_IN_BAG,                        253).     %% 不在包裹中，无法进行此操作
+-define(INFO_FULL_OF_BAG,                       254).     %% 包裹已满，无法进行此操作
+-define(INFO_FULL_OF_STORAGE,                   255).     %% 仓库已满，无法进行此操作
+-define(INFO_FULL_OF_TREASURE,                  256).     %% 宝物库已满，无法容纳更多宝物！请先清理宝物库后再领取
+-define(INFO_ITEM_NOT_SATISFIED,                266).     %% 材料不足，无法进行此操作
+-define(INFO_WRONG_POSITION,                    267).     %% 错误的位置信息，无法进行此操作
+-define(INFO_COOLDOWN_RESET_ALREADY,            268).     %% 冷却时间已经完成，无需重置
+-define(INFO_WRONG_REWARD_LIST,                 269).     %% 奖励信息配置错误
+-define(INFO_WRONG_CAREER,                      270).     %% 职业不符，无法进行此操作
+-define(INFO_NOT_IN_RAID,                       271).     %% 非扫荡状态中，无法进行此操作
+-define(INFO_NOT_ONLINE,                        272).     %% 对方不在线
+-define(INFO_FULL_OF_MONEY,                     500).     %% 金钱已满，无法获取
+-define(INFO_FULL_OF_EXP,                       501).     %% 经验已经达到上限，无法获取
+-define(INFO_PARTNER_FULL_OF_EXP,               502).     %% 伙伴经验已经达到上限，无法获取
+-define(INFO_PARTNER_LEVEL_EXCEED,              503).     %% 伙伴等级已达角色等级，无法继续获取经验
+-define(INFO_GOODS_USE_SUCCESS,                 510).     %% 物品使用成功
+-define(INFO_UPGRADE_SUCCESS,                   511).     %% 升级成功
+-define(INFP_GET_REWARD,                        520).     %% 恭喜您获得%s
+
+
+-endif.
+

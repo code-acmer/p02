@@ -1,0 +1,27 @@
+[
+ {host, "192.168.1.177"},
+ {port, 3306}, 
+ {user, "publish"},
+ {password, "1234"},
+ {dblist, [lp02_base_test_177, lp02_log_test_177]},
+ {include_path, "/home/zhangr/p02_server/apps/common02/include/"}
+].
+
+[
+ {base_sys_acm,              ets_base_sys_acm},
+ {base_protocol,             ets_base_protocol},
+ {base_app_store_product,    ets_base_app_store_product},
+ {base_online_gift,          ets_base_online_gift},
+ {base_login_gift,           ets_base_login_gift},
+ {base_mon,                  ets_base_mon},
+ {base_shop_goods,           ets_shop_goods},
+ {base_player,               ets_base_player},
+ {base_equipment,            ets_base_equipment},
+ {base_equipment_property,   ets_base_equipment_property},
+ {base_equipment_upgrade,    ets_base_equipment_upgrade},
+ {base_combat_skill,         ets_base_combat_skill},
+ {base_combat_skill_passive, ets_base_combat_skill_passive},
+ {base_combat_buff,          ets_base_combat_buff},
+ {log_mail,                  ets_log_mail}
+].
+

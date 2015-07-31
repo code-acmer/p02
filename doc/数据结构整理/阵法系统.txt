@@ -1,0 +1,44 @@
+一.数据库表
+
+1.角色阵法数据库表(跟玩家相关的数据)：camp
+
+id        bigint(20)                required          递增ID
+playerid  bigint(20)                required          角色ID
+campid    int(10)          	        required          阵法ID                                
+lv        tinyint(3)                required          等级(默认为0)(变化的数据)
+is_use    tinyint(1)                defualt           0    该阵法是否正在启用          
+position  varchar(200)          required          {{1,-1},{2,0},{3,3},{4,-1},{5,-1},{6,-1},{7,-1},{8,-1},{9,-1}} 
+-1表示没开启,0表示位置开启但没有角色,3表示位置开始而且角色(或)的id为3 (要求角色和伙伴id不能小于等于0)
+
+对于阵法的位置
+位置有开启和未开启之分;
+开启的位置还有有角色和无角色分；
+玩家主角默认在阵法低序号位置上，并且不可下阵。
+
+
+2.阵法基本表(阵法的基本信息:位置开启顺序,开启条件,升级条件,战斗附加属性):base_camp  (策划文档尚未完善,还需增加)
+id                bigint(20)                required             阵法ID
+name              varchar(50)               required             阵法名字
+desc              varchar(200)              default ""           阵法描述
+levelNeed         tinyint(3)                required             开启时角色所需等级
+base_attribute    int(10)                   required             基础属性
+data              text                      升级条件&附加攻击属性(采用json格式存储数据),因为这个字段的信息会增加(等级会增),所以采用一个字段表示
+
+例子(php序列化格式):
+
+a:2:                                                  %%表示有两个等级即两组数据
+{i:1;                                                 %%表示第一组数据的开始
+ a:6:                                                 %%接下来有6个list
+ {
+  s:16:"upgradeCondition";                            %%升级条件标签
+  s:40:"[{lv,1},{coin,900},{cultrue,100},{cooldowntime,4}]";           %%等级为1的升级条件:铜钱900,阅历100,冷却时间4秒
+
+  s:15:"attackAttribute";                             %%攻击属性
+  s:36:"[{tyep,1},{att,14},{desc,"增加攻击14"}]"      %%攻击类型/攻击值/攻击描述
+ }
+ i:2;
+ {
+  ......
+ }
+}
+

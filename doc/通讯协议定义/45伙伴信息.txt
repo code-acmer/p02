@@ -1,0 +1,202 @@
+45 伙伴协议
+###########################################
+协议号 45001
+伙伴信息查询
+c > s
+  int:64 Parter_id 伙伴id
+
+s > c
+  int:64 Parter_id     伙伴id
+  string Parter_name   伙伴名
+  int:8  Career        职业
+  int:16 Genius        天赋
+  int:16 Soul_force    魂力
+  int:8  Five_phases   五行
+  int:32 Coin          铜钱
+  int:16 Prestige      声望
+  int:16 Lv            等级
+  int:32 Exp           经验
+  int:32 Exp_lim       经验上限
+  int:32 Hp            生命
+  int:32 Hp_lim        生命上限
+  int:16 Force         武力
+  int:16 Magic         法术
+  int:16 Stunt         绝技
+  int:16 Agile         敏捷
+  int:16 Mobi          行动力
+  int:16 Trained_force 培养武力
+  int:16 Trained_magic 培养法术
+  int:16 Trained_stunt 培养绝技
+  int:64 当前普攻技能id
+  int:64 当前主动技能id
+  int:16  被动技能数量
+  array{
+    int:64 被动技能id
+  }
+  int:8  Status        状态（0正常，1出战，2训练）
+
+
+协议号 45002
+%%伙伴招募
+c > s
+  int:64 id 伙伴唯一id
+s > c
+  int:8                0 招募成功，1 队伍人数超上限，2声望值不够，3铜钱不够
+  Parterner_id：64  
+  
+  
+协议号 45003
+%%解散伙伴
+c > s
+  int:64 Parterner_id 伙伴id
+s > c
+  Parterner_id：64  
+  int:8                0成功  1 失败
+
+协议号 45004
+%%读取招募列表
+c > s
+  null
+s > c
+因历史遗留，故与45005同
+
+  
+  
+协议号 45005 
+%%读取队伍列表
+c > s
+  null
+s > c
+	int:16 队伍列表长度
+	array{
+	int:64  伙伴唯一id
+	int:64  伙伴资源id
+	string  伙伴名称
+	int:8   职业		1，2，3，4（分别是	1天行、2武尊、3羽芒、4方士）
+	int:16  天赋
+	int:16  魂力
+	int:8   五行
+	int:32  铜钱
+	int:32  声望
+	int:16  等级
+	int:32  经验
+	int:32  升级经验
+	int:32  气血
+	int:32  最大气血
+	int:16  武力
+	int:16  法术
+	int:16  绝技
+	int:16  敏捷
+	int:16  行动力
+	int:16  培养武力
+	int:16  培养法术
+	int:16  培养绝技
+	int:64  普通技能id
+	int:64  绝技技能id
+	int:16  被动技能数量
+	array{
+	int:64 被动技能id
+	}
+	int:8   状态（0正常，1出战，2训练）
+	int:8   类型 1、剧情，2、声望
+	int:32  战力
+	}
+
+二级属性：
+	int:32 攻击
+	int:32 防御
+	int:32 法术攻击
+	int:32 法术防御
+	int:32 绝技攻击
+	int:32 绝技防御
+	int:16 命中
+	int:16 闪避
+	int:16 暴击
+	int:16 韧性
+	int:16 破击
+	int:16 格挡
+
+
+协议号:45008
+%%伙伴培养
+c >> s:
+	int:8 培养类型
+	int:64 伙伴ID
+s >> c:
+	int:8 返回培养结果 0 成功 1失败
+	int:8 培养类型
+	int:16 培养武力
+	int:16 培养法术
+	int:16 培养绝技
+	int:64 伙伴ID
+	
+协议号:45009
+%%保存伙伴培养属性
+c >> s 
+    int:64 伙伴ID
+s >> c:
+	int:16 培养武力
+	int:16 培养法术
+	int:16 培养绝技
+    int:64 伙伴ID
+    int:16 总武力
+    int:16 总法术
+    int:16 总绝技
+
+	 
+#################天赋提升######################
+协议号 45010
+c > s
+    int:64 parter_id
+    int:8  是否使用保护符 0 未使用 1使用
+s > c
+	int:16 状态码
+	    0失败
+	    1成功
+		2伙伴不归你所有
+		3天赋丹不存在
+		4保护符不存在
+		5天赋已到上限
+		6铜钱不足
+		7伙伴信息不存在
+		8系统错误
+	int:64 parter_id
+	int:16 genius 天赋
+	
+	
+#################修改五行######################
+协议号 45011
+c > s
+	int:8  phases  1、2、3、4、5
+	int:64 parter_id
+
+s > c
+	int:16 状态码
+	    0失败
+	    1成功
+		2伙伴不归你所有
+		3五行丹不存在
+		4铜钱不足
+		5与原来的五行一样
+		8系统错误
+	int:64 parter_id
+	int:8 five_phases 五行
+
+
+#################修改跟随与否######################
+协议号 45020
+c > s
+	int:64 伙伴id
+	int:8   是否跟随  1是跟随，0是不跟随
+
+s > c
+	int:8 状态码
+	    0失败
+	    1成功
+		2伙伴不归你所有
+		3vip等级不足
+		8系统错误
+	int:64 伙伴id
+	int:8   是否跟随 1是跟随，0是不跟随
+
+

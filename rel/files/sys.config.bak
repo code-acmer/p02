@@ -1,0 +1,64 @@
+[
+ %% SASL config
+ {sasl, [
+         {sasl_error_logger, {file, "log/sasl-error.log"}},
+         {errlog_type, error},
+         {error_logger_mf_dir, "log/sasl"},      % Log directory
+         {error_logger_mf_maxbytes, 10485760},   % 10 MB max file size
+         {error_logger_mf_maxfiles, 5}           % 5 files max
+        ]},
+  
+  {server, [  
+            {tcp_listener_ip,   [{ip, "localhost"}]},  
+            {tcp_listener_port, [{port, 8801}]},
+            {server_no, "1"},          %% 节点id
+            {http_ips, ["127.0.0.1"]}, %% 允许访问http端口的ip段
+            {can_gmcmd, 1},            %% 是否允许使用gm指令
+            {server_start_timestamp, {2013, 06, 06, 10, 00, 00}}, %% 服务器的开服时间
+            {log_level, 3},   %% 日志输出级别类型
+            %% 数据库配置
+            {db_admin, [
+                        {type, db_mysql},
+                        {host, "127.0.0.1"},
+                        {port, 3306}, 
+                        {user, "root"},
+                        {password, "root"},
+                        {db, "xxm_admin"},
+                        {poolsize, 1},
+                        {encode, utf8}
+                       ]},		
+            {db_base, [
+                       {type, db_mysql},
+                       {host, "127.0.0.1"},
+                       {port, 3306}, 
+                       {user, "root"},
+                       {password, "root"},
+                       {db, "xxm_base"},
+                       {poolsize, 1},
+                       {encode, utf8}
+                      ]},				  					  		
+            {db_game, [
+                       {type, db_mysql},
+                       {host, "127.0.0.1"},
+                       {port, 3306}, 
+                       {user, "root"},
+                       {password, "root"},
+                       {db, "xxm_game"},
+                       {poolsize, 1},
+                       {encode, utf8}
+                      ]},	
+            {db_log, [
+                      {type, db_mysql},
+                      {host, "127.0.0.1"},
+                      {port, 3306}, 
+                      {user, "root"},
+                      {password, "root"},
+                      {db, "xxm_log"},
+                      {poolsize, 1},
+                      {encode, utf8}
+                     ]}
+          ]
+  }
+].  
+
+

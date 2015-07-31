@@ -1,0 +1,98 @@
+*表示新加字段
+
+1、修改			基础物品表：base_goods
+	goods_id		物品ID
+	goods_name		物品名称
+	icon			物品图标
+	intro			物品描述信息
+	type			物品类型：10装备道具，15宝石道具，20护符道具，25丹药道具，30宠物道具，35任务道具，40技能类，45材料，80其他类，81；参照base_goods_type表
+	subtype			物品子类型：装备子类型：1剑，2刀，3弓，4扇，5头盔，6铠甲，7戒指，8项链，9护肩，10腰带，11鞋子。
+								增益子类型：1 药品，2 经验。 
+								具体参照base_goods_subtype表
+	equip_type		装备类型：0为个人的物品，不为0时，记录的是帮派id,表示物品在该帮派仓库
+	bind			是否绑定：0、不绑定,1、使用后绑定，2、已绑定
+	price_type		价格类型：1、铜钱，2、元宝，3、绑定元宝
+	price			物品购买价格
+	trade			物品是否可以交易：0、可交易，1、不可交易
+	sell_price		物品出售价格
+	sell			物品是否可出售：0、可出售，1、不可出售
+	isdrop			物品是否可丢弃：0、可丢弃，1、不可丢弃
+	level			等级限制，0、无等级
+	career			职业限制，0、为不限制，1、剑侠，2、刀客，3、飞羽，4、方士
+	sex				性别限制，0、不限制，1、男，2、女
+	hp				生命值
+	attack			攻击
+	def				防御
+	magic_attack	法术攻击
+	magic_def		法术防御
+	stunt_attack	绝技攻击
+	stunt_def		绝技防御
+	hit				命中
+	dodge			躲闪
+	crit			暴击
+	parry			格挡
+	counter			反击
+	force			武力
+	magic			法术
+	stunt			绝技
+	grade			冶炼系数
+	suit_id			套装ID：0、不是套装，具体参照套装属性表
+	max_hole		可镶嵌孔数：0、不可打孔
+	max_overlap		可叠加数：0、不可叠加
+	color			物品颜色：0白色，1绿色，2蓝色，3紫色，4橙色
+	other_data		保存额外数据
+	expire_time		有效期：0、无限期，单位秒
+	effect_num		物品作用数值：仅使用于护符类物品，其他物品该字段值为0
+
+2、				基础套装表：base_equip_suit
+	suit_id			套装ID
+	suit_name		套装名称
+	suit_intro		套装描述
+	suit_totals		套装总件数
+	suit_goods_id	套装包含装备(套装包含的装备ID数组，格式如：[10000,10001,10002,10003,10004,10005])
+
+
+3、				装备套装属性表：base_equip_suit_attribute
+	id				编号
+	suit_id			套装ID
+	suit_num		套装件数
+	level			等级要求
+	hp				套装增加血量
+	attack			套装增加普通攻击
+	def				套装增加普通防御
+	magic_attack	套装增加法术攻击
+	magic_def		套装增加法术防御
+	stunt_attack	套装增加绝技攻击
+	stunt_def		套装增加绝技防御
+	hit				套装增加命中
+	dodge			套装增加躲闪
+	crit			套装增加暴击
+	parry			套装增加格挡
+	counter			套装增加反击
+	force			套装增加武力
+	magic			套装增加法术
+	stunt			套装增加绝技	
+
+
+4、				强化规则表：base_equip_strengthen_rule
+	id				编号
+	type			物品类型：固定为81，表示装备
+	subtype			物品子类型
+	level			装备等级
+	color			装备颜色
+	coin			强化基础
+	ratio			价格系数
+
+5、				装备冶炼规则表：base_equip_practise_rule
+	id				编号
+	type			物品类型：固定为81，表示装备
+	subtype			物品子类型
+	cost			冶炼费用
+	color			装备颜色
+	level			装备等级
+	attribute_type_list		冶炼属性类型：存放格式如[1,2,3,5,4]表示可能产生对应的属性类型，属性类型参考属性类型说明
+	attribute_num_weigth	属性个数和权值：格式如[{num,weigth},{num2,weigth2}..]表示产生num个属性的权值为weigth
+	attribute_star_weigth_value		冶炼属性星级、权值和系数:格式[{star,weigth,value},{star1,weigth1,value1},...]
+
+其他(待添加)
+	

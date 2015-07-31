@@ -1,0 +1,307 @@
+2015-02-10 15:02:27 =CRASH REPORT====
+  crasher:
+    initial call: application_master:init/4
+    pid: <0.614.0>
+    registered_name: []
+    exception exit: {{bad_return,{{server_app,start,[normal,[]]},{version_error,0}}},[{application_master,init,4,[{file,"application_master.erl"},{line,133}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [<0.613.0>]
+    messages: [{'EXIT',<0.615.0>,normal}]
+    links: [<0.613.0>,<0.7.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 376
+    stack_size: 27
+    reductions: 112
+  neighbours:
+2015-02-10 15:02:36 =CRASH REPORT====
+  crasher:
+    initial call: application_master:init/4
+    pid: <0.554.0>
+    registered_name: []
+    exception exit: {{bad_return,{{server_app,start,[normal,[]]},{version_error,0}}},[{application_master,init,4,[{file,"application_master.erl"},{line,133}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [<0.553.0>]
+    messages: [{'EXIT',<0.555.0>,normal}]
+    links: [<0.553.0>,<0.7.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 376
+    stack_size: 27
+    reductions: 112
+  neighbours:
+2015-02-10 15:04:15 =CRASH REPORT====
+  crasher:
+    initial call: application_master:init/4
+    pid: <0.548.0>
+    registered_name: []
+    exception exit: {{bad_return,{{server_app,start,[normal,[]]},{version_error,0}}},[{application_master,init,4,[{file,"application_master.erl"},{line,133}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [<0.547.0>]
+    messages: [{'EXIT',<0.549.0>,normal}]
+    links: [<0.547.0>,<0.7.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 376
+    stack_size: 27
+    reductions: 112
+  neighbours:
+2015-02-10 15:07:36 =CRASH REPORT====
+  crasher:
+    initial call: application_master:init/4
+    pid: <0.168.0>
+    registered_name: []
+    exception exit: {{bad_return,{{server_app,start,[normal,[]]},{version_error,0}}},[{application_master,init,4,[{file,"application_master.erl"},{line,133}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [<0.167.0>]
+    messages: [{'EXIT',<0.169.0>,normal}]
+    links: [<0.167.0>,<0.7.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 376
+    stack_size: 27
+    reductions: 112
+  neighbours:
+2015-02-10 15:10:19 =ERROR REPORT====
+Mnesia('p02_db_disc_1@192.168.1.135'): ** ERROR ** (core dumped to file: "/home/li/server_p02/MnesiaCore.p02_db_disc_1@192.168.1.135_1423_552219_719061")
+ ** FATAL ** {error,{"Cannot open dets table",player_frag3,[{file,"/home/li/server_p02/mnesia/p02_db_disc_1@192.168.1.135/player_frag3.DAT"},{type,set},{keypos,2},{repair,true},{ram_file,true}],{not_a_dets_file,"/home/li/server_p02/mnesia/p02_db_disc_1@192.168.1.135/player_frag3.DAT"}}}
+2015-02-10 15:10:29 =ERROR REPORT====
+Mnesia('p02_db_disc_1@192.168.1.135'): ** ERROR ** mnesia_event got unexpected event: {'EXIT',<0.117.0>,killed}
+2015-02-10 15:10:29 =CRASH REPORT====
+  crasher:
+    initial call: gen_event:init_it/6
+    pid: <0.114.0>
+    registered_name: mnesia_event
+    exception exit: {killed,[{gen_event,terminate_server,4,[{file,"gen_event.erl"},{line,304}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [mnesia_sup,<0.112.0>]
+    messages: []
+    links: []
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 1598
+    stack_size: 27
+    reductions: 637
+  neighbours:
+2015-02-10 15:10:29 =CRASH REPORT====
+  crasher:
+    initial call: application_master:init/4
+    pid: <0.111.0>
+    registered_name: []
+    exception exit: {{killed,{mnesia_sup,start,[normal,[]]}},[{application_master,init,4,[{file,"application_master.erl"},{line,133}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [<0.110.0>]
+    messages: [{'EXIT',<0.112.0>,normal}]
+    links: [<0.110.0>,<0.7.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 376
+    stack_size: 27
+    reductions: 113
+  neighbours:
+2015-02-10 15:11:49 =CRASH REPORT====
+  crasher:
+    initial call: application_master:init/4
+    pid: <0.168.0>
+    registered_name: []
+    exception exit: {{bad_return,{{server_app,start,[normal,[]]},{version_error,1}}},[{application_master,init,4,[{file,"application_master.erl"},{line,133}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [<0.167.0>]
+    messages: [{'EXIT',<0.169.0>,normal}]
+    links: [<0.167.0>,<0.7.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 376
+    stack_size: 27
+    reductions: 112
+  neighbours:
+2015-02-10 16:13:33 =ERROR REPORT====
+** Generic server <0.921.0> terminating 
+** Last message in was {tcp,#Port<0.12964>,[0,0,0,0,68,23,246,135,39,19,2|<<8,1,18,18,230,150,135,232,137,186,231,154,132,231,153,189,231,190,138,229,186,167,40,1,48,1,56,1>>]}
+** When Server state == {client,undefined,0,1,"49603362","huowu20143",0,1,#Port<0.12964>,{192,168,1,112},1142421127,1423556011,<0.921.0>,1423556011,[]}
+** Reason for termination == 
+** {'module could not be loaded',[{data_base_goods,get,[22110015],[]},{lib_goods,'-create_role/1-fun-0-',2,[{file,"src/lib/lib_goods.erl"},{line,570}]},{lib_goods,'-create_role/1-lc$^0/1-0-',2,[{file,"src/lib/lib_goods.erl"},{line,610}]},{pp_account,post_role_created,1,[{file,"src/pp/pp_account.erl"},{line,503}]},{pp_account,create_role,1,[{file,"src/pp/pp_account.erl"},{line,479}]},{pp_account,handle,3,[{file,"src/pp/pp_account.erl"},{line,107}]},{tcp_client_handler,handle_info,2,[{file,"src/listener/tcp_client_handler.erl"},{line,254}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,599}]}]}
+2015-02-10 16:13:33 =CRASH REPORT====
+  crasher:
+    initial call: tcp_client_handler:init/1
+    pid: <0.921.0>
+    registered_name: []
+    exception exit: {{undef,[{data_base_goods,get,[22110015],[]},{lib_goods,'-create_role/1-fun-0-',2,[{file,"src/lib/lib_goods.erl"},{line,570}]},{lib_goods,'-create_role/1-lc$^0/1-0-',2,[{file,"src/lib/lib_goods.erl"},{line,610}]},{pp_account,post_role_created,1,[{file,"src/pp/pp_account.erl"},{line,503}]},{pp_account,create_role,1,[{file,"src/pp/pp_account.erl"},{line,479}]},{pp_account,handle,3,[{file,"src/pp/pp_account.erl"},{line,107}]},{tcp_client_handler,handle_info,2,[{file,"src/listener/tcp_client_handler.erl"},{line,254}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,599}]}]},[{gen_server,terminate,6,[{file,"gen_server.erl"},{line,746}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [listener_sup_tcp_client_handler,tcp_client_handler_listener_sup,server]
+    messages: []
+    links: [<0.756.0>]
+    dictionary: [{hmisc_rand_seed,{19365,14626,12421}}]
+    trap_exit: true
+    status: running
+    heap_size: 4185
+    stack_size: 27
+    reductions: 15765
+  neighbours:
+2015-02-10 16:13:33 =SUPERVISOR REPORT====
+     Supervisor: {local,listener_sup_tcp_client_handler}
+     Context:    child_terminated
+     Reason:     {undef,[{data_base_goods,get,[22110015],[]},{lib_goods,'-create_role/1-fun-0-',2,[{file,"src/lib/lib_goods.erl"},{line,570}]},{lib_goods,'-create_role/1-lc$^0/1-0-',2,[{file,"src/lib/lib_goods.erl"},{line,610}]},{pp_account,post_role_created,1,[{file,"src/pp/pp_account.erl"},{line,503}]},{pp_account,create_role,1,[{file,"src/pp/pp_account.erl"},{line,479}]},{pp_account,handle,3,[{file,"src/pp/pp_account.erl"},{line,107}]},{tcp_client_handler,handle_info,2,[{file,"src/listener/tcp_client_handler.erl"},{line,254}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,599}]}]}
+     Offender:   [{pid,<0.921.0>},{name,undefined},{mfargs,{tcp_client_handler,start_link,undefined}},{restart_type,temporary},{shutdown,2000},{child_type,worker}]
+
+2015-02-10 18:45:44 =ERROR REPORT====
+** Generic server {n,l,{p,150000006}} terminating 
+** Last message in was {'EXIT',<0.897.0>,shutdown}
+** When Server state == {mod_player_state,{player,150000006,18,"49505227","p03_robot_1",<<"d8a82e2b">>,1,1,0,0,0,0,0,1,2000,0,400,0,0,0,0,200,0,0,0,0,20,0,100,0,0,1,1423561879,0,1,0,1423561874,1,0,1,{31000101,0},[],[],[],[],[],0,0,0,0,0,[],0,0,0,0,0,1,[],0,0,0,0},[{goods,150000088,8,90111001,150000006,9,10011,1,1,0,1,0,0,10,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,{},0,9,0,0,0},{goods,150000082,8,90101001,150000006,9,10001,1,1,0,1,0,0,10,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,{},0,1,0,0,0},{goods,150000079,8,22400015,150000006,2,2204,1,1,5,0,0,0,20,2204,0,0,0,0,0,0,0,0,0,0,19,0,0,0,23,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,{0},0,0,0,0,0},{goods,150000077,8,22110015,150000006,2,2201,1,1,5,0,0,0,20,2201,0,0,0,0,0,0,53,0,0,0,6,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,{0},0,0,0,0,0},{goods,150000087,8,90110001,150000006,9,10010,1,1,0,1,0,0,10,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,{},0,8,0,0,0},{goods,150000086,8,90109001,150000006,9,10009,1,1,0,1,0,0,10,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,{},0,7,0,0,0},{goods,150000084,8,90103001,150000006,9,10003,1,1,0,1,0,0,10,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,{},0,3,0,0,0},{goods,150000078,8,22300015,150000006,2,2203,1,1,5,0,0,0,20,2203,281,0,0,0,0,0,0,0,0,0,0,0,23,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,{0},0,0,0,0,0},{goods,150000085,8,90105001,150000006,9,10005,1,1,0,1,0,0,10,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,{},0,4,0,0,0},{goods,150000083,8,90102001,150000006,9,10002,1,1,0,1,0,0,10,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,{},0,2,0,0,0},{goods,150000081,8,22700015,150000006,2,2207,1,1,5,0,0,0,20,2207,0,0,0,0,0,0,0,0,18,0,0,0,0,0,0,0,8,0,0,10,0,0,0,0,0,0,0,0,0,0,1,0,{0},0,0,0,0,0},{goods,150000080,8,22500015,150000006,2,2205,1,1,5,0,0,0,20,2205,0,0,0,0,0,0,19,0,0,0,0,0,0,0,0,0,15,0,0,13,0,0,0,0,0,0,0,0,0,0,1,0,{0},0,0,0,0,0}],undefined,[],<0.1248.0>,undefined,undefined,1929040474,1423561853,[{task,150000080,4,4000101,150000006,4,41,0,0,0,0},{task,150000081,4,4000201,150000006,4,42,0,0,0,0},{task,150000091,4,4000601,150000006,4,46,0,0,0,0},{task,150000083,4,4000401,150000006,4,44,0,0,0,0},{task,150000085,4,4001001,150000006,4,50,0,0,0,0},{task,150000078,4,1020001,150000006,1,12,0,0,0,0},{task,150000084,4,4000901,150000006,4,49,0,0,0,0},{task,150000086,4,4001101,150000006,4,51,0,0,0,0},{task,150000087,4,4001201,150000006,4,52,0,0,0,0},{task,150000089,4,4001501,150000006,4,55,0,0,0,0},{task,150000076,4,1000001,150000006,1,10,0,0,0,0},{task,150000077,4,1010001,150000006,1,11,0,0,0,0},{task,150000079,4,4000001,150000006,4,40,0,0,0,0},{task,150000082,4,4000301,150000006,4,43,0,0,0,0},{task,150000088,4,4001301,150000006,4,53,0,0,0,0},{task,150000090,4,4000501,150000006,4,45,0,0,0,0}],[],{dungeon_mugen,150000006,6,1199000,0,0,0,1,1,0,undefined,0,[],1,0,0,1,0},{dungeon_info,0,[],[],[],0,0,0,0,0,0,0,0},{super_battle,150000006,3,1190101,1190102,0,0,1,1,0,100,0},{daily_dungeon,150000006,1,0,0,0,0,0,0,0,0,0,0},[],[],undefined,[],[],{source_dungeon,150000006,1,[],0},[],{player_cost_state,0,0},{sterious_shop,150000006,4,[],0,0,0},{ordinary_shop,150000006,2,[],0},{main_shop,150000006,1,[],0},{activity_shop_record,150000006,2,undefined,[],0},{vice_shop,150000006,1,[],0,0,0},{choujiang_info,150000006,3,0,0,0,0,0,0},[],[]}
+** Reason for termination == 
+** {function_clause,[{lib_player,handle_cost_coin_rank,[{player,150000006,18,"49505227","p03_robot_1",<<"d8a82e2b">>,1,1,0,0,0,0,0,1,2000,0,400,0,0,0,0,200,0,0,0,0,20,0,100,0,0,0,1423561879,1423565144,1,0,1423561874,1,0,1,{31000101,0},[],[],[],[],[],0,0,0,0,0,[],0,0,0,0,0,1,[],0,0,0,0},0],[{file,"lib_player.erl"},{line,590}]},{mod_player,inner_save_to_db,1,[{file,"src/mod/mod_player.erl"},{line,617}]},{mod_player,terminate,2,[{file,"src/mod/mod_player.erl"},{line,677}]},{gen_server,terminate,6,[{file,"gen_server.erl"},{line,721}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+2015-02-10 18:45:44 =CRASH REPORT====
+  crasher:
+    initial call: mod_player:init/1
+    pid: <0.1248.0>
+    registered_name: []
+    exception exit: {{function_clause,[{lib_player,handle_cost_coin_rank,[{player,150000006,18,"49505227","p03_robot_1",<<"d8a82e2b">>,1,1,0,0,0,0,0,1,2000,0,400,0,0,0,0,200,0,0,0,0,20,0,100,0,0,0,1423561879,1423565144,1,0,1423561874,1,0,1,{31000101,0},[],[],[],[],[],0,0,0,0,0,[],0,0,0,0,0,1,[],0,0,0,0},0],[{file,"lib_player.erl"},{line,590}]},{mod_player,inner_save_to_db,1,[{file,"src/mod/mod_player.erl"},{line,617}]},{mod_player,terminate,2,[{file,"src/mod/mod_player.erl"},{line,677}]},{gen_server,terminate,6,[{file,"gen_server.erl"},{line,721}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]},[{gen_server,terminate,6,[{file,"gen_server.erl"},{line,724}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [player_sup,server_sup,server]
+    messages: []
+    links: []
+    dictionary: [{last_cmd_timestamp,1423562236},{hmisc_rand_seed,{1467,21784,20204}},{last_send_packet,{13,[{3,13009,[<<50,209,3>>,[[<<0,5>>,[<<"#)">>,[["\b","ûg"],[]]]]]]},{68,13009,[<<"2ÑD">>,[[<<0,5>>,[<<"#)">>,[["\b","ûg"],[]]]]]]},{47,13009,[<<"2Ñ/">>,[[<<0,10>>,[<<"2Ú">>,[["\b",[134,163,195,71]],[],[],[],[],[],[],[],[],[],[],["`",[144,3]],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]]]]]]},{25,13009,[<<50,209,25>>,[[<<0,10>>,[<<"2Ú">>,[["\b",[134,163,195,71]],[],[],[],[],[],[],[],[],[],[],["`",[134,3]],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]]]]]]},{102,13009,[<<"2Ñf">>,[[<<0,10>>,[<<"2Ú">>,[["\b",[134,163,195,71]],[],[],[],[],[],[],[],[],[],[],["`",[252,2]],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]]]]]]},{35,13009,[<<"2Ñ#">>,[[<<0,10>>,[<<"2Ú">>,[["\b",[134,163,195,71]],[],[],[],[],[],[],[],[],[],[],["`",[242,2]],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]]]]]]},{72,13009,[<<"2ÑH">>,[[<<0,10>>,[<<"2Ú">>,[["\b",[134,163,195,71]],[],[],[],[],[],[],[],[],[],[],["`",[232,2]],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]]]]]]},{2,13009,[<<50,209,2>>,[[<<0,10>>,[<<"2Ú">>,[["\b",[134,163,195,71]],[],[],[],[],[],[],[],[],[],[],["`",[222,2]],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]]]]]]},{75,13009,[<<"2ÑK">>,[[<<0,10>>,[<<"2Ú">>,[["\b",[134,163,195,71]],[],[],[],[],[],[],[],[],[],[],["`",[212,2]],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]]]]]]},{62,13009,[<<"2Ñ>">>,[[<<0,10>>,[<<"2Ú">>,[["\b",[134,163,195,71]],[],[],[],[],[],[],[],[],[],[],["`",[202,2]],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]]]]]]},{37,13009,[<<"2Ñ%">>,[[<<0,10>>,[<<"2Ú">>,[["\b",[134,163,195,71]],[],[],[],[],[],[],[],[],[],[],["`",[192,2]],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]]]]]]},{104,13009,[<<"2Ñh">>,[[<<0,10>>,[<<"2Ú">>,[["\b",[134,163,195,71]],[],[],[],[],[],[],[],[],[],[],["`",[182,2]],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[]]]],[<<0,6>>,[<<58,153>>,[[],[[18],[0],[[[],[]]]],[[26],[0],[[[],[]]]],[]]]]]]},{23,13007,[<<50,207,23>>,[[<<0,13>>,[<<"2Ú">>,[["\b",[134,163,195,71]],[],[],[],[],[],[],[],[],[],[],["`",[172,2]],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[],[[152,4],[1]],[],[],[],[],[],[],[],[]]]],[<<0,6>>,[<<58,153>>,[[],[[18],[0],[[[],[]]]],[[26],[0],[[[],[]]]],[]]]]]]}]}}]
+    trap_exit: true
+    status: running
+    heap_size: 6772
+    stack_size: 27
+    reductions: 55784
+  neighbours:
+2015-02-10 18:45:44 =SUPERVISOR REPORT====
+     Supervisor: {local,player_sup}
+     Context:    shutdown_error
+     Reason:     {function_clause,[{lib_player,handle_cost_coin_rank,[{player,150000006,18,"49505227","p03_robot_1",<<"d8a82e2b">>,1,1,0,0,0,0,0,1,2000,0,400,0,0,0,0,200,0,0,0,0,20,0,100,0,0,0,1423561879,1423565144,1,0,1423561874,1,0,1,{31000101,0},[],[],[],[],[],0,0,0,0,0,[],0,0,0,0,0,1,[],0,0,0,0},0],[{file,"lib_player.erl"},{line,590}]},{mod_player,inner_save_to_db,1,[{file,"src/mod/mod_player.erl"},{line,617}]},{mod_player,terminate,2,[{file,"src/mod/mod_player.erl"},{line,677}]},{gen_server,terminate,6,[{file,"gen_server.erl"},{line,721}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+     Offender:   [{nb_children,1},{name,undefined},{mfargs,{mod_player,start_link,[]}},{restart_type,temporary},{shutdown,4294967295},{child_type,worker}]
+
+2015-02-10 18:45:44 =ERROR REPORT====
+** Generic server mod_selling_shop terminating 
+** Last message in was {'EXIT',<0.170.0>,shutdown}
+** When Server state == {state,[{ordinary_shop_msg,9000002,1,2,0},{ordinary_shop_msg,9000011,1,30,0},{ordinary_shop_msg,9000012,1,30,0}],[{main_shop_msg,9400011,1,1,0},{main_shop_msg,9400012,1,1,0},{main_shop_msg,9400006,1,1,0},{main_shop_msg,9400002,1,5,0},{main_shop_msg,9400001,1,2,0},{main_shop_msg,9400004,1,1,0},{main_shop_msg,9400003,1,1,0}]}
+** Reason for termination == 
+** {function_clause,[{lib_shop,save_main_shop,[{ordinary_shop_msg,9000002,1,2,0}],[{file,"src/lib/lib_shop.erl"},{line,66}]},{lists,map,2,[{file,"lists.erl"},{line,1237}]},{mod_selling_shop,terminate,2,[{file,"src/mod/mod_selling_shop.erl"},{line,226}]},{gen_server,terminate,6,[{file,"gen_server.erl"},{line,721}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+2015-02-10 18:45:44 =CRASH REPORT====
+  crasher:
+    initial call: mod_selling_shop:init/1
+    pid: <0.813.0>
+    registered_name: mod_selling_shop
+    exception exit: {{function_clause,[{lib_shop,save_main_shop,[{ordinary_shop_msg,9000002,1,2,0}],[{file,"src/lib/lib_shop.erl"},{line,66}]},{lists,map,2,[{file,"lists.erl"},{line,1237}]},{mod_selling_shop,terminate,2,[{file,"src/mod/mod_selling_shop.erl"},{line,226}]},{gen_server,terminate,6,[{file,"gen_server.erl"},{line,721}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]},[{gen_server,terminate,6,[{file,"gen_server.erl"},{line,724}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [server_sup,server]
+    messages: []
+    links: []
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 987
+    stack_size: 27
+    reductions: 15103
+  neighbours:
+2015-02-10 18:45:44 =SUPERVISOR REPORT====
+     Supervisor: {local,server_sup}
+     Context:    shutdown_error
+     Reason:     {function_clause,[{lib_shop,save_main_shop,[{ordinary_shop_msg,9000002,1,2,0}],[{file,"src/lib/lib_shop.erl"},{line,66}]},{lists,map,2,[{file,"lists.erl"},{line,1237}]},{mod_selling_shop,terminate,2,[{file,"src/mod/mod_selling_shop.erl"},{line,226}]},{gen_server,terminate,6,[{file,"gen_server.erl"},{line,721}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+     Offender:   [{pid,<0.813.0>},{name,mod_selling_shop},{mfargs,{mod_selling_shop,start_link,[]}},{restart_type,permanent},{shutdown,10000},{child_type,worker}]
+
+2015-02-10 18:45:44 =SUPERVISOR REPORT====
+     Supervisor: {local,tcp_acceptor_sup_tcp_room_handler}
+     Context:    shutdown_error
+     Reason:     normal
+     Offender:   [{nb_children,1},{name,tcp_acceptor},{mfargs,{tcp_acceptor,start_link,[tcp_room_handler]}},{restart_type,transient},{shutdown,brutal_kill},{child_type,worker}]
+
+2015-02-10 18:46:28 =CRASH REPORT====
+  crasher:
+    initial call: application_master:init/4
+    pid: <0.480.0>
+    registered_name: []
+    exception exit: {{{schema_integrity_check_failed,[{current_attrs_error,[id,version,accid,accname,nickname,career,lv,exp,vip,vip_exp,vip_due_time,gm_power,sn,coin,cost_coin,gold,cost_gold,seal,bind_gold,cost,vigor,buy_vigor_times,combat_point,honor,fpt,friends_limit,friends_cnt,bag_limit,bag_cnt,day_buy_num,online_flag,timestamp_login,timestamp_logout,total_login_days,timestamp_login_reward,timestamp_daily_reset,first_login,vip_flag,login_reward_flag,last_dungeon,dungeon_reward,skill_setting,normal_skill_ids,stunt_skill_ids,passive_skill_ids,mail_flag,help_battle_id,total_gold,last_fashion,fashion,have_dungeoned,friends_ext,beginner_step,status,unlock_role_timestamp,goods_update_timestamp,week_login_days,open_boss_info,battle_ability,boss_open_times,last_add_league_time,return_gold],[id,version,accid,accname,nickname,career,lv,exp,vip,vip_exp,vip_due_time,gm_power,sn,coin,cost_coin,gold,cost_gold,seal,bind_gold,cost,vigor,buy_vigor_times,combat_point,honor,fpt,friends_limit,friends_cnt,bag_limit,bag_cnt,day_buy_num,online_flag,timestamp_login,timestamp_logout,total_login_days,timestamp_login_reward,timestamp_daily_reset,first_login,vip_flag,login_reward_flag,last_dungeon,dungeon_reward,skill_setting,normal_skill_ids,stunt_skill_ids,passive_skill_ids,mail_flag,help_battle_id,total_gold,last_fashion,fashion,have_dungeoned,friends_ext,beginner_step,status,unlock_role_timestamp,goods_update_timestamp,week_login_days,month_login_days,month_login_last_time,open_boss_info,battle_ability,boss_open_times,last_add_league_time,return_gold]}]},{server_app,start,[normal,[]]}},[{application_master,init,4,[{file,"application_master.erl"},{line,133}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [<0.479.0>]
+    messages: [{'EXIT',<0.481.0>,normal}]
+    links: [<0.479.0>,<0.7.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 1598
+    stack_size: 27
+    reductions: 201
+  neighbours:
+2015-02-10 18:59:47 =ERROR REPORT====
+** Generic server mod_selling_shop terminating 
+** Last message in was {'EXIT',<0.638.0>,shutdown}
+** When Server state == {state,[{ordinary_shop_msg,9000011,1,30,0},{ordinary_shop_msg,9000002,1,2,0},{ordinary_shop_msg,9000012,1,30,0}],[{main_shop_msg,9400003,1,1,0},{main_shop_msg,9400001,1,2,0},{main_shop_msg,9400006,1,1,0},{main_shop_msg,9400011,1,1,0},{main_shop_msg,9400002,1,5,0},{main_shop_msg,9400004,1,1,0},{main_shop_msg,9400012,1,1,0}]}
+** Reason for termination == 
+** {function_clause,[{lib_shop,save_main_shop,[{ordinary_shop_msg,9000011,1,30,0}],[{file,"src/lib/lib_shop.erl"},{line,66}]},{lists,map,2,[{file,"lists.erl"},{line,1237}]},{mod_selling_shop,terminate,2,[{file,"src/mod/mod_selling_shop.erl"},{line,226}]},{gen_server,terminate,6,[{file,"gen_server.erl"},{line,721}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+2015-02-10 18:59:47 =CRASH REPORT====
+  crasher:
+    initial call: mod_selling_shop:init/1
+    pid: <0.715.0>
+    registered_name: mod_selling_shop
+    exception exit: {{function_clause,[{lib_shop,save_main_shop,[{ordinary_shop_msg,9000011,1,30,0}],[{file,"src/lib/lib_shop.erl"},{line,66}]},{lists,map,2,[{file,"lists.erl"},{line,1237}]},{mod_selling_shop,terminate,2,[{file,"src/mod/mod_selling_shop.erl"},{line,226}]},{gen_server,terminate,6,[{file,"gen_server.erl"},{line,721}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]},[{gen_server,terminate,6,[{file,"gen_server.erl"},{line,724}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [server_sup,server]
+    messages: []
+    links: []
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 1598
+    stack_size: 27
+    reductions: 942
+  neighbours:
+2015-02-10 18:59:47 =SUPERVISOR REPORT====
+     Supervisor: {local,server_sup}
+     Context:    shutdown_error
+     Reason:     {function_clause,[{lib_shop,save_main_shop,[{ordinary_shop_msg,9000011,1,30,0}],[{file,"src/lib/lib_shop.erl"},{line,66}]},{lists,map,2,[{file,"lists.erl"},{line,1237}]},{mod_selling_shop,terminate,2,[{file,"src/mod/mod_selling_shop.erl"},{line,226}]},{gen_server,terminate,6,[{file,"gen_server.erl"},{line,721}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+     Offender:   [{pid,<0.715.0>},{name,mod_selling_shop},{mfargs,{mod_selling_shop,start_link,[]}},{restart_type,permanent},{shutdown,10000},{child_type,worker}]
+
+2015-02-10 21:08:24 =ERROR REPORT====
+** Generic server mod_selling_shop terminating 
+** Last message in was {'EXIT',<0.641.0>,shutdown}
+** When Server state == {state,[{ordinary_shop_msg,9000011,1,30,0},{ordinary_shop_msg,9000002,1,2,0},{ordinary_shop_msg,9000012,1,30,0}],[{main_shop_msg,9400002,1,6,0},{main_shop_msg,9400003,1,1,0},{main_shop_msg,9400001,1,2,0},{main_shop_msg,9400006,1,1,0},{main_shop_msg,9400011,1,1,0},{main_shop_msg,9400004,1,1,0},{main_shop_msg,9400012,1,1,0}]}
+** Reason for termination == 
+** {function_clause,[{lib_shop,save_main_shop,[{ordinary_shop_msg,9000011,1,30,0}],[{file,"src/lib/lib_shop.erl"},{line,66}]},{lists,map,2,[{file,"lists.erl"},{line,1237}]},{mod_selling_shop,terminate,2,[{file,"src/mod/mod_selling_shop.erl"},{line,226}]},{gen_server,terminate,6,[{file,"gen_server.erl"},{line,721}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+2015-02-10 21:08:24 =CRASH REPORT====
+  crasher:
+    initial call: mod_selling_shop:init/1
+    pid: <0.718.0>
+    registered_name: mod_selling_shop
+    exception exit: {{function_clause,[{lib_shop,save_main_shop,[{ordinary_shop_msg,9000011,1,30,0}],[{file,"src/lib/lib_shop.erl"},{line,66}]},{lists,map,2,[{file,"lists.erl"},{line,1237}]},{mod_selling_shop,terminate,2,[{file,"src/mod/mod_selling_shop.erl"},{line,226}]},{gen_server,terminate,6,[{file,"gen_server.erl"},{line,721}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]},[{gen_server,terminate,6,[{file,"gen_server.erl"},{line,724}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [server_sup,server]
+    messages: []
+    links: []
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 1598
+    stack_size: 27
+    reductions: 8525
+  neighbours:
+2015-02-10 21:08:24 =SUPERVISOR REPORT====
+     Supervisor: {local,server_sup}
+     Context:    shutdown_error
+     Reason:     {function_clause,[{lib_shop,save_main_shop,[{ordinary_shop_msg,9000011,1,30,0}],[{file,"src/lib/lib_shop.erl"},{line,66}]},{lists,map,2,[{file,"lists.erl"},{line,1237}]},{mod_selling_shop,terminate,2,[{file,"src/mod/mod_selling_shop.erl"},{line,226}]},{gen_server,terminate,6,[{file,"gen_server.erl"},{line,721}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+     Offender:   [{pid,<0.718.0>},{name,mod_selling_shop},{mfargs,{mod_selling_shop,start_link,[]}},{restart_type,permanent},{shutdown,10000},{child_type,worker}]
+
+2015-02-10 21:08:40 =ERROR REPORT====
+** Generic server mod_selling_shop terminating 
+** Last message in was {'EXIT',<0.555.0>,shutdown}
+** When Server state == {state,[{ordinary_shop_msg,9000011,1,30,0},{ordinary_shop_msg,9000002,1,2,0},{ordinary_shop_msg,9000012,1,30,0}],[{main_shop_msg,9400003,1,1,0},{main_shop_msg,9400001,1,2,0},{main_shop_msg,9400006,1,1,0},{main_shop_msg,9400011,1,1,0},{main_shop_msg,9400002,1,6,0},{main_shop_msg,9400004,1,1,0},{main_shop_msg,9400012,1,1,0}]}
+** Reason for termination == 
+** {function_clause,[{lib_shop,save_main_shop,[{ordinary_shop_msg,9000011,1,30,0}],[{file,"src/lib/lib_shop.erl"},{line,66}]},{lists,map,2,[{file,"lists.erl"},{line,1237}]},{mod_selling_shop,terminate,2,[{file,"src/mod/mod_selling_shop.erl"},{line,226}]},{gen_server,terminate,6,[{file,"gen_server.erl"},{line,721}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+2015-02-10 21:08:40 =CRASH REPORT====
+  crasher:
+    initial call: mod_selling_shop:init/1
+    pid: <0.634.0>
+    registered_name: mod_selling_shop
+    exception exit: {{function_clause,[{lib_shop,save_main_shop,[{ordinary_shop_msg,9000011,1,30,0}],[{file,"src/lib/lib_shop.erl"},{line,66}]},{lists,map,2,[{file,"lists.erl"},{line,1237}]},{mod_selling_shop,terminate,2,[{file,"src/mod/mod_selling_shop.erl"},{line,226}]},{gen_server,terminate,6,[{file,"gen_server.erl"},{line,721}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]},[{gen_server,terminate,6,[{file,"gen_server.erl"},{line,724}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [server_sup,server]
+    messages: []
+    links: []
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 1598
+    stack_size: 27
+    reductions: 843
+  neighbours:
+2015-02-10 21:08:40 =SUPERVISOR REPORT====
+     Supervisor: {local,server_sup}
+     Context:    shutdown_error
+     Reason:     {function_clause,[{lib_shop,save_main_shop,[{ordinary_shop_msg,9000011,1,30,0}],[{file,"src/lib/lib_shop.erl"},{line,66}]},{lists,map,2,[{file,"lists.erl"},{line,1237}]},{mod_selling_shop,terminate,2,[{file,"src/mod/mod_selling_shop.erl"},{line,226}]},{gen_server,terminate,6,[{file,"gen_server.erl"},{line,721}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+     Offender:   [{pid,<0.634.0>},{name,mod_selling_shop},{mfargs,{mod_selling_shop,start_link,[]}},{restart_type,permanent},{shutdown,10000},{child_type,worker}]
+

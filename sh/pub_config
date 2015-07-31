@@ -1,0 +1,29 @@
+SERVER_ROOT=/home/liu/server_p02/
+GIT_EBIN_ROOT=/home/liu/ebin_p02/
+NODE_CONFIG=$SERVER_ROOT/sh/node_config_example
+DB_STRUCT=$SERVER_ROOT/sh/db_struct.sh
+
+##要对比的表
+SOURCE_TABLE=p02_log
+BACKUP_TABLE=p02_log_out    ##外网导入到这里
+BACKUP_TABLE2=p02_log_out2  ##149的导入到这里
+
+##moyou.me config
+MOYOU_ACCOUNT=root@118.192.89.115
+MOYOU_DB_HOST=10.9.31.17
+MOYOU_DB_USER=root
+MOYOU_DB_PASSWORD=a8aRax0XWGBXfnnv
+MOYOU_EBIN_DIR=/data/kof/ebin_p02/
+
+##sina
+SINA_ACCOUNT=root@sina
+SINA_DB_HOST=172.16.61.23
+SINA_DB_USER=root
+SINA_DB_PASSWORD=cUC7GPuCHsjS12O
+SINA_EBIN_DIR=/data/kof/ebin_p02/
+
+##149 CONFIG
+SOURCE_ACCOUNT=root@192.168.1.149
+SOURCE_DB_HOST=192.168.1.149
+SOURCE_DB_USER=mroot
+SOURCE_DB_PASSWORD=mroot

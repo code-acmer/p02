@@ -1,0 +1,13 @@
+-ifndef(DEFINE_MAIL_TEXT_HRL).
+-define(DEFINE_MAIL_TEXT_HRL, true).
+
+-define(LUCKY_COIN_REWARD_MAIL, 1). %% #{title => "投放幸运币奖励", content => "这是你投放幸运币返还的奖励，奖励在附件中收取"}
+-define(MUGEN_RANK_REWARD_MAIL, 2). %% #{title => "通天塔排行榜奖励", content => "恭喜你在通天塔中英勇奋战，获得第~w名，这是你的奖励"}
+-define(ASYNC_ARENA_RANK_REWARD_MAIL, 3). %% #{title => "竞技场排行榜奖励", content => "恭喜你在竞技场中英勇奋战，获得第~w名，这是你的奖励"}
+-define(GOLD_RANK_REWARD_MAIL, 4). %% #{title => "钻石排行榜奖励", content => "恭喜你在钻石排行榜获得第~w名的优异成绩，特发此奖"}
+-define(COIN_RANK_REWARD_MAIL, 5). %% #{title => "铜钱排行榜奖励", content => "恭喜你在铜钱排行榜获得第~w名的优异成绩，特发此奖"}
+-define(SUPER_BATTLE_RANK_REWARD_MAIL, 6). %% #{title => "极限格斗排行榜奖励", content => "恭喜你在极限格斗中英勇奋战，获得第~w名，这是你的奖励"}
+-define(BATTLE_ABILITY_RANK_REWARD_MAIL, 7). %% #{title => "战斗力排行榜奖励", content => "恭喜你在战斗力排行榜获得第~w名的优异成绩，特发此奖"}
+-define(CROSS_PVP_RANK_REWARD_MAIL, 8). %% #{title => "跨服竞技场排名奖励", content => "恭喜你在跨服竞技场获得第~w名的优异成绩，特发此奖"}
+-define(LOGIN_VIP_REWARD, 9). %% #{title => "VIP登陆奖励", content => "作为尊贵VIP特有的奖励"}
+-endif.

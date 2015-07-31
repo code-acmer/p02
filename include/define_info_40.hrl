@@ -1,0 +1,116 @@
+-ifndef(DEFINE_INFO_40_HRL).
+-define(DEFINE_INFO_40_HRL, true).
+
+-include("define_info_0.hrl").
+
+-define(INFO_LEAGUE_IN_LEAGUE, 40000).  %%你已经在工会里面
+-define(INFO_LEAGUE_ADD_LEAGUE_LIMIT, 40001).  %%今天不能再加入工会了哦
+-define(INFO_LEAGUE_ADD_ABILITY_LIMIT, 40002).  %%战斗力不足，不能加入工会
+-define(INFO_LEAGUE_ADD_NUM_LIMIT, 40003).  %%工会人数已满
+-define(INFO_LEAGUE_NOT_MEMBER, 40004).  %%非工会成员不能操作
+-define(INFO_LEAGUE_NOT_ENOUGH_POWER, 40005).  %%权限不足
+-define(INFO_LEAGUE_TAGET_INFO_CHANGE, 40006).  %%目标成员信息已经发生变化
+-define(INFO_LEAGUE_BOSS_CANNOT_LEAVE, 40007).  %%会长不能离开工会，请先转交权限
+-define(INFO_LEAGUE_LIMIT_NAME, 40008).  %%工会名字含有敏感词汇
+-define(INFO_LEAGUE_TAR_SELF, 40009). %%不能以自己为对象
+-define(INFO_LEAGUE_LONG_NAME, 40010). %%工会名字过长
+-define(INFO_LEAGUE_LONG_DER, 40011). %%宣言字数过多
+-define(INFO_LEAGUE_GET_LIST_ERROR, 40012). %%获取工会列表数据异常
+-define(INFO_LEAGUE_TITLE_FULL, 40013). %%该职位人数达到上限
+-define(INFO_LEAGUE_MEMBRE_NUM_NO_ENOUGH, 40014). %%公会人数不足
+-define(INFO_LEAGUE_GOLD_NO_ENOUGH, 40015). %%公会礼金不足
+-define(INFO_LEAGUE_NOT_BOSS, 40016). %%不是会长
+-define(INFO_LEAGUE_NOT_FIND_GIFTS, 40017). %%工会中没有礼包
+-define(INFO_LEAGUE_LEVEL_LIMIT, 40018). %% 公会等级限制
+-define(INFO_LEAGUE_CREATE_LEVEL_LIMIT, 40019). %% 创建军团失败,团长未达到20级以上
+
+-define(INFO_PAY_GIFTS_NOT_FOUND, 40100). %%没有该礼包
+-define(INFO_PAY_GIFTS_TODAY_SEND, 40101). %%该礼包今天已经派发过了
+-define(INFO_PAY_GIFTS_OVER_TIME, 40102). %%该礼包已经过期
+-define(INFO_LEAGUE_GIFTS_RECV, 40103). %%你已经领过这个土豪发的同批次礼包了
+-define(INFO_LEAGUE_GIFTS_NUM_LIMIT, 40104). %%该礼包已经被抢光了,下次早点来吧
+-define(INFO_PAY_GIFTS_SEND_OVER, 40105). %%该礼包已经发完
+-define(INFO_PAY_GIFTS_NOT_ENOUGH, 40106). %%今日派发礼包数量不足
+-define(INFO_PAY_GIFTS_APPOINT_SAME, 40107). %%该批次礼包已指定发过该玩家
+-define(INFO_PAY_GIFTS_RECV_FALSE, 40108). %%玩家已经领过该批次的红包
+-define(INFO_PAY_GIFTS_NOT_REQUEST, 40109). %%没有请求信息
+-define(INFO_PAY_GIFTS_SEND_NOT_SELF, 40200). %%玩家不可给自己发红包
+-define(INFO_BAG_GIFTS_OVER_TIME, 40201). %%该礼包已经过期,系统自动销毁
+
+-define(INFO_LEAGUE_ALREADY_APPLY, 40300). %%本月已报名参战, 等待下一轮匹配参战
+-define(INFO_LEAGUE_NOT_APPLY, 40301). %%暂时没有资格参战, 如未报名, 请先报名
+-define(INFO_LEAGUE_APPLY_ERROR, 40302). %%暂时没有资格参战, 如未报名, 请先报名
+-define(INFO_LEAGUE_NOT_ENEMY, 40303). %%本轮作战幸运轮空, 将获取幸运大奖
+-define(INFO_LEAGUE_GROUP_ERROR, 40304). %% 申请段位越界
+-define(INFO_CHALLENGE_ERROR_MEMBER, 40305). %% 挑战非敌方公会成员
+-define(INFO_NOT_CHALLENGE_RECORD, 40306). %% 没有挑战记录
+-define(INFO_ENEMY_LEAGUE_POINT_ERROR, 40307). %% 敌方工会据点有错
+-define(INFO_LEAGUE_POINT_ERROR, 40308). %% 我方工会据点有错
+-define(INFO_LEAGUE_APPOINT_ERROR, 40309). %% 会员已经被指派到其他据点
+-define(INFO_LEAGUE_NOT_POINT, 40310). %% 没有该据点
+-define(INFO_LEAGUE_POINT_ALREADY_OCC, 40311). %% 据点已经被其他玩家占领
+-define(INFO_FIGHT_OWN_POINT_ERROR, 40312). %% 不可攻击我方公会据点
+-define(INFO_LEAGUE_POINT_ATTACK, 40313). %% 据点正在被其他玩家攻击
+-define(INFO_LEAGUE_ABILITY_ENOUGH, 40314). %%挑战战斗力不足
+-define(INFO_CHALLENGE_POINT_NUM_LIMIT, 40315).%% 你已经挑战过据点, 无法再挑战
+-define(INFO_CHALLENGE_POINT_OVER_TIME, 40316).%% 挑战该据点超时
+-define(INFO_LEAGUE_APPLY_MEMBER_NUM_LIMIT, 40317). %% 工会战报名失败, 会员数量未满10人, 去拉人入会吧
+-define(INFO_LEAGUE_CHALLENGE_POINT_SAME, 40318). %% 同一据点不可重复挑战
+-define(INFO_MEMBRE_CHALLENGE_NUM_LIMIT, 40319). %% 挑战次数不足
+-define(INFO_LEAGUE_ENEMY_GRAP_NUM_LIMIT, 40320). %% 敌人接受挑战次数用完
+-define(INFO_CHALLENGE_ENEMY_OVER_TIME, 40321). %% 挑战敌方玩家超时
+-define(INFO_NOT_REPEAT_CHALLENGE_ENEMY, 40322). %% 不可重复挑战敌方玩家
+-define(INFO_LEAGUE_CHALLENGE_RECORD_ERROR, 40323). %% 公会单人挑战记录出错
+-define(INFO_LEAGUE_CHALLENGE_TIMES_LIMIT, 40324). %% 挑战次数限制
+-define(INFO_LEAGUE_FIGHT_NOT_RANK, 40325). %% 当前公会战没有排名
+-define(INFO_LEAGUE_FIGHT_NOT_START, 40326). %% 掠夺战准备时段, 军团可安排据点守卫
+-define(INFO_LEAGUE_FIGHT_START, 40327). %% 掠夺战已开始, 不能调整据点
+-define(INFO_LEAGUE_FIGHT_STARTING_NOT_LEAVE, 40328). %% 掠夺战已开始, 当前不能离开公会
+-define(INFO_LEAGUE_MEMBRE_HAVE_FIGHT_RECORD, 40329). %% 本轮掠夺战结束方可加入其他公会
+
+
+-define(INFO_LEAGUE_NOT_JOINT_FIGHT,          40400).  %% 您还未加入跨服军团战
+-define(INFO_LEAGUE_ENEMY_NOT_JOIN,           40401).  %% 您要挑战的军团未加入战役
+-define(INFO_LEAGUE_BAD_ENEMY,                40402).  %% 您不能挑战非对战军团
+-define(INFO_LEAGUE_DEFEND_POINT_NOT_FOUND,   40403).  %% 军团据点未找到
+-define(INFO_LEAGUE_DEFEND_POINT_STATUS_ERROR, 40404). %% 该据点状态不可挑战
+
+
+-define(INFO_G17_GUILD_BAD_PARAM,             40500).  %% 参数错误
+-define(INFO_G17_GUILD_TIMEOUT,               40501).  %% 查询时间过期
+-define(INFO_G17_GUILD_BAD_SIGN,              40502).  %% 签名错误
+-define(INFO_G17_GUILD_NOT_GUILD_MEMBER,      40503).  %% 非公会成员
+-define(INFO_G17_GUILD_LEADER_CANT_QUIT,      40504).  %% 会长不能退出公会
+-define(INFO_G17_GUILD_ERROR_QIUT,            40505).  %% 退出失败
+-define(INFO_G17_GUILD_SYSTEM_ERROR,          40506).  %% 公会平台系统错误
+-define(INFO_G17_GUILD_BAND_TIME,             40507).  %% 公会在封禁期间内无法接收新成员
+-define(INFO_G17_GUILD_JION_FAILED,           40508).  %% 加入失败
+-define(INFO_G17_GUILD_GUILD_NOTFOUND,        40509).  %% 公会不存在
+-define(INFO_G17_GUILD_ALEADY_JOIN,           40510).  %% 已经加入其它公会，不能再申请或创建公会
+-define(INFO_G17_GUILD_ALEADY_APPLY,          40511).  %% 已经提交过申请，请不能重复提交
+-define(INFO_G17_GUILD_APPLY_FAILED,          40512).  %% 申请加入失败
+-define(INFO_G17_GUILD_USER_NOTFOUND,         40513).  %% 用户不存在
+-define(INFO_G17_GUILD_NAME_EMPTY,            40514).  %% 公会名为空
+-define(INFO_G17_GUILD_NAME_LEN_ERROR,        40515).  %% 公会名长度不对
+-define(INFO_G17_GUILD_NAME_SPEICAL,          40516).  %% 公会名中含有非法字
+-define(INFO_G17_GUILD_NAME_USED,             40517).  %% 公会名已经被使用
+-define(INFO_G17_GUILD_CREATE_FAILED,         40518).  %% 创建公会失败
+-define(INFO_G17_GUILD_QUIT_FAILED,           40519).  %% 退出公会失败
+-define(INFO_G17_GUILD_LEADER_NOT_JOIN,       40520).  %% 帮主未加入公会
+-define(INFO_G17_GUILD_JOIN_NOT_SAME,         40521).  %% 不能加入与军团长不一致的公会
+
+-define(INFO_MASTER_TEACH_NUM_LIMIT,          40600).  %% 师傅收徒次数限制
+-define(INFO_MASTER_NOT_FOUR_STAR_CARD,       40601).  %% 非四星级以上的技能卡
+-define(INFO_MASTER_CARD_ALREADY_UES,         40602).  %% 卡已经被用作教学, 不可再使用
+-define(INFO_MASTER_LEARN_NUM_LIMIT,          40603).  %% 徒弟拜师次数限制
+-define(INFO_MASTER_SKILL_CODE_ERROR,         40604).  %% 该技能码不存在
+-define(INFO_MASTER_NOT_AT_SAME_GUILD,        40605).  %% 师傅和徒弟不在同一公会
+-define(INFO_MASTER_NOT_LEARN_SELF,           40606).  %% 不可学习自己的技能码
+-define(INFO_MASTER_ALREADY_LEARN_CARD,       40607).  %% 已经在学习这张卡, 不可重复
+-define(INFO_MASTER_ALREADY_HAS_APPRENTICE,   40608).  %% 此卡已有徒弟
+-define(INFO_MASTER_VIP_OVER_ERROR,           40609).  %% 不可学习低级vip玩家
+-define(INFO_MASTER_ALREADY_REQUEST_CARD,     40610).  %% 不可重复向师傅请求学习这张卡
+-define(INFO_MASTER_RECV_REWARD_ERROR,        40611).  %% 不符合领奖条件
+-define(INFO_MASTER_NOT_SAME_TIME_LEARN,      40612).  %% 徒弟不可在同一时间学习多张技能卡
+
+-endif.

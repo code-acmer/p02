@@ -1,0 +1,15 @@
+%% -*- erlang -*-
+os:putenv("GPROC_DIST", "true"),
+case os:getenv("NO_DEBUG_INFO") of
+    "true" ->
+        ErlOpts = case lists:keyfind(erl_opts, 1, CONFIG) of
+                      false ->
+                          [];
+                      {_, ErlOpts0} ->
+                          ErlOpts0
+                  end,
+        lists:keystore(erl_opts, 1, CONFIG,
+                       {erl_opts, [no_debug_info | lists:delete(debug_info, ErlOpts)]});
+    F when F=="false"; F==false ->
+        CONFIG
+end.

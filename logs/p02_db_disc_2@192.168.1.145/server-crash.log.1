@@ -1,0 +1,810 @@
+2015-07-04 19:07:08 =CRASH REPORT====
+  crasher:
+    initial call: supervisor:ranch_acceptors_sup/1
+    pid: <0.989.0>
+    registered_name: []
+    exception exit: {{{badmatch,{error,eaddrinuse}},[{ranch_acceptors_sup,init,1,[{file,"src/ranch_acceptors_sup.erl"},{line,30}]},{supervisor,init,1,[{file,"supervisor.erl"},{line,243}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,306}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]},[{gen_server,init_it,6,[{file,"gen_server.erl"},{line,330}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [<0.982.0>,ranch_sup,<0.903.0>]
+    messages: []
+    links: [<0.982.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 610
+    stack_size: 27
+    reductions: 649
+  neighbours:
+2015-07-04 19:07:08 =SUPERVISOR REPORT====
+     Supervisor: {<0.982.0>,ranch_listener_sup}
+     Context:    start_error
+     Reason:     {{badmatch,{error,eaddrinuse}},[{ranch_acceptors_sup,init,1,[{file,"src/ranch_acceptors_sup.erl"},{line,30}]},{supervisor,init,1,[{file,"supervisor.erl"},{line,243}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,306}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+     Offender:   [{pid,undefined},{name,ranch_acceptors_sup},{mfargs,{ranch_acceptors_sup,start_link,[http_g17,10,ranch_tcp,[{port,18880},{max_connections,3000}]]}},{restart_type,permanent},{shutdown,infinity},{child_type,supervisor}]
+
+2015-07-04 19:07:10 =CRASH REPORT====
+  crasher:
+    initial call: tcp_listener:init/1
+    pid: <0.3462.0>
+    registered_name: []
+    exception exit: {eaddrinuse,[{gen_server,init_it,6,[{file,"gen_server.erl"},{line,322}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [tcp_client_handler_listener_sup,server]
+    messages: []
+    links: [<0.3461.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 610
+    stack_size: 27
+    reductions: 675
+  neighbours:
+2015-07-04 19:07:10 =SUPERVISOR REPORT====
+     Supervisor: {local,tcp_client_handler_listener_sup}
+     Context:    start_error
+     Reason:     eaddrinuse
+     Offender:   [{pid,undefined},{name,listener_sup},{mfargs,{tcp_listener,start_link,[8801,tcp_client_handler]}},{restart_type,permanent},{shutdown,2000},{child_type,worker}]
+
+2015-07-04 19:07:10 =CRASH REPORT====
+  crasher:
+    initial call: tcp_listener:init/1
+    pid: <0.3464.0>
+    registered_name: []
+    exception exit: {eaddrinuse,[{gen_server,init_it,6,[{file,"gen_server.erl"},{line,322}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [tcp_room_handler_listener_sup,server]
+    messages: []
+    links: [<0.3463.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 610
+    stack_size: 27
+    reductions: 683
+  neighbours:
+2015-07-04 19:07:10 =SUPERVISOR REPORT====
+     Supervisor: {local,tcp_room_handler_listener_sup}
+     Context:    start_error
+     Reason:     eaddrinuse
+     Offender:   [{pid,undefined},{name,listener_sup},{mfargs,{tcp_listener,start_link,[9801,tcp_room_handler]}},{restart_type,permanent},{shutdown,2000},{child_type,worker}]
+
+2015-07-04 19:07:10 =CRASH REPORT====
+  crasher:
+    initial call: supervisor:ranch_acceptors_sup/1
+    pid: <0.3467.0>
+    registered_name: []
+    exception exit: {{{badmatch,{error,eaddrinuse}},[{ranch_acceptors_sup,init,1,[{file,"src/ranch_acceptors_sup.erl"},{line,30}]},{supervisor,init,1,[{file,"supervisor.erl"},{line,243}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,306}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]},[{gen_server,init_it,6,[{file,"gen_server.erl"},{line,330}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [<0.3465.0>,ranch_sup,<0.903.0>]
+    messages: []
+    links: [<0.3465.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 610
+    stack_size: 27
+    reductions: 649
+  neighbours:
+2015-07-04 19:07:10 =SUPERVISOR REPORT====
+     Supervisor: {<0.3465.0>,ranch_listener_sup}
+     Context:    start_error
+     Reason:     {{badmatch,{error,eaddrinuse}},[{ranch_acceptors_sup,init,1,[{file,"src/ranch_acceptors_sup.erl"},{line,30}]},{supervisor,init,1,[{file,"supervisor.erl"},{line,243}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,306}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+     Offender:   [{pid,undefined},{name,ranch_acceptors_sup},{mfargs,{ranch_acceptors_sup,start_link,[http,10,ranch_tcp,[{port,7801},{max_connections,3000}]]}},{restart_type,permanent},{shutdown,infinity},{child_type,supervisor}]
+
+2015-07-04 19:07:10 =CRASH REPORT====
+  crasher:
+    initial call: mochiweb_socket_server:init/1
+    pid: <0.3469.0>
+    registered_name: []
+    exception exit: {eaddrinuse,[{gen_server,init_it,6,[{file,"gen_server.erl"},{line,322}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [h_httpd_sup,server]
+    messages: []
+    links: [<0.3468.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 610
+    stack_size: 27
+    reductions: 554
+  neighbours:
+2015-07-04 19:07:10 =SUPERVISOR REPORT====
+     Supervisor: {local,h_httpd_sup}
+     Context:    start_error
+     Reason:     eaddrinuse
+     Offender:   [{pid,undefined},{name,httpd_handler},{mfargs,{httpd_handler,start,[[{ip,{0,0,0,0}},{port,18801}]]}},{restart_type,permanent},{shutdown,5000},{child_type,worker}]
+
+2015-07-04 19:07:35 =SUPERVISOR REPORT====
+     Supervisor: {<0.916.0>,ranch_listener_sup}
+     Context:    start_error
+     Reason:     {{badmatch,{error,eaddrinuse}},[{ranch_acceptors_sup,init,1,[{file,"src/ranch_acceptors_sup.erl"},{line,30}]},{supervisor,init,1,[{file,"supervisor.erl"},{line,243}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,306}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+     Offender:   [{pid,undefined},{name,ranch_acceptors_sup},{mfargs,{ranch_acceptors_sup,start_link,[http_g17,10,ranch_tcp,[{port,18880},{max_connections,3000}]]}},{restart_type,permanent},{shutdown,infinity},{child_type,supervisor}]
+
+2015-07-04 19:07:35 =CRASH REPORT====
+  crasher:
+    initial call: supervisor:ranch_acceptors_sup/1
+    pid: <0.924.0>
+    registered_name: []
+    exception exit: {{{badmatch,{error,eaddrinuse}},[{ranch_acceptors_sup,init,1,[{file,"src/ranch_acceptors_sup.erl"},{line,30}]},{supervisor,init,1,[{file,"supervisor.erl"},{line,243}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,306}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]},[{gen_server,init_it,6,[{file,"gen_server.erl"},{line,330}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [<0.916.0>,ranch_sup,<0.844.0>]
+    messages: []
+    links: [<0.916.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 610
+    stack_size: 27
+    reductions: 649
+  neighbours:
+2015-07-04 19:07:37 =CRASH REPORT====
+  crasher:
+    initial call: tcp_listener:init/1
+    pid: <0.3462.0>
+    registered_name: []
+    exception exit: {eaddrinuse,[{gen_server,init_it,6,[{file,"gen_server.erl"},{line,322}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [tcp_client_handler_listener_sup,server]
+    messages: []
+    links: [<0.3461.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 610
+    stack_size: 27
+    reductions: 674
+  neighbours:
+2015-07-04 19:07:37 =SUPERVISOR REPORT====
+     Supervisor: {local,tcp_client_handler_listener_sup}
+     Context:    start_error
+     Reason:     eaddrinuse
+     Offender:   [{pid,undefined},{name,listener_sup},{mfargs,{tcp_listener,start_link,[8801,tcp_client_handler]}},{restart_type,permanent},{shutdown,2000},{child_type,worker}]
+
+2015-07-04 19:07:37 =CRASH REPORT====
+  crasher:
+    initial call: tcp_listener:init/1
+    pid: <0.3464.0>
+    registered_name: []
+    exception exit: {eaddrinuse,[{gen_server,init_it,6,[{file,"gen_server.erl"},{line,322}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [tcp_room_handler_listener_sup,server]
+    messages: []
+    links: [<0.3463.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 610
+    stack_size: 27
+    reductions: 682
+  neighbours:
+2015-07-04 19:07:37 =SUPERVISOR REPORT====
+     Supervisor: {local,tcp_room_handler_listener_sup}
+     Context:    start_error
+     Reason:     eaddrinuse
+     Offender:   [{pid,undefined},{name,listener_sup},{mfargs,{tcp_listener,start_link,[9801,tcp_room_handler]}},{restart_type,permanent},{shutdown,2000},{child_type,worker}]
+
+2015-07-04 19:07:37 =CRASH REPORT====
+  crasher:
+    initial call: supervisor:ranch_acceptors_sup/1
+    pid: <0.3467.0>
+    registered_name: []
+    exception exit: {{{badmatch,{error,eaddrinuse}},[{ranch_acceptors_sup,init,1,[{file,"src/ranch_acceptors_sup.erl"},{line,30}]},{supervisor,init,1,[{file,"supervisor.erl"},{line,243}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,306}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]},[{gen_server,init_it,6,[{file,"gen_server.erl"},{line,330}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [<0.3465.0>,ranch_sup,<0.844.0>]
+    messages: []
+    links: [<0.3465.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 610
+    stack_size: 27
+    reductions: 649
+  neighbours:
+2015-07-04 19:07:37 =SUPERVISOR REPORT====
+     Supervisor: {<0.3465.0>,ranch_listener_sup}
+     Context:    start_error
+     Reason:     {{badmatch,{error,eaddrinuse}},[{ranch_acceptors_sup,init,1,[{file,"src/ranch_acceptors_sup.erl"},{line,30}]},{supervisor,init,1,[{file,"supervisor.erl"},{line,243}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,306}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+     Offender:   [{pid,undefined},{name,ranch_acceptors_sup},{mfargs,{ranch_acceptors_sup,start_link,[http,10,ranch_tcp,[{port,7801},{max_connections,3000}]]}},{restart_type,permanent},{shutdown,infinity},{child_type,supervisor}]
+
+2015-07-04 19:07:37 =CRASH REPORT====
+  crasher:
+    initial call: mochiweb_socket_server:init/1
+    pid: <0.3469.0>
+    registered_name: []
+    exception exit: {eaddrinuse,[{gen_server,init_it,6,[{file,"gen_server.erl"},{line,322}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [h_httpd_sup,server]
+    messages: []
+    links: [<0.3468.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 610
+    stack_size: 27
+    reductions: 554
+  neighbours:
+2015-07-04 19:07:37 =SUPERVISOR REPORT====
+     Supervisor: {local,h_httpd_sup}
+     Context:    start_error
+     Reason:     eaddrinuse
+     Offender:   [{pid,undefined},{name,httpd_handler},{mfargs,{httpd_handler,start,[[{ip,{0,0,0,0}},{port,18801}]]}},{restart_type,permanent},{shutdown,5000},{child_type,worker}]
+
+2015-07-04 19:21:49 =CRASH REPORT====
+  crasher:
+    initial call: supervisor:ranch_acceptors_sup/1
+    pid: <0.1073.0>
+    registered_name: []
+    exception exit: {{{badmatch,{error,eaddrinuse}},[{ranch_acceptors_sup,init,1,[{file,"src/ranch_acceptors_sup.erl"},{line,30}]},{supervisor,init,1,[{file,"supervisor.erl"},{line,243}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,306}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]},[{gen_server,init_it,6,[{file,"gen_server.erl"},{line,330}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [<0.1062.0>,ranch_sup,<0.977.0>]
+    messages: []
+    links: [<0.1062.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 610
+    stack_size: 27
+    reductions: 649
+  neighbours:
+2015-07-04 19:21:49 =SUPERVISOR REPORT====
+     Supervisor: {<0.1062.0>,ranch_listener_sup}
+     Context:    start_error
+     Reason:     {{badmatch,{error,eaddrinuse}},[{ranch_acceptors_sup,init,1,[{file,"src/ranch_acceptors_sup.erl"},{line,30}]},{supervisor,init,1,[{file,"supervisor.erl"},{line,243}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,306}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+     Offender:   [{pid,undefined},{name,ranch_acceptors_sup},{mfargs,{ranch_acceptors_sup,start_link,[http_g17,10,ranch_tcp,[{port,18880},{max_connections,3000}]]}},{restart_type,permanent},{shutdown,infinity},{child_type,supervisor}]
+
+2015-07-04 19:21:50 =CRASH REPORT====
+  crasher:
+    initial call: tcp_listener:init/1
+    pid: <0.3458.0>
+    registered_name: []
+    exception exit: {eaddrinuse,[{gen_server,init_it,6,[{file,"gen_server.erl"},{line,322}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [tcp_client_handler_listener_sup,server]
+    messages: []
+    links: [<0.3457.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 610
+    stack_size: 27
+    reductions: 675
+  neighbours:
+2015-07-04 19:21:50 =SUPERVISOR REPORT====
+     Supervisor: {local,tcp_client_handler_listener_sup}
+     Context:    start_error
+     Reason:     eaddrinuse
+     Offender:   [{pid,undefined},{name,listener_sup},{mfargs,{tcp_listener,start_link,[8801,tcp_client_handler]}},{restart_type,permanent},{shutdown,2000},{child_type,worker}]
+
+2015-07-04 19:21:50 =CRASH REPORT====
+  crasher:
+    initial call: tcp_listener:init/1
+    pid: <0.3460.0>
+    registered_name: []
+    exception exit: {eaddrinuse,[{gen_server,init_it,6,[{file,"gen_server.erl"},{line,322}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [tcp_room_handler_listener_sup,server]
+    messages: []
+    links: [<0.3459.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 610
+    stack_size: 27
+    reductions: 683
+  neighbours:
+2015-07-04 19:21:50 =SUPERVISOR REPORT====
+     Supervisor: {local,tcp_room_handler_listener_sup}
+     Context:    start_error
+     Reason:     eaddrinuse
+     Offender:   [{pid,undefined},{name,listener_sup},{mfargs,{tcp_listener,start_link,[9801,tcp_room_handler]}},{restart_type,permanent},{shutdown,2000},{child_type,worker}]
+
+2015-07-04 19:21:50 =CRASH REPORT====
+  crasher:
+    initial call: supervisor:ranch_acceptors_sup/1
+    pid: <0.3463.0>
+    registered_name: []
+    exception exit: {{{badmatch,{error,eaddrinuse}},[{ranch_acceptors_sup,init,1,[{file,"src/ranch_acceptors_sup.erl"},{line,30}]},{supervisor,init,1,[{file,"supervisor.erl"},{line,243}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,306}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]},[{gen_server,init_it,6,[{file,"gen_server.erl"},{line,330}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [<0.3461.0>,ranch_sup,<0.977.0>]
+    messages: []
+    links: [<0.3461.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 610
+    stack_size: 27
+    reductions: 649
+  neighbours:
+2015-07-04 19:21:50 =SUPERVISOR REPORT====
+     Supervisor: {<0.3461.0>,ranch_listener_sup}
+     Context:    start_error
+     Reason:     {{badmatch,{error,eaddrinuse}},[{ranch_acceptors_sup,init,1,[{file,"src/ranch_acceptors_sup.erl"},{line,30}]},{supervisor,init,1,[{file,"supervisor.erl"},{line,243}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,306}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+     Offender:   [{pid,undefined},{name,ranch_acceptors_sup},{mfargs,{ranch_acceptors_sup,start_link,[http,10,ranch_tcp,[{port,7801},{max_connections,3000}]]}},{restart_type,permanent},{shutdown,infinity},{child_type,supervisor}]
+
+2015-07-04 19:21:50 =CRASH REPORT====
+  crasher:
+    initial call: mochiweb_socket_server:init/1
+    pid: <0.3465.0>
+    registered_name: []
+    exception exit: {eaddrinuse,[{gen_server,init_it,6,[{file,"gen_server.erl"},{line,322}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [h_httpd_sup,server]
+    messages: []
+    links: [<0.3464.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 610
+    stack_size: 27
+    reductions: 554
+  neighbours:
+2015-07-04 19:21:50 =SUPERVISOR REPORT====
+     Supervisor: {local,h_httpd_sup}
+     Context:    start_error
+     Reason:     eaddrinuse
+     Offender:   [{pid,undefined},{name,httpd_handler},{mfargs,{httpd_handler,start,[[{ip,{0,0,0,0}},{port,18801}]]}},{restart_type,permanent},{shutdown,5000},{child_type,worker}]
+
+2015-07-04 19:28:42 =SUPERVISOR REPORT====
+     Supervisor: {<0.1045.0>,ranch_listener_sup}
+     Context:    start_error
+     Reason:     {{badmatch,{error,eaddrinuse}},[{ranch_acceptors_sup,init,1,[{file,"src/ranch_acceptors_sup.erl"},{line,30}]},{supervisor,init,1,[{file,"supervisor.erl"},{line,243}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,306}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+     Offender:   [{pid,undefined},{name,ranch_acceptors_sup},{mfargs,{ranch_acceptors_sup,start_link,[http_g17,10,ranch_tcp,[{port,18880},{max_connections,3000}]]}},{restart_type,permanent},{shutdown,infinity},{child_type,supervisor}]
+
+2015-07-04 19:28:42 =CRASH REPORT====
+  crasher:
+    initial call: supervisor:ranch_acceptors_sup/1
+    pid: <0.1055.0>
+    registered_name: []
+    exception exit: {{{badmatch,{error,eaddrinuse}},[{ranch_acceptors_sup,init,1,[{file,"src/ranch_acceptors_sup.erl"},{line,30}]},{supervisor,init,1,[{file,"supervisor.erl"},{line,243}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,306}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]},[{gen_server,init_it,6,[{file,"gen_server.erl"},{line,330}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [<0.1045.0>,ranch_sup,<0.952.0>]
+    messages: []
+    links: [<0.1045.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 610
+    stack_size: 27
+    reductions: 649
+  neighbours:
+2015-07-04 19:28:43 =CRASH REPORT====
+  crasher:
+    initial call: tcp_listener:init/1
+    pid: <0.3460.0>
+    registered_name: []
+    exception exit: {eaddrinuse,[{gen_server,init_it,6,[{file,"gen_server.erl"},{line,322}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [tcp_client_handler_listener_sup,server]
+    messages: []
+    links: [<0.3459.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 610
+    stack_size: 27
+    reductions: 675
+  neighbours:
+2015-07-04 19:28:43 =SUPERVISOR REPORT====
+     Supervisor: {local,tcp_client_handler_listener_sup}
+     Context:    start_error
+     Reason:     eaddrinuse
+     Offender:   [{pid,undefined},{name,listener_sup},{mfargs,{tcp_listener,start_link,[8800,tcp_client_handler]}},{restart_type,permanent},{shutdown,2000},{child_type,worker}]
+
+2015-07-04 19:29:14 =CRASH REPORT====
+  crasher:
+    initial call: supervisor:ranch_acceptors_sup/1
+    pid: <0.947.0>
+    registered_name: []
+    exception exit: {{{badmatch,{error,eaddrinuse}},[{ranch_acceptors_sup,init,1,[{file,"src/ranch_acceptors_sup.erl"},{line,30}]},{supervisor,init,1,[{file,"supervisor.erl"},{line,243}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,306}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]},[{gen_server,init_it,6,[{file,"gen_server.erl"},{line,330}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [<0.938.0>,ranch_sup,<0.861.0>]
+    messages: []
+    links: [<0.938.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 610
+    stack_size: 27
+    reductions: 649
+  neighbours:
+2015-07-04 19:29:14 =SUPERVISOR REPORT====
+     Supervisor: {<0.938.0>,ranch_listener_sup}
+     Context:    start_error
+     Reason:     {{badmatch,{error,eaddrinuse}},[{ranch_acceptors_sup,init,1,[{file,"src/ranch_acceptors_sup.erl"},{line,30}]},{supervisor,init,1,[{file,"supervisor.erl"},{line,243}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,306}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+     Offender:   [{pid,undefined},{name,ranch_acceptors_sup},{mfargs,{ranch_acceptors_sup,start_link,[http_g17,10,ranch_tcp,[{port,18880},{max_connections,3000}]]}},{restart_type,permanent},{shutdown,infinity},{child_type,supervisor}]
+
+2015-07-04 19:29:15 =CRASH REPORT====
+  crasher:
+    initial call: tcp_listener:init/1
+    pid: <0.3446.0>
+    registered_name: []
+    exception exit: {eaddrinuse,[{gen_server,init_it,6,[{file,"gen_server.erl"},{line,322}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [tcp_client_handler_listener_sup,server]
+    messages: []
+    links: [<0.3445.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 610
+    stack_size: 27
+    reductions: 675
+  neighbours:
+2015-07-04 19:29:15 =SUPERVISOR REPORT====
+     Supervisor: {local,tcp_client_handler_listener_sup}
+     Context:    start_error
+     Reason:     eaddrinuse
+     Offender:   [{pid,undefined},{name,listener_sup},{mfargs,{tcp_listener,start_link,[8800,tcp_client_handler]}},{restart_type,permanent},{shutdown,2000},{child_type,worker}]
+
+2015-07-04 19:31:05 =CRASH REPORT====
+  crasher:
+    initial call: tcp_listener:init/1
+    pid: <0.3456.0>
+    registered_name: []
+    exception exit: {eaddrinuse,[{gen_server,init_it,6,[{file,"gen_server.erl"},{line,322}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [tcp_client_handler_listener_sup,server]
+    messages: []
+    links: [<0.3455.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 610
+    stack_size: 27
+    reductions: 674
+  neighbours:
+2015-07-04 19:31:05 =SUPERVISOR REPORT====
+     Supervisor: {local,tcp_client_handler_listener_sup}
+     Context:    start_error
+     Reason:     eaddrinuse
+     Offender:   [{pid,undefined},{name,listener_sup},{mfargs,{tcp_listener,start_link,[8800,tcp_client_handler]}},{restart_type,permanent},{shutdown,2000},{child_type,worker}]
+
+2015-07-04 19:31:51 =CRASH REPORT====
+  crasher:
+    initial call: tcp_listener:init/1
+    pid: <0.3456.0>
+    registered_name: []
+    exception exit: {eaddrinuse,[{gen_server,init_it,6,[{file,"gen_server.erl"},{line,322}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [tcp_client_handler_listener_sup,server]
+    messages: []
+    links: [<0.3455.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 610
+    stack_size: 27
+    reductions: 675
+  neighbours:
+2015-07-04 19:31:51 =SUPERVISOR REPORT====
+     Supervisor: {local,tcp_client_handler_listener_sup}
+     Context:    start_error
+     Reason:     eaddrinuse
+     Offender:   [{pid,undefined},{name,listener_sup},{mfargs,{tcp_listener,start_link,[8801,tcp_client_handler]}},{restart_type,permanent},{shutdown,2000},{child_type,worker}]
+
+2015-07-04 19:31:51 =CRASH REPORT====
+  crasher:
+    initial call: tcp_listener:init/1
+    pid: <0.3458.0>
+    registered_name: []
+    exception exit: {eaddrinuse,[{gen_server,init_it,6,[{file,"gen_server.erl"},{line,322}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [tcp_room_handler_listener_sup,server]
+    messages: []
+    links: [<0.3457.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 610
+    stack_size: 27
+    reductions: 683
+  neighbours:
+2015-07-04 19:31:51 =SUPERVISOR REPORT====
+     Supervisor: {local,tcp_room_handler_listener_sup}
+     Context:    start_error
+     Reason:     eaddrinuse
+     Offender:   [{pid,undefined},{name,listener_sup},{mfargs,{tcp_listener,start_link,[9801,tcp_room_handler]}},{restart_type,permanent},{shutdown,2000},{child_type,worker}]
+
+2015-07-04 19:31:51 =CRASH REPORT====
+  crasher:
+    initial call: supervisor:ranch_acceptors_sup/1
+    pid: <0.3461.0>
+    registered_name: []
+    exception exit: {{{badmatch,{error,eaddrinuse}},[{ranch_acceptors_sup,init,1,[{file,"src/ranch_acceptors_sup.erl"},{line,30}]},{supervisor,init,1,[{file,"supervisor.erl"},{line,243}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,306}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]},[{gen_server,init_it,6,[{file,"gen_server.erl"},{line,330}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [<0.3459.0>,ranch_sup,<0.896.0>]
+    messages: []
+    links: [<0.3459.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 610
+    stack_size: 27
+    reductions: 649
+  neighbours:
+2015-07-04 19:31:51 =SUPERVISOR REPORT====
+     Supervisor: {<0.3459.0>,ranch_listener_sup}
+     Context:    start_error
+     Reason:     {{badmatch,{error,eaddrinuse}},[{ranch_acceptors_sup,init,1,[{file,"src/ranch_acceptors_sup.erl"},{line,30}]},{supervisor,init,1,[{file,"supervisor.erl"},{line,243}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,306}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+     Offender:   [{pid,undefined},{name,ranch_acceptors_sup},{mfargs,{ranch_acceptors_sup,start_link,[http,10,ranch_tcp,[{port,7801},{max_connections,3000}]]}},{restart_type,permanent},{shutdown,infinity},{child_type,supervisor}]
+
+2015-07-04 19:31:51 =CRASH REPORT====
+  crasher:
+    initial call: mochiweb_socket_server:init/1
+    pid: <0.3463.0>
+    registered_name: []
+    exception exit: {eaddrinuse,[{gen_server,init_it,6,[{file,"gen_server.erl"},{line,322}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [h_httpd_sup,server]
+    messages: []
+    links: [<0.3462.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 610
+    stack_size: 27
+    reductions: 554
+  neighbours:
+2015-07-04 19:31:51 =SUPERVISOR REPORT====
+     Supervisor: {local,h_httpd_sup}
+     Context:    start_error
+     Reason:     eaddrinuse
+     Offender:   [{pid,undefined},{name,httpd_handler},{mfargs,{httpd_handler,start,[[{ip,{0,0,0,0}},{port,18801}]]}},{restart_type,permanent},{shutdown,5000},{child_type,worker}]
+
+2015-07-04 21:09:03 =CRASH REPORT====
+  crasher:
+    initial call: supervisor:ranch_acceptors_sup/1
+    pid: <0.796.0>
+    registered_name: []
+    exception exit: {{{badmatch,{error,eaddrinuse}},[{ranch_acceptors_sup,init,1,[{file,"src/ranch_acceptors_sup.erl"},{line,30}]},{supervisor,init,1,[{file,"supervisor.erl"},{line,243}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,306}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]},[{gen_server,init_it,6,[{file,"gen_server.erl"},{line,330}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [<0.788.0>,ranch_sup,<0.705.0>]
+    messages: []
+    links: [<0.788.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 610
+    stack_size: 27
+    reductions: 649
+  neighbours:
+2015-07-04 21:09:03 =SUPERVISOR REPORT====
+     Supervisor: {<0.788.0>,ranch_listener_sup}
+     Context:    start_error
+     Reason:     {{badmatch,{error,eaddrinuse}},[{ranch_acceptors_sup,init,1,[{file,"src/ranch_acceptors_sup.erl"},{line,30}]},{supervisor,init,1,[{file,"supervisor.erl"},{line,243}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,306}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+     Offender:   [{pid,undefined},{name,ranch_acceptors_sup},{mfargs,{ranch_acceptors_sup,start_link,[http_g17,10,ranch_tcp,[{port,18880},{max_connections,3000}]]}},{restart_type,permanent},{shutdown,infinity},{child_type,supervisor}]
+
+2015-07-04 21:09:07 =CRASH REPORT====
+  crasher:
+    initial call: tcp_listener:init/1
+    pid: <0.3446.0>
+    registered_name: []
+    exception exit: {eaddrinuse,[{gen_server,init_it,6,[{file,"gen_server.erl"},{line,322}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [tcp_client_handler_listener_sup,server]
+    messages: []
+    links: [<0.3445.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 610
+    stack_size: 27
+    reductions: 673
+  neighbours:
+2015-07-04 21:09:07 =SUPERVISOR REPORT====
+     Supervisor: {local,tcp_client_handler_listener_sup}
+     Context:    start_error
+     Reason:     eaddrinuse
+     Offender:   [{pid,undefined},{name,listener_sup},{mfargs,{tcp_listener,start_link,[8801,tcp_client_handler]}},{restart_type,permanent},{shutdown,2000},{child_type,worker}]
+
+2015-07-04 21:09:07 =CRASH REPORT====
+  crasher:
+    initial call: tcp_listener:init/1
+    pid: <0.3448.0>
+    registered_name: []
+    exception exit: {eaddrinuse,[{gen_server,init_it,6,[{file,"gen_server.erl"},{line,322}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [tcp_room_handler_listener_sup,server]
+    messages: []
+    links: [<0.3447.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 610
+    stack_size: 27
+    reductions: 681
+  neighbours:
+2015-07-04 21:09:07 =SUPERVISOR REPORT====
+     Supervisor: {local,tcp_room_handler_listener_sup}
+     Context:    start_error
+     Reason:     eaddrinuse
+     Offender:   [{pid,undefined},{name,listener_sup},{mfargs,{tcp_listener,start_link,[9801,tcp_room_handler]}},{restart_type,permanent},{shutdown,2000},{child_type,worker}]
+
+2015-07-04 21:09:07 =CRASH REPORT====
+  crasher:
+    initial call: supervisor:ranch_acceptors_sup/1
+    pid: <0.3451.0>
+    registered_name: []
+    exception exit: {{{badmatch,{error,eaddrinuse}},[{ranch_acceptors_sup,init,1,[{file,"src/ranch_acceptors_sup.erl"},{line,30}]},{supervisor,init,1,[{file,"supervisor.erl"},{line,243}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,306}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]},[{gen_server,init_it,6,[{file,"gen_server.erl"},{line,330}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [<0.3449.0>,ranch_sup,<0.705.0>]
+    messages: []
+    links: [<0.3449.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 610
+    stack_size: 27
+    reductions: 649
+  neighbours:
+2015-07-04 21:09:07 =SUPERVISOR REPORT====
+     Supervisor: {<0.3449.0>,ranch_listener_sup}
+     Context:    start_error
+     Reason:     {{badmatch,{error,eaddrinuse}},[{ranch_acceptors_sup,init,1,[{file,"src/ranch_acceptors_sup.erl"},{line,30}]},{supervisor,init,1,[{file,"supervisor.erl"},{line,243}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,306}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+     Offender:   [{pid,undefined},{name,ranch_acceptors_sup},{mfargs,{ranch_acceptors_sup,start_link,[http,10,ranch_tcp,[{port,7801},{max_connections,3000}]]}},{restart_type,permanent},{shutdown,infinity},{child_type,supervisor}]
+
+2015-07-04 21:09:07 =CRASH REPORT====
+  crasher:
+    initial call: mochiweb_socket_server:init/1
+    pid: <0.3453.0>
+    registered_name: []
+    exception exit: {eaddrinuse,[{gen_server,init_it,6,[{file,"gen_server.erl"},{line,322}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [h_httpd_sup,server]
+    messages: []
+    links: [<0.3452.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 610
+    stack_size: 27
+    reductions: 554
+  neighbours:
+2015-07-04 21:09:07 =SUPERVISOR REPORT====
+     Supervisor: {local,h_httpd_sup}
+     Context:    start_error
+     Reason:     eaddrinuse
+     Offender:   [{pid,undefined},{name,httpd_handler},{mfargs,{httpd_handler,start,[[{ip,{0,0,0,0}},{port,18801}]]}},{restart_type,permanent},{shutdown,5000},{child_type,worker}]
+
+2015-07-04 21:14:17 =CRASH REPORT====
+  crasher:
+    initial call: supervisor:ranch_acceptors_sup/1
+    pid: <0.910.0>
+    registered_name: []
+    exception exit: {{{badmatch,{error,eaddrinuse}},[{ranch_acceptors_sup,init,1,[{file,"src/ranch_acceptors_sup.erl"},{line,30}]},{supervisor,init,1,[{file,"supervisor.erl"},{line,243}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,306}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]},[{gen_server,init_it,6,[{file,"gen_server.erl"},{line,330}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [<0.895.0>,ranch_sup,<0.800.0>]
+    messages: []
+    links: [<0.895.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 610
+    stack_size: 27
+    reductions: 649
+  neighbours:
+2015-07-04 21:14:17 =SUPERVISOR REPORT====
+     Supervisor: {<0.895.0>,ranch_listener_sup}
+     Context:    start_error
+     Reason:     {{badmatch,{error,eaddrinuse}},[{ranch_acceptors_sup,init,1,[{file,"src/ranch_acceptors_sup.erl"},{line,30}]},{supervisor,init,1,[{file,"supervisor.erl"},{line,243}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,306}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+     Offender:   [{pid,undefined},{name,ranch_acceptors_sup},{mfargs,{ranch_acceptors_sup,start_link,[http_g17,10,ranch_tcp,[{port,18880},{max_connections,3000}]]}},{restart_type,permanent},{shutdown,infinity},{child_type,supervisor}]
+
+2015-07-04 21:21:23 =CRASH REPORT====
+  crasher:
+    initial call: supervisor:ranch_acceptors_sup/1
+    pid: <0.990.0>
+    registered_name: []
+    exception exit: {{{badmatch,{error,eaddrinuse}},[{ranch_acceptors_sup,init,1,[{file,"src/ranch_acceptors_sup.erl"},{line,30}]},{supervisor,init,1,[{file,"supervisor.erl"},{line,243}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,306}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]},[{gen_server,init_it,6,[{file,"gen_server.erl"},{line,330}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [<0.979.0>,ranch_sup,<0.885.0>]
+    messages: []
+    links: [<0.979.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 610
+    stack_size: 27
+    reductions: 649
+  neighbours:
+2015-07-04 21:21:23 =SUPERVISOR REPORT====
+     Supervisor: {<0.979.0>,ranch_listener_sup}
+     Context:    start_error
+     Reason:     {{badmatch,{error,eaddrinuse}},[{ranch_acceptors_sup,init,1,[{file,"src/ranch_acceptors_sup.erl"},{line,30}]},{supervisor,init,1,[{file,"supervisor.erl"},{line,243}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,306}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+     Offender:   [{pid,undefined},{name,ranch_acceptors_sup},{mfargs,{ranch_acceptors_sup,start_link,[http_g17,10,ranch_tcp,[{port,18880},{max_connections,3000}]]}},{restart_type,permanent},{shutdown,infinity},{child_type,supervisor}]
+
+2015-07-04 21:21:23 =CRASH REPORT====
+  crasher:
+    initial call: application_master:init/4
+    pid: <0.1012.0>
+    registered_name: []
+    exception exit: {{bad_return,{{server_app,start,[normal,[]]},{'EXIT',{{case_clause,{ok,true,disc}},[{mnesia_misc,init_db,3,[{file,"mnesia_misc.erl"},{line,127}]},{mnesia_misc,init,0,[{file,"mnesia_misc.erl"},{line,30}]},{server_app,start,2,[{file,"src/server_app.erl"},{line,33}]},{application_master,start_it_old,4,[{file,"application_master.erl"},{line,272}]}]}}}},[{application_master,init,4,[{file,"application_master.erl"},{line,133}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [<0.1011.0>]
+    messages: [{'EXIT',<0.1013.0>,normal}]
+    links: [<0.1011.0>,<0.7.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 1598
+    stack_size: 27
+    reductions: 213
+  neighbours:
+2015-07-04 22:45:48 =CRASH REPORT====
+  crasher:
+    initial call: supervisor:ranch_acceptors_sup/1
+    pid: <0.588.0>
+    registered_name: []
+    exception exit: {{{badmatch,{error,eaddrinuse}},[{ranch_acceptors_sup,init,1,[{file,"src/ranch_acceptors_sup.erl"},{line,30}]},{supervisor,init,1,[{file,"supervisor.erl"},{line,243}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,306}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]},[{gen_server,init_it,6,[{file,"gen_server.erl"},{line,330}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [<0.581.0>,ranch_sup,<0.554.0>]
+    messages: []
+    links: [<0.581.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 610
+    stack_size: 27
+    reductions: 649
+  neighbours:
+2015-07-04 22:45:48 =SUPERVISOR REPORT====
+     Supervisor: {<0.581.0>,ranch_listener_sup}
+     Context:    start_error
+     Reason:     {{badmatch,{error,eaddrinuse}},[{ranch_acceptors_sup,init,1,[{file,"src/ranch_acceptors_sup.erl"},{line,30}]},{supervisor,init,1,[{file,"supervisor.erl"},{line,243}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,306}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+     Offender:   [{pid,undefined},{name,ranch_acceptors_sup},{mfargs,{ranch_acceptors_sup,start_link,[http_g17,10,ranch_tcp,[{port,18880},{max_connections,3000}]]}},{restart_type,permanent},{shutdown,infinity},{child_type,supervisor}]
+
+2015-07-04 22:45:48 =ERROR REPORT====
+Mnesia('p02_db_disc_2@192.168.1.145'): ** ERROR ** mnesia_event got {inconsistent_database, starting_partitioned_network, 'p02_db_disc_1@192.168.1.145'}
+2015-07-04 22:45:48 =CRASH REPORT====
+  crasher:
+    initial call: application_master:init/4
+    pid: <0.595.0>
+    registered_name: []
+    exception exit: {{bad_return,{{server_app,start,[normal,[]]},{'EXIT',{{case_clause,{ok,true,remote}},[{mnesia_misc,init_db,3,[{file,"mnesia_misc.erl"},{line,127}]},{mnesia_misc,init,0,[{file,"mnesia_misc.erl"},{line,30}]},{server_app,start,2,[{file,"src/server_app.erl"},{line,33}]},{application_master,start_it_old,4,[{file,"application_master.erl"},{line,272}]}]}}}},[{application_master,init,4,[{file,"application_master.erl"},{line,133}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [<0.594.0>]
+    messages: [{'EXIT',<0.596.0>,normal}]
+    links: [<0.594.0>,<0.7.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 1598
+    stack_size: 27
+    reductions: 213
+  neighbours:
+2015-07-04 23:32:01 =CRASH REPORT====
+  crasher:
+    initial call: supervisor:ranch_acceptors_sup/1
+    pid: <0.886.0>
+    registered_name: []
+    exception exit: {{{badmatch,{error,eaddrinuse}},[{ranch_acceptors_sup,init,1,[{file,"src/ranch_acceptors_sup.erl"},{line,30}]},{supervisor,init,1,[{file,"supervisor.erl"},{line,243}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,306}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]},[{gen_server,init_it,6,[{file,"gen_server.erl"},{line,330}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [<0.877.0>,ranch_sup,<0.799.0>]
+    messages: []
+    links: [<0.877.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 610
+    stack_size: 27
+    reductions: 649
+  neighbours:
+2015-07-04 23:32:01 =SUPERVISOR REPORT====
+     Supervisor: {<0.877.0>,ranch_listener_sup}
+     Context:    start_error
+     Reason:     {{badmatch,{error,eaddrinuse}},[{ranch_acceptors_sup,init,1,[{file,"src/ranch_acceptors_sup.erl"},{line,30}]},{supervisor,init,1,[{file,"supervisor.erl"},{line,243}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,306}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+     Offender:   [{pid,undefined},{name,ranch_acceptors_sup},{mfargs,{ranch_acceptors_sup,start_link,[http_g17,10,ranch_tcp,[{port,18880},{max_connections,3000}]]}},{restart_type,permanent},{shutdown,infinity},{child_type,supervisor}]
+
+2015-07-04 23:32:01 =ERROR REPORT====
+Mnesia('p02_db_disc_2@192.168.1.145'): ** ERROR ** mnesia_event got {inconsistent_database, starting_partitioned_network, 'p02_db_disc_1@192.168.1.145'}
+2015-07-04 23:32:01 =CRASH REPORT====
+  crasher:
+    initial call: application_master:init/4
+    pid: <0.905.0>
+    registered_name: []
+    exception exit: {{bad_return,{{server_app,start,[normal,[]]},{'EXIT',{{case_clause,{ok,true,remote}},[{mnesia_misc,init_db,3,[{file,"mnesia_misc.erl"},{line,127}]},{mnesia_misc,init,0,[{file,"mnesia_misc.erl"},{line,30}]},{server_app,start,2,[{file,"src/server_app.erl"},{line,33}]},{application_master,start_it_old,4,[{file,"application_master.erl"},{line,272}]}]}}}},[{application_master,init,4,[{file,"application_master.erl"},{line,133}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [<0.904.0>]
+    messages: [{'EXIT',<0.906.0>,normal}]
+    links: [<0.904.0>,<0.7.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 1598
+    stack_size: 27
+    reductions: 213
+  neighbours:
+2015-07-04 23:43:09 =CRASH REPORT====
+  crasher:
+    initial call: application_master:init/4
+    pid: <0.210.0>
+    registered_name: []
+    exception exit: {{bad_return,{{server_app,start,[normal,[]]},{disc_nodes_not_running,['p02_db_disc_2@192.168.1.145'],"Ensure Disc Node running"}}},[{application_master,init,4,[{file,"application_master.erl"},{line,133}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [<0.209.0>]
+    messages: [{'EXIT',<0.211.0>,normal}]
+    links: [<0.209.0>,<0.7.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 1598
+    stack_size: 27
+    reductions: 196
+  neighbours:
+2015-07-04 23:55:03 =CRASH REPORT====
+  crasher:
+    initial call: application_master:init/4
+    pid: <0.409.0>
+    registered_name: []
+    exception exit: {{bad_return,{{server_app,start,[normal,[]]},{'EXIT',{{case_clause,{ok,true,disc}},[{mnesia_misc,init_db,3,[{file,"mnesia_misc.erl"},{line,127}]},{mnesia_misc,init,0,[{file,"mnesia_misc.erl"},{line,30}]},{server_app,start,2,[{file,"src/server_app.erl"},{line,33}]},{application_master,start_it_old,4,[{file,"application_master.erl"},{line,272}]}]}}}},[{application_master,init,4,[{file,"application_master.erl"},{line,133}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [<0.408.0>]
+    messages: [{'EXIT',<0.410.0>,normal}]
+    links: [<0.408.0>,<0.7.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 1598
+    stack_size: 27
+    reductions: 213
+  neighbours:

@@ -1,0 +1,28 @@
+2015-02-12 18:56:09 =ERROR REPORT====
+** Generic server mod_selling_shop terminating 
+** Last message in was {'EXIT',<0.370.0>,shutdown}
+** When Server state == {state,[{ordinary_shop_msg,9000005,1,30,0}],[]}
+** Reason for termination == 
+** {function_clause,[{lib_shop,save_main_shop,[{ordinary_shop_msg,9000005,1,30,0}],[{file,"lib_shop.erl"},{line,66}]},{lists,map,2,[{file,"lists.erl"},{line,1237}]},{mod_selling_shop,terminate,2,[{file,"src/mod/mod_selling_shop.erl"},{line,226}]},{gen_server,terminate,6,[{file,"gen_server.erl"},{line,721}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+2015-02-12 18:56:09 =CRASH REPORT====
+  crasher:
+    initial call: mod_selling_shop:init/1
+    pid: <0.630.0>
+    registered_name: mod_selling_shop
+    exception exit: {{function_clause,[{lib_shop,save_main_shop,[{ordinary_shop_msg,9000005,1,30,0}],[{file,"lib_shop.erl"},{line,66}]},{lists,map,2,[{file,"lists.erl"},{line,1237}]},{mod_selling_shop,terminate,2,[{file,"src/mod/mod_selling_shop.erl"},{line,226}]},{gen_server,terminate,6,[{file,"gen_server.erl"},{line,721}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]},[{gen_server,terminate,6,[{file,"gen_server.erl"},{line,724}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [server_sup,server]
+    messages: []
+    links: []
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 987
+    stack_size: 27
+    reductions: 5646
+  neighbours:
+2015-02-12 18:56:09 =SUPERVISOR REPORT====
+     Supervisor: {local,server_sup}
+     Context:    shutdown_error
+     Reason:     {function_clause,[{lib_shop,save_main_shop,[{ordinary_shop_msg,9000005,1,30,0}],[{file,"lib_shop.erl"},{line,66}]},{lists,map,2,[{file,"lists.erl"},{line,1237}]},{mod_selling_shop,terminate,2,[{file,"src/mod/mod_selling_shop.erl"},{line,226}]},{gen_server,terminate,6,[{file,"gen_server.erl"},{line,721}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+     Offender:   [{pid,<0.630.0>},{name,mod_selling_shop},{mfargs,{mod_selling_shop,start_link,[]}},{restart_type,permanent},{shutdown,10000},{child_type,worker}]
+

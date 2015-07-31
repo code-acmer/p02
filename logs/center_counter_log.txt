@@ -1,0 +1,6 @@
+
+=INFO REPORT==== 4-Jul-2015::15:07:39 ===
+start <0.2.0>
+
+=INFO REPORT==== 4-Jul-2015::15:07:39 ===
+p02_center_app start on 'center@127.0.0.1' StartType normal

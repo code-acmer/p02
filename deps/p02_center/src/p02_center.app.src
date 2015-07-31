@@ -1,0 +1,12 @@
+{application, p02_center,
+ [
+  {description, ""},
+  {vsn, "1"},
+  {registered, []},
+  {applications, [
+                  kernel,
+                  stdlib
+                 ]},
+  {mod, { p02_center_app, []}},
+  {env, []}
+ ]}.

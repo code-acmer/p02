@@ -1,0 +1,146 @@
+
+1、怪物表修改：base_mon
+	id				bigint		自增id
+	mid				bigint		怪物编号（策划编）	
+	name			txt			怪物名称
+	type			tinyint		怪物类型。1是普通怪，2是boss
+	attack_type		tinyint		怪物的攻击类型。1是物理攻击类，4是法术攻击类
+	patrol_area		int			怪物的巡逻范围
+	trace_area		int			怪物的追踪范围
+	guard_area		int			怪物的警戒范围
+	skill_id		bigint		怪物的技能id
+	lv				int			怪物等级
+	hp				int			生命
+	hp_lim			int			生命上限
+	five_phases		tinyint		怪物五行
+	force			smallint	武力值
+	magic			smallint	法术值
+	stunt			smallint	绝技值
+	attack			int			攻击
+	magic_attack	int			法术攻击
+	stunt_attack	int			绝技攻击
+	def				int			防御
+	magic_def		int			法术防御
+	stunt_def		int			绝技防御
+	hit				int			命中
+	dodge			int			闪避
+	crit			int			暴击
+	parry			int			格挡
+	counter			int			反击
+	morale			int			气势
+	icon			int			图片
+	exp				int			杀死怪物的经验
+	coin			int			杀死怪物的铜钱
+	experience		int			杀死怪物获得的历练
+	mon_drop		txt			杀死怪物掉落规则，结构举例：[[{100,2,10,1},{111,2,900,0},{112,2,5000,0}],[{100,2,10,1},{111,2,40,0},{112,2,10,0}]]
+								例子中有两次抽奖机会，因为结构[[],[]],最外面的中括号内有两个[]。
+								第一次抽奖在100，111，112三个id中多选一，因为有结构[{},{},{}]，中括号内有三个大括号。
+								大括号中第二位的数字表示数量。
+								大括号中第三位的数字表示概率。请确保每一次抽奖的所有id的概率加起来不超过10000。因为10000减去所有id的概率和是不中奖的概率。
+								大括号中第四位的数字表示是否有特殊控制规则。如果不加这一位，那么在掉落时无论是什么物品都要查一次控制表。所以加的好。1表示有，0表示没有
+								所谓10000是指100.00%，以此类推
+								暂定长度为300。
+	mon_group		txt			怪物可能代表了一群怪物。json结构：{"camp_id":111,"camp_lv":2,"mons":[{"mon_pos":2,"mon_id":22},{……}]}
+								camp_id是阵法id,camp_lv是阵法等级，mons是怪物群，其中mon_pos是怪物位置，mon_id是怪物id。
+	speed			int			怪物速度
+	scene			int			怪物所在场景（代码中用到的字段）
+								
+2、增加副本掉落控制表:控制某些物品的掉落规则
+	base_goods_drop_control
+	
+	id				bigint		自增id
+	goods_id		bigint		需要控制掉落的物品基础id
+	date_type		tinyint		间隔类型，1：每日计；2：每周计,3：每月计，0忽略
+	max_num			int			设定时间间隔内的最大掉落数量,0则忽略
+	max_times		int			设定达到多少次时一定得至少掉一次（针对某玩家）,0则忽略
+
+3、增加物品掉落数统计记录表：为实现物品掉落控制，记录固定间隔（日、周）内某物品的掉落总数
+	goods_drop_sum_log
+	
+	id				bigint		自增id
+	goods_id		bigint		物品基础id
+	date_type		tinyint		间隔类型，1：每日计；2：每周计。
+	date_count		int			间隔数，从1970年1月1日开始的天数，或者周数。1970年1月1日的周定为第0周。
+	drop_sum		int			该间隔日期内的掉落数统计
+	
+4、增加玩家打怪未获得物品次数记录：记录玩家打怪不掉落某物品的次数，超过这个次数，则必须给他掉一个。但如果在该时间间隔内物品掉落已超过最大掉落数量，则不掉落。
+	player_no_drop_log
+	
+	id				bigint		自增id
+	player_id		bigint		玩家id
+	goods_id		bigint		物品基础id
+	no_drop_count	int			不掉落次数统计
+
+
+5、地图表：base_scene
+	地图type定义：0为场景（基础场景，普通场景），2为单人副本
+	
+6、基础副本表：一个副本首先也是一个场景，此表作用是记录副本的额外信息。
+	base_dungeon
+	
+	id				bigint		自增id
+	def				bigint		场景资源的id
+	out				txt			出口信息，结构：[100,38,12]其中100表示出口在100为id的场景，38，12为出口的坐标。这个坐标只在特殊情况时用得上。
+	requirement		txt			进入需求。
+	name			txt			副本名称
+	reward			txt			完成本副本的奖励。固定物品 + 从可选物品中随机一个出来。
+								示例：{ [{1, 100, 0}, {3,1,88103001}],[{3, 1,88103001,1000,20,30},{3,1,88103001,2000,30,40},{3,1,88103001,2000,40,50},{3,1,88103001,2000,50,60}]} 
+								大括号内，第一个中括号表示固定奖励项，第二个中括号表示随机奖励项。
+								固定奖励项：{奖励种类id，数量，物品id}
+								随机奖励项：{奖励种类id，数量，物品id，概率(1到10000)，npc体力百分比下限(0到100)Min，npc体力百分比上限(0到100)Max}
+								奖励种类：1是元宝，2是铜钱，3是普通物品。
+								算守关奖励时按照  Min < Npc体力百分比 <= Max 筛选出随机奖励项
+								
+	dungeon_type	tinyint		副本类型，1为普通副本，2为精英副本。
+	event			txt			副本的事件，格式为[{"progress":0,"id":2000},{"progress":1,"id":2001}]。progress表示触发此事件的进度。
+	series_id		int			所属副本系列的id
+	series_name		txt			所属副本系列的名字
+	ser_task_id		int			开启这个副本系列的任务的id
+	ser_scene		int			副本系列所在的场景	
+	ser_order		int			在所处副本中的排序
+	war_dialog		txt			副本内 战斗对话
+	place_x			tinyint		在副本选择地图上的x坐标
+	place_y			tinyint		在副本选择地图上的y坐标
+	icon_id			int			图片资源id
+	
+	守关副本新增字段
+	total_time		int			副本总时间，单位秒（不包括准备时间）
+	npc_hp			tinyint		守关副本的npc体力
+	guard_mon		txt			守关副本的怪物，结构[{Road2MonID, [MonID1,MonID2,MonID3,MonID4,MonID5,MonID6], BornTime},{},{}]，其中Road2MonID表示肯定在2路出现的怪物的ID，0表示没有，然后是其它怪的列表（MonID），BornTime表示以秒表示的出生时间。
+	
+	
+			
+	待删除字段：
+	scene			
+		
+	副本xml结构：
+	第一层：根据场景分。ser_scene
+	第二层：dungeon_type副本类型
+	第三层：系列series_id，还有名字，系列任务id
+	第四层就是每个系列的副本了。最好能够按照ser_oder排序。
+		
+7、副本系列表：base_dungeon_series
+	字段说明：
+		id				int		副本系列的id
+		name			txt		副本系列的名字
+		ser_task_id		int		开启这个副本系列的任务的id
+		ser_scene		int		副本系列所在的场景
+		
+8、场景id规律。
+		1、基本场景有门派（国家）之分，0是公共的。
+		2、在哪个门派场景传送点的副本，就是哪个门派的。1门派的人不能进2，3，4等其它门派的场景。0场景的则是公共的副本。都可以进。
+		3、新手的门派id为100，新手村的门派暂定为0。
+		
+9、修改表：player_dungeon
+	增加字段:
+		dungeon_progress	int		副本进度，打怪的记录，用下法记录（便于指定事件触发时机）：
+									0->进入->1->接触第一波怪->2->打败第一波怪->3->接触第一波怪->4
+									事件的触发进度：
+										1、不能是0。
+										2、如果是1，则说明是0变成1的时候触发。意思就是刚进入就触发。
+										3、比如，如果是2，则说明是接触第一波，由1变成2时触发。
+										4、如果是3，则说明是打败第一波怪时触发。
+									自以为这种做法能把触发时机做得比较自由。
+									
+		dungeon_evaluate	int		副本评价，直接数字，1、2、3等。
+		dungeon_enable		bool	副本准入，如果不准入，则说明是当前副本的下一个，在前端显示灰色。		

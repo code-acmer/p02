@@ -1,0 +1,138 @@
+-ifndef(DEFINE_INFO_15_HRL).
+-define(DEFINE_INFO_15_HRL, true).
+
+-include("define_info_0.hrl").
+
+
+-define(INFO_GOODS_CFG_NOT_FOUND,               15000).   %% 斗魂配置数据未找到
+-define(INFO_PLAYER_GOODS_NOT_FOUND,            15001).   %% 玩家斗魂数据未找到
+-define(INFO_GOODS_UPGRADE_INFO_NOT_FOUND,      15002).   %% 装备升级配置未找到
+-define(INFO_GOODS_LV_LIMIT,                    15003).   %% 斗魂已升到顶级
+-define(INFO_GOODS_BAG_EXT_SUCCESS,             15004).   %% 成功增加5个斗魂仓库
+-define(INFO_GOODS_JEWEL_FULL,                  15005).   %% 装备宝石已达到上限，无法再镶嵌
+-define(INFO_GOODS_JEWEL_HAS_INLAID,            15006).   %% 该宝石已经镶嵌在装备上了
+-define(INFO_GOODS_NOT_JEWEL_TYPE,              15007).   %% 非宝石类型，无法操作
+-define(INFO_GOODS_JEWEL_NOT_INLAID,            15008).   %% 目标宝石不在该装备上
+-define(INFO_GOODS_NOT_JEWEL,                   15009).   %% 该装备上没有宝石
+-define(INFO_GOODS_NOT_JEWEL_HOLE,              15010).   %% 该装备上没有宝石孔,不能镶嵌宝石
+-define(INFO_GOODS_HOLE_HAS_JEWEL,              15011).   %% 该孔上已存在宝石,请先脱下
+-define(INFO_GOODS_HOLE_NOT_JEWEL,              15012).   %% 装备目标孔上没有宝石
+-define(INFO_GOODS_NOT_COMPOSE,                 15013).   %% 该物品无法合成
+-define(INFO_GOODS_NOT_SAME_SUB_TYPE,           15020).   %% 装备部位不同，传承失败
+-define(INFO_GOODS_HAVE_UPGRADE,                15021).   %% 升级装备无法传承
+-define(INFO_GOODS_TARGET_LV_LOWER,             15022).   %% 无法传承低级装备
+-define(INFO_GOODS_COLOR_LV_LOWER,              15023).   %% 无法传承低级颜色装备
+-define(INFO_GOODS_HAVE_EQUIPED,                15100).   %% 物品已经装备
+-define(INFO_GOODS_NOT_ENOUGH_LV,               15101).   %% 技能卡等级不够,不能升阶
+
+-define(INFO_SHOP_GOODS_TIMEOUT,                15300).   %% 商品不在上架时间内
+
+-define(INFO_GOODS_REPURCHASE_SUCCESS,          15500).   %% 回购成功
+-define(INFO_GOODS_REPURCHASE_FAILED,           15501).   %% 回购失败
+-define(INFO_GOODS_REPURCHASE_WRONG_INFO,       15502).   %% 回购数据获取失败，无法回购
+-define(INFO_GOODS_UPGRADE_TIMES_ERROR,         15503).   %% 装备升级次数出错
+-define(INFO_GOODS_NOT_IN_EQUIP,                15504).   %% 物品没有装备上，无法卸下
+-define(INFO_GOODS_SELL_ITEM_SUCCESS,           15510).   %% 出售成功
+-define(INFO_GOODS_SELL_ITEM_FAILED,            15511).   %% 出售失败
+-define(INFO_GOODS_SELL_ITEM_DUPLICATED,        15512).   %% 出售的物品中有重复的信息，出售失败
+-define(INFO_GOODS_SELL_WRONG_ITEM_INFO,        15513).   %% 错误的物品信息，出售失败
+-define(INFO_GOODS_CANNOT_BE_SOLD,              15514).   %% 该物品不可出售
+-define(INFO_GOODS_NOT_ENOUGH_COST,             15515).   %% 消耗材料不足
+-define(INFO_GOODS_BUY_ITEM_SUCCESS,            15520).   %% 购买成功
+-define(INFO_GOODS_BUY_ITEM_FAILED,             15521).   %% 购买失败
+-define(INFO_GOODS_NOT_ENOUGH_BAG,              15522).   %% 包裹剩余空间不足，请整理后再尝试
+-define(INFO_GOODS_WRONG_BUY_NUMBER,            15523).   %% 购买的数量错误，无法购买
+-define(INFO_GOODS_WRONG_ITEM_INFO,             15524).   %% 获取购买物品信息失败，无法购买
+-define(INFO_GOODS_NO_VIP,                      15525).   %% 非VIP玩家无法使用VIP商店
+-define(INFO_GOODS_NOT_ENOUGH_GOLD,             15526).   %% 元宝不足，无法购买
+-define(INFO_GOODS_NOT_ENOUGH_COIN,             15527).   %% 金钱不足，无法购买
+-define(INFO_GOODS_SWITCH_ITEM_SUCCESS,         15530).   %% 更换武器成功
+-define(INFO_GOODS_SWITCH_ITEM_FAILED,          15531).   %% 更换武器失败
+-define(INFO_GOODS_ITEM_NOT_FOUND,              15532).   %% 未找到对应物品
+-define(INFO_GOODS_TAKE_OFF_FULL_OF_BAG,        15533).   %% 包裹已满，无法取下
+-define(INFO_GOODS_PARTNER_NOT_FOUND,           15534).   %% 未找到伙伴信息
+-define(INFO_GOODS_BAD_OWNER_INFO,              15535).   %% 装备或伙伴所属错误
+-define(INFO_GOODS_ITEM_NOT_IN_BAG,             15536).   %% 装备未在包裹中，请整理后再尝试
+-define(INFO_GOODS_WRONG_TARGET_POSITION,       15537).   %% 目标位置错误，无法穿戴
+-define(INFO_GOODS_NOT_EQUIPMENT,               15538).   %% 非装备类型，无法操作
+-define(INFO_GOODS_WRONG_CAREER,                15539).   %% 装备职业类型不符，无法穿戴
+-define(INFO_GOODS_LEVEL_NOT_SATISFIED,         15540).   %% 等级不足，无法穿戴
+-define(INFO_GOODS_NOT_SAME_CARRER,             15541).   %% 职业不同，武器部位未交换
+-define(INFO_GOODS_CHANGE_EQUIP_FAILED,         15542).   %% 变化武器失败
+-define(INFO_GOODS_CHANGE_EQUIP_DESC_ERROR,     15543).   %% 变化武器的目标武器信息错误
+-define(INFO_GOODS_TREASURE_SUCCESS,            15550).   %% 成功使用摇钱树，金钱 + %s
+-define(INFO_GOODS_TREASURE_FAILED,             15551).   %% 使用摇钱树失败
+-define(INFO_GOODS_TREASURE_GOLD_OUT,           15552).   %% 元宝不足，无法使用摇钱树
+-define(INFO_GOODS_TREASURE_TIMES_OUT,          15553).   %% 今日的剩余摇钱树使用次数不足
+-define(INFO_GOODS_STAMINA_SUCCESS,             15560).   %% 体力购买成功
+-define(INFO_GOODS_STAMINA_FAILED,              15561).   %% 体力购买失败
+-define(INFO_GOODS_STAMINA_GOLD_OUT,            15562).   %% 元宝不足，无法购买体力
+-define(INFO_GOODS_STAMINA_TIMES_OUT,           15563).   %% 今日的体力购买次数已经使用完毕
+-define(INFO_GOODS_STAMINA_EXCEED,              15564).   %% 体力较为充沛，无需购买
+-define(INFO_GOODS_STRENGTHEN_SUCCESS,          15570).   %% 强化成功
+-define(INFO_GOODS_STRENGTHEN_LV_FULL,          15571).   %% 强化等级已满
+-define(INFO_GOODS_STRENGTHEN_LEVEL_EXCEED,     15572).   %% 强化等级不能超过主角等级，强化失败
+-define(INFO_GOODS_STRENGTHEN_WRONG_RULE,       15573).   %% 错误的强化规则，强化失败
+-define(INFO_GOODS_STAR_FULL,                   15574).   %% 物品星级已满    
+-define(INFO_GOODS_SWITCH_SUCCESS,              15580).   %% 物品交换成功
+-define(INFO_GOODS_SWITCH_FAILED,               15581).   %% 物品交换失败
+-define(INFO_GOODS_SWITCH_THE_SAME,             15582).   %% 同一个物品，无法交换
+-define(INFO_GOODS_SWITCH_SAME_POSITION,        15583).   %% 目标位置和源位置相同，无法移动
+-define(INFO_GOODS_SWITCH_WRONG_TARGET,         15584).   %% 目标位置错误，无法移动
+-define(INFO_GOODS_FORGE_SUCCESS,               15590).   %% 装备升阶成功
+-define(INFO_GOODS_FORGE_FAILED,                15591).   %% 装备升阶失败
+-define(INFO_GOODS_FORGE_RULE_NOT_FOUND,        15592).   %% 装备升阶规则获取失败，无法进阶
+-define(INFO_GOODS_FORGE_EQUIP_NOT_FOUND,       15593).   %% 装备升阶后的数据获取失败，无法进阶
+-define(INFO_GOODS_FORGE_LEVEL_EXCEED,          15594).   %% 升阶后的装备穿戴等级不足，无法进阶
+-define(INFO_GOODS_KEY_ITEM_NOT_SATISFIED,      15595).   %% 无法补齐： [%s] 为关键材料，不能使用元宝补齐
+-define(INFO_GOODS_FORGE_KEY_NOT_SATISFIED,     15596).   %% 无法补齐： [%s] 为关键材料，不能使用元宝补齐，需通过精英副本掉落来获得
+-define(INFO_GOODS_ARTIFACT_KEY_NOT_SATISFIED,  15597).   %% 无法补齐： [%s] 为关键材料，不能使用元宝补齐，需通过神秘商人、每日奖励等方式获得
+-define(INFO_GOODS_DUNGEON_NOT_PASSED,          15598).   %% 无法补齐：需要通关副本 [%s] 后，才能用元宝补齐 [%s]
+-define(INFO_GOODS_FORGE_VIP_LOWER,             15599).   %% vip等级不足，无法使用材料补齐功能
+-define(INFO_GOODS_RESET_MYSTERY_SHOP_SUCCESS,  15600).   %% 刷新神秘商店成功
+-define(INFO_GOODS_RESET_MYSTERY_SHOP_FAILED,   15601).   %% 刷新神秘商店失败
+-define(INFO_GOODS_NOT_IN_MYSTERY_SHOP,         15602).   %% 非神秘商店物品或已经购买，购买失败
+-define(INFO_GOODS_WRONG_MYSTERY_SHOP,          15603).   %% 神秘商店信息获取失败，购买失败
+-define(INFO_GOODS_MYSTERY_SHOP_TIMES_OUT,      15604).   %% 神秘商店刷新次数使用完毕，刷新失败
+-define(INFO_GOODS_WRONG_TIME_MYSTERY_SHOP,     15605).   %% 当前时间段您已免费刷新过，可购买刷新机会
+-define(INFO_GOODS_WRONG_REPEAT_BUY,            15606).   %% 该物品已购买，不可重复
+-define(INFO_GOODS_WRONG_SHOP_OVERDUE,          15607).   %% 神秘商店过期，请尝试重新获取神秘商店
+-define(INFO_GOODS_WRONG_POS,                   15608).   %% 商品位置错误
+-define(INFO_GOODS_CONTAINER_EXTEND_SUCCESS,    15610).   %% 开启容器成功
+-define(INFO_GOODS_CONTAINER_EXTEND_FAILED,     15611).   %% 开启容器失败
+-define(INFO_GOODS_CONTAINER_EXTEND_ALL,        15612).   %% 容器已经开启完毕
+-define(INFO_UPDATE_REWARD_ALEADY_GET,          15613).   %% 您已领取过更新奖励
+-define(INFO_SCORE2_BUY_TIMES_LIMIT,            15700).   %% 已达最大军粮够买次数
+-define(INFO_GOODS_BUY_SCORE2_SUCCESS,          15701).   %% 购买军粮成功
+-define(INFO_GOODS_GIFT_OK,                     15800).   %% 礼包领取成功
+-define(INFO_GOODS_GIFT_FAILED,                 15801).   %% 礼包领取失败
+-define(INFO_GOODS_GIFT_WRONG_CODE,             15802).   %% 激活码输入错误，领取失败
+-define(INFO_GOODS_GIFT_ALREADY_GOT,            15803).   %% 该礼包已经领取过了
+-define(INFO_XUNZHANG_NO_FIND,                  15850).   %% 背包中没有该勋章
+-define(INFO_XUNZHANG_LV_LIMIT,                 15851).   %% 勋章升级，等级不足
+-define(INFO_XUNZHANG_GET_WRONG,                15852).   %% 配置没有该勋章
+-define(INFO_XUNZHANG_FIND,                     15853).   %% 勋章已激活
+-define(INFO_BUY_NUM_LIMIT,                     15870).   %% 您在一天内被购买该商品次数有限制，请勿超量购买
+-define(INFO_ACTIVITY_SHOP_OVERDUE,             15880).   %% 抢购活动过期
+-define(INFO_SHOP_NO_FIND,                      15881).   %% 当前活动不存在该商品
+-define(INFO_SHOP_NUM_LIMIT,                    15882).   %% 商品数量限制
+-define(INFO_NOT_ACTIVITY_OPEN,                 15883).   %% 当前没有抢购活动开放
+-define(INFO_ACTIVITY_PLAYER_BUY_LIMIT,         15884).   %% 您抢购该商品次数已达上限
+
+-define(INFO_CHOUJIANG_FREE_NUM_LIMIT,          15890).   %% 当前免费抽奖次数用完
+-define(INFO_CHOUJIANG_FREE_TIME_LIMIT,         15891).   %% 进行多次免费抽奖操作，有时间限制
+
+-define(INFO_CAREER_FALSE,                      15900).   %% 职业不符
+-define(INFO_GOODS_PVP_SHOP_TIMES_OUT,          15910).   %% pvp商城刷新次数今日已用完
+-define(INFO_GOODS_FAIR_SHOP_TIMES_OUT,         15911).   %% 公平竞技场商城刷新次数今日已用完
+-define(INFO_GOODS_CROSS_SHOP_TIMES_OUT,        15912).   %% 跨服竞技场商城刷新次数今日已用完
+-define(INFO_GOODS_LEAGUE_SHOP_TIMES_OUT,       15913).   %% 公会商城刷新次数今日已用完
+
+-define(INFO_GOODS_FASHION_ALREADY_WEAR,        15920).   %% 该时装已经穿在身上
+-define(INFO_GOODS_NOT_FASHION,                 15921).   %% 非时装类型，无法操作
+-define(INFO_GOODS_FASHION_NOT_WEAR,            15922).   %% 该时装没有穿在身上
+-define(INFO_GOODS_AUTO_SWAER_FASHION_FAIL,     15923).   %% 购买错误,自动穿戴时装失败
+-define(INFO_GOODS_ALREADY_HAS_FASHION,         15924).   %% 已经拥有该款套装
+
+-endif.
+

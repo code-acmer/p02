@@ -1,0 +1,48 @@
+2015-01-09 09:57:00 =CRASH REPORT====
+  crasher:
+    initial call: mod_counter:init/1
+    pid: <0.587.0>
+    registered_name: []
+    exception exit: {{{badmatch,false},[{mod_counter,init,1,[{file,"src/mod/mod_counter.erl"},{line,64}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,306}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]},[{gen_server,init_it,6,[{file,"gen_server.erl"},{line,330}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [server_sup,server]
+    messages: []
+    links: [<0.539.0>]
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 610
+    stack_size: 27
+    reductions: 431
+  neighbours:
+2015-01-09 09:57:00 =CRASH REPORT====
+  crasher:
+    initial call: application_master:init/4
+    pid: <0.537.0>
+    registered_name: []
+    exception exit: {{bad_return,{{server_app,start,[normal,[]]},{'EXIT',{{badmatch,{error,{{{badmatch,false},[{mod_counter,init,1,[{file,"src/mod/mod_counter.erl"},{line,64}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,306}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]},{child,undefined,mod_counter,{mod_counter,start_link,[]},permanent,10000,worker,[mod_counter]}}}},[{server_sup,start_child,2,[{file,"src/server_sup.erl"},{line,41}]},{server_app,start_child_srv,0,[{file,"src/server_app.erl"},{line,156}]},{server_app,start,2,[{file,"src/server_app.erl"},{line,105}]},{application_master,start_it_old,4,[{file,"application_master.erl"},{line,272}]}]}}}},[{application_master,init,4,[{file,"application_master.erl"},{line,133}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [<0.536.0>]
+    messages: [{'EXIT',<0.538.0>,normal}]
+    links: [<0.536.0>,<0.7.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 1598
+    stack_size: 27
+    reductions: 209
+  neighbours:
+2015-01-10 14:49:05 =CRASH REPORT====
+  crasher:
+    initial call: mod_counter:init/1
+    pid: <0.621.0>
+    registered_name: []
+    exception exit: {{{badmatch,false},[{mod_counter,init,1,[{file,"src/mod/mod_counter.erl"},{line,64}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,306}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]},[{gen_server,init_it,6,[{file,"gen_server.erl"},{line,330}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [server_sup,server]
+    messages: []
+    links: [<0.573.0>]
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 610
+    stack_size: 27
+    reductions: 433
+  neighbours:

@@ -1,0 +1,99 @@
+2015-05-29 21:42:34 =CRASH REPORT====
+  crasher:
+    initial call: mod_cross_pvp_center:init/1
+    pid: <0.1111.0>
+    registered_name: []
+    exception exit: {{timeout,{gen_leader,leader_call,[gproc_dist,{reg,{n,g,mod_cross_pvp_center},undefined,<0.1111.0>}]}},[{gen_leader,leader_call,2,[{file,"src/gen_leader.erl"},{line,359}]},{gproc_dist,leader_call,1,[{file,"src/gproc_dist.erl"},{line,825}]},{gproc,reg,1,[{file,"src/gproc.erl"},{line,610}]},{gproc,register_name,2,[{file,"src/gproc.erl"},{line,1200}]},{gen,name_register,1,[{file,"gen.erl"},{line,299}]},{gen,init_it,7,[{file,"gen.erl"},{line,126}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [server_sup,server]
+    messages: []
+    links: [<0.191.0>]
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 610
+    stack_size: 27
+    reductions: 128
+  neighbours:
+2015-05-29 21:42:34 =CRASH REPORT====
+  crasher:
+    initial call: application_master:init/4
+    pid: <0.189.0>
+    registered_name: []
+    exception exit: {{bad_return,{{server_app,start,[normal,[]]},{'EXIT',{{badmatch,{error,{{timeout,{gen_leader,leader_call,[gproc_dist,{reg,{n,g,mod_cross_pvp_center},undefined,<0.1111.0>}]}},{child,undefined,mod_cross_pvp_center,{mod_cross_pvp_center,start_link,[]},permanent,10000,worker,[mod_cross_pvp_center]}}}},[{server_sup,start_child,2,[{file,"src/server_sup.erl"},{line,42}]},{server_app,start_child,0,[{file,"src/server_app.erl"},{line,109}]},{server_app,start,2,[{file,"src/server_app.erl"},{line,54}]},{application_master,start_it_old,4,[{file,"application_master.erl"},{line,272}]}]}}}},[{application_master,init,4,[{file,"application_master.erl"},{line,133}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [<0.188.0>]
+    messages: [{'EXIT',<0.190.0>,normal}]
+    links: [<0.188.0>,<0.7.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 1598
+    stack_size: 27
+    reductions: 214
+  neighbours:
+2015-05-29 23:41:20 =CRASH REPORT====
+  crasher:
+    initial call: application_master:init/4
+    pid: <0.646.0>
+    registered_name: []
+    exception exit: {{bad_return,{{server_app,start,[normal,[]]},{'EXIT',{{badmatch,{error,{{'EXIT',{undef,[{mod_player_rerlc,start_link,[1],[]},{supervisor,do_start_child,2,[{file,"supervisor.erl"},{line,314}]},{supervisor,handle_start_child,2,[{file,"supervisor.erl"},{line,685}]},{supervisor,handle_call,3,[{file,"supervisor.erl"},{line,394}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,580}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}},{child,undefined,mod_player_rec_1,{mod_player_rerlc,start_link,[1]},permanent,10000,worker,[mod_player_rerlc]}}}},[{server_sup,start_child,3,[{file,"src/server_sup.erl"},{line,50}]},{server_app,'-start_child_srv/0-lc$^2/1-2-',1,[{file,"server_app.erl"},{line,140}]},{server_app,start_child_srv,0,[{file,"server_app.erl"},{line,140}]},{server_app,start,2,[{file,"server_app.erl"},{line,54}]},{application_master,start_it_old,4,[{file,"application_master.erl"},{line,272}]}]}}}},[{application_master,init,4,[{file,"application_master.erl"},{line,133}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [<0.645.0>]
+    messages: [{'EXIT',<0.647.0>,normal}]
+    links: [<0.645.0>,<0.7.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 2586
+    stack_size: 27
+    reductions: 304
+  neighbours:
+2015-05-29 23:43:51 =CRASH REPORT====
+  crasher:
+    initial call: application_master:init/4
+    pid: <0.646.0>
+    registered_name: []
+    exception exit: {{bad_return,{{server_app,start,[normal,[]]},{'EXIT',{{badmatch,{error,{{'EXIT',{undef,[{mod_player_rerlc,start_link,[1],[]},{supervisor,do_start_child,2,[{file,"supervisor.erl"},{line,314}]},{supervisor,handle_start_child,2,[{file,"supervisor.erl"},{line,685}]},{supervisor,handle_call,3,[{file,"supervisor.erl"},{line,394}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,580}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}},{child,undefined,mod_player_rec_1,{mod_player_rerlc,start_link,[1]},permanent,10000,worker,[mod_player_rerlc]}}}},[{server_sup,start_child,3,[{file,"src/server_sup.erl"},{line,50}]},{server_app,'-start_child_srv/0-lc$^2/1-2-',1,[{file,"server_app.erl"},{line,140}]},{server_app,start_child_srv,0,[{file,"server_app.erl"},{line,140}]},{server_app,start,2,[{file,"server_app.erl"},{line,54}]},{application_master,start_it_old,4,[{file,"application_master.erl"},{line,272}]}]}}}},[{application_master,init,4,[{file,"application_master.erl"},{line,133}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [<0.645.0>]
+    messages: [{'EXIT',<0.647.0>,normal}]
+    links: [<0.645.0>,<0.7.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 2586
+    stack_size: 27
+    reductions: 305
+  neighbours:
+2015-05-29 23:43:52 =ERROR REPORT====
+Error in process <0.2.0> on node 'p02_db_disc_1@192.168.1.109' with exit value: {{nocatch,{error,{cannot_start_application,server,{bad_return,{{server_app,start,[normal,[]]},{'EXIT',{{badmatch,{error,{{'EXIT',{undef,[{mod_player_rerlc,start_link,[1],[]},{supervisor,do_start_child,2,[{file,"sup... 
+
+2015-05-29 23:45:12 =CRASH REPORT====
+  crasher:
+    initial call: application_master:init/4
+    pid: <0.646.0>
+    registered_name: []
+    exception exit: {{bad_return,{{server_app,start,[normal,[]]},{'EXIT',{{badmatch,{error,{{'EXIT',{undef,[{mod_player_rerlc,start_link,[1],[]},{supervisor,do_start_child,2,[{file,"supervisor.erl"},{line,314}]},{supervisor,handle_start_child,2,[{file,"supervisor.erl"},{line,685}]},{supervisor,handle_call,3,[{file,"supervisor.erl"},{line,394}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,580}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}},{child,undefined,mod_player_rec_1,{mod_player_rerlc,start_link,[1]},permanent,10000,worker,[mod_player_rerlc]}}}},[{server_sup,start_child,3,[{file,"src/server_sup.erl"},{line,50}]},{server_app,'-start_child_srv/0-lc$^2/1-2-',1,[{file,"server_app.erl"},{line,140}]},{server_app,start_child_srv,0,[{file,"server_app.erl"},{line,140}]},{server_app,start,2,[{file,"server_app.erl"},{line,54}]},{application_master,start_it_old,4,[{file,"application_master.erl"},{line,272}]}]}}}},[{application_master,init,4,[{file,"application_master.erl"},{line,133}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [<0.645.0>]
+    messages: [{'EXIT',<0.647.0>,normal}]
+    links: [<0.645.0>,<0.7.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 2586
+    stack_size: 27
+    reductions: 304
+  neighbours:
+2015-05-29 23:50:18 =CRASH REPORT====
+  crasher:
+    initial call: application_master:init/4
+    pid: <0.646.0>
+    registered_name: []
+    exception exit: {{bad_return,{{server_app,start,[normal,[]]},{'EXIT',{{badmatch,{error,{{'EXIT',{undef,[{mod_player_rerlc,start_link,[1],[]},{supervisor,do_start_child,2,[{file,"supervisor.erl"},{line,314}]},{supervisor,handle_start_child,2,[{file,"supervisor.erl"},{line,685}]},{supervisor,handle_call,3,[{file,"supervisor.erl"},{line,394}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,580}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}},{child,undefined,mod_player_rerlc_1,{mod_player_rerlc,start_link,[1]},permanent,10000,worker,[mod_player_rerlc]}}}},[{server_sup,start_child,3,[{file,"src/server_sup.erl"},{line,50}]},{server_app,'-start_child_srv/0-lc$^2/1-2-',1,[{file,"server_app.erl"},{line,140}]},{server_app,start_child_srv,0,[{file,"server_app.erl"},{line,140}]},{server_app,start,2,[{file,"server_app.erl"},{line,54}]},{application_master,start_it_old,4,[{file,"application_master.erl"},{line,272}]}]}}}},[{application_master,init,4,[{file,"application_master.erl"},{line,133}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [<0.645.0>]
+    messages: [{'EXIT',<0.647.0>,normal}]
+    links: [<0.645.0>,<0.7.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 2586
+    stack_size: 27
+    reductions: 305
+  neighbours:

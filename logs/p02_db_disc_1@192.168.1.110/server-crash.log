@@ -1,0 +1,559 @@
+2015-01-14 17:19:02 =ERROR REPORT====
+** Generic server mod_boss_manage_1 terminating 
+** Last message in was init_boss_manage
+** When Server state == {state,undefined}
+** Reason for termination == 
+** {'function not exported',[{data_base_dungeon_world_boss,get_all_id,[],[]},{mod_boss_manage,handle_info,2,[{file,"src/mod/mod_boss_manage.erl"},{line,153}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,599}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+2015-01-14 17:19:02 =CRASH REPORT====
+  crasher:
+    initial call: mod_boss_manage:init/1
+    pid: <0.715.0>
+    registered_name: mod_boss_manage_1
+    exception exit: {{undef,[{data_base_dungeon_world_boss,get_all_id,[],[]},{mod_boss_manage,handle_info,2,[{file,"src/mod/mod_boss_manage.erl"},{line,153}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,599}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]},[{gen_server,terminate,6,[{file,"gen_server.erl"},{line,746}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [server_sup,server]
+    messages: []
+    links: [<0.170.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 987
+    stack_size: 27
+    reductions: 172
+  neighbours:
+2015-01-14 17:19:02 =ERROR REPORT====
+** Generic server mod_boss_manage_2 terminating 
+** Last message in was init_boss_manage
+** When Server state == {state,undefined}
+** Reason for termination == 
+** {'function not exported',[{data_base_dungeon_world_boss,get_all_id,[],[]},{mod_boss_manage,handle_info,2,[{file,"src/mod/mod_boss_manage.erl"},{line,153}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,599}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+2015-01-14 17:19:02 =CRASH REPORT====
+  crasher:
+    initial call: mod_boss_manage:init/1
+    pid: <0.716.0>
+    registered_name: mod_boss_manage_2
+    exception exit: {{undef,[{data_base_dungeon_world_boss,get_all_id,[],[]},{mod_boss_manage,handle_info,2,[{file,"src/mod/mod_boss_manage.erl"},{line,153}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,599}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]},[{gen_server,terminate,6,[{file,"gen_server.erl"},{line,746}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [server_sup,server]
+    messages: []
+    links: [<0.170.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 987
+    stack_size: 27
+    reductions: 172
+  neighbours:
+2015-01-14 17:19:02 =ERROR REPORT====
+** Generic server mod_boss_manage_3 terminating 
+** Last message in was init_boss_manage
+** When Server state == {state,undefined}
+** Reason for termination == 
+** {'function not exported',[{data_base_dungeon_world_boss,get_all_id,[],[]},{mod_boss_manage,handle_info,2,[{file,"src/mod/mod_boss_manage.erl"},{line,153}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,599}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+2015-01-14 17:19:02 =CRASH REPORT====
+  crasher:
+    initial call: mod_boss_manage:init/1
+    pid: <0.717.0>
+    registered_name: mod_boss_manage_3
+    exception exit: {{undef,[{data_base_dungeon_world_boss,get_all_id,[],[]},{mod_boss_manage,handle_info,2,[{file,"src/mod/mod_boss_manage.erl"},{line,153}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,599}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]},[{gen_server,terminate,6,[{file,"gen_server.erl"},{line,746}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [server_sup,server]
+    messages: []
+    links: [<0.170.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 987
+    stack_size: 27
+    reductions: 180
+  neighbours:
+2015-01-14 17:19:03 =SUPERVISOR REPORT====
+     Supervisor: {local,server_sup}
+     Context:    child_terminated
+     Reason:     {undef,[{data_base_dungeon_world_boss,get_all_id,[],[]},{mod_boss_manage,handle_info,2,[{file,"src/mod/mod_boss_manage.erl"},{line,153}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,599}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+     Offender:   [{pid,<0.715.0>},{name,mod_boss_manage_1},{mfargs,{mod_boss_manage,start_link,[1]}},{restart_type,permanent},{shutdown,10000},{child_type,worker}]
+
+2015-01-14 17:19:03 =SUPERVISOR REPORT====
+     Supervisor: {local,server_sup}
+     Context:    child_terminated
+     Reason:     {undef,[{data_base_dungeon_world_boss,get_all_id,[],[]},{mod_boss_manage,handle_info,2,[{file,"src/mod/mod_boss_manage.erl"},{line,153}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,599}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+     Offender:   [{pid,<0.716.0>},{name,mod_boss_manage_2},{mfargs,{mod_boss_manage,start_link,[2]}},{restart_type,permanent},{shutdown,10000},{child_type,worker}]
+
+2015-01-14 17:19:03 =SUPERVISOR REPORT====
+     Supervisor: {local,server_sup}
+     Context:    child_terminated
+     Reason:     {undef,[{data_base_dungeon_world_boss,get_all_id,[],[]},{mod_boss_manage,handle_info,2,[{file,"src/mod/mod_boss_manage.erl"},{line,153}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,599}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+     Offender:   [{pid,<0.717.0>},{name,mod_boss_manage_3},{mfargs,{mod_boss_manage,start_link,[3]}},{restart_type,permanent},{shutdown,10000},{child_type,worker}]
+
+2015-01-14 17:19:03 =ERROR REPORT====
+** Generic server mod_boss_manage_3 terminating 
+** Last message in was init_boss_manage
+** When Server state == {state,undefined}
+** Reason for termination == 
+** {'function not exported',[{data_base_dungeon_world_boss,get_all_id,[],[]},{mod_boss_manage,handle_info,2,[{file,"src/mod/mod_boss_manage.erl"},{line,153}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,599}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+2015-01-14 17:19:03 =CRASH REPORT====
+  crasher:
+    initial call: mod_boss_manage:init/1
+    pid: <0.740.0>
+    registered_name: mod_boss_manage_3
+    exception exit: {{undef,[{data_base_dungeon_world_boss,get_all_id,[],[]},{mod_boss_manage,handle_info,2,[{file,"src/mod/mod_boss_manage.erl"},{line,153}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,599}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]},[{gen_server,terminate,6,[{file,"gen_server.erl"},{line,746}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [server_sup,server]
+    messages: []
+    links: [<0.170.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 987
+    stack_size: 27
+    reductions: 240
+  neighbours:
+2015-01-14 17:19:03 =ERROR REPORT====
+** Generic server mod_boss_manage_2 terminating 
+** Last message in was init_boss_manage
+** When Server state == {state,undefined}
+** Reason for termination == 
+** {'function not exported',[{data_base_dungeon_world_boss,get_all_id,[],[]},{mod_boss_manage,handle_info,2,[{file,"src/mod/mod_boss_manage.erl"},{line,153}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,599}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+2015-01-14 17:19:03 =CRASH REPORT====
+  crasher:
+    initial call: mod_boss_manage:init/1
+    pid: <0.739.0>
+    registered_name: mod_boss_manage_2
+    exception exit: {{undef,[{data_base_dungeon_world_boss,get_all_id,[],[]},{mod_boss_manage,handle_info,2,[{file,"src/mod/mod_boss_manage.erl"},{line,153}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,599}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]},[{gen_server,terminate,6,[{file,"gen_server.erl"},{line,746}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [server_sup,server]
+    messages: []
+    links: [<0.170.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 987
+    stack_size: 27
+    reductions: 172
+  neighbours:
+2015-01-14 17:19:03 =ERROR REPORT====
+** Generic server mod_boss_manage_1 terminating 
+** Last message in was init_boss_manage
+** When Server state == {state,undefined}
+** Reason for termination == 
+** {'function not exported',[{data_base_dungeon_world_boss,get_all_id,[],[]},{mod_boss_manage,handle_info,2,[{file,"src/mod/mod_boss_manage.erl"},{line,153}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,599}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+2015-01-14 17:19:03 =CRASH REPORT====
+  crasher:
+    initial call: mod_boss_manage:init/1
+    pid: <0.738.0>
+    registered_name: mod_boss_manage_1
+    exception exit: {{undef,[{data_base_dungeon_world_boss,get_all_id,[],[]},{mod_boss_manage,handle_info,2,[{file,"src/mod/mod_boss_manage.erl"},{line,153}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,599}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]},[{gen_server,terminate,6,[{file,"gen_server.erl"},{line,746}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [server_sup,server]
+    messages: []
+    links: [<0.170.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 987
+    stack_size: 27
+    reductions: 180
+  neighbours:
+2015-01-14 17:19:03 =SUPERVISOR REPORT====
+     Supervisor: {local,server_sup}
+     Context:    child_terminated
+     Reason:     {undef,[{data_base_dungeon_world_boss,get_all_id,[],[]},{mod_boss_manage,handle_info,2,[{file,"src/mod/mod_boss_manage.erl"},{line,153}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,599}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+     Offender:   [{pid,<0.740.0>},{name,mod_boss_manage_3},{mfargs,{mod_boss_manage,start_link,[3]}},{restart_type,permanent},{shutdown,10000},{child_type,worker}]
+
+2015-01-14 17:19:03 =SUPERVISOR REPORT====
+     Supervisor: {local,server_sup}
+     Context:    child_terminated
+     Reason:     {undef,[{data_base_dungeon_world_boss,get_all_id,[],[]},{mod_boss_manage,handle_info,2,[{file,"src/mod/mod_boss_manage.erl"},{line,153}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,599}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+     Offender:   [{pid,<0.739.0>},{name,mod_boss_manage_2},{mfargs,{mod_boss_manage,start_link,[2]}},{restart_type,permanent},{shutdown,10000},{child_type,worker}]
+
+2015-01-14 17:19:03 =SUPERVISOR REPORT====
+     Supervisor: {local,server_sup}
+     Context:    child_terminated
+     Reason:     {undef,[{data_base_dungeon_world_boss,get_all_id,[],[]},{mod_boss_manage,handle_info,2,[{file,"src/mod/mod_boss_manage.erl"},{line,153}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,599}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+     Offender:   [{pid,<0.738.0>},{name,mod_boss_manage_1},{mfargs,{mod_boss_manage,start_link,[1]}},{restart_type,permanent},{shutdown,10000},{child_type,worker}]
+
+2015-01-14 17:19:03 =SUPERVISOR REPORT====
+     Supervisor: {local,server_sup}
+     Context:    shutdown
+     Reason:     reached_max_restart_intensity
+     Offender:   [{pid,<0.738.0>},{name,mod_boss_manage_1},{mfargs,{mod_boss_manage,start_link,[1]}},{restart_type,permanent},{shutdown,10000},{child_type,worker}]
+
+2015-01-14 17:19:16 =ERROR REPORT====
+Mnesia('p02_db_disc_1@192.168.1.110'): ** ERROR ** (core dumped to file: "/home/li/server_p02/MnesiaCore.p02_db_disc_1@192.168.1.110_1421_227156_755892")
+ ** FATAL ** {error,{"Cannot open dets table",relationship,[{file,"/home/li/server_p02/mnesia/p02_db_disc_1@192.168.1.110/relationship.DAT"},{type,set},{keypos,2},{repair,true},{ram_file,true}],{not_a_dets_file,"/home/li/server_p02/mnesia/p02_db_disc_1@192.168.1.110/relationship.DAT"}}}
+2015-01-14 17:19:26 =ERROR REPORT====
+Mnesia('p02_db_disc_1@192.168.1.110'): ** ERROR ** mnesia_event got unexpected event: {'EXIT',<0.117.0>,killed}
+2015-01-14 17:19:26 =CRASH REPORT====
+  crasher:
+    initial call: gen_event:init_it/6
+    pid: <0.114.0>
+    registered_name: mnesia_event
+    exception exit: {killed,[{gen_event,terminate_server,4,[{file,"gen_event.erl"},{line,304}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [mnesia_sup,<0.112.0>]
+    messages: []
+    links: []
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 1598
+    stack_size: 27
+    reductions: 637
+  neighbours:
+2015-01-14 17:19:26 =CRASH REPORT====
+  crasher:
+    initial call: application_master:init/4
+    pid: <0.111.0>
+    registered_name: []
+    exception exit: {{killed,{mnesia_sup,start,[normal,[]]}},[{application_master,init,4,[{file,"application_master.erl"},{line,133}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [<0.110.0>]
+    messages: [{'EXIT',<0.112.0>,normal}]
+    links: [<0.110.0>,<0.7.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 376
+    stack_size: 27
+    reductions: 113
+  neighbours:
+2015-01-14 17:22:25 =ERROR REPORT====
+** Generic server mod_boss_manage_3 terminating 
+** Last message in was init_boss_manage
+** When Server state == {state,undefined}
+** Reason for termination == 
+** {'function not exported',[{data_base_dungeon_world_boss,get_all_id,[],[]},{mod_boss_manage,handle_info,2,[{file,"src/mod/mod_boss_manage.erl"},{line,153}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,599}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+2015-01-14 17:22:25 =CRASH REPORT====
+  crasher:
+    initial call: mod_boss_manage:init/1
+    pid: <0.717.0>
+    registered_name: mod_boss_manage_3
+    exception exit: {{undef,[{data_base_dungeon_world_boss,get_all_id,[],[]},{mod_boss_manage,handle_info,2,[{file,"src/mod/mod_boss_manage.erl"},{line,153}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,599}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]},[{gen_server,terminate,6,[{file,"gen_server.erl"},{line,746}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [server_sup,server]
+    messages: []
+    links: [<0.170.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 987
+    stack_size: 27
+    reductions: 172
+  neighbours:
+2015-01-14 17:22:25 =ERROR REPORT====
+** Generic server mod_boss_manage_2 terminating 
+** Last message in was init_boss_manage
+** When Server state == {state,undefined}
+** Reason for termination == 
+** {'function not exported',[{data_base_dungeon_world_boss,get_all_id,[],[]},{mod_boss_manage,handle_info,2,[{file,"src/mod/mod_boss_manage.erl"},{line,153}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,599}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+2015-01-14 17:22:25 =SUPERVISOR REPORT====
+     Supervisor: {local,server_sup}
+     Context:    child_terminated
+     Reason:     {undef,[{data_base_dungeon_world_boss,get_all_id,[],[]},{mod_boss_manage,handle_info,2,[{file,"src/mod/mod_boss_manage.erl"},{line,153}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,599}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+     Offender:   [{pid,<0.717.0>},{name,mod_boss_manage_3},{mfargs,{mod_boss_manage,start_link,[3]}},{restart_type,permanent},{shutdown,10000},{child_type,worker}]
+
+2015-01-14 17:22:25 =CRASH REPORT====
+  crasher:
+    initial call: mod_boss_manage:init/1
+    pid: <0.716.0>
+    registered_name: mod_boss_manage_2
+    exception exit: {{undef,[{data_base_dungeon_world_boss,get_all_id,[],[]},{mod_boss_manage,handle_info,2,[{file,"src/mod/mod_boss_manage.erl"},{line,153}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,599}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]},[{gen_server,terminate,6,[{file,"gen_server.erl"},{line,746}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [server_sup,server]
+    messages: []
+    links: [<0.170.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 987
+    stack_size: 27
+    reductions: 180
+  neighbours:
+2015-01-14 17:22:25 =ERROR REPORT====
+** Generic server mod_boss_manage_1 terminating 
+** Last message in was init_boss_manage
+** When Server state == {state,undefined}
+** Reason for termination == 
+** {'function not exported',[{data_base_dungeon_world_boss,get_all_id,[],[]},{mod_boss_manage,handle_info,2,[{file,"src/mod/mod_boss_manage.erl"},{line,153}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,599}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+2015-01-14 17:22:25 =CRASH REPORT====
+  crasher:
+    initial call: mod_boss_manage:init/1
+    pid: <0.715.0>
+    registered_name: mod_boss_manage_1
+    exception exit: {{undef,[{data_base_dungeon_world_boss,get_all_id,[],[]},{mod_boss_manage,handle_info,2,[{file,"src/mod/mod_boss_manage.erl"},{line,153}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,599}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]},[{gen_server,terminate,6,[{file,"gen_server.erl"},{line,746}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [server_sup,server]
+    messages: []
+    links: [<0.170.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 987
+    stack_size: 27
+    reductions: 180
+  neighbours:
+2015-01-14 17:22:25 =SUPERVISOR REPORT====
+     Supervisor: {local,server_sup}
+     Context:    child_terminated
+     Reason:     {undef,[{data_base_dungeon_world_boss,get_all_id,[],[]},{mod_boss_manage,handle_info,2,[{file,"src/mod/mod_boss_manage.erl"},{line,153}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,599}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+     Offender:   [{pid,<0.716.0>},{name,mod_boss_manage_2},{mfargs,{mod_boss_manage,start_link,[2]}},{restart_type,permanent},{shutdown,10000},{child_type,worker}]
+
+2015-01-14 17:22:25 =SUPERVISOR REPORT====
+     Supervisor: {local,server_sup}
+     Context:    child_terminated
+     Reason:     {undef,[{data_base_dungeon_world_boss,get_all_id,[],[]},{mod_boss_manage,handle_info,2,[{file,"src/mod/mod_boss_manage.erl"},{line,153}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,599}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+     Offender:   [{pid,<0.715.0>},{name,mod_boss_manage_1},{mfargs,{mod_boss_manage,start_link,[1]}},{restart_type,permanent},{shutdown,10000},{child_type,worker}]
+
+2015-01-14 17:25:02 =ERROR REPORT====
+** Generic server mod_boss_manage_1 terminating 
+** Last message in was init_boss_manage
+** When Server state == {state,undefined}
+** Reason for termination == 
+** {'function not exported',[{data_base_dungeon_world_boss,get_all_id,[],[]},{mod_boss_manage,handle_info,2,[{file,"src/mod/mod_boss_manage.erl"},{line,153}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,599}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+2015-01-14 17:25:02 =CRASH REPORT====
+  crasher:
+    initial call: mod_boss_manage:init/1
+    pid: <0.652.0>
+    registered_name: mod_boss_manage_1
+    exception exit: {{undef,[{data_base_dungeon_world_boss,get_all_id,[],[]},{mod_boss_manage,handle_info,2,[{file,"src/mod/mod_boss_manage.erl"},{line,153}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,599}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]},[{gen_server,terminate,6,[{file,"gen_server.erl"},{line,746}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [server_sup,server]
+    messages: []
+    links: [<0.489.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 987
+    stack_size: 27
+    reductions: 172
+  neighbours:
+2015-01-14 17:25:02 =ERROR REPORT====
+** Generic server mod_boss_manage_3 terminating 
+** Last message in was init_boss_manage
+** When Server state == {state,undefined}
+** Reason for termination == 
+** {'function not exported',[{data_base_dungeon_world_boss,get_all_id,[],[]},{mod_boss_manage,handle_info,2,[{file,"src/mod/mod_boss_manage.erl"},{line,153}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,599}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+2015-01-14 17:25:02 =CRASH REPORT====
+  crasher:
+    initial call: mod_boss_manage:init/1
+    pid: <0.651.0>
+    registered_name: mod_boss_manage_3
+    exception exit: {{undef,[{data_base_dungeon_world_boss,get_all_id,[],[]},{mod_boss_manage,handle_info,2,[{file,"src/mod/mod_boss_manage.erl"},{line,153}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,599}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]},[{gen_server,terminate,6,[{file,"gen_server.erl"},{line,746}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [server_sup,server]
+    messages: []
+    links: [<0.489.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 987
+    stack_size: 27
+    reductions: 180
+  neighbours:
+2015-01-14 17:25:02 =SUPERVISOR REPORT====
+     Supervisor: {local,server_sup}
+     Context:    child_terminated
+     Reason:     {undef,[{data_base_dungeon_world_boss,get_all_id,[],[]},{mod_boss_manage,handle_info,2,[{file,"src/mod/mod_boss_manage.erl"},{line,153}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,599}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+     Offender:   [{pid,<0.652.0>},{name,mod_boss_manage_1},{mfargs,{mod_boss_manage,start_link,[1]}},{restart_type,permanent},{shutdown,10000},{child_type,worker}]
+
+2015-01-14 17:25:02 =SUPERVISOR REPORT====
+     Supervisor: {local,server_sup}
+     Context:    child_terminated
+     Reason:     {undef,[{data_base_dungeon_world_boss,get_all_id,[],[]},{mod_boss_manage,handle_info,2,[{file,"src/mod/mod_boss_manage.erl"},{line,153}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,599}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+     Offender:   [{pid,<0.651.0>},{name,mod_boss_manage_3},{mfargs,{mod_boss_manage,start_link,[3]}},{restart_type,permanent},{shutdown,10000},{child_type,worker}]
+
+2015-01-14 17:25:02 =ERROR REPORT====
+** Generic server mod_boss_manage_2 terminating 
+** Last message in was init_boss_manage
+** When Server state == {state,undefined}
+** Reason for termination == 
+** {'function not exported',[{data_base_dungeon_world_boss,get_all_id,[],[]},{mod_boss_manage,handle_info,2,[{file,"src/mod/mod_boss_manage.erl"},{line,153}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,599}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+2015-01-14 17:25:02 =CRASH REPORT====
+  crasher:
+    initial call: mod_boss_manage:init/1
+    pid: <0.653.0>
+    registered_name: mod_boss_manage_2
+    exception exit: {{undef,[{data_base_dungeon_world_boss,get_all_id,[],[]},{mod_boss_manage,handle_info,2,[{file,"src/mod/mod_boss_manage.erl"},{line,153}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,599}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]},[{gen_server,terminate,6,[{file,"gen_server.erl"},{line,746}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [server_sup,server]
+    messages: []
+    links: [<0.489.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 987
+    stack_size: 27
+    reductions: 172
+  neighbours:
+2015-01-14 17:25:02 =SUPERVISOR REPORT====
+     Supervisor: {local,server_sup}
+     Context:    child_terminated
+     Reason:     {undef,[{data_base_dungeon_world_boss,get_all_id,[],[]},{mod_boss_manage,handle_info,2,[{file,"src/mod/mod_boss_manage.erl"},{line,153}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,599}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+     Offender:   [{pid,<0.653.0>},{name,mod_boss_manage_2},{mfargs,{mod_boss_manage,start_link,[2]}},{restart_type,permanent},{shutdown,10000},{child_type,worker}]
+
+2015-01-14 17:25:02 =SUPERVISOR REPORT====
+     Supervisor: {local,server_sup}
+     Context:    shutdown
+     Reason:     reached_max_restart_intensity
+     Offender:   [{pid,<0.653.0>},{name,mod_boss_manage_2},{mfargs,{mod_boss_manage,start_link,[2]}},{restart_type,permanent},{shutdown,10000},{child_type,worker}]
+
+2015-01-14 17:30:10 =ERROR REPORT====
+** Generic server mod_boss_manage_1 terminating 
+** Last message in was init_boss_manage
+** When Server state == {state,undefined}
+** Reason for termination == 
+** {'function not exported',[{data_base_dungeon_world_boss,get_all_id,[],[]},{mod_boss_manage,handle_info,2,[{file,"src/mod/mod_boss_manage.erl"},{line,153}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,599}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+2015-01-14 17:30:10 =CRASH REPORT====
+  crasher:
+    initial call: mod_boss_manage:init/1
+    pid: <0.544.0>
+    registered_name: mod_boss_manage_1
+    exception exit: {{undef,[{data_base_dungeon_world_boss,get_all_id,[],[]},{mod_boss_manage,handle_info,2,[{file,"src/mod/mod_boss_manage.erl"},{line,153}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,599}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]},[{gen_server,terminate,6,[{file,"gen_server.erl"},{line,746}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [server_sup,server]
+    messages: []
+    links: [<0.489.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 987
+    stack_size: 27
+    reductions: 172
+  neighbours:
+2015-01-14 17:30:10 =SUPERVISOR REPORT====
+     Supervisor: {local,server_sup}
+     Context:    child_terminated
+     Reason:     {undef,[{data_base_dungeon_world_boss,get_all_id,[],[]},{mod_boss_manage,handle_info,2,[{file,"src/mod/mod_boss_manage.erl"},{line,153}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,599}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+     Offender:   [{pid,<0.544.0>},{name,mod_boss_manage_1},{mfargs,{mod_boss_manage,start_link,[1]}},{restart_type,permanent},{shutdown,10000},{child_type,worker}]
+
+2015-01-14 17:30:10 =ERROR REPORT====
+** Generic server mod_boss_manage_3 terminating 
+** Last message in was init_boss_manage
+** When Server state == {state,undefined}
+** Reason for termination == 
+** {'function not exported',[{data_base_dungeon_world_boss,get_all_id,[],[]},{mod_boss_manage,handle_info,2,[{file,"src/mod/mod_boss_manage.erl"},{line,153}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,599}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+2015-01-14 17:30:10 =CRASH REPORT====
+  crasher:
+    initial call: mod_boss_manage:init/1
+    pid: <0.546.0>
+    registered_name: mod_boss_manage_3
+    exception exit: {{undef,[{data_base_dungeon_world_boss,get_all_id,[],[]},{mod_boss_manage,handle_info,2,[{file,"src/mod/mod_boss_manage.erl"},{line,153}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,599}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]},[{gen_server,terminate,6,[{file,"gen_server.erl"},{line,746}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [server_sup,server]
+    messages: []
+    links: [<0.489.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 987
+    stack_size: 27
+    reductions: 172
+  neighbours:
+2015-01-14 17:30:10 =ERROR REPORT====
+** Generic server mod_boss_manage_2 terminating 
+** Last message in was init_boss_manage
+** When Server state == {state,undefined}
+** Reason for termination == 
+** {'function not exported',[{data_base_dungeon_world_boss,get_all_id,[],[]},{mod_boss_manage,handle_info,2,[{file,"src/mod/mod_boss_manage.erl"},{line,153}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,599}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+2015-01-14 17:30:10 =CRASH REPORT====
+  crasher:
+    initial call: mod_boss_manage:init/1
+    pid: <0.545.0>
+    registered_name: mod_boss_manage_2
+    exception exit: {{undef,[{data_base_dungeon_world_boss,get_all_id,[],[]},{mod_boss_manage,handle_info,2,[{file,"src/mod/mod_boss_manage.erl"},{line,153}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,599}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]},[{gen_server,terminate,6,[{file,"gen_server.erl"},{line,746}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [server_sup,server]
+    messages: []
+    links: [<0.489.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 987
+    stack_size: 27
+    reductions: 180
+  neighbours:
+2015-01-14 17:30:10 =SUPERVISOR REPORT====
+     Supervisor: {local,server_sup}
+     Context:    child_terminated
+     Reason:     {undef,[{data_base_dungeon_world_boss,get_all_id,[],[]},{mod_boss_manage,handle_info,2,[{file,"src/mod/mod_boss_manage.erl"},{line,153}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,599}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+     Offender:   [{pid,<0.546.0>},{name,mod_boss_manage_3},{mfargs,{mod_boss_manage,start_link,[3]}},{restart_type,permanent},{shutdown,10000},{child_type,worker}]
+
+2015-01-14 17:30:10 =SUPERVISOR REPORT====
+     Supervisor: {local,server_sup}
+     Context:    child_terminated
+     Reason:     {undef,[{data_base_dungeon_world_boss,get_all_id,[],[]},{mod_boss_manage,handle_info,2,[{file,"src/mod/mod_boss_manage.erl"},{line,153}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,599}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+     Offender:   [{pid,<0.545.0>},{name,mod_boss_manage_2},{mfargs,{mod_boss_manage,start_link,[2]}},{restart_type,permanent},{shutdown,10000},{child_type,worker}]
+
+2015-01-14 17:30:10 =ERROR REPORT====
+** Generic server mod_boss_manage_1 terminating 
+** Last message in was init_boss_manage
+** When Server state == {state,undefined}
+** Reason for termination == 
+** {'function not exported',[{data_base_dungeon_world_boss,get_all_id,[],[]},{mod_boss_manage,handle_info,2,[{file,"src/mod/mod_boss_manage.erl"},{line,153}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,599}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+2015-01-14 17:30:10 =CRASH REPORT====
+  crasher:
+    initial call: mod_boss_manage:init/1
+    pid: <0.651.0>
+    registered_name: mod_boss_manage_1
+    exception exit: {{undef,[{data_base_dungeon_world_boss,get_all_id,[],[]},{mod_boss_manage,handle_info,2,[{file,"src/mod/mod_boss_manage.erl"},{line,153}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,599}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]},[{gen_server,terminate,6,[{file,"gen_server.erl"},{line,746}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [server_sup,server]
+    messages: []
+    links: [<0.489.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 987
+    stack_size: 27
+    reductions: 172
+  neighbours:
+2015-01-14 17:30:10 =SUPERVISOR REPORT====
+     Supervisor: {local,server_sup}
+     Context:    child_terminated
+     Reason:     {undef,[{data_base_dungeon_world_boss,get_all_id,[],[]},{mod_boss_manage,handle_info,2,[{file,"src/mod/mod_boss_manage.erl"},{line,153}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,599}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+     Offender:   [{pid,<0.651.0>},{name,mod_boss_manage_1},{mfargs,{mod_boss_manage,start_link,[1]}},{restart_type,permanent},{shutdown,10000},{child_type,worker}]
+
+2015-01-14 17:30:10 =ERROR REPORT====
+** Generic server mod_boss_manage_2 terminating 
+** Last message in was init_boss_manage
+** When Server state == {state,undefined}
+** Reason for termination == 
+** {'function not exported',[{data_base_dungeon_world_boss,get_all_id,[],[]},{mod_boss_manage,handle_info,2,[{file,"src/mod/mod_boss_manage.erl"},{line,153}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,599}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+2015-01-14 17:30:10 =CRASH REPORT====
+  crasher:
+    initial call: mod_boss_manage:init/1
+    pid: <0.653.0>
+    registered_name: mod_boss_manage_2
+    exception exit: {{undef,[{data_base_dungeon_world_boss,get_all_id,[],[]},{mod_boss_manage,handle_info,2,[{file,"src/mod/mod_boss_manage.erl"},{line,153}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,599}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]},[{gen_server,terminate,6,[{file,"gen_server.erl"},{line,746}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [server_sup,server]
+    messages: []
+    links: [<0.489.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 987
+    stack_size: 27
+    reductions: 172
+  neighbours:
+2015-01-14 17:30:10 =ERROR REPORT====
+** Generic server mod_boss_manage_3 terminating 
+** Last message in was init_boss_manage
+** When Server state == {state,undefined}
+** Reason for termination == 
+** {'function not exported',[{data_base_dungeon_world_boss,get_all_id,[],[]},{mod_boss_manage,handle_info,2,[{file,"src/mod/mod_boss_manage.erl"},{line,153}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,599}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+2015-01-14 17:30:10 =CRASH REPORT====
+  crasher:
+    initial call: mod_boss_manage:init/1
+    pid: <0.652.0>
+    registered_name: mod_boss_manage_3
+    exception exit: {{undef,[{data_base_dungeon_world_boss,get_all_id,[],[]},{mod_boss_manage,handle_info,2,[{file,"src/mod/mod_boss_manage.erl"},{line,153}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,599}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]},[{gen_server,terminate,6,[{file,"gen_server.erl"},{line,746}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [server_sup,server]
+    messages: []
+    links: [<0.489.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 987
+    stack_size: 27
+    reductions: 172
+  neighbours:
+2015-01-14 17:30:10 =SUPERVISOR REPORT====
+     Supervisor: {local,server_sup}
+     Context:    child_terminated
+     Reason:     {undef,[{data_base_dungeon_world_boss,get_all_id,[],[]},{mod_boss_manage,handle_info,2,[{file,"src/mod/mod_boss_manage.erl"},{line,153}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,599}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+     Offender:   [{pid,<0.653.0>},{name,mod_boss_manage_2},{mfargs,{mod_boss_manage,start_link,[2]}},{restart_type,permanent},{shutdown,10000},{child_type,worker}]
+
+2015-01-14 17:30:10 =SUPERVISOR REPORT====
+     Supervisor: {local,server_sup}
+     Context:    child_terminated
+     Reason:     {undef,[{data_base_dungeon_world_boss,get_all_id,[],[]},{mod_boss_manage,handle_info,2,[{file,"src/mod/mod_boss_manage.erl"},{line,153}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,599}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+     Offender:   [{pid,<0.652.0>},{name,mod_boss_manage_3},{mfargs,{mod_boss_manage,start_link,[3]}},{restart_type,permanent},{shutdown,10000},{child_type,worker}]
+
+2015-01-14 17:30:10 =SUPERVISOR REPORT====
+     Supervisor: {local,server_sup}
+     Context:    shutdown
+     Reason:     reached_max_restart_intensity
+     Offender:   [{pid,<0.652.0>},{name,mod_boss_manage_3},{mfargs,{mod_boss_manage,start_link,[3]}},{restart_type,permanent},{shutdown,10000},{child_type,worker}]
+

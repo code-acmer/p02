@@ -1,0 +1,11 @@
+
+::生成客户端所需要的c++协议文件
+
+
+cd ../proto
+for /r %%c in (*.proto) do escript ../script/protoc.escript %%c
+
+for /r %%c in (*.proto) do protoc -I"E:/happytree-mobile/server/proto" --cpp_out="E:/happytree-mobile/client_new/shsg/proj.win32/Net/proto"  %%c
+
+pause
+ 

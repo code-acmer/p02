@@ -1,0 +1,1169 @@
+2014-12-14 14:29:45.896 [debug] <0.71.0>@lager_handler_watcher:94 Lager installed handler {lager_file_backend,
+                            "/home/li/server_p02/logs/p02_db_disc_1@192.168.1.104/server.log"} into lager_event
+2014-12-14 14:29:45.896 [debug] <0.73.0>@lager_handler_watcher:94 Lager installed handler error_logger_lager_h into error_logger
+2014-12-14 14:29:45.917 [debug] <0.58.0> Supervisor gr_param_sup started gr_param:start_link(gr_lager_default_tracer_params) at pid <0.75.0>
+2014-12-14 14:29:45.917 [debug] <0.57.0> Supervisor gr_counter_sup started gr_counter:start_link(gr_lager_default_tracer_counters) at pid <0.76.0>
+2014-12-14 14:29:45.917 [debug] <0.59.0> Supervisor gr_manager_sup started gr_manager:start_link(gr_lager_default_tracer_params_mgr, gr_lager_default_tracer_params, []) at pid <0.77.0>
+2014-12-14 14:29:45.917 [debug] <0.59.0> Supervisor gr_manager_sup started gr_manager:start_link(gr_lager_default_tracer_counters_mgr, gr_lager_default_tracer_counters, [{input,0},{filter,0},{output,0}]) at pid <0.78.0>
+2014-12-14 14:29:46.142 [info] <0.7.0> Application lager started on node 'p02_db_disc_1@192.168.1.104'
+2014-12-14 14:29:46.171 [debug] <0.2.0>@main:server_start:42 Lager Config [{async_threshold_window,5},{crash_log_date,"$D0"},{crash_log,"/home/li/server_p02/logs/p02_db_disc_1@192.168.1.104/server-crash.log"},{colors,[{debug,"\e[0;38m"},{info,"\e[1;37m"},{notice,"\e[1;36m"},{warning,"\e[1;33m"},{error,"\e[1;31m"},{critical,"\e[1;35m"},{alert,"\e[1;44m"},{emergency,"\e[1;41m"}]},{crash_log_count,5},{async_threshold,20},{crash_log_size,10485760},{crash_log_msg_size,65536},{colored,true},{log_level,debug},{handlers,[{lager_console_backend,[debug,{lager_default_formatter,[date," ",time,color," [",severity,"] <",pid,">@",module,":",function,":",line," ",message,"\e[0m\r\n"]}]},{lager_file_backend,[{level,debug},{date,"$W0D23"},{count,20},{file,"/home/li/server_p02/logs/p02_db_disc_1@192.168.1.104/server.log"}]}]},{error_logger_hwm,50},{error_logger_redirect,true},{included_applications,[]}]
+2014-12-14 14:29:46.171 [debug] <0.2.0>@main:server_start:44 mod_counter start 
+2014-12-14 14:29:46.203 [info] <0.2.0>@mnesia_upgrade:maybe_upgrade_mnesia:105 first run mnesia
+2014-12-14 14:29:46.220 [debug] <0.94.0> Supervisor hstdlib_sup started hmod_timer:start_link() at pid <0.95.0>
+2014-12-14 14:29:46.227 [debug] <0.94.0> Supervisor hstdlib_sup started hmod_rand:start_link() at pid <0.96.0>
+2014-12-14 14:29:46.227 [info] <0.7.0> Application hstdlib started on node 'p02_db_disc_1@192.168.1.104'
+2014-12-14 14:29:46.228 [info] <0.7.0> Application mysql started on node 'p02_db_disc_1@192.168.1.104'
+2014-12-14 14:29:46.236 [info] <0.7.0> Application crypto started on node 'p02_db_disc_1@192.168.1.104'
+2014-12-14 14:29:46.246 [debug] <0.102.0> Supervisor emysql_sup started emysql_statements:start_link() at pid <0.103.0>
+2014-12-14 14:29:46.249 [debug] <0.102.0> Supervisor emysql_sup started emysql_conn_mgr:start_link() at pid <0.104.0>
+2014-12-14 14:29:46.249 [info] <0.7.0> Application emysql started on node 'p02_db_disc_1@192.168.1.104'
+2014-12-14 14:29:46.251 [info] <0.107.0> leshu_db_stated: StartArgs [fuck_rebar]
+
+2014-12-14 14:29:46.251 [info] <0.107.0> leshu_db_env: {ok,[{ip,"0.0.0.0"}]}
+
+2014-12-14 14:29:46.252 [info] <0.7.0> Application leshu_db started on node 'p02_db_disc_1@192.168.1.104'
+2014-12-14 14:29:46.275 [debug] <0.112.0> Supervisor mnesia_sup started mnesia_sup:start_event() at pid <0.113.0>
+2014-12-14 14:29:46.285 [debug] <0.114.0> Supervisor mnesia_kernel_sup started mnesia_monitor:start() at pid <0.115.0>
+2014-12-14 14:29:46.291 [debug] <0.114.0> Supervisor mnesia_kernel_sup started mnesia_subscr:start() at pid <0.116.0>
+2014-12-14 14:29:46.302 [debug] <0.114.0> Supervisor mnesia_kernel_sup started mnesia_locker:start() at pid <0.117.0>
+2014-12-14 14:29:46.309 [debug] <0.114.0> Supervisor mnesia_kernel_sup started mnesia_recover:start() at pid <0.118.0>
+2014-12-14 14:29:46.344 [debug] <0.114.0> Supervisor mnesia_kernel_sup started mnesia_tm:start() at pid <0.119.0>
+2014-12-14 14:29:46.348 [debug] <0.114.0> Supervisor mnesia_kernel_sup started mnesia_checkpoint_sup:start() at pid <0.120.0>
+2014-12-14 14:29:46.351 [debug] <0.114.0> Supervisor mnesia_kernel_sup started mnesia_snmp_sup:start() at pid <0.121.0>
+2014-12-14 14:29:46.357 [debug] <0.114.0> Supervisor mnesia_kernel_sup started mnesia_controller:start() at pid <0.122.0>
+2014-12-14 14:29:46.368 [debug] <0.114.0> Supervisor mnesia_kernel_sup started mnesia_late_loader:start() at pid <0.123.0>
+2014-12-14 14:29:46.368 [debug] <0.112.0> Supervisor mnesia_sup started mnesia_kernel_sup:start() at pid <0.114.0>
+2014-12-14 14:29:46.368 [info] <0.7.0> Application mnesia started on node 'p02_db_disc_1@192.168.1.104'
+2014-12-14 14:29:46.377 [info] <0.7.0> Application asn1 started on node 'p02_db_disc_1@192.168.1.104'
+2014-12-14 14:29:46.381 [debug] <0.67.0>@lager_handler_watcher:94 Lager installed handler lager_backend_throttle into lager_event
+2014-12-14 14:29:46.382 [info] <0.7.0> Application public_key started on node 'p02_db_disc_1@192.168.1.104'
+2014-12-14 14:29:46.402 [debug] <0.130.0> Supervisor ssl_sup started ssl_manager:start_link([]) at pid <0.131.0>
+2014-12-14 14:29:46.405 [debug] <0.130.0> Supervisor ssl_sup started tls_connection_sup:start_link() at pid <0.132.0>
+2014-12-14 14:29:46.408 [debug] <0.130.0> Supervisor ssl_sup started ssl_listen_tracker_sup:start_link() at pid <0.133.0>
+2014-12-14 14:29:46.408 [info] <0.7.0> Application ssl started on node 'p02_db_disc_1@192.168.1.104'
+2014-12-14 14:29:46.415 [debug] <0.137.0> Supervisor ibrowse_sup started ibrowse:start_link() at pid <0.138.0>
+2014-12-14 14:29:46.415 [info] <0.7.0> Application ibrowse started on node 'p02_db_disc_1@192.168.1.104'
+2014-12-14 14:29:46.431 [debug] <0.143.0> Supervisor os_mon_sup started disksup:start_link() at pid <0.144.0>
+2014-12-14 14:29:46.437 [debug] <0.143.0> Supervisor os_mon_sup started memsup:start_link() at pid <0.145.0>
+2014-12-14 14:29:46.441 [debug] <0.35.0> Supervisor kernel_safe_sup started timer:start_link() at pid <0.147.0>
+2014-12-14 14:29:46.447 [debug] <0.143.0> Supervisor os_mon_sup started cpu_sup:start_link() at pid <0.148.0>
+2014-12-14 14:29:46.447 [info] <0.7.0> Application os_mon started on node 'p02_db_disc_1@192.168.1.104'
+2014-12-14 14:29:46.457 [debug] <0.154.0> Supervisor folsom_sup started folsom_sample_slide_sup:start_link() at pid <0.155.0>
+2014-12-14 14:29:46.457 [info] <0.42.0> alarm_handler: {set,{system_memory_high_watermark,[]}}
+2014-12-14 14:29:46.460 [debug] <0.154.0> Supervisor folsom_sup started folsom_meter_timer_server:start_link() at pid <0.156.0>
+2014-12-14 14:29:46.461 [debug] <0.154.0> Supervisor folsom_sup started folsom_metrics_histogram_ets:start_link() at pid <0.157.0>
+2014-12-14 14:29:46.461 [info] <0.7.0> Application folsom started on node 'p02_db_disc_1@192.168.1.104'
+2014-12-14 14:29:46.479 [debug] <0.161.0> Supervisor gproc_sup started gproc:start_link() at pid <0.162.0>
+2014-12-14 14:29:46.482 [debug] <0.161.0> Supervisor gproc_sup started gproc_monitor:start_link() at pid <0.163.0>
+2014-12-14 14:29:46.487 [debug] <0.161.0> Supervisor gproc_sup started gproc_bcast:start_link() at pid <0.164.0>
+2014-12-14 14:29:46.495 [debug] <0.161.0> Supervisor gproc_sup started gproc_pool:start_link() at pid <0.165.0>
+2014-12-14 14:29:46.495 [info] <0.7.0> Application gproc started on node 'p02_db_disc_1@192.168.1.104'
+2014-12-14 14:29:46.499 [debug] <0.168.0>@mnesia_misc:init_from_config:37 TryNodes ['p02_db_disc_1@127.0.0.1'], NodeType disc
+2014-12-14 14:29:46.500 [debug] <0.171.0> Supervisor inet_gethost_native_sup started undefined at pid <0.172.0>
+2014-12-14 14:29:46.500 [debug] <0.35.0> Supervisor kernel_safe_sup started inet_gethost_native:start_link() at pid <0.171.0>
+2014-12-14 14:29:46.511 [info] <0.168.0>@mnesia_misc:init_from_config:50 First Disc Db Node Start
+2014-12-14 14:29:46.512 [debug] <0.168.0>@mnesia_misc:init_db:121 {Nodes, WasDiscNode, NodeType} {[],false,disc}
+2014-12-14 14:29:46.512 [info] <0.168.0>@mnesia_misc:init_db:130 RAM -> disc will create_schema
+2014-12-14 14:29:46.523 [info] <0.7.0> Application mnesia exited with reason: stopped
+2014-12-14 14:29:46.557 [debug] <0.35.0> Supervisor kernel_safe_sup started disk_log_sup:start_link() at pid <0.178.0>
+2014-12-14 14:29:46.557 [debug] <0.35.0> Supervisor kernel_safe_sup started disk_log_server:start_link() at pid <0.179.0>
+2014-12-14 14:29:46.638 [debug] <0.191.0> Supervisor mnesia_sup started mnesia_sup:start_event() at pid <0.192.0>
+2014-12-14 14:29:46.639 [debug] <0.193.0> Supervisor mnesia_kernel_sup started mnesia_monitor:start() at pid <0.194.0>
+2014-12-14 14:29:46.639 [debug] <0.193.0> Supervisor mnesia_kernel_sup started mnesia_subscr:start() at pid <0.195.0>
+2014-12-14 14:29:46.639 [debug] <0.193.0> Supervisor mnesia_kernel_sup started mnesia_locker:start() at pid <0.196.0>
+2014-12-14 14:29:46.639 [debug] <0.193.0> Supervisor mnesia_kernel_sup started mnesia_recover:start() at pid <0.197.0>
+2014-12-14 14:29:46.659 [debug] <0.35.0> Supervisor kernel_safe_sup started dets_sup:start_link() at pid <0.201.0>
+2014-12-14 14:29:46.659 [debug] <0.35.0> Supervisor kernel_safe_sup started dets_server:start_link() at pid <0.202.0>
+2014-12-14 14:29:46.687 [debug] <0.193.0> Supervisor mnesia_kernel_sup started mnesia_tm:start() at pid <0.198.0>
+2014-12-14 14:29:46.687 [debug] <0.193.0> Supervisor mnesia_kernel_sup started mnesia_checkpoint_sup:start() at pid <0.211.0>
+2014-12-14 14:29:46.687 [debug] <0.193.0> Supervisor mnesia_kernel_sup started mnesia_snmp_sup:start() at pid <0.212.0>
+2014-12-14 14:29:46.687 [debug] <0.193.0> Supervisor mnesia_kernel_sup started mnesia_controller:start() at pid <0.213.0>
+2014-12-14 14:29:46.688 [debug] <0.193.0> Supervisor mnesia_kernel_sup started mnesia_late_loader:start() at pid <0.214.0>
+2014-12-14 14:29:46.688 [debug] <0.191.0> Supervisor mnesia_sup started mnesia_kernel_sup:start() at pid <0.193.0>
+2014-12-14 14:29:46.688 [info] <0.7.0> Application mnesia started on node 'p02_db_disc_1@192.168.1.104'
+2014-12-14 14:29:50.208 [debug] <0.42.0>@mod_alarm_handler:init:24 misc_alarm_handler init : [].
+2014-12-14 14:29:50.212 [debug] <0.169.0> Supervisor server_sup started mod_cache:start_link() at pid <0.658.0>
+2014-12-14 14:29:50.269 [info] <0.168.0>@server_app:start:59 acceptor_sup started 
+2014-12-14 14:29:50.269 [info] <0.168.0>@server_app:start:67 acceptor_sup started 
+2014-12-14 14:29:50.273 [debug] <0.663.0>@tcp_listener:init:35 Listen on port: 8801
+2014-12-14 14:29:50.276 [debug] <0.662.0> Supervisor tcp_client_handler_listener_sup started tcp_listener:start_link(8801, tcp_client_handler) at pid <0.663.0>
+2014-12-14 14:29:50.276 [info] <0.168.0>@server_app:start:79 listener_sup started for port: 8801 ... 
+2014-12-14 14:29:50.276 [debug] <0.662.0> Supervisor tcp_client_handler_listener_sup started supervisor:start_link({local,listener_sup_tcp_client_handler}, listener_sup, [tcp_client_handler]) at pid <0.669.0>
+2014-12-14 14:29:50.276 [debug] <0.671.0>@tcp_listener:init:35 Listen on port: 9801
+2014-12-14 14:29:50.276 [debug] <0.670.0> Supervisor tcp_room_handler_listener_sup started tcp_listener:start_link(9801, tcp_room_handler) at pid <0.671.0>
+2014-12-14 14:29:50.276 [info] <0.168.0>@server_app:start:87 listener_sup started for port: 8801 ... 
+2014-12-14 14:29:50.277 [debug] <0.670.0> Supervisor tcp_room_handler_listener_sup started supervisor:start_link({local,listener_sup_tcp_room_handler}, listener_sup, [tcp_room_handler]) at pid <0.677.0>
+2014-12-14 14:29:50.280 [info] <0.678.0>@httpd_handler:start:18 mochiweb start on: [{ip,{0,0,0,0}},{port,18801}]
+2014-12-14 14:29:50.292 [debug] <0.678.0> Supervisor h_httpd_sup started httpd_handler:start([{ip,{0,0,0,0}},{port,18801}]) at pid <0.679.0>
+2014-12-14 14:29:50.297 [warning] <0.168.0>@server_app:start:100 rank_sup start 
+2014-12-14 14:29:50.303 [debug] <0.697.0>@mod_counter:init:62 CenterList ['center@127.0.0.1']
+2014-12-14 14:29:50.311 [debug] <0.169.0> Supervisor server_sup started mod_counter:start_link() at pid <0.697.0>
+2014-12-14 14:29:50.314 [debug] <0.169.0> Supervisor server_sup started update:start_link() at pid <0.701.0>
+2014-12-14 14:29:50.317 [debug] <0.169.0> Supervisor server_sup started mod_boss_manage:start_link(1) at pid <0.702.0>
+2014-12-14 14:29:50.317 [debug] <0.169.0> Supervisor server_sup started mod_boss_manage:start_link(2) at pid <0.703.0>
+2014-12-14 14:29:50.318 [debug] <0.169.0> Supervisor server_sup started mod_boss_manage:start_link(3) at pid <0.704.0>
+2014-12-14 14:29:50.322 [debug] <0.169.0> Supervisor server_sup started mod_base_log:start_link(log_player_p, {log_state,{record_mysql_info,db_log,log_player,[id,player_id,event_id,arg1,arg2,timestamp],log_player,...},...}) at pid <0.705.0>
+2014-12-14 14:29:50.322 [debug] <0.169.0> Supervisor server_sup started mod_base_log:start_link(log_player_mini_p, {log_state,{record_mysql_info,db_log,log_player_mini,[player_id,acc_id,acc_name,nick_name],log_player_mini,...},...}) at pid <0.706.0>
+2014-12-14 14:29:50.322 [debug] <0.169.0> Supervisor server_sup started mod_base_log:start_link(log_player_feedback_p, {log_state,{record_mysql_info,db_log,log_player_feedback,[id,player_id,title,content,timestamp],...},...}) at pid <0.707.0>
+2014-12-14 14:29:50.325 [info] <0.705.0>@mod_base_log:available_table2:224 run CreateTableSQL Result 0, TableIndex 1
+2014-12-14 14:29:50.330 [debug] <0.169.0> Supervisor server_sup started mod_sys_acm:start_link(1) at pid <0.709.0>
+2014-12-14 14:29:50.330 [debug] <0.169.0> Supervisor server_sup started mod_sys_acm:start_link(2) at pid <0.710.0>
+2014-12-14 14:29:50.330 [debug] <0.169.0> Supervisor server_sup started mod_sys_acm:start_link(3) at pid <0.711.0>
+2014-12-14 14:29:50.342 [debug] <0.169.0> Supervisor server_sup started mod_player_rec:start_link(1) at pid <0.713.0>
+2014-12-14 14:29:50.342 [debug] <0.169.0> Supervisor server_sup started mod_player_rec:start_link(2) at pid <0.714.0>
+2014-12-14 14:29:50.342 [debug] <0.169.0> Supervisor server_sup started mod_player_rec:start_link(3) at pid <0.715.0>
+2014-12-14 14:29:50.344 [debug] <0.169.0> Supervisor server_sup started mod_table_clear:start_link() at pid <0.716.0>
+2014-12-14 14:29:50.361 [debug] <0.723.0> Supervisor gs_cron_sup started cron_agent_sup:start_link() at pid <0.724.0>
+2014-12-14 14:29:50.361 [info] <0.7.0> Application gs_cron started on node 'p02_db_disc_1@192.168.1.104'
+2014-12-14 14:29:50.361 [debug] <0.169.0> Supervisor server_sup started mod_timer:start_link() at pid <0.717.0>
+2014-12-14 14:29:50.367 [debug] <0.169.0> Supervisor server_sup started mod_dungeon_match:start_link() at pid <0.725.0>
+2014-12-14 14:29:50.371 [debug] <0.169.0> Supervisor server_sup started mod_selling_shop:start_link() at pid <0.726.0>
+2014-12-14 14:29:50.377 [debug] <0.169.0> Supervisor server_sup started mod_activity_shop:start_link() at pid <0.728.0>
+2014-12-14 14:29:50.383 [debug] <0.728.0>@mod_activity_shop:handle_info:160 init_state ShopMsgList : []
+2014-12-14 14:29:50.386 [debug] <0.696.0> Supervisor rank_sup started mod_arena:start_link(async_arena_rank) at pid <0.735.0>
+2014-12-14 14:29:50.386 [debug] <0.696.0> Supervisor rank_sup started mod_arena:start_link(sync_arena_rank) at pid <0.736.0>
+2014-12-14 14:29:50.389 [warning] <0.728.0>@mod_activity_shop:handle_info:169 get_next_activity
+2014-12-14 14:29:50.390 [debug] <0.696.0> Supervisor rank_sup started mod_rank:start_link(mugen_rank, mugen_rank_1, 500, daily, 1) at pid <0.737.0>
+2014-12-14 14:29:50.390 [debug] <0.696.0> Supervisor rank_sup started mod_rank:start_link(mugen_rank, mugen_rank_2, 500, daily, 1) at pid <0.738.0>
+2014-12-14 14:29:50.390 [debug] <0.696.0> Supervisor rank_sup started mod_rank:start_link(mugen_rank, mugen_rank_3, 500, daily, 1) at pid <0.739.0>
+2014-12-14 14:29:50.390 [debug] <0.696.0> Supervisor rank_sup started mod_rank:start_link(super_battle_rank, super_battle_rank_1, 500, daily, 1) at pid <0.740.0>
+2014-12-14 14:29:50.391 [debug] <0.696.0> Supervisor rank_sup started mod_rank:start_link(super_battle_rank, super_battle_rank_2, 500, daily, 1) at pid <0.741.0>
+2014-12-14 14:29:50.391 [debug] <0.696.0> Supervisor rank_sup started mod_rank:start_link(super_battle_rank, super_battle_rank_3, 500, daily, 1) at pid <0.742.0>
+2014-12-14 14:29:50.391 [debug] <0.696.0> Supervisor rank_sup started mod_rank:start_link(battle_ability_rank, battle_ability_rank_1, 500, daily, 1) at pid <0.743.0>
+2014-12-14 14:29:50.391 [debug] <0.696.0> Supervisor rank_sup started mod_rank:start_link(battle_ability_rank, battle_ability_rank_2, 500, daily, 1) at pid <0.744.0>
+2014-12-14 14:29:50.391 [debug] <0.696.0> Supervisor rank_sup started mod_rank:start_link(battle_ability_rank, battle_ability_rank_3, 500, daily, 1) at pid <0.745.0>
+2014-12-14 14:29:50.392 [debug] <0.696.0> Supervisor rank_sup started mod_rank:start_link(cost_coin_rank, cost_coin_rank_1, 500, weekly, 1) at pid <0.746.0>
+2014-12-14 14:29:50.392 [debug] <0.696.0> Supervisor rank_sup started mod_rank:start_link(cost_coin_rank, cost_coin_rank_2, 500, weekly, 1) at pid <0.747.0>
+2014-12-14 14:29:50.392 [debug] <0.696.0> Supervisor rank_sup started mod_rank:start_link(cost_coin_rank, cost_coin_rank_3, 500, weekly, 1) at pid <0.748.0>
+2014-12-14 14:29:50.392 [debug] <0.696.0> Supervisor rank_sup started mod_rank:start_link(cost_gold_rank, cost_gold_rank_1, 500, weekly, 1) at pid <0.749.0>
+2014-12-14 14:29:50.392 [debug] <0.696.0> Supervisor rank_sup started mod_rank:start_link(cost_gold_rank, cost_gold_rank_2, 500, weekly, 1) at pid <0.750.0>
+2014-12-14 14:29:50.392 [debug] <0.696.0> Supervisor rank_sup started mod_rank:start_link(cost_gold_rank, cost_gold_rank_3, 500, weekly, 1) at pid <0.751.0>
+2014-12-14 14:29:50.393 [debug] <0.696.0> Supervisor rank_sup started mod_rank:start_link(world_boss_rank, world_boss_rank_1, 500, weekly, 1) at pid <0.752.0>
+2014-12-14 14:29:50.393 [debug] <0.696.0> Supervisor rank_sup started mod_rank:start_link(world_boss_rank, world_boss_rank_2, 500, weekly, 1) at pid <0.753.0>
+2014-12-14 14:29:50.393 [debug] <0.696.0> Supervisor rank_sup started mod_rank:start_link(world_boss_rank, world_boss_rank_3, 500, weekly, 1) at pid <0.754.0>
+2014-12-14 14:29:50.393 [debug] <0.696.0> Supervisor rank_sup started mod_rank:start_link(async_arena_rank, async_arena_rank_1, 500, daily, 1) at pid <0.755.0>
+2014-12-14 14:29:50.393 [debug] <0.696.0> Supervisor rank_sup started mod_rank:start_link(async_arena_rank, async_arena_rank_2, 500, daily, 1) at pid <0.756.0>
+2014-12-14 14:29:50.394 [debug] <0.696.0> Supervisor rank_sup started mod_rank:start_link(async_arena_rank, async_arena_rank_3, 500, daily, 1) at pid <0.757.0>
+2014-12-14 14:29:50.412 [warning] <0.728.0>@mod_activity_shop:handle_info:189 All Activity End!
+2014-12-14 14:29:50.423 [debug] <0.737.0>@mod_rank:handle_cast:129 mugen_rank_1 auto_reset 
+2014-12-14 14:29:50.423 [debug] <0.738.0>@mod_rank:handle_cast:129 mugen_rank_2 auto_reset 
+2014-12-14 14:29:50.423 [debug] <0.739.0>@mod_rank:handle_cast:129 mugen_rank_3 auto_reset 
+2014-12-14 14:29:50.423 [debug] <0.740.0>@mod_rank:handle_cast:129 super_battle_rank_1 auto_reset 
+2014-12-14 14:29:50.423 [debug] <0.747.0>@mod_rank:handle_cast:129 cost_coin_rank_2 auto_reset 
+2014-12-14 14:29:50.423 [debug] <0.741.0>@mod_rank:handle_cast:129 super_battle_rank_2 auto_reset 
+2014-12-14 14:29:50.423 [debug] <0.748.0>@mod_rank:handle_cast:129 cost_coin_rank_3 auto_reset 
+2014-12-14 14:29:50.423 [debug] <0.742.0>@mod_rank:handle_cast:129 super_battle_rank_3 auto_reset 
+2014-12-14 14:29:50.423 [debug] <0.749.0>@mod_rank:handle_cast:129 cost_gold_rank_1 auto_reset 
+2014-12-14 14:29:50.423 [debug] <0.750.0>@mod_rank:handle_cast:129 cost_gold_rank_2 auto_reset 
+2014-12-14 14:29:50.423 [debug] <0.743.0>@mod_rank:handle_cast:129 battle_ability_rank_1 auto_reset 
+2014-12-14 14:29:50.423 [debug] <0.751.0>@mod_rank:handle_cast:129 cost_gold_rank_3 auto_reset 
+2014-12-14 14:29:50.423 [debug] <0.744.0>@mod_rank:handle_cast:129 battle_ability_rank_2 auto_reset 
+2014-12-14 14:29:50.424 [debug] <0.752.0>@mod_rank:handle_cast:129 world_boss_rank_1 auto_reset 
+2014-12-14 14:29:50.424 [debug] <0.753.0>@mod_rank:handle_cast:129 world_boss_rank_2 auto_reset 
+2014-12-14 14:29:50.424 [debug] <0.745.0>@mod_rank:handle_cast:129 battle_ability_rank_3 auto_reset 
+2014-12-14 14:29:50.424 [debug] <0.754.0>@mod_rank:handle_cast:129 world_boss_rank_3 auto_reset 
+2014-12-14 14:29:50.424 [debug] <0.746.0>@mod_rank:handle_cast:129 cost_coin_rank_1 auto_reset 
+2014-12-14 14:29:50.424 [debug] <0.755.0>@mod_rank:handle_cast:129 async_arena_rank_1 auto_reset 
+2014-12-14 14:29:50.424 [debug] <0.756.0>@mod_rank:handle_cast:129 async_arena_rank_2 auto_reset 
+2014-12-14 14:29:50.424 [debug] <0.757.0>@mod_rank:handle_cast:129 async_arena_rank_3 auto_reset 
+2014-12-14 14:29:50.442 [info] <0.168.0> mochi_get error Key center_node_port
+
+2014-12-14 14:29:50.449 [debug] <0.782.0> Supervisor ranch_sup started ranch_server:start_link() at pid <0.783.0>
+2014-12-14 14:29:50.449 [info] <0.7.0> Application ranch started on node 'p02_db_disc_1@192.168.1.104'
+2014-12-14 14:29:50.452 [info] <0.7.0> Application cowlib started on node 'p02_db_disc_1@192.168.1.104'
+2014-12-14 14:29:50.459 [debug] <0.788.0> Supervisor cowboy_sup started cowboy_clock:start_link() at pid <0.789.0>
+2014-12-14 14:29:50.459 [info] <0.7.0> Application cowboy started on node 'p02_db_disc_1@192.168.1.104'
+2014-12-14 14:29:50.468 [debug] <0.790.0> Supervisor {<0.790.0>,ranch_listener_sup} started ranch_conns_sup:start_link(http, worker, 5000, ranch_tcp, 5000, cowboy_protocol) at pid <0.791.0>
+2014-12-14 14:29:50.470 [debug] <0.792.0> Supervisor {<0.792.0>,ranch_acceptors_sup} started ranch_acceptor:start_link(#Port<0.12063>, ranch_tcp, <0.791.0>) at pid <0.793.0>
+2014-12-14 14:29:50.470 [debug] <0.792.0> Supervisor {<0.792.0>,ranch_acceptors_sup} started ranch_acceptor:start_link(#Port<0.12063>, ranch_tcp, <0.791.0>) at pid <0.794.0>
+2014-12-14 14:29:50.470 [debug] <0.792.0> Supervisor {<0.792.0>,ranch_acceptors_sup} started ranch_acceptor:start_link(#Port<0.12063>, ranch_tcp, <0.791.0>) at pid <0.795.0>
+2014-12-14 14:29:50.470 [debug] <0.792.0> Supervisor {<0.792.0>,ranch_acceptors_sup} started ranch_acceptor:start_link(#Port<0.12063>, ranch_tcp, <0.791.0>) at pid <0.796.0>
+2014-12-14 14:29:50.470 [debug] <0.792.0> Supervisor {<0.792.0>,ranch_acceptors_sup} started ranch_acceptor:start_link(#Port<0.12063>, ranch_tcp, <0.791.0>) at pid <0.797.0>
+2014-12-14 14:29:50.470 [debug] <0.792.0> Supervisor {<0.792.0>,ranch_acceptors_sup} started ranch_acceptor:start_link(#Port<0.12063>, ranch_tcp, <0.791.0>) at pid <0.798.0>
+2014-12-14 14:29:50.470 [debug] <0.792.0> Supervisor {<0.792.0>,ranch_acceptors_sup} started ranch_acceptor:start_link(#Port<0.12063>, ranch_tcp, <0.791.0>) at pid <0.799.0>
+2014-12-14 14:29:50.470 [debug] <0.792.0> Supervisor {<0.792.0>,ranch_acceptors_sup} started ranch_acceptor:start_link(#Port<0.12063>, ranch_tcp, <0.791.0>) at pid <0.800.0>
+2014-12-14 14:29:50.471 [debug] <0.792.0> Supervisor {<0.792.0>,ranch_acceptors_sup} started ranch_acceptor:start_link(#Port<0.12063>, ranch_tcp, <0.791.0>) at pid <0.801.0>
+2014-12-14 14:29:50.471 [debug] <0.792.0> Supervisor {<0.792.0>,ranch_acceptors_sup} started ranch_acceptor:start_link(#Port<0.12063>, ranch_tcp, <0.791.0>) at pid <0.802.0>
+2014-12-14 14:29:50.471 [debug] <0.790.0> Supervisor {<0.790.0>,ranch_listener_sup} started ranch_acceptors_sup:start_link(http, 10, ranch_tcp, [{port,7801},{max_connections,3000}]) at pid <0.792.0>
+2014-12-14 14:29:50.471 [debug] <0.782.0> Supervisor ranch_sup started ranch_listener_sup:start_link(http, 10, ranch_tcp, [{port,7801},{max_connections,3000}], cowboy_protocol, [{env,[{dispatch,[{'_',[],[{[<<"get_server_list">>],[],http_handler,[center_node]},{'_',[],http_handler,...}]}]}]}]) at pid <0.790.0>
+2014-12-14 14:29:50.475 [debug] <0.169.0> Supervisor server_sup started player_sup:start_link() at pid <0.803.0>
+2014-12-14 14:29:50.478 [warning] <0.697.0>@mod_counter:rpc_get_counter:198 update uid UidType player_uid, OldRangeId undefined NewRangeId 4
+2014-12-14 14:29:50.479 [warning] <0.697.0>@mod_counter:rpc_get_counter:198 update uid UidType dungeon_uid, OldRangeId undefined NewRangeId 4
+2014-12-14 14:29:50.483 [warning] <0.697.0>@mod_counter:rpc_get_counter:198 update uid UidType fashion_uid, OldRangeId undefined NewRangeId 4
+2014-12-14 14:29:50.483 [warning] <0.697.0>@mod_counter:rpc_get_counter:198 update uid UidType mails_uid, OldRangeId undefined NewRangeId 4
+2014-12-14 14:29:50.491 [warning] <0.697.0>@mod_counter:rpc_get_counter:198 update uid UidType chats_private_uid, OldRangeId undefined NewRangeId 4
+2014-12-14 14:29:50.491 [warning] <0.697.0>@mod_counter:rpc_get_counter:198 update uid UidType chats_world_uid, OldRangeId undefined NewRangeId 4
+2014-12-14 14:29:50.492 [warning] <0.697.0>@mod_counter:rpc_get_counter:198 update uid UidType goods_uid, OldRangeId undefined NewRangeId 4
+2014-12-14 14:29:50.492 [warning] <0.697.0>@mod_counter:rpc_get_counter:198 update uid UidType player_skill_uid, OldRangeId undefined NewRangeId 4
+2014-12-14 14:29:50.493 [warning] <0.697.0>@mod_counter:rpc_get_counter:198 update uid UidType task_uid, OldRangeId undefined NewRangeId 4
+2014-12-14 14:29:50.493 [warning] <0.697.0>@mod_counter:rpc_get_counter:198 update uid UidType dungeon_schedule_uid, OldRangeId undefined NewRangeId 4
+2014-12-14 14:29:50.494 [warning] <0.697.0>@mod_counter:rpc_get_counter:198 update uid UidType team_uid, OldRangeId undefined NewRangeId 4
+2014-12-14 14:29:50.495 [warning] <0.697.0>@mod_counter:rpc_get_counter:198 update uid UidType mugen_reward_uid, OldRangeId undefined NewRangeId 4
+2014-12-14 14:29:50.496 [warning] <0.697.0>@mod_counter:rpc_get_counter:198 update uid UidType base_operators_mail_uid, OldRangeId undefined NewRangeId 4
+2014-12-14 14:29:50.515 [info] <0.7.0> Application server started on node 'p02_db_disc_1@192.168.1.104'
+2014-12-14 14:29:51.413 [debug] <0.728.0>@mod_activity_shop:handle_info:209 timeout: []
+2014-12-14 14:29:51.413 [debug] <0.728.0>@mod_activity_shop:save_to_db:347 activity shop save_to_db
+2014-12-14 14:30:06.847 [debug] <0.804.0>@tcp_client_handler:init:119 {ok,[{sndbuf,2625280},{recbuf,1058928},{packet,2},{header,11},{active,200},{nodelay,false},{keepalive,true},{priority,0},{tos,0},{buffer,1460},{delay_send,true},{packet_size,0},{high_watermark,8192},{low_watermark,4096},{sndbuf,2625280},{exit_on_close,true},{send_timeout,infinity},{packet_size,0},{high_msgq_watermark,8192},{low_msgq_watermark,4096}]}
+2014-12-14 14:30:06.847 [debug] <0.804.0>@tcp_client_handler:init:129 IP {127,0,0,1} connected, for socket #Port<0.12167> on 35162.
+2014-12-14 14:30:06.847 [warning] <0.664.0>@tcp_acceptor:start_client:96 listener_sup:start_child Success 
+2014-12-14 14:30:36.808 [debug] <0.804.0>@pt:unpack:89 Cmd  10000 
+2014-12-14 14:30:36.838 [debug] <0.804.0>@pp_account:check_account_pass2:280 Platform undefined
+2014-12-14 14:30:36.838 [debug] <0.804.0>@pp_account:check_account_pass2:293 4399 coming
+2014-12-14 14:30:36.838 [debug] <0.804.0>@pp_account:check_4399_account_pass:319 suid: 49523054
+timestamp: 1418538636
+sign: 6757613e285538a8e1726c856b51cb62
+2014-12-14 14:30:36.838 [debug] <0.804.0>@pp_account:check_4399_account_pass:323 Login pass verify: 
+md5 6757613e285538a8e1726c856b51cb62
+cmd5 6757613e285538a8e1726c856b51cb62
+2014-12-14 14:30:36.847 [debug] <0.804.0>@pp_account:may_start_mod_player:184 Sn 1
+2014-12-14 14:30:36.847 [debug] <0.804.0>@pp_account:may_start_mod_player:187 no player need create role 
+2014-12-14 14:30:36.847 [debug] <0.804.0>@pp_account:handle:33 Client1 {client,undefined,0,1,"49523054","p03_robot_1",0,undefined,0,0,1,#Port<0.12167>,{127,0,0,1},224838969,1418538636,<0.804.0>,1418538606}
+2014-12-14 14:30:36.863 [debug] <0.804.0>@pt:pack:167 pack 10000: {pbaccountlogin,[{result,1},{acc_id,"49523054"},{session,224838969}]}
+2014-12-14 14:30:36.863 [debug] <0.804.0>@pt:pack:168 Cmd :10000 size : 17 bytes
+2014-12-14 14:30:36.871 [info] <0.804.0> Duration proto_tc_10000 cost 37360 microseconds
+
+2014-12-14 14:30:36.872 [debug] <0.804.0>@packet_misc:send_packet:117 Bin <<39,16,0,19,39,16,8,1,34,8,52,57,53,50,51,48,53,52,40,185,138,155,107>>, 23
+2014-12-14 14:30:36.872 [debug] <0.804.0>@packet_misc:send:124 SendData Success Total Size 23 bytes 
+2014-12-14 14:30:36.872 [debug] <0.705.0>@mod_base_log:handle_info:137 log_player_20141214_1 insert len 1 676 microseconds
+2014-12-14 14:30:37.197 [debug] <0.804.0>@pt:unpack:89 Cmd  10003 
+2014-12-14 14:30:37.198 [debug] <0.804.0>@pp_account:handle:57 create_role Sn 1
+2014-12-14 14:30:37.199 [debug] <0.804.0>@pp_account:handle:86 
+Ready to create role: {pbuserlogininfo,undefined,<<102,97,54,49,101,51,99,101>>,undefined,undefined,undefined,undefined,1,undefined,[52,57,53,50,51,48,53,52],[112,48,51,95,114,111,98,111,116,95,49]}
+2014-12-14 14:30:37.199 [debug] <0.804.0>@pp_account:create_role:427 Creating Role PlayerInfo = {pbuserlogininfo,undefined,<<"fa61e3ce">>,undefined,undefined,undefined,undefined,1,undefined,"49523054","p03_robot_1"}
+2014-12-14 14:30:37.227 [warning] <0.804.0>@data_base_task:get:1123 get not find {4001401}
+2014-12-14 14:30:37.270 [debug] <0.804.0>@lib_goods:get_goods_att:348  BaseGoods: {base_goods,22110015,<<230,158,129,229,133,137,230,139,179,229,165,151>>,100009,<<49,231,186,167,230,158,129,229,147,129,194,183,230,158,129,229,133,137,230,139,179,229,165,151>>,2,2201,1,0,1,[[{common_reward,1,10000,240100101,2,0,0,0}]],[],1,1,0,20,31001,20,32001,0,1,5,1,0,0,0,111,0,6,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,10,0}, Goods {goods,30000002,6,22110015,30000002,2,2201,1,1,5,0,0,0,10,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,{0},0,0} 
+2014-12-14 14:30:37.272 [debug] <0.804.0>@lib_goods:get_ext_att:401 not att_color Color 1
+2014-12-14 14:30:37.273 [debug] <0.804.0>@lib_goods:get_goods_att:348  BaseGoods: {base_goods,22300015,<<230,158,129,229,133,137,230,136,152,233,157,180>>,100007,<<49,231,186,167,230,158,129,229,147,129,194,183,230,158,129,229,133,137,230,136,152,233,157,180>>,2,2203,1,0,1,[[{common_reward,1,10000,240100101,2,0,0,0}]],[],0,1,0,20,51001,20,52001,0,1,5,1,634,0,0,0,0,0,24,0,0,0,0,0,0,0,0,0,0,0,0,0,0,10,0}, Goods {goods,30000003,6,22300015,30000002,2,2203,1,1,5,0,0,0,10,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,{0},0,0} 
+2014-12-14 14:30:37.273 [debug] <0.804.0>@lib_goods:get_ext_att:401 not att_color Color 1
+2014-12-14 14:30:37.273 [debug] <0.804.0>@lib_goods:get_goods_att:348  BaseGoods: {base_goods,22400015,<<230,158,129,229,133,137,233,161,185,233,147,190>>,100005,<<49,231,186,167,230,158,129,229,147,129,194,183,230,158,129,229,133,137,233,161,185,233,147,190>>,2,2204,1,0,1,[[{common_reward,1,10000,240100101,2,0,0,0}]],[],0,1,0,20,51001,20,52001,0,1,5,1,0,0,0,0,0,18,0,24,0,0,0,0,0,0,0,0,0,0,0,0,0,10,0}, Goods {goods,30000004,6,22400015,30000002,2,2204,1,1,5,0,0,0,10,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,{0},0,0} 
+2014-12-14 14:30:37.273 [debug] <0.804.0>@lib_goods:get_ext_att:401 not att_color Color 1
+2014-12-14 14:30:37.274 [debug] <0.804.0>@lib_goods:get_goods_att:348  BaseGoods: {base_goods,22500015,<<230,158,129,229,133,137,230,136,146,230,140,135>>,100004,<<49,231,186,167,230,158,129,229,147,129,194,183,230,158,129,229,133,137,230,136,146,230,140,135>>,2,2205,1,0,1,[[{common_reward,1,10000,240100101,2,0,0,0}]],[],0,1,0,20,51001,20,52001,0,1,5,1,0,0,0,48,0,0,0,0,12,0,0,0,0,0,0,0,0,0,0,0,0,10,0}, Goods {goods,30000005,6,22500015,30000002,2,2205,1,1,5,0,0,0,10,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,{0},0,0} 
+2014-12-14 14:30:37.274 [debug] <0.804.0>@lib_goods:get_ext_att:401 not att_color Color 1
+2014-12-14 14:30:37.274 [debug] <0.804.0>@lib_goods:get_goods_att:348  BaseGoods: {base_goods,22700015,<<230,158,129,229,133,137,232,163,164,229,173,144>>,100010,<<49,231,186,167,230,158,129,229,147,129,194,183,230,158,129,229,133,137,232,163,164,229,173,144>>,2,2207,1,0,1,[[{common_reward,1,10000,240100101,2,0,0,0}]],[],0,1,0,20,51001,20,52001,0,1,5,1,0,0,0,0,36,0,0,0,12,0,0,0,0,0,0,0,0,0,0,0,0,10,0}, Goods {goods,30000006,6,22700015,30000002,2,2207,1,1,5,0,0,0,10,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,{0},0,0} 
+2014-12-14 14:30:37.274 [debug] <0.804.0>@lib_goods:get_ext_att:401 not att_color Color 1
+2014-12-14 14:30:37.275 [debug] <0.804.0>@pp_account:handle:90 
+Role create ok. 
+2014-12-14 14:30:37.275 [debug] <0.804.0>@pp_account:handle:91  Role msg add MySql table 
+2014-12-14 14:30:37.275 [debug] <0.804.0>@pp_account:handle:107 
+Create role ok: {pbuserresult,1,30000002}.
+2014-12-14 14:30:37.275 [debug] <0.804.0>@pt:pack:167 pack 10003: {pbuserresult,[{result,1},{user_id,30000002}]}
+2014-12-14 14:30:37.275 [debug] <0.804.0>@pt:pack:168 Cmd :10003 size : 7 bytes
+2014-12-14 14:30:37.275 [warning] <0.706.0>@mod_base_log:with_try:156 Error error, Reason: undef, Stack: [{erl_mysql,replace,[log_player_mini,{[player_id,acc_id,acc_name,nick_name],[[30000002,<<"49523054">>,<<"p03_robot_1">>,<<"fa61e3ce">>]]}],[]},{db_mysql_base,r_list_replace,2,[{file,"src/mysql_db/db_mysql_base.erl"},{line,122}]},{mod_base_log,'-insert_every_n/4-fun-1-',3,[{file,"src/mod/mod_base_log.erl"},{line,173}]},{mod_base_log,with_try,1,[{file,"src/mod/mod_base_log.erl"},{line,154}]},{mod_base_log,insert_every_n,4,[{file,"src/mod/mod_base_log.erl"},{line,171}]},{mod_base_log,handle_info,2,[{file,"src/mod/mod_base_log.erl"},{line,122}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,599}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]
+2014-12-14 14:30:37.275 [debug] <0.706.0>@mod_base_log:handle_info:137 log_player_mini insert len 1 573 microseconds
+2014-12-14 14:30:37.276 [debug] <0.705.0>@mod_base_log:handle_info:137 log_player_20141214_1 insert len 1 1021 microseconds
+2014-12-14 14:30:37.280 [debug] <0.807.0>@lib_player:init_login_reward:922 NewWeekLoginDays 1
+2014-12-14 14:30:37.280 [debug] <0.804.0>@packet_misc:send_packet:117 Bin <<39,19,0,9,39,19,8,1,16,130,135,167,14>>, 13
+2014-12-14 14:30:37.280 [debug] <0.804.0>@packet_misc:send:124 SendData Success Total Size 13 bytes 
+2014-12-14 14:30:37.281 [debug] <0.705.0>@mod_base_log:handle_info:137 log_player_20141214_1 insert len 1 873 microseconds
+2014-12-14 14:30:37.284 [warning] <0.709.0>@mod_sys_acm:handle_cast:109 sys_acm new player PlayerId30000002
+2014-12-14 14:30:37.299 [debug] <0.807.0>@lib_dungeon:get_daily_dungeon2:1505 get daily dungeon Lv 7
+2014-12-14 14:30:37.299 [warning] <0.807.0>@data_base_dungeon_area:get_daily_dungeon_by_lv:1070 get_daily_dungeon_by_lv not find {7}
+2014-12-14 14:30:37.302 [debug] <0.807.0>@mod_player:handle_cast:234 Login SteriousShop: {sterious_shop,30000002,4,[],0,0,1}
+2014-12-14 14:30:37.302 [debug] <0.807.0>@mod_player:handle_cast:235 login_activity_record: {activity_shop_record,30000002,2,undefined,[],1}
+2014-12-14 14:30:37.308 [warning] <0.807.0>@data_base_task:get:1123 get not find {4001401}
+2014-12-14 14:30:37.308 [debug] <0.807.0>@lib_task:daily_reset:78 LinkUpdate []
+2014-12-14 14:30:37.308 [debug] <0.807.0>@lib_task:daily_reset:80 DelList []
+2014-12-14 14:30:37.317 [debug] <0.807.0>@mod_player:handle_cast:270 mod_player start pid <0.807.0>
+2014-12-14 14:31:20.484 [debug] <0.804.0>@pt:unpack:89 Cmd  10000 
+2014-12-14 14:31:20.485 [debug] <0.804.0>@pp_account:check_account_pass2:280 Platform undefined
+2014-12-14 14:31:20.485 [debug] <0.804.0>@pp_account:check_account_pass2:293 4399 coming
+2014-12-14 14:31:20.485 [debug] <0.804.0>@pp_account:check_4399_account_pass:319 suid: 49523054
+timestamp: 1418538680
+sign: e4ab6bc78d6c9ce34d7ea390d54e2448
+2014-12-14 14:31:20.485 [debug] <0.804.0>@pp_account:check_4399_account_pass:323 Login pass verify: 
+md5 e4ab6bc78d6c9ce34d7ea390d54e2448
+cmd5 e4ab6bc78d6c9ce34d7ea390d54e2448
+2014-12-14 14:31:20.486 [debug] <0.804.0>@pp_account:may_start_mod_player:184 Sn 1
+2014-12-14 14:31:20.487 [debug] <0.804.0>@mod_login:login:36 Player is Live, Update Sesssion
+2014-12-14 14:31:20.487 [debug] <0.804.0>@mod_login:login:37 mod_login trying to update_client_info
+2014-12-14 14:31:20.487 [debug] <0.804.0>@mod_login:login:39 mod_login trying to update_client_info done.
+2014-12-14 14:31:20.487 [debug] <0.804.0>@pp_account:handle:33 Client1 {client,<0.807.0>,30000002,1,"49523054","p03_robot_1",0,undefined,0,0,1,#Port<0.12167>,{127,0,0,1},1794539300,1418538680,<0.804.0>,1418538606}
+2014-12-14 14:31:20.488 [debug] <0.804.0>@pt:pack:167 pack 10000: {pbaccountlogin,[{result,1},{user_info,[{pbuserlogininfo,[{user_id,30000002},{nickname,<<"fa61e3ce">>},{level,1},{career,1}]}]},{acc_id,"49523054"},{session,1794539300}]}
+2014-12-14 14:31:20.488 [debug] <0.804.0>@pt:pack:168 Cmd :10000 size : 39 bytes
+2014-12-14 14:31:20.488 [info] <0.804.0> Duration proto_tc_10000 cost 3311 microseconds
+
+2014-12-14 14:31:20.488 [debug] <0.804.0>@packet_misc:send_packet:117 Bin <<39,16,0,41,39,16,8,1,26,19,8,130,135,167,14,18,8,102,97,54,49,101,51,99,101,24,1,40,1,34,8,52,57,53,50,51,48,53,52,40,164,254,217,215,6>>, 45
+2014-12-14 14:31:20.488 [debug] <0.804.0>@packet_misc:send:124 SendData Success Total Size 45 bytes 
+2014-12-14 14:31:20.490 [debug] <0.705.0>@mod_base_log:handle_info:137 log_player_20141214_1 insert len 1 2275 microseconds
+2014-12-14 14:31:37.632 [debug] <0.804.0>@pt:unpack:89 Cmd  15510 
+2014-12-14 14:31:37.632 [debug] <0.807.0>@mod_player:handle_cast:379 mod_player routing: id = 30000002, cmd = 15510, data = <<>>
+2014-12-14 14:31:37.646 [debug] <0.807.0>@pp_goods:handle:273 SellingList: []
+2014-12-14 14:31:37.661 [debug] <0.807.0>@pt:pack:167 pack 15510: {pbsellinglist,[]}
+2014-12-14 14:31:37.661 [debug] <0.807.0>@pt:pack:168 Cmd :15510 size : 0 bytes
+2014-12-14 14:31:37.661 [debug] <0.807.0>@mod_player:inner_handle:1068 player changed ... 
+2014-12-14 14:31:37.675 [debug] <0.804.0>@packet_misc:send:124 SendData Success Total Size 6 bytes 
+2014-12-14 14:31:37.675 [info] <0.807.0> Duration proto_tc_15510 cost 42967 microseconds
+
+2014-12-14 14:34:02.726 [debug] <0.834.0>@tcp_client_handler:init:119 {ok,[{sndbuf,2625280},{recbuf,1058928},{packet,2},{header,11},{active,200},{nodelay,false},{keepalive,true},{priority,0},{tos,0},{buffer,1460},{delay_send,true},{packet_size,0},{high_watermark,8192},{low_watermark,4096},{sndbuf,2625280},{exit_on_close,true},{send_timeout,infinity},{packet_size,0},{high_msgq_watermark,8192},{low_msgq_watermark,4096}]}
+2014-12-14 14:34:02.726 [debug] <0.834.0>@tcp_client_handler:init:129 IP {127,0,0,1} connected, for socket #Port<0.13307> on 34689.
+2014-12-14 14:34:02.726 [warning] <0.665.0>@tcp_acceptor:start_client:96 listener_sup:start_child Success 
+2014-12-14 14:35:02.669 [debug] <0.834.0>@pt:unpack:89 Cmd  10000 
+2014-12-14 14:35:02.669 [debug] <0.834.0>@pp_account:check_account_pass2:280 Platform undefined
+2014-12-14 14:35:02.669 [debug] <0.834.0>@pp_account:check_account_pass2:293 4399 coming
+2014-12-14 14:35:02.670 [debug] <0.834.0>@pp_account:check_4399_account_pass:319 suid: 49523386
+timestamp: 1418538902
+sign: ece578baf89cec6303ed54e6a6bdc29d
+2014-12-14 14:35:02.670 [debug] <0.834.0>@pp_account:check_4399_account_pass:323 Login pass verify: 
+md5 ece578baf89cec6303ed54e6a6bdc29d
+cmd5 ece578baf89cec6303ed54e6a6bdc29d
+2014-12-14 14:35:02.672 [debug] <0.834.0>@pp_account:may_start_mod_player:184 Sn 1
+2014-12-14 14:35:02.672 [debug] <0.834.0>@pp_account:may_start_mod_player:187 no player need create role 
+2014-12-14 14:35:02.672 [debug] <0.834.0>@pp_account:handle:33 Client1 {client,undefined,0,1,"49523386","p03_robot_2",0,undefined,0,0,1,#Port<0.13307>,{127,0,0,1},1448724473,1418538902,<0.834.0>,1418538842}
+2014-12-14 14:35:02.672 [debug] <0.834.0>@pt:pack:167 pack 10000: {pbaccountlogin,[{result,1},{acc_id,"49523386"},{session,1448724473}]}
+2014-12-14 14:35:02.672 [debug] <0.834.0>@pt:pack:168 Cmd :10000 size : 18 bytes
+2014-12-14 14:35:02.673 [debug] <0.834.0>@packet_misc:send_packet:117 Bin <<39,16,0,20,39,16,8,1,34,8,52,57,53,50,51,51,56,54,40,249,143,231,178,5>>, 24
+2014-12-14 14:35:02.673 [debug] <0.834.0>@packet_misc:send:124 SendData Success Total Size 24 bytes 
+2014-12-14 14:35:02.673 [info] <0.834.0> Duration proto_tc_10000 cost 3378 microseconds
+
+2014-12-14 14:35:02.674 [debug] <0.705.0>@mod_base_log:handle_info:137 log_player_20141214_1 insert len 1 1432 microseconds
+2014-12-14 14:35:02.997 [debug] <0.834.0>@pt:unpack:89 Cmd  10003 
+2014-12-14 14:35:02.997 [debug] <0.834.0>@pp_account:handle:57 create_role Sn 1
+2014-12-14 14:35:02.999 [debug] <0.834.0>@pp_account:handle:86 
+Ready to create role: {pbuserlogininfo,undefined,<<101,99,98,53,55,99,54,50>>,undefined,undefined,undefined,undefined,1,undefined,[52,57,53,50,51,51,56,54],[112,48,51,95,114,111,98,111,116,95,50]}
+2014-12-14 14:35:02.999 [debug] <0.834.0>@pp_account:create_role:427 Creating Role PlayerInfo = {pbuserlogininfo,undefined,<<"ecb57c62">>,undefined,undefined,undefined,undefined,1,undefined,"49523386","p03_robot_2"}
+2014-12-14 14:35:03.094 [warning] <0.834.0>@data_base_task:get:1123 get not find {4001401}
+2014-12-14 14:35:03.096 [debug] <0.834.0>@lib_goods:get_goods_att:348  BaseGoods: {base_goods,22110015,<<230,158,129,229,133,137,230,139,179,229,165,151>>,100009,<<49,231,186,167,230,158,129,229,147,129,194,183,230,158,129,229,133,137,230,139,179,229,165,151>>,2,2201,1,0,1,[[{common_reward,1,10000,240100101,2,0,0,0}]],[],1,1,0,20,31001,20,32001,0,1,5,1,0,0,0,111,0,6,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,10,0}, Goods {goods,30000007,6,22110015,30000003,2,2201,1,1,5,0,0,0,10,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,{0},0,0} 
+2014-12-14 14:35:03.096 [debug] <0.834.0>@lib_goods:get_ext_att:401 not att_color Color 1
+2014-12-14 14:35:03.134 [debug] <0.834.0>@lib_goods:get_goods_att:348  BaseGoods: {base_goods,22300015,<<230,158,129,229,133,137,230,136,152,233,157,180>>,100007,<<49,231,186,167,230,158,129,229,147,129,194,183,230,158,129,229,133,137,230,136,152,233,157,180>>,2,2203,1,0,1,[[{common_reward,1,10000,240100101,2,0,0,0}]],[],0,1,0,20,51001,20,52001,0,1,5,1,634,0,0,0,0,0,24,0,0,0,0,0,0,0,0,0,0,0,0,0,0,10,0}, Goods {goods,30000008,6,22300015,30000003,2,2203,1,1,5,0,0,0,10,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,{0},0,0} 
+2014-12-14 14:35:03.135 [debug] <0.834.0>@lib_goods:get_ext_att:401 not att_color Color 1
+2014-12-14 14:35:03.179 [debug] <0.834.0>@lib_goods:get_goods_att:348  BaseGoods: {base_goods,22400015,<<230,158,129,229,133,137,233,161,185,233,147,190>>,100005,<<49,231,186,167,230,158,129,229,147,129,194,183,230,158,129,229,133,137,233,161,185,233,147,190>>,2,2204,1,0,1,[[{common_reward,1,10000,240100101,2,0,0,0}]],[],0,1,0,20,51001,20,52001,0,1,5,1,0,0,0,0,0,18,0,24,0,0,0,0,0,0,0,0,0,0,0,0,0,10,0}, Goods {goods,30000009,6,22400015,30000003,2,2204,1,1,5,0,0,0,10,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,{0},0,0} 
+2014-12-14 14:35:03.179 [debug] <0.834.0>@lib_goods:get_ext_att:401 not att_color Color 1
+2014-12-14 14:35:03.180 [debug] <0.834.0>@lib_goods:get_goods_att:348  BaseGoods: {base_goods,22500015,<<230,158,129,229,133,137,230,136,146,230,140,135>>,100004,<<49,231,186,167,230,158,129,229,147,129,194,183,230,158,129,229,133,137,230,136,146,230,140,135>>,2,2205,1,0,1,[[{common_reward,1,10000,240100101,2,0,0,0}]],[],0,1,0,20,51001,20,52001,0,1,5,1,0,0,0,48,0,0,0,0,12,0,0,0,0,0,0,0,0,0,0,0,0,10,0}, Goods {goods,30000010,6,22500015,30000003,2,2205,1,1,5,0,0,0,10,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,{0},0,0} 
+2014-12-14 14:35:03.180 [debug] <0.834.0>@lib_goods:get_ext_att:401 not att_color Color 1
+2014-12-14 14:35:03.223 [debug] <0.834.0>@lib_goods:get_goods_att:348  BaseGoods: {base_goods,22700015,<<230,158,129,229,133,137,232,163,164,229,173,144>>,100010,<<49,231,186,167,230,158,129,229,147,129,194,183,230,158,129,229,133,137,232,163,164,229,173,144>>,2,2207,1,0,1,[[{common_reward,1,10000,240100101,2,0,0,0}]],[],0,1,0,20,51001,20,52001,0,1,5,1,0,0,0,0,36,0,0,0,12,0,0,0,0,0,0,0,0,0,0,0,0,10,0}, Goods {goods,30000011,6,22700015,30000003,2,2207,1,1,5,0,0,0,10,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,{0},0,0} 
+2014-12-14 14:35:03.224 [debug] <0.834.0>@lib_goods:get_ext_att:401 not att_color Color 1
+2014-12-14 14:35:03.368 [debug] <0.834.0>@pp_account:handle:90 
+Role create ok. 
+2014-12-14 14:35:03.368 [debug] <0.834.0>@pp_account:handle:91  Role msg add MySql table 
+2014-12-14 14:35:03.368 [debug] <0.834.0>@pp_account:handle:107 
+Create role ok: {pbuserresult,1,30000003}.
+2014-12-14 14:35:03.368 [debug] <0.834.0>@pt:pack:167 pack 10003: {pbuserresult,[{result,1},{user_id,30000003}]}
+2014-12-14 14:35:03.368 [debug] <0.834.0>@pt:pack:168 Cmd :10003 size : 7 bytes
+2014-12-14 14:35:03.368 [warning] <0.706.0>@mod_base_log:with_try:156 Error error, Reason: undef, Stack: [{erl_mysql,replace,[log_player_mini,{[player_id,acc_id,acc_name,nick_name],[[30000003,<<"49523386">>,<<"p03_robot_2">>,<<"ecb57c62">>]]}],[]},{db_mysql_base,r_list_replace,2,[{file,"src/mysql_db/db_mysql_base.erl"},{line,122}]},{mod_base_log,'-insert_every_n/4-fun-1-',3,[{file,"src/mod/mod_base_log.erl"},{line,173}]},{mod_base_log,with_try,1,[{file,"src/mod/mod_base_log.erl"},{line,154}]},{mod_base_log,insert_every_n,4,[{file,"src/mod/mod_base_log.erl"},{line,171}]},{mod_base_log,handle_info,2,[{file,"src/mod/mod_base_log.erl"},{line,122}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,599}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]
+2014-12-14 14:35:03.368 [debug] <0.706.0>@mod_base_log:handle_info:137 log_player_mini insert len 1 457 microseconds
+2014-12-14 14:35:03.368 [debug] <0.836.0>@lib_player:init_login_reward:922 NewWeekLoginDays 1
+2014-12-14 14:35:03.368 [debug] <0.834.0>@packet_misc:send_packet:117 Bin <<39,19,0,9,39,19,8,1,16,131,135,167,14>>, 13
+2014-12-14 14:35:03.368 [debug] <0.834.0>@packet_misc:send:124 SendData Success Total Size 13 bytes 
+2014-12-14 14:35:03.369 [debug] <0.705.0>@mod_base_log:handle_info:137 log_player_20141214_1 insert len 1 1111 microseconds
+2014-12-14 14:35:03.370 [debug] <0.705.0>@mod_base_log:handle_info:137 log_player_20141214_1 insert len 1 549 microseconds
+2014-12-14 14:35:03.370 [warning] <0.709.0>@mod_sys_acm:handle_cast:109 sys_acm new player PlayerId30000003
+2014-12-14 14:35:03.372 [debug] <0.836.0>@lib_dungeon:get_daily_dungeon2:1505 get daily dungeon Lv 9
+2014-12-14 14:35:03.372 [warning] <0.836.0>@data_base_dungeon_area:get_daily_dungeon_by_lv:1070 get_daily_dungeon_by_lv not find {9}
+2014-12-14 14:35:03.372 [debug] <0.836.0>@mod_player:handle_cast:234 Login SteriousShop: {sterious_shop,30000003,4,[],0,0,1}
+2014-12-14 14:35:03.372 [debug] <0.836.0>@mod_player:handle_cast:235 login_activity_record: {activity_shop_record,30000003,2,undefined,[],1}
+2014-12-14 14:35:03.373 [warning] <0.836.0>@data_base_task:get:1123 get not find {4001401}
+2014-12-14 14:35:03.373 [debug] <0.836.0>@lib_task:daily_reset:78 LinkUpdate []
+2014-12-14 14:35:03.373 [debug] <0.836.0>@lib_task:daily_reset:80 DelList []
+2014-12-14 14:35:03.373 [debug] <0.836.0>@mod_player:handle_cast:270 mod_player start pid <0.836.0>
+2014-12-14 14:35:12.565 [debug] <0.834.0>@pt:unpack:89 Cmd  10000 
+2014-12-14 14:35:12.565 [debug] <0.834.0>@pp_account:check_account_pass2:280 Platform undefined
+2014-12-14 14:35:12.565 [debug] <0.834.0>@pp_account:check_account_pass2:293 4399 coming
+2014-12-14 14:35:12.565 [debug] <0.834.0>@pp_account:check_4399_account_pass:319 suid: 49523386
+timestamp: 1418538912
+sign: 3d06b6c66e8e8ecd98ba36e54dd866a1
+2014-12-14 14:35:12.566 [debug] <0.834.0>@pp_account:check_4399_account_pass:323 Login pass verify: 
+md5 3d06b6c66e8e8ecd98ba36e54dd866a1
+cmd5 3d06b6c66e8e8ecd98ba36e54dd866a1
+2014-12-14 14:35:12.568 [debug] <0.834.0>@pp_account:may_start_mod_player:184 Sn 1
+2014-12-14 14:35:12.568 [debug] <0.834.0>@mod_login:login:36 Player is Live, Update Sesssion
+2014-12-14 14:35:12.568 [debug] <0.834.0>@mod_login:login:37 mod_login trying to update_client_info
+2014-12-14 14:35:12.568 [debug] <0.834.0>@mod_login:login:39 mod_login trying to update_client_info done.
+2014-12-14 14:35:12.569 [debug] <0.834.0>@pp_account:handle:33 Client1 {client,<0.836.0>,30000003,1,"49523386","p03_robot_2",0,undefined,0,0,1,#Port<0.13307>,{127,0,0,1},2128244021,1418538912,<0.834.0>,1418538842}
+2014-12-14 14:35:12.569 [debug] <0.834.0>@pt:pack:167 pack 10000: {pbaccountlogin,[{result,1},{user_info,[{pbuserlogininfo,[{user_id,30000003},{nickname,<<"ecb57c62">>},{level,1},{career,1}]}]},{acc_id,"49523386"},{session,2128244021}]}
+2014-12-14 14:35:12.569 [debug] <0.834.0>@pt:pack:168 Cmd :10000 size : 39 bytes
+2014-12-14 14:35:12.569 [info] <0.834.0> Duration proto_tc_10000 cost 4244 microseconds
+
+2014-12-14 14:35:12.570 [debug] <0.834.0>@packet_misc:send_packet:117 Bin <<39,16,0,41,39,16,8,1,26,19,8,131,135,167,14,18,8,101,99,98,53,55,99,54,50,24,1,40,1,34,8,52,57,53,50,51,51,56,54,40,181,218,233,246,7>>, 45
+2014-12-14 14:35:12.570 [debug] <0.834.0>@packet_misc:send:124 SendData Success Total Size 45 bytes 
+2014-12-14 14:35:12.571 [debug] <0.705.0>@mod_base_log:handle_info:137 log_player_20141214_1 insert len 1 912 microseconds
+2014-12-14 14:50:31.706 [debug] <0.836.0>@mod_player:terminate:654 Oh myGod the mod_player process exit, Reason: 
+shutdown
+2014-12-14 14:50:31.706 [debug] <0.807.0>@mod_player:terminate:654 Oh myGod the mod_player process exit, Reason: 
+shutdown
+2014-12-14 14:50:31.712 [warning] <0.834.0>@tcp_client_handler:handle_cast:186 mod_player stopped cast 
+2014-12-14 14:50:31.712 [warning] <0.834.0>@tcp_client_handler:terminate:322 tcp_client_handler stop Reason normal
+2014-12-14 14:50:31.712 [debug] <0.834.0>@tcp_client_handler:terminate:325 Player 30000003 disconnect 
+2014-12-14 14:50:31.712 [warning] <0.834.0>@mod_player:tcp_disconnect:935 Not Player Pid, PlayerId 30000003
+2014-12-14 14:50:31.853 [warning] <0.804.0>@tcp_client_handler:handle_cast:186 mod_player stopped cast 
+2014-12-14 14:50:31.853 [warning] <0.804.0>@tcp_client_handler:terminate:322 tcp_client_handler stop Reason normal
+2014-12-14 14:50:31.853 [debug] <0.804.0>@tcp_client_handler:terminate:325 Player 30000002 disconnect 
+2014-12-14 14:50:31.853 [warning] <0.804.0>@mod_player:tcp_disconnect:935 Not Player Pid, PlayerId 30000002
+2014-12-14 14:50:31.854 [warning] <0.726.0>@mod_selling_shop:terminate:184 ShopList []
+2014-12-14 14:50:31.855 [warning] <0.168.0>@server_app:stop:113 server_app stopping.
+2014-12-14 14:50:31.923 [info] <0.42.0> alarm_handler: {clear,system_memory_high_watermark}
+2014-12-14 14:50:38.778 [debug] <0.71.0>@lager_handler_watcher:94 Lager installed handler {lager_file_backend,
+                            "/home/li/server_p02/logs/p02_db_disc_1@192.168.1.104/server.log"} into lager_event
+2014-12-14 14:50:38.778 [debug] <0.73.0>@lager_handler_watcher:94 Lager installed handler error_logger_lager_h into error_logger
+2014-12-14 14:50:38.793 [debug] <0.58.0> Supervisor gr_param_sup started gr_param:start_link(gr_lager_default_tracer_params) at pid <0.75.0>
+2014-12-14 14:50:38.793 [debug] <0.57.0> Supervisor gr_counter_sup started gr_counter:start_link(gr_lager_default_tracer_counters) at pid <0.76.0>
+2014-12-14 14:50:38.793 [debug] <0.59.0> Supervisor gr_manager_sup started gr_manager:start_link(gr_lager_default_tracer_params_mgr, gr_lager_default_tracer_params, []) at pid <0.77.0>
+2014-12-14 14:50:38.794 [debug] <0.59.0> Supervisor gr_manager_sup started gr_manager:start_link(gr_lager_default_tracer_counters_mgr, gr_lager_default_tracer_counters, [{input,0},{filter,0},{output,0}]) at pid <0.78.0>
+2014-12-14 14:50:39.033 [info] <0.7.0> Application lager started on node 'p02_db_disc_1@192.168.1.104'
+2014-12-14 14:50:39.053 [debug] <0.2.0>@main:server_start:42 Lager Config [{async_threshold_window,5},{crash_log_date,"$D0"},{crash_log,"/home/li/server_p02/logs/p02_db_disc_1@192.168.1.104/server-crash.log"},{colors,[{debug,"\e[0;38m"},{info,"\e[1;37m"},{notice,"\e[1;36m"},{warning,"\e[1;33m"},{error,"\e[1;31m"},{critical,"\e[1;35m"},{alert,"\e[1;44m"},{emergency,"\e[1;41m"}]},{crash_log_count,5},{async_threshold,20},{crash_log_size,10485760},{crash_log_msg_size,65536},{colored,true},{log_level,debug},{handlers,[{lager_console_backend,[debug,{lager_default_formatter,[date," ",time,color," [",severity,"] <",pid,">@",module,":",function,":",line," ",message,"\e[0m\r\n"]}]},{lager_file_backend,[{level,debug},{date,"$W0D23"},{count,20},{file,"/home/li/server_p02/logs/p02_db_disc_1@192.168.1.104/server.log"}]}]},{error_logger_hwm,50},{error_logger_redirect,true},{included_applications,[]}]
+2014-12-14 14:50:39.053 [debug] <0.2.0>@main:server_start:44 mod_counter start 
+2014-12-14 14:50:39.094 [info] <0.2.0>@mnesia_upgrade:maybe_upgrade_mnesia:111 not upgrade mnesia
+2014-12-14 14:50:39.105 [debug] <0.94.0> Supervisor hstdlib_sup started hmod_timer:start_link() at pid <0.95.0>
+2014-12-14 14:50:39.112 [debug] <0.94.0> Supervisor hstdlib_sup started hmod_rand:start_link() at pid <0.96.0>
+2014-12-14 14:50:39.113 [info] <0.7.0> Application hstdlib started on node 'p02_db_disc_1@192.168.1.104'
+2014-12-14 14:50:39.114 [info] <0.7.0> Application mysql started on node 'p02_db_disc_1@192.168.1.104'
+2014-12-14 14:50:39.122 [info] <0.7.0> Application crypto started on node 'p02_db_disc_1@192.168.1.104'
+2014-12-14 14:50:39.130 [debug] <0.102.0> Supervisor emysql_sup started emysql_statements:start_link() at pid <0.103.0>
+2014-12-14 14:50:39.133 [debug] <0.102.0> Supervisor emysql_sup started emysql_conn_mgr:start_link() at pid <0.104.0>
+2014-12-14 14:50:39.134 [info] <0.7.0> Application emysql started on node 'p02_db_disc_1@192.168.1.104'
+2014-12-14 14:50:39.136 [info] <0.107.0> leshu_db_stated: StartArgs [fuck_rebar]
+
+2014-12-14 14:50:39.136 [info] <0.107.0> leshu_db_env: {ok,[{ip,"0.0.0.0"}]}
+
+2014-12-14 14:50:39.137 [info] <0.7.0> Application leshu_db started on node 'p02_db_disc_1@192.168.1.104'
+2014-12-14 14:50:39.147 [debug] <0.112.0> Supervisor mnesia_sup started mnesia_sup:start_event() at pid <0.113.0>
+2014-12-14 14:50:39.153 [debug] <0.114.0> Supervisor mnesia_kernel_sup started mnesia_monitor:start() at pid <0.115.0>
+2014-12-14 14:50:39.158 [debug] <0.114.0> Supervisor mnesia_kernel_sup started mnesia_subscr:start() at pid <0.116.0>
+2014-12-14 14:50:39.174 [debug] <0.114.0> Supervisor mnesia_kernel_sup started mnesia_locker:start() at pid <0.117.0>
+2014-12-14 14:50:39.184 [debug] <0.114.0> Supervisor mnesia_kernel_sup started mnesia_recover:start() at pid <0.118.0>
+2014-12-14 14:50:39.227 [debug] <0.35.0> Supervisor kernel_safe_sup started dets_sup:start_link() at pid <0.120.0>
+2014-12-14 14:50:39.227 [debug] <0.35.0> Supervisor kernel_safe_sup started dets_server:start_link() at pid <0.121.0>
+2014-12-14 14:50:39.273 [debug] <0.67.0>@lager_handler_watcher:94 Lager installed handler lager_backend_throttle into lager_event
+2014-12-14 14:50:39.278 [debug] <0.35.0> Supervisor kernel_safe_sup started disk_log_sup:start_link() at pid <0.125.0>
+2014-12-14 14:50:39.278 [debug] <0.35.0> Supervisor kernel_safe_sup started disk_log_server:start_link() at pid <0.126.0>
+2014-12-14 14:50:39.394 [debug] <0.114.0> Supervisor mnesia_kernel_sup started mnesia_tm:start() at pid <0.119.0>
+2014-12-14 14:50:39.402 [debug] <0.114.0> Supervisor mnesia_kernel_sup started mnesia_checkpoint_sup:start() at pid <0.143.0>
+2014-12-14 14:50:39.405 [debug] <0.114.0> Supervisor mnesia_kernel_sup started mnesia_snmp_sup:start() at pid <0.144.0>
+2014-12-14 14:50:39.405 [debug] <0.114.0> Supervisor mnesia_kernel_sup started mnesia_controller:start() at pid <0.145.0>
+2014-12-14 14:50:39.415 [debug] <0.114.0> Supervisor mnesia_kernel_sup started mnesia_late_loader:start() at pid <0.146.0>
+2014-12-14 14:50:39.415 [debug] <0.112.0> Supervisor mnesia_sup started mnesia_kernel_sup:start() at pid <0.114.0>
+2014-12-14 14:50:39.416 [info] <0.7.0> Application mnesia started on node 'p02_db_disc_1@192.168.1.104'
+2014-12-14 14:50:39.444 [info] <0.7.0> Application asn1 started on node 'p02_db_disc_1@192.168.1.104'
+2014-12-14 14:50:39.454 [info] <0.7.0> Application public_key started on node 'p02_db_disc_1@192.168.1.104'
+2014-12-14 14:50:39.565 [debug] <0.234.0> Supervisor ssl_sup started ssl_manager:start_link([]) at pid <0.250.0>
+2014-12-14 14:50:39.572 [debug] <0.234.0> Supervisor ssl_sup started tls_connection_sup:start_link() at pid <0.280.0>
+2014-12-14 14:50:39.577 [debug] <0.234.0> Supervisor ssl_sup started ssl_listen_tracker_sup:start_link() at pid <0.294.0>
+2014-12-14 14:50:39.577 [info] <0.7.0> Application ssl started on node 'p02_db_disc_1@192.168.1.104'
+2014-12-14 14:50:39.588 [debug] <0.310.0> Supervisor ibrowse_sup started ibrowse:start_link() at pid <0.326.0>
+2014-12-14 14:50:39.588 [info] <0.7.0> Application ibrowse started on node 'p02_db_disc_1@192.168.1.104'
+2014-12-14 14:50:39.608 [debug] <0.349.0> Supervisor os_mon_sup started disksup:start_link() at pid <0.367.0>
+2014-12-14 14:50:39.617 [debug] <0.349.0> Supervisor os_mon_sup started memsup:start_link() at pid <0.378.0>
+2014-12-14 14:50:39.623 [debug] <0.35.0> Supervisor kernel_safe_sup started timer:start_link() at pid <0.388.0>
+2014-12-14 14:50:39.626 [info] <0.42.0> alarm_handler: {set,{system_memory_high_watermark,[]}}
+2014-12-14 14:50:39.631 [debug] <0.349.0> Supervisor os_mon_sup started cpu_sup:start_link() at pid <0.395.0>
+2014-12-14 14:50:39.632 [info] <0.7.0> Application os_mon started on node 'p02_db_disc_1@192.168.1.104'
+2014-12-14 14:50:39.647 [debug] <0.420.0> Supervisor folsom_sup started folsom_sample_slide_sup:start_link() at pid <0.429.0>
+2014-12-14 14:50:39.650 [debug] <0.420.0> Supervisor folsom_sup started folsom_meter_timer_server:start_link() at pid <0.437.0>
+2014-12-14 14:50:39.653 [debug] <0.420.0> Supervisor folsom_sup started folsom_metrics_histogram_ets:start_link() at pid <0.448.0>
+2014-12-14 14:50:39.653 [info] <0.7.0> Application folsom started on node 'p02_db_disc_1@192.168.1.104'
+2014-12-14 14:50:39.674 [debug] <0.481.0> Supervisor gproc_sup started gproc:start_link() at pid <0.491.0>
+2014-12-14 14:50:39.676 [debug] <0.481.0> Supervisor gproc_sup started gproc_monitor:start_link() at pid <0.492.0>
+2014-12-14 14:50:39.692 [debug] <0.481.0> Supervisor gproc_sup started gproc_bcast:start_link() at pid <0.493.0>
+2014-12-14 14:50:39.697 [debug] <0.481.0> Supervisor gproc_sup started gproc_pool:start_link() at pid <0.494.0>
+2014-12-14 14:50:39.698 [info] <0.7.0> Application gproc started on node 'p02_db_disc_1@192.168.1.104'
+2014-12-14 14:50:39.705 [debug] <0.497.0>@mnesia_misc:init_from_config:37 TryNodes ['p02_db_disc_1@127.0.0.1'], NodeType disc
+2014-12-14 14:50:39.705 [debug] <0.500.0> Supervisor inet_gethost_native_sup started undefined at pid <0.501.0>
+2014-12-14 14:50:39.705 [debug] <0.35.0> Supervisor kernel_safe_sup started inet_gethost_native:start_link() at pid <0.500.0>
+2014-12-14 14:50:39.712 [info] <0.497.0>@mnesia_misc:init_from_config:50 First Disc Db Node Start
+2014-12-14 14:50:39.713 [debug] <0.497.0>@mnesia_misc:init_db:121 {Nodes, WasDiscNode, NodeType} {[],true,disc}
+2014-12-14 14:50:39.803 [debug] <0.42.0>@mod_alarm_handler:init:24 misc_alarm_handler init : [].
+2014-12-14 14:50:39.806 [debug] <0.498.0> Supervisor server_sup started mod_cache:start_link() at pid <0.509.0>
+2014-12-14 14:50:39.865 [info] <0.497.0>@server_app:start:59 acceptor_sup started 
+2014-12-14 14:50:39.865 [info] <0.497.0>@server_app:start:67 acceptor_sup started 
+2014-12-14 14:50:39.869 [debug] <0.514.0>@tcp_listener:init:35 Listen on port: 8801
+2014-12-14 14:50:39.875 [debug] <0.513.0> Supervisor tcp_client_handler_listener_sup started tcp_listener:start_link(8801, tcp_client_handler) at pid <0.514.0>
+2014-12-14 14:50:39.876 [info] <0.497.0>@server_app:start:79 listener_sup started for port: 8801 ... 
+2014-12-14 14:50:39.876 [debug] <0.513.0> Supervisor tcp_client_handler_listener_sup started supervisor:start_link({local,listener_sup_tcp_client_handler}, listener_sup, [tcp_client_handler]) at pid <0.520.0>
+2014-12-14 14:50:39.876 [debug] <0.522.0>@tcp_listener:init:35 Listen on port: 9801
+2014-12-14 14:50:39.877 [info] <0.497.0>@server_app:start:87 listener_sup started for port: 8801 ... 
+2014-12-14 14:50:39.877 [debug] <0.521.0> Supervisor tcp_room_handler_listener_sup started tcp_listener:start_link(9801, tcp_room_handler) at pid <0.522.0>
+2014-12-14 14:50:39.877 [debug] <0.521.0> Supervisor tcp_room_handler_listener_sup started supervisor:start_link({local,listener_sup_tcp_room_handler}, listener_sup, [tcp_room_handler]) at pid <0.528.0>
+2014-12-14 14:50:39.885 [info] <0.529.0>@httpd_handler:start:18 mochiweb start on: [{ip,{0,0,0,0}},{port,18801}]
+2014-12-14 14:50:39.891 [debug] <0.529.0> Supervisor h_httpd_sup started httpd_handler:start([{ip,{0,0,0,0}},{port,18801}]) at pid <0.530.0>
+2014-12-14 14:50:39.892 [warning] <0.497.0>@server_app:start:100 rank_sup start 
+2014-12-14 14:50:39.896 [debug] <0.548.0>@mod_counter:init:62 CenterList ['center@127.0.0.1']
+2014-12-14 14:50:39.908 [debug] <0.498.0> Supervisor server_sup started mod_counter:start_link() at pid <0.548.0>
+2014-12-14 14:50:39.913 [debug] <0.498.0> Supervisor server_sup started update:start_link() at pid <0.552.0>
+2014-12-14 14:50:39.918 [debug] <0.498.0> Supervisor server_sup started mod_boss_manage:start_link(1) at pid <0.553.0>
+2014-12-14 14:50:39.919 [debug] <0.498.0> Supervisor server_sup started mod_boss_manage:start_link(2) at pid <0.554.0>
+2014-12-14 14:50:39.919 [debug] <0.498.0> Supervisor server_sup started mod_boss_manage:start_link(3) at pid <0.555.0>
+2014-12-14 14:50:39.923 [debug] <0.498.0> Supervisor server_sup started mod_base_log:start_link(log_player_p, {log_state,{record_mysql_info,db_log,log_player,[id,player_id,event_id,arg1,arg2,timestamp],log_player,...},...}) at pid <0.556.0>
+2014-12-14 14:50:39.923 [debug] <0.498.0> Supervisor server_sup started mod_base_log:start_link(log_player_mini_p, {log_state,{record_mysql_info,db_log,log_player_mini,[player_id,acc_id,acc_name,nick_name],log_player_mini,...},...}) at pid <0.557.0>
+2014-12-14 14:50:39.923 [debug] <0.498.0> Supervisor server_sup started mod_base_log:start_link(log_player_feedback_p, {log_state,{record_mysql_info,db_log,log_player_feedback,[id,player_id,title,content,timestamp],...},...}) at pid <0.558.0>
+2014-12-14 14:50:39.928 [info] <0.556.0>@mod_base_log:available_table2:224 run CreateTableSQL Result 0, TableIndex 1
+2014-12-14 14:50:39.931 [debug] <0.498.0> Supervisor server_sup started mod_sys_acm:start_link(1) at pid <0.560.0>
+2014-12-14 14:50:39.931 [debug] <0.498.0> Supervisor server_sup started mod_sys_acm:start_link(2) at pid <0.561.0>
+2014-12-14 14:50:39.931 [debug] <0.498.0> Supervisor server_sup started mod_sys_acm:start_link(3) at pid <0.562.0>
+2014-12-14 14:50:39.942 [debug] <0.498.0> Supervisor server_sup started mod_player_rec:start_link(1) at pid <0.564.0>
+2014-12-14 14:50:39.942 [debug] <0.498.0> Supervisor server_sup started mod_player_rec:start_link(2) at pid <0.565.0>
+2014-12-14 14:50:39.942 [debug] <0.498.0> Supervisor server_sup started mod_player_rec:start_link(3) at pid <0.566.0>
+2014-12-14 14:50:39.946 [debug] <0.498.0> Supervisor server_sup started mod_table_clear:start_link() at pid <0.567.0>
+2014-12-14 14:50:39.961 [debug] <0.574.0> Supervisor gs_cron_sup started cron_agent_sup:start_link() at pid <0.575.0>
+2014-12-14 14:50:39.961 [info] <0.7.0> Application gs_cron started on node 'p02_db_disc_1@192.168.1.104'
+2014-12-14 14:50:39.962 [debug] <0.498.0> Supervisor server_sup started mod_timer:start_link() at pid <0.568.0>
+2014-12-14 14:50:39.972 [debug] <0.498.0> Supervisor server_sup started mod_dungeon_match:start_link() at pid <0.576.0>
+2014-12-14 14:50:39.980 [debug] <0.498.0> Supervisor server_sup started mod_selling_shop:start_link() at pid <0.577.0>
+2014-12-14 14:50:39.985 [debug] <0.498.0> Supervisor server_sup started mod_activity_shop:start_link() at pid <0.579.0>
+2014-12-14 14:50:39.989 [debug] <0.547.0> Supervisor rank_sup started mod_arena:start_link(async_arena_rank) at pid <0.586.0>
+2014-12-14 14:50:39.989 [debug] <0.547.0> Supervisor rank_sup started mod_arena:start_link(sync_arena_rank) at pid <0.587.0>
+2014-12-14 14:50:39.990 [debug] <0.579.0>@mod_activity_shop:handle_info:160 init_state ShopMsgList : []
+2014-12-14 14:50:39.996 [warning] <0.579.0>@mod_activity_shop:handle_info:169 get_next_activity
+2014-12-14 14:50:40.000 [debug] <0.547.0> Supervisor rank_sup started mod_rank:start_link(mugen_rank, mugen_rank_1, 500, daily, 1) at pid <0.588.0>
+2014-12-14 14:50:40.000 [debug] <0.547.0> Supervisor rank_sup started mod_rank:start_link(mugen_rank, mugen_rank_2, 500, daily, 1) at pid <0.589.0>
+2014-12-14 14:50:40.001 [debug] <0.547.0> Supervisor rank_sup started mod_rank:start_link(mugen_rank, mugen_rank_3, 500, daily, 1) at pid <0.590.0>
+2014-12-14 14:50:40.001 [debug] <0.547.0> Supervisor rank_sup started mod_rank:start_link(super_battle_rank, super_battle_rank_1, 500, daily, 1) at pid <0.591.0>
+2014-12-14 14:50:40.002 [debug] <0.547.0> Supervisor rank_sup started mod_rank:start_link(super_battle_rank, super_battle_rank_2, 500, daily, 1) at pid <0.592.0>
+2014-12-14 14:50:40.002 [debug] <0.547.0> Supervisor rank_sup started mod_rank:start_link(super_battle_rank, super_battle_rank_3, 500, daily, 1) at pid <0.593.0>
+2014-12-14 14:50:40.002 [debug] <0.547.0> Supervisor rank_sup started mod_rank:start_link(battle_ability_rank, battle_ability_rank_1, 500, daily, 1) at pid <0.594.0>
+2014-12-14 14:50:40.002 [debug] <0.547.0> Supervisor rank_sup started mod_rank:start_link(battle_ability_rank, battle_ability_rank_2, 500, daily, 1) at pid <0.595.0>
+2014-12-14 14:50:40.003 [debug] <0.547.0> Supervisor rank_sup started mod_rank:start_link(battle_ability_rank, battle_ability_rank_3, 500, daily, 1) at pid <0.596.0>
+2014-12-14 14:50:40.003 [debug] <0.547.0> Supervisor rank_sup started mod_rank:start_link(cost_coin_rank, cost_coin_rank_1, 500, weekly, 1) at pid <0.597.0>
+2014-12-14 14:50:40.003 [debug] <0.547.0> Supervisor rank_sup started mod_rank:start_link(cost_coin_rank, cost_coin_rank_2, 500, weekly, 1) at pid <0.598.0>
+2014-12-14 14:50:40.003 [debug] <0.547.0> Supervisor rank_sup started mod_rank:start_link(cost_coin_rank, cost_coin_rank_3, 500, weekly, 1) at pid <0.599.0>
+2014-12-14 14:50:40.003 [debug] <0.547.0> Supervisor rank_sup started mod_rank:start_link(cost_gold_rank, cost_gold_rank_1, 500, weekly, 1) at pid <0.600.0>
+2014-12-14 14:50:40.003 [debug] <0.547.0> Supervisor rank_sup started mod_rank:start_link(cost_gold_rank, cost_gold_rank_2, 500, weekly, 1) at pid <0.601.0>
+2014-12-14 14:50:40.003 [debug] <0.547.0> Supervisor rank_sup started mod_rank:start_link(cost_gold_rank, cost_gold_rank_3, 500, weekly, 1) at pid <0.602.0>
+2014-12-14 14:50:40.003 [debug] <0.547.0> Supervisor rank_sup started mod_rank:start_link(world_boss_rank, world_boss_rank_1, 500, weekly, 1) at pid <0.603.0>
+2014-12-14 14:50:40.004 [debug] <0.547.0> Supervisor rank_sup started mod_rank:start_link(world_boss_rank, world_boss_rank_2, 500, weekly, 1) at pid <0.604.0>
+2014-12-14 14:50:40.004 [debug] <0.547.0> Supervisor rank_sup started mod_rank:start_link(world_boss_rank, world_boss_rank_3, 500, weekly, 1) at pid <0.605.0>
+2014-12-14 14:50:40.004 [debug] <0.547.0> Supervisor rank_sup started mod_rank:start_link(async_arena_rank, async_arena_rank_1, 500, daily, 1) at pid <0.606.0>
+2014-12-14 14:50:40.004 [debug] <0.547.0> Supervisor rank_sup started mod_rank:start_link(async_arena_rank, async_arena_rank_2, 500, daily, 1) at pid <0.607.0>
+2014-12-14 14:50:40.004 [debug] <0.547.0> Supervisor rank_sup started mod_rank:start_link(async_arena_rank, async_arena_rank_3, 500, daily, 1) at pid <0.608.0>
+2014-12-14 14:50:40.005 [warning] <0.579.0>@mod_activity_shop:handle_info:189 All Activity End!
+2014-12-14 14:50:40.008 [debug] <0.588.0>@mod_rank:handle_cast:129 mugen_rank_1 auto_reset 
+2014-12-14 14:50:40.008 [debug] <0.589.0>@mod_rank:handle_cast:129 mugen_rank_2 auto_reset 
+2014-12-14 14:50:40.008 [debug] <0.590.0>@mod_rank:handle_cast:129 mugen_rank_3 auto_reset 
+2014-12-14 14:50:40.008 [debug] <0.591.0>@mod_rank:handle_cast:129 super_battle_rank_1 auto_reset 
+2014-12-14 14:50:40.008 [debug] <0.592.0>@mod_rank:handle_cast:129 super_battle_rank_2 auto_reset 
+2014-12-14 14:50:40.008 [debug] <0.593.0>@mod_rank:handle_cast:129 super_battle_rank_3 auto_reset 
+2014-12-14 14:50:40.008 [debug] <0.594.0>@mod_rank:handle_cast:129 battle_ability_rank_1 auto_reset 
+2014-12-14 14:50:40.008 [debug] <0.595.0>@mod_rank:handle_cast:129 battle_ability_rank_2 auto_reset 
+2014-12-14 14:50:40.008 [debug] <0.596.0>@mod_rank:handle_cast:129 battle_ability_rank_3 auto_reset 
+2014-12-14 14:50:40.008 [debug] <0.597.0>@mod_rank:handle_cast:129 cost_coin_rank_1 auto_reset 
+2014-12-14 14:50:40.008 [debug] <0.598.0>@mod_rank:handle_cast:129 cost_coin_rank_2 auto_reset 
+2014-12-14 14:50:40.008 [debug] <0.599.0>@mod_rank:handle_cast:129 cost_coin_rank_3 auto_reset 
+2014-12-14 14:50:40.008 [debug] <0.600.0>@mod_rank:handle_cast:129 cost_gold_rank_1 auto_reset 
+2014-12-14 14:50:40.008 [debug] <0.601.0>@mod_rank:handle_cast:129 cost_gold_rank_2 auto_reset 
+2014-12-14 14:50:40.008 [debug] <0.602.0>@mod_rank:handle_cast:129 cost_gold_rank_3 auto_reset 
+2014-12-14 14:50:40.008 [debug] <0.603.0>@mod_rank:handle_cast:129 world_boss_rank_1 auto_reset 
+2014-12-14 14:50:40.008 [debug] <0.604.0>@mod_rank:handle_cast:129 world_boss_rank_2 auto_reset 
+2014-12-14 14:50:40.009 [debug] <0.605.0>@mod_rank:handle_cast:129 world_boss_rank_3 auto_reset 
+2014-12-14 14:50:40.009 [debug] <0.606.0>@mod_rank:handle_cast:129 async_arena_rank_1 auto_reset 
+2014-12-14 14:50:40.009 [debug] <0.607.0>@mod_rank:handle_cast:129 async_arena_rank_2 auto_reset 
+2014-12-14 14:50:40.009 [debug] <0.608.0>@mod_rank:handle_cast:129 async_arena_rank_3 auto_reset 
+2014-12-14 14:50:40.022 [info] <0.497.0> mochi_get error Key center_node_port
+
+2014-12-14 14:50:40.033 [debug] <0.633.0> Supervisor ranch_sup started ranch_server:start_link() at pid <0.634.0>
+2014-12-14 14:50:40.033 [info] <0.7.0> Application ranch started on node 'p02_db_disc_1@192.168.1.104'
+2014-12-14 14:50:40.035 [info] <0.7.0> Application cowlib started on node 'p02_db_disc_1@192.168.1.104'
+2014-12-14 14:50:40.041 [debug] <0.639.0> Supervisor cowboy_sup started cowboy_clock:start_link() at pid <0.640.0>
+2014-12-14 14:50:40.041 [info] <0.7.0> Application cowboy started on node 'p02_db_disc_1@192.168.1.104'
+2014-12-14 14:50:40.049 [debug] <0.641.0> Supervisor {<0.641.0>,ranch_listener_sup} started ranch_conns_sup:start_link(http, worker, 5000, ranch_tcp, 5000, cowboy_protocol) at pid <0.642.0>
+2014-12-14 14:50:40.051 [debug] <0.643.0> Supervisor {<0.643.0>,ranch_acceptors_sup} started ranch_acceptor:start_link(#Port<0.11807>, ranch_tcp, <0.642.0>) at pid <0.644.0>
+2014-12-14 14:50:40.051 [debug] <0.643.0> Supervisor {<0.643.0>,ranch_acceptors_sup} started ranch_acceptor:start_link(#Port<0.11807>, ranch_tcp, <0.642.0>) at pid <0.645.0>
+2014-12-14 14:50:40.051 [debug] <0.643.0> Supervisor {<0.643.0>,ranch_acceptors_sup} started ranch_acceptor:start_link(#Port<0.11807>, ranch_tcp, <0.642.0>) at pid <0.646.0>
+2014-12-14 14:50:40.052 [debug] <0.643.0> Supervisor {<0.643.0>,ranch_acceptors_sup} started ranch_acceptor:start_link(#Port<0.11807>, ranch_tcp, <0.642.0>) at pid <0.647.0>
+2014-12-14 14:50:40.052 [debug] <0.643.0> Supervisor {<0.643.0>,ranch_acceptors_sup} started ranch_acceptor:start_link(#Port<0.11807>, ranch_tcp, <0.642.0>) at pid <0.648.0>
+2014-12-14 14:50:40.052 [debug] <0.643.0> Supervisor {<0.643.0>,ranch_acceptors_sup} started ranch_acceptor:start_link(#Port<0.11807>, ranch_tcp, <0.642.0>) at pid <0.649.0>
+2014-12-14 14:50:40.052 [debug] <0.643.0> Supervisor {<0.643.0>,ranch_acceptors_sup} started ranch_acceptor:start_link(#Port<0.11807>, ranch_tcp, <0.642.0>) at pid <0.650.0>
+2014-12-14 14:50:40.052 [debug] <0.643.0> Supervisor {<0.643.0>,ranch_acceptors_sup} started ranch_acceptor:start_link(#Port<0.11807>, ranch_tcp, <0.642.0>) at pid <0.651.0>
+2014-12-14 14:50:40.053 [debug] <0.643.0> Supervisor {<0.643.0>,ranch_acceptors_sup} started ranch_acceptor:start_link(#Port<0.11807>, ranch_tcp, <0.642.0>) at pid <0.652.0>
+2014-12-14 14:50:40.053 [debug] <0.643.0> Supervisor {<0.643.0>,ranch_acceptors_sup} started ranch_acceptor:start_link(#Port<0.11807>, ranch_tcp, <0.642.0>) at pid <0.653.0>
+2014-12-14 14:50:40.053 [debug] <0.641.0> Supervisor {<0.641.0>,ranch_listener_sup} started ranch_acceptors_sup:start_link(http, 10, ranch_tcp, [{port,7801},{max_connections,3000}]) at pid <0.643.0>
+2014-12-14 14:50:40.053 [debug] <0.633.0> Supervisor ranch_sup started ranch_listener_sup:start_link(http, 10, ranch_tcp, [{port,7801},{max_connections,3000}], cowboy_protocol, [{env,[{dispatch,[{'_',[],[{[<<"get_server_list">>],[],http_handler,[center_node]},{'_',[],http_handler,...}]}]}]}]) at pid <0.641.0>
+2014-12-14 14:50:40.058 [debug] <0.498.0> Supervisor server_sup started player_sup:start_link() at pid <0.654.0>
+2014-12-14 14:50:40.073 [info] <0.7.0> Application server started on node 'p02_db_disc_1@192.168.1.104'
+2014-12-14 14:50:41.007 [debug] <0.579.0>@mod_activity_shop:handle_info:209 timeout: []
+2014-12-14 14:50:41.007 [debug] <0.579.0>@mod_activity_shop:save_to_db:347 activity shop save_to_db
+2014-12-14 14:51:01.110 [debug] <0.655.0>@tcp_client_handler:init:119 {ok,[{sndbuf,2625280},{recbuf,1058928},{packet,2},{header,11},{active,200},{nodelay,false},{keepalive,true},{priority,0},{tos,0},{buffer,1460},{delay_send,true},{packet_size,0},{high_watermark,8192},{low_watermark,4096},{sndbuf,2625280},{exit_on_close,true},{send_timeout,infinity},{packet_size,0},{high_msgq_watermark,8192},{low_msgq_watermark,4096}]}
+2014-12-14 14:51:01.110 [debug] <0.655.0>@tcp_client_handler:init:129 IP {127,0,0,1} connected, for socket #Port<0.11911> on 49568.
+2014-12-14 14:51:01.110 [warning] <0.515.0>@tcp_acceptor:start_client:96 listener_sup:start_child Success 
+2014-12-14 14:51:19.827 [debug] <0.656.0>@tcp_client_handler:init:119 {ok,[{sndbuf,2625280},{recbuf,1058928},{packet,2},{header,11},{active,200},{nodelay,false},{keepalive,true},{priority,0},{tos,0},{buffer,1460},{delay_send,true},{packet_size,0},{high_watermark,8192},{low_watermark,4096},{sndbuf,2625280},{exit_on_close,true},{send_timeout,infinity},{packet_size,0},{high_msgq_watermark,8192},{low_msgq_watermark,4096}]}
+2014-12-14 14:51:19.827 [debug] <0.656.0>@tcp_client_handler:init:129 IP {127,0,0,1} connected, for socket #Port<0.11937> on 33795.
+2014-12-14 14:51:19.827 [warning] <0.516.0>@tcp_acceptor:start_client:96 listener_sup:start_child Success 
+2014-12-14 14:52:49.039 [debug] <0.655.0>@pt:unpack:89 Cmd  10000 
+2014-12-14 14:52:49.082 [debug] <0.655.0>@pp_account:check_account_pass2:280 Platform undefined
+2014-12-14 14:52:49.082 [debug] <0.655.0>@pp_account:check_account_pass2:293 4399 coming
+2014-12-14 14:52:49.082 [debug] <0.655.0>@pp_account:check_4399_account_pass:319 suid: 49523386
+timestamp: 1418539968
+sign: 38751e6daced4e3fb5ed2507ad4506b0
+2014-12-14 14:52:49.082 [debug] <0.655.0>@pp_account:check_4399_account_pass:323 Login pass verify: 
+md5 38751e6daced4e3fb5ed2507ad4506b0
+cmd5 38751e6daced4e3fb5ed2507ad4506b0
+2014-12-14 14:52:49.093 [debug] <0.655.0>@pp_account:may_start_mod_player:184 Sn 1
+2014-12-14 14:52:49.096 [debug] <0.655.0>@pp_account:handle:33 Client1 {client,<0.980.0>,30000003,1,"49523386","p03_robot_2",0,undefined,0,0,1,#Port<0.11911>,{127,0,0,1},456390920,1418539969,<0.655.0>,1418539861}
+2014-12-14 14:52:49.109 [debug] <0.655.0>@pt:pack:167 pack 10000: {pbaccountlogin,[{result,1},{user_info,[{pbuserlogininfo,[{user_id,30000003},{nickname,<<"ecb57c62">>},{level,1},{career,1}]}]},{acc_id,"49523386"},{session,456390920}]}
+2014-12-14 14:52:49.109 [debug] <0.655.0>@pt:pack:168 Cmd :10000 size : 39 bytes
+2014-12-14 14:52:49.121 [info] <0.655.0> Duration proto_tc_10000 cost 42157 microseconds
+
+2014-12-14 14:52:49.121 [debug] <0.655.0>@packet_misc:send_packet:117 Bin <<39,16,0,41,39,16,8,1,26,19,8,131,135,167,14,18,8,101,99,98,53,55,99,54,50,24,1,40,1,34,8,52,57,53,50,51,51,56,54,40,136,242,207,217,1>>, 45
+2014-12-14 14:52:49.121 [debug] <0.655.0>@packet_misc:send:124 SendData Success Total Size 45 bytes 
+2014-12-14 14:52:49.121 [debug] <0.556.0>@mod_base_log:handle_info:137 log_player_20141214_1 insert len 1 566 microseconds
+2014-12-14 14:52:49.144 [warning] <0.560.0>@mod_sys_acm:handle_cast:109 sys_acm new player PlayerId30000003
+2014-12-14 14:52:49.166 [debug] <0.980.0>@mod_player:handle_cast:234 Login SteriousShop: {sterious_shop,30000003,4,[],0,0,0}
+2014-12-14 14:52:49.166 [debug] <0.980.0>@mod_player:handle_cast:235 login_activity_record: {activity_shop_record,30000003,2,undefined,[],0}
+2014-12-14 14:52:49.174 [debug] <0.980.0>@mod_player:handle_cast:270 mod_player start pid <0.980.0>
+2014-12-14 15:00:00.987 [warning] <0.1086.0>@mod_boss_manage:sys_open_boss:43 sys_open_boss DbSn 2 BossId 1
+2014-12-14 15:00:00.987 [warning] <0.1087.0>@mod_boss_manage:sys_open_boss:43 sys_open_boss DbSn 1 BossId 1
+2014-12-14 15:00:00.988 [warning] <0.1088.0>@mod_boss_manage:sys_open_boss:43 sys_open_boss DbSn 3 BossId 1
+2014-12-14 15:06:12.924 [debug] <0.980.0>@mod_player:terminate:654 Oh myGod the mod_player process exit, Reason: 
+shutdown
+2014-12-14 15:06:12.928 [warning] <0.655.0>@tcp_client_handler:handle_cast:186 mod_player stopped cast 
+2014-12-14 15:06:12.928 [warning] <0.655.0>@tcp_client_handler:terminate:322 tcp_client_handler stop Reason normal
+2014-12-14 15:06:12.928 [debug] <0.655.0>@tcp_client_handler:terminate:325 Player 30000003 disconnect 
+2014-12-14 15:06:12.929 [warning] <0.655.0>@mod_player:tcp_disconnect:935 Not Player Pid, PlayerId 30000003
+2014-12-14 15:06:12.929 [warning] <0.577.0>@mod_selling_shop:terminate:184 ShopList []
+2014-12-14 15:06:12.930 [warning] <0.497.0>@server_app:stop:113 server_app stopping.
+2014-12-14 15:06:12.931 [warning] <0.656.0>@tcp_client_handler:terminate:322 tcp_client_handler stop Reason shutdown
+2014-12-14 15:06:12.946 [info] <0.42.0> alarm_handler: {clear,system_memory_high_watermark}
+2014-12-14 15:06:16.655 [debug] <0.71.0>@lager_handler_watcher:94 Lager installed handler {lager_file_backend,
+                            "/home/li/server_p02/logs/p02_db_disc_1@192.168.1.104/server.log"} into lager_event
+2014-12-14 15:06:16.655 [debug] <0.73.0>@lager_handler_watcher:94 Lager installed handler error_logger_lager_h into error_logger
+2014-12-14 15:06:16.670 [debug] <0.58.0> Supervisor gr_param_sup started gr_param:start_link(gr_lager_default_tracer_params) at pid <0.75.0>
+2014-12-14 15:06:16.670 [debug] <0.57.0> Supervisor gr_counter_sup started gr_counter:start_link(gr_lager_default_tracer_counters) at pid <0.76.0>
+2014-12-14 15:06:16.670 [debug] <0.59.0> Supervisor gr_manager_sup started gr_manager:start_link(gr_lager_default_tracer_params_mgr, gr_lager_default_tracer_params, []) at pid <0.77.0>
+2014-12-14 15:06:16.670 [debug] <0.59.0> Supervisor gr_manager_sup started gr_manager:start_link(gr_lager_default_tracer_counters_mgr, gr_lager_default_tracer_counters, [{input,0},{filter,0},{output,0}]) at pid <0.78.0>
+2014-12-14 15:06:16.912 [info] <0.7.0> Application lager started on node 'p02_db_disc_1@192.168.1.104'
+2014-12-14 15:06:16.941 [debug] <0.2.0>@main:server_start:42 Lager Config [{async_threshold_window,5},{crash_log_date,"$D0"},{crash_log,"/home/li/server_p02/logs/p02_db_disc_1@192.168.1.104/server-crash.log"},{colors,[{debug,"\e[0;38m"},{info,"\e[1;37m"},{notice,"\e[1;36m"},{warning,"\e[1;33m"},{error,"\e[1;31m"},{critical,"\e[1;35m"},{alert,"\e[1;44m"},{emergency,"\e[1;41m"}]},{crash_log_count,5},{async_threshold,20},{crash_log_size,10485760},{crash_log_msg_size,65536},{colored,true},{log_level,debug},{handlers,[{lager_console_backend,[debug,{lager_default_formatter,[date," ",time,color," [",severity,"] <",pid,">@",module,":",function,":",line," ",message,"\e[0m\r\n"]}]},{lager_file_backend,[{level,debug},{date,"$W0D23"},{count,20},{file,"/home/li/server_p02/logs/p02_db_disc_1@192.168.1.104/server.log"}]}]},{error_logger_hwm,50},{error_logger_redirect,true},{included_applications,[]}]
+2014-12-14 15:06:16.941 [debug] <0.2.0>@main:server_start:44 mod_counter start 
+2014-12-14 15:06:16.981 [info] <0.2.0>@mnesia_upgrade:maybe_upgrade_mnesia:111 not upgrade mnesia
+2014-12-14 15:06:16.989 [debug] <0.94.0> Supervisor hstdlib_sup started hmod_timer:start_link() at pid <0.95.0>
+2014-12-14 15:06:16.995 [debug] <0.94.0> Supervisor hstdlib_sup started hmod_rand:start_link() at pid <0.96.0>
+2014-12-14 15:06:16.995 [info] <0.7.0> Application hstdlib started on node 'p02_db_disc_1@192.168.1.104'
+2014-12-14 15:06:16.996 [info] <0.7.0> Application mysql started on node 'p02_db_disc_1@192.168.1.104'
+2014-12-14 15:06:17.013 [info] <0.7.0> Application crypto started on node 'p02_db_disc_1@192.168.1.104'
+2014-12-14 15:06:17.023 [debug] <0.102.0> Supervisor emysql_sup started emysql_statements:start_link() at pid <0.103.0>
+2014-12-14 15:06:17.025 [debug] <0.102.0> Supervisor emysql_sup started emysql_conn_mgr:start_link() at pid <0.104.0>
+2014-12-14 15:06:17.026 [info] <0.7.0> Application emysql started on node 'p02_db_disc_1@192.168.1.104'
+2014-12-14 15:06:17.029 [info] <0.107.0> leshu_db_stated: StartArgs [fuck_rebar]
+
+2014-12-14 15:06:17.029 [info] <0.107.0> leshu_db_env: {ok,[{ip,"0.0.0.0"}]}
+
+2014-12-14 15:06:17.031 [info] <0.7.0> Application leshu_db started on node 'p02_db_disc_1@192.168.1.104'
+2014-12-14 15:06:17.050 [debug] <0.112.0> Supervisor mnesia_sup started mnesia_sup:start_event() at pid <0.113.0>
+2014-12-14 15:06:17.057 [debug] <0.114.0> Supervisor mnesia_kernel_sup started mnesia_monitor:start() at pid <0.115.0>
+2014-12-14 15:06:17.061 [debug] <0.114.0> Supervisor mnesia_kernel_sup started mnesia_subscr:start() at pid <0.116.0>
+2014-12-14 15:06:17.070 [debug] <0.114.0> Supervisor mnesia_kernel_sup started mnesia_locker:start() at pid <0.117.0>
+2014-12-14 15:06:17.075 [debug] <0.114.0> Supervisor mnesia_kernel_sup started mnesia_recover:start() at pid <0.118.0>
+2014-12-14 15:06:17.119 [debug] <0.35.0> Supervisor kernel_safe_sup started dets_sup:start_link() at pid <0.120.0>
+2014-12-14 15:06:17.119 [debug] <0.35.0> Supervisor kernel_safe_sup started dets_server:start_link() at pid <0.121.0>
+2014-12-14 15:06:17.146 [debug] <0.67.0>@lager_handler_watcher:94 Lager installed handler lager_backend_throttle into lager_event
+2014-12-14 15:06:17.184 [debug] <0.35.0> Supervisor kernel_safe_sup started disk_log_sup:start_link() at pid <0.125.0>
+2014-12-14 15:06:17.184 [debug] <0.35.0> Supervisor kernel_safe_sup started disk_log_server:start_link() at pid <0.126.0>
+2014-12-14 15:06:17.325 [debug] <0.114.0> Supervisor mnesia_kernel_sup started mnesia_tm:start() at pid <0.119.0>
+2014-12-14 15:06:17.333 [debug] <0.114.0> Supervisor mnesia_kernel_sup started mnesia_checkpoint_sup:start() at pid <0.140.0>
+2014-12-14 15:06:17.337 [debug] <0.114.0> Supervisor mnesia_kernel_sup started mnesia_snmp_sup:start() at pid <0.141.0>
+2014-12-14 15:06:17.337 [debug] <0.114.0> Supervisor mnesia_kernel_sup started mnesia_controller:start() at pid <0.142.0>
+2014-12-14 15:06:17.353 [debug] <0.114.0> Supervisor mnesia_kernel_sup started mnesia_late_loader:start() at pid <0.143.0>
+2014-12-14 15:06:17.353 [debug] <0.112.0> Supervisor mnesia_sup started mnesia_kernel_sup:start() at pid <0.114.0>
+2014-12-14 15:06:17.353 [info] <0.7.0> Application mnesia started on node 'p02_db_disc_1@192.168.1.104'
+2014-12-14 15:06:17.381 [info] <0.7.0> Application asn1 started on node 'p02_db_disc_1@192.168.1.104'
+2014-12-14 15:06:17.398 [info] <0.7.0> Application public_key started on node 'p02_db_disc_1@192.168.1.104'
+2014-12-14 15:06:17.445 [debug] <0.236.0> Supervisor ssl_sup started ssl_manager:start_link([]) at pid <0.245.0>
+2014-12-14 15:06:17.453 [debug] <0.236.0> Supervisor ssl_sup started tls_connection_sup:start_link() at pid <0.277.0>
+2014-12-14 15:06:17.459 [debug] <0.236.0> Supervisor ssl_sup started ssl_listen_tracker_sup:start_link() at pid <0.291.0>
+2014-12-14 15:06:17.459 [info] <0.7.0> Application ssl started on node 'p02_db_disc_1@192.168.1.104'
+2014-12-14 15:06:17.469 [debug] <0.311.0> Supervisor ibrowse_sup started ibrowse:start_link() at pid <0.318.0>
+2014-12-14 15:06:17.469 [info] <0.7.0> Application ibrowse started on node 'p02_db_disc_1@192.168.1.104'
+2014-12-14 15:06:17.492 [debug] <0.341.0> Supervisor os_mon_sup started disksup:start_link() at pid <0.362.0>
+2014-12-14 15:06:17.501 [debug] <0.341.0> Supervisor os_mon_sup started memsup:start_link() at pid <0.375.0>
+2014-12-14 15:06:17.508 [debug] <0.35.0> Supervisor kernel_safe_sup started timer:start_link() at pid <0.383.0>
+2014-12-14 15:06:17.510 [info] <0.42.0> alarm_handler: {set,{system_memory_high_watermark,[]}}
+2014-12-14 15:06:17.517 [debug] <0.341.0> Supervisor os_mon_sup started cpu_sup:start_link() at pid <0.386.0>
+2014-12-14 15:06:17.518 [info] <0.7.0> Application os_mon started on node 'p02_db_disc_1@192.168.1.104'
+2014-12-14 15:06:17.534 [debug] <0.418.0> Supervisor folsom_sup started folsom_sample_slide_sup:start_link() at pid <0.424.0>
+2014-12-14 15:06:17.538 [debug] <0.418.0> Supervisor folsom_sup started folsom_meter_timer_server:start_link() at pid <0.438.0>
+2014-12-14 15:06:17.544 [debug] <0.418.0> Supervisor folsom_sup started folsom_metrics_histogram_ets:start_link() at pid <0.459.0>
+2014-12-14 15:06:17.544 [info] <0.7.0> Application folsom started on node 'p02_db_disc_1@192.168.1.104'
+2014-12-14 15:06:17.566 [debug] <0.475.0> Supervisor gproc_sup started gproc:start_link() at pid <0.476.0>
+2014-12-14 15:06:17.575 [debug] <0.475.0> Supervisor gproc_sup started gproc_monitor:start_link() at pid <0.477.0>
+2014-12-14 15:06:17.577 [debug] <0.475.0> Supervisor gproc_sup started gproc_bcast:start_link() at pid <0.478.0>
+2014-12-14 15:06:17.580 [debug] <0.475.0> Supervisor gproc_sup started gproc_pool:start_link() at pid <0.479.0>
+2014-12-14 15:06:17.580 [info] <0.7.0> Application gproc started on node 'p02_db_disc_1@192.168.1.104'
+2014-12-14 15:06:17.585 [debug] <0.482.0>@mnesia_misc:init_from_config:37 TryNodes ['p02_db_disc_1@127.0.0.1'], NodeType disc
+2014-12-14 15:06:17.585 [debug] <0.485.0> Supervisor inet_gethost_native_sup started undefined at pid <0.486.0>
+2014-12-14 15:06:17.585 [debug] <0.35.0> Supervisor kernel_safe_sup started inet_gethost_native:start_link() at pid <0.485.0>
+2014-12-14 15:06:17.594 [info] <0.482.0>@mnesia_misc:init_from_config:50 First Disc Db Node Start
+2014-12-14 15:06:17.594 [debug] <0.482.0>@mnesia_misc:init_db:121 {Nodes, WasDiscNode, NodeType} {[],true,disc}
+2014-12-14 15:06:17.707 [debug] <0.42.0>@mod_alarm_handler:init:24 misc_alarm_handler init : [].
+2014-12-14 15:06:17.710 [debug] <0.483.0> Supervisor server_sup started mod_cache:start_link() at pid <0.494.0>
+2014-12-14 15:06:17.765 [info] <0.482.0>@server_app:start:59 acceptor_sup started 
+2014-12-14 15:06:17.765 [info] <0.482.0>@server_app:start:67 acceptor_sup started 
+2014-12-14 15:06:17.769 [debug] <0.499.0>@tcp_listener:init:35 Listen on port: 8801
+2014-12-14 15:06:17.777 [debug] <0.498.0> Supervisor tcp_client_handler_listener_sup started tcp_listener:start_link(8801, tcp_client_handler) at pid <0.499.0>
+2014-12-14 15:06:17.777 [info] <0.482.0>@server_app:start:79 listener_sup started for port: 8801 ... 
+2014-12-14 15:06:17.777 [debug] <0.498.0> Supervisor tcp_client_handler_listener_sup started supervisor:start_link({local,listener_sup_tcp_client_handler}, listener_sup, [tcp_client_handler]) at pid <0.505.0>
+2014-12-14 15:06:17.778 [debug] <0.507.0>@tcp_listener:init:35 Listen on port: 9801
+2014-12-14 15:06:17.780 [debug] <0.506.0> Supervisor tcp_room_handler_listener_sup started tcp_listener:start_link(9801, tcp_room_handler) at pid <0.507.0>
+2014-12-14 15:06:17.780 [info] <0.482.0>@server_app:start:87 listener_sup started for port: 8801 ... 
+2014-12-14 15:06:17.780 [debug] <0.506.0> Supervisor tcp_room_handler_listener_sup started supervisor:start_link({local,listener_sup_tcp_room_handler}, listener_sup, [tcp_room_handler]) at pid <0.513.0>
+2014-12-14 15:06:17.786 [info] <0.514.0>@httpd_handler:start:18 mochiweb start on: [{ip,{0,0,0,0}},{port,18801}]
+2014-12-14 15:06:17.792 [debug] <0.514.0> Supervisor h_httpd_sup started httpd_handler:start([{ip,{0,0,0,0}},{port,18801}]) at pid <0.515.0>
+2014-12-14 15:06:17.796 [warning] <0.482.0>@server_app:start:100 rank_sup start 
+2014-12-14 15:06:17.800 [debug] <0.533.0>@mod_counter:init:62 CenterList ['center@127.0.0.1']
+2014-12-14 15:06:17.809 [debug] <0.483.0> Supervisor server_sup started mod_counter:start_link() at pid <0.533.0>
+2014-12-14 15:06:17.815 [debug] <0.483.0> Supervisor server_sup started update:start_link() at pid <0.537.0>
+2014-12-14 15:06:17.818 [debug] <0.483.0> Supervisor server_sup started mod_boss_manage:start_link(1) at pid <0.538.0>
+2014-12-14 15:06:17.818 [debug] <0.483.0> Supervisor server_sup started mod_boss_manage:start_link(2) at pid <0.539.0>
+2014-12-14 15:06:17.819 [debug] <0.483.0> Supervisor server_sup started mod_boss_manage:start_link(3) at pid <0.540.0>
+2014-12-14 15:06:17.822 [debug] <0.483.0> Supervisor server_sup started mod_base_log:start_link(log_player_p, {log_state,{record_mysql_info,db_log,log_player,[id,player_id,event_id,arg1,arg2,timestamp],log_player,...},...}) at pid <0.541.0>
+2014-12-14 15:06:17.823 [debug] <0.483.0> Supervisor server_sup started mod_base_log:start_link(log_player_mini_p, {log_state,{record_mysql_info,db_log,log_player_mini,[player_id,acc_id,acc_name,nick_name],log_player_mini,...},...}) at pid <0.542.0>
+2014-12-14 15:06:17.823 [debug] <0.483.0> Supervisor server_sup started mod_base_log:start_link(log_player_feedback_p, {log_state,{record_mysql_info,db_log,log_player_feedback,[id,player_id,title,content,timestamp],...},...}) at pid <0.543.0>
+2014-12-14 15:06:17.832 [info] <0.541.0>@mod_base_log:available_table2:224 run CreateTableSQL Result 0, TableIndex 1
+2014-12-14 15:06:17.839 [debug] <0.483.0> Supervisor server_sup started mod_sys_acm:start_link(1) at pid <0.545.0>
+2014-12-14 15:06:17.839 [debug] <0.483.0> Supervisor server_sup started mod_sys_acm:start_link(2) at pid <0.546.0>
+2014-12-14 15:06:17.839 [debug] <0.483.0> Supervisor server_sup started mod_sys_acm:start_link(3) at pid <0.547.0>
+2014-12-14 15:06:17.850 [debug] <0.483.0> Supervisor server_sup started mod_player_rec:start_link(1) at pid <0.549.0>
+2014-12-14 15:06:17.851 [debug] <0.483.0> Supervisor server_sup started mod_player_rec:start_link(2) at pid <0.550.0>
+2014-12-14 15:06:17.851 [debug] <0.483.0> Supervisor server_sup started mod_player_rec:start_link(3) at pid <0.551.0>
+2014-12-14 15:06:17.855 [debug] <0.483.0> Supervisor server_sup started mod_table_clear:start_link() at pid <0.552.0>
+2014-12-14 15:06:17.871 [debug] <0.559.0> Supervisor gs_cron_sup started cron_agent_sup:start_link() at pid <0.560.0>
+2014-12-14 15:06:17.871 [info] <0.7.0> Application gs_cron started on node 'p02_db_disc_1@192.168.1.104'
+2014-12-14 15:06:17.871 [debug] <0.483.0> Supervisor server_sup started mod_timer:start_link() at pid <0.553.0>
+2014-12-14 15:06:17.873 [debug] <0.483.0> Supervisor server_sup started mod_dungeon_match:start_link() at pid <0.561.0>
+2014-12-14 15:06:17.881 [debug] <0.483.0> Supervisor server_sup started mod_selling_shop:start_link() at pid <0.562.0>
+2014-12-14 15:06:17.891 [debug] <0.483.0> Supervisor server_sup started mod_activity_shop:start_link() at pid <0.564.0>
+2014-12-14 15:06:17.897 [debug] <0.564.0>@mod_activity_shop:handle_info:160 init_state ShopMsgList : []
+2014-12-14 15:06:17.903 [warning] <0.564.0>@mod_activity_shop:handle_info:169 get_next_activity
+2014-12-14 15:06:17.905 [debug] <0.532.0> Supervisor rank_sup started mod_arena:start_link(async_arena_rank) at pid <0.571.0>
+2014-12-14 15:06:17.905 [debug] <0.532.0> Supervisor rank_sup started mod_arena:start_link(sync_arena_rank) at pid <0.572.0>
+2014-12-14 15:06:17.909 [warning] <0.564.0>@mod_activity_shop:handle_info:189 All Activity End!
+2014-12-14 15:06:17.912 [debug] <0.532.0> Supervisor rank_sup started mod_rank:start_link(mugen_rank, mugen_rank_1, 500, daily, 1) at pid <0.573.0>
+2014-12-14 15:06:17.913 [debug] <0.532.0> Supervisor rank_sup started mod_rank:start_link(mugen_rank, mugen_rank_2, 500, daily, 1) at pid <0.574.0>
+2014-12-14 15:06:17.913 [debug] <0.532.0> Supervisor rank_sup started mod_rank:start_link(mugen_rank, mugen_rank_3, 500, daily, 1) at pid <0.575.0>
+2014-12-14 15:06:17.913 [debug] <0.532.0> Supervisor rank_sup started mod_rank:start_link(super_battle_rank, super_battle_rank_1, 500, daily, 1) at pid <0.576.0>
+2014-12-14 15:06:17.913 [debug] <0.532.0> Supervisor rank_sup started mod_rank:start_link(super_battle_rank, super_battle_rank_2, 500, daily, 1) at pid <0.577.0>
+2014-12-14 15:06:17.913 [debug] <0.532.0> Supervisor rank_sup started mod_rank:start_link(super_battle_rank, super_battle_rank_3, 500, daily, 1) at pid <0.578.0>
+2014-12-14 15:06:17.913 [debug] <0.532.0> Supervisor rank_sup started mod_rank:start_link(battle_ability_rank, battle_ability_rank_1, 500, daily, 1) at pid <0.579.0>
+2014-12-14 15:06:17.914 [debug] <0.532.0> Supervisor rank_sup started mod_rank:start_link(battle_ability_rank, battle_ability_rank_2, 500, daily, 1) at pid <0.580.0>
+2014-12-14 15:06:17.914 [debug] <0.532.0> Supervisor rank_sup started mod_rank:start_link(battle_ability_rank, battle_ability_rank_3, 500, daily, 1) at pid <0.581.0>
+2014-12-14 15:06:17.914 [debug] <0.532.0> Supervisor rank_sup started mod_rank:start_link(cost_coin_rank, cost_coin_rank_1, 500, weekly, 1) at pid <0.582.0>
+2014-12-14 15:06:17.914 [debug] <0.532.0> Supervisor rank_sup started mod_rank:start_link(cost_coin_rank, cost_coin_rank_2, 500, weekly, 1) at pid <0.583.0>
+2014-12-14 15:06:17.914 [debug] <0.532.0> Supervisor rank_sup started mod_rank:start_link(cost_coin_rank, cost_coin_rank_3, 500, weekly, 1) at pid <0.584.0>
+2014-12-14 15:06:17.915 [debug] <0.532.0> Supervisor rank_sup started mod_rank:start_link(cost_gold_rank, cost_gold_rank_1, 500, weekly, 1) at pid <0.585.0>
+2014-12-14 15:06:17.915 [debug] <0.532.0> Supervisor rank_sup started mod_rank:start_link(cost_gold_rank, cost_gold_rank_2, 500, weekly, 1) at pid <0.586.0>
+2014-12-14 15:06:17.924 [debug] <0.589.0>@mod_rank:handle_cast:129 world_boss_rank_2 auto_reset 
+2014-12-14 15:06:17.924 [debug] <0.590.0>@mod_rank:handle_cast:129 world_boss_rank_3 auto_reset 
+2014-12-14 15:06:17.924 [debug] <0.573.0>@mod_rank:handle_cast:129 mugen_rank_1 auto_reset 
+2014-12-14 15:06:17.924 [debug] <0.591.0>@mod_rank:handle_cast:129 async_arena_rank_1 auto_reset 
+2014-12-14 15:06:17.925 [debug] <0.592.0>@mod_rank:handle_cast:129 async_arena_rank_2 auto_reset 
+2014-12-14 15:06:17.925 [debug] <0.574.0>@mod_rank:handle_cast:129 mugen_rank_2 auto_reset 
+2014-12-14 15:06:17.925 [debug] <0.593.0>@mod_rank:handle_cast:129 async_arena_rank_3 auto_reset 
+2014-12-14 15:06:17.925 [debug] <0.575.0>@mod_rank:handle_cast:129 mugen_rank_3 auto_reset 
+2014-12-14 15:06:17.925 [debug] <0.576.0>@mod_rank:handle_cast:129 super_battle_rank_1 auto_reset 
+2014-12-14 15:06:17.925 [debug] <0.577.0>@mod_rank:handle_cast:129 super_battle_rank_2 auto_reset 
+2014-12-14 15:06:17.926 [debug] <0.578.0>@mod_rank:handle_cast:129 super_battle_rank_3 auto_reset 
+2014-12-14 15:06:17.926 [debug] <0.579.0>@mod_rank:handle_cast:129 battle_ability_rank_1 auto_reset 
+2014-12-14 15:06:17.926 [debug] <0.580.0>@mod_rank:handle_cast:129 battle_ability_rank_2 auto_reset 
+2014-12-14 15:06:17.926 [debug] <0.581.0>@mod_rank:handle_cast:129 battle_ability_rank_3 auto_reset 
+2014-12-14 15:06:17.926 [debug] <0.582.0>@mod_rank:handle_cast:129 cost_coin_rank_1 auto_reset 
+2014-12-14 15:06:17.926 [debug] <0.584.0>@mod_rank:handle_cast:129 cost_coin_rank_3 auto_reset 
+2014-12-14 15:06:17.926 [debug] <0.583.0>@mod_rank:handle_cast:129 cost_coin_rank_2 auto_reset 
+2014-12-14 15:06:17.927 [debug] <0.585.0>@mod_rank:handle_cast:129 cost_gold_rank_1 auto_reset 
+2014-12-14 15:06:17.927 [debug] <0.586.0>@mod_rank:handle_cast:129 cost_gold_rank_2 auto_reset 
+2014-12-14 15:06:17.927 [debug] <0.587.0>@mod_rank:handle_cast:129 cost_gold_rank_3 auto_reset 
+2014-12-14 15:06:17.927 [debug] <0.588.0>@mod_rank:handle_cast:129 world_boss_rank_1 auto_reset 
+2014-12-14 15:06:18.910 [debug] <0.564.0>@mod_activity_shop:handle_info:209 timeout: []
+2014-12-14 15:06:18.910 [debug] <0.564.0>@mod_activity_shop:save_to_db:347 activity shop save_to_db
+2014-12-14 15:06:29.386 [debug] <0.640.0>@tcp_client_handler:init:119 {ok,[{sndbuf,2625280},{recbuf,1058928},{packet,2},{header,11},{active,200},{nodelay,false},{keepalive,true},{priority,0},{tos,0},{buffer,1460},{delay_send,true},{packet_size,0},{high_watermark,8192},{low_watermark,4096},{sndbuf,2625280},{exit_on_close,true},{send_timeout,infinity},{packet_size,0},{high_msgq_watermark,8192},{low_msgq_watermark,4096}]}
+2014-12-14 15:06:29.386 [debug] <0.640.0>@tcp_client_handler:init:129 IP {127,0,0,1} connected, for socket #Port<0.11899> on 39699.
+2014-12-14 15:06:29.386 [warning] <0.500.0>@tcp_acceptor:start_client:96 listener_sup:start_child Success 
+2014-12-14 15:06:30.113 [debug] <0.640.0>@pt:unpack:89 Cmd  10000 
+2014-12-14 15:06:30.143 [debug] <0.640.0>@pp_account:check_account_pass2:280 Platform undefined
+2014-12-14 15:06:30.143 [debug] <0.640.0>@pp_account:check_account_pass2:293 4399 coming
+2014-12-14 15:06:30.143 [debug] <0.640.0>@pp_account:check_4399_account_pass:319 suid: 49523386
+timestamp: 1418540789
+sign: 11b735b8dd7150e0d453c85eaf2734c4
+2014-12-14 15:06:30.143 [debug] <0.640.0>@pp_account:check_4399_account_pass:323 Login pass verify: 
+md5 11b735b8dd7150e0d453c85eaf2734c4
+cmd5 11b735b8dd7150e0d453c85eaf2734c4
+2014-12-14 15:06:30.152 [debug] <0.640.0>@pp_account:may_start_mod_player:184 Sn 1
+2014-12-14 15:06:30.154 [debug] <0.640.0>@pp_account:handle:33 Client1 {client,<0.641.0>,30000003,1,"49523386","p03_robot_2",0,undefined,0,0,1,#Port<0.11899>,{127,0,0,1},394791175,1418540790,<0.640.0>,1418540789}
+2014-12-14 15:06:30.165 [debug] <0.640.0>@pt:pack:167 pack 10000: {pbaccountlogin,[{result,1},{user_info,[{pbuserlogininfo,[{user_id,30000003},{nickname,<<"ecb57c62">>},{level,1},{career,1}]}]},{acc_id,"49523386"},{session,394791175}]}
+2014-12-14 15:06:30.165 [debug] <0.640.0>@pt:pack:168 Cmd :10000 size : 39 bytes
+2014-12-14 15:06:30.187 [warning] <0.6.0> lager_error_logger_h dropped 9 messages in the last second that exceeded the limit of 50 messages/sec
+2014-12-14 15:06:30.188 [debug] <0.640.0>@packet_misc:send_packet:117 Bin <<39,16,0,41,39,16,8,1,26,19,8,131,135,167,14,18,8,101,99,98,53,55,99,54,50,24,1,40,1,34,8,52,57,53,50,51,51,56,54,40,135,146,160,188,1>>, 45
+2014-12-14 15:06:30.188 [info] <0.640.0> Duration proto_tc_10000 cost 48250 microseconds
+
+2014-12-14 15:06:30.188 [debug] <0.640.0>@packet_misc:send:124 SendData Success Total Size 45 bytes 
+2014-12-14 15:06:30.189 [debug] <0.541.0>@mod_base_log:handle_info:137 log_player_20141214_1 insert len 1 1018 microseconds
+2014-12-14 15:06:30.205 [warning] <0.545.0>@mod_sys_acm:handle_cast:109 sys_acm new player PlayerId30000003
+2014-12-14 15:06:30.222 [debug] <0.641.0>@mod_player:handle_cast:234 Login SteriousShop: {sterious_shop,30000003,4,[],0,0,0}
+2014-12-14 15:06:30.223 [debug] <0.641.0>@mod_player:handle_cast:235 login_activity_record: {activity_shop_record,30000003,2,undefined,[],0}
+2014-12-14 15:06:30.235 [debug] <0.641.0>@mod_player:handle_cast:270 mod_player start pid <0.641.0>
+2014-12-14 15:06:44.355 [debug] <0.640.0>@pt:unpack:89 Cmd  10000 
+2014-12-14 15:06:44.356 [debug] <0.640.0>@pp_account:check_account_pass2:280 Platform undefined
+2014-12-14 15:06:44.356 [debug] <0.640.0>@pp_account:check_account_pass2:293 4399 coming
+2014-12-14 15:06:44.356 [debug] <0.640.0>@pp_account:check_4399_account_pass:319 suid: 49523386
+timestamp: 1418540804
+sign: ae9e0e1e5e79712a8f5eb79d17552981
+2014-12-14 15:06:44.356 [debug] <0.640.0>@pp_account:check_4399_account_pass:323 Login pass verify: 
+md5 ae9e0e1e5e79712a8f5eb79d17552981
+cmd5 ae9e0e1e5e79712a8f5eb79d17552981
+2014-12-14 15:06:44.357 [debug] <0.640.0>@pp_account:may_start_mod_player:184 Sn 1
+2014-12-14 15:06:44.358 [debug] <0.640.0>@mod_login:login:36 Player is Live, Update Sesssion
+2014-12-14 15:06:44.358 [debug] <0.640.0>@mod_login:login:37 mod_login trying to update_client_info
+2014-12-14 15:06:44.358 [debug] <0.640.0>@mod_login:login:39 mod_login trying to update_client_info done.
+2014-12-14 15:06:44.358 [debug] <0.640.0>@pp_account:handle:33 Client1 {client,<0.641.0>,30000003,1,"49523386","p03_robot_2",0,undefined,0,0,1,#Port<0.11899>,{127,0,0,1},315070454,1418540804,<0.640.0>,1418540789}
+2014-12-14 15:06:44.359 [debug] <0.640.0>@pt:pack:167 pack 10000: {pbaccountlogin,[{result,1},{user_info,[{pbuserlogininfo,[{user_id,30000003},{nickname,<<"ecb57c62">>},{level,1},{career,1}]}]},{acc_id,"49523386"},{session,315070454}]}
+2014-12-14 15:06:44.359 [debug] <0.640.0>@pt:pack:168 Cmd :10000 size : 39 bytes
+2014-12-14 15:06:44.359 [info] <0.640.0> Duration proto_tc_10000 cost 3064 microseconds
+
+2014-12-14 15:06:44.359 [debug] <0.640.0>@packet_misc:send_packet:117 Bin <<39,16,0,41,39,16,8,1,26,19,8,131,135,167,14,18,8,101,99,98,53,55,99,54,50,24,1,40,1,34,8,52,57,53,50,51,51,56,54,40,246,175,158,150,1>>, 45
+2014-12-14 15:06:44.360 [debug] <0.640.0>@packet_misc:send:124 SendData Success Total Size 45 bytes 
+2014-12-14 15:06:44.361 [debug] <0.541.0>@mod_base_log:handle_info:137 log_player_20141214_1 insert len 1 1933 microseconds
+2014-12-14 15:07:31.984 [debug] <0.641.0>@mod_player:terminate:654 Oh myGod the mod_player process exit, Reason: 
+shutdown
+2014-12-14 15:07:31.989 [warning] <0.640.0>@tcp_client_handler:handle_cast:186 mod_player stopped cast 
+2014-12-14 15:07:31.989 [warning] <0.562.0>@mod_selling_shop:terminate:184 ShopList []
+2014-12-14 15:07:31.989 [warning] <0.640.0>@tcp_client_handler:terminate:322 tcp_client_handler stop Reason normal
+2014-12-14 15:07:31.989 [debug] <0.640.0>@tcp_client_handler:terminate:325 Player 30000003 disconnect 
+2014-12-14 15:07:31.989 [warning] <0.640.0>@mod_player:tcp_disconnect:935 Not Player Pid, PlayerId 30000003
+2014-12-14 15:07:31.989 [warning] <0.482.0>@server_app:stop:113 server_app stopping.
+2014-12-14 15:07:31.999 [info] <0.42.0> alarm_handler: {clear,system_memory_high_watermark}
+2014-12-14 15:07:37.220 [debug] <0.71.0>@lager_handler_watcher:94 Lager installed handler {lager_file_backend,
+                            "/home/li/server_p02/logs/p02_db_disc_1@192.168.1.104/server.log"} into lager_event
+2014-12-14 15:07:37.220 [debug] <0.73.0>@lager_handler_watcher:94 Lager installed handler error_logger_lager_h into error_logger
+2014-12-14 15:07:37.235 [debug] <0.58.0> Supervisor gr_param_sup started gr_param:start_link(gr_lager_default_tracer_params) at pid <0.75.0>
+2014-12-14 15:07:37.235 [debug] <0.57.0> Supervisor gr_counter_sup started gr_counter:start_link(gr_lager_default_tracer_counters) at pid <0.76.0>
+2014-12-14 15:07:37.235 [debug] <0.59.0> Supervisor gr_manager_sup started gr_manager:start_link(gr_lager_default_tracer_params_mgr, gr_lager_default_tracer_params, []) at pid <0.77.0>
+2014-12-14 15:07:37.235 [debug] <0.59.0> Supervisor gr_manager_sup started gr_manager:start_link(gr_lager_default_tracer_counters_mgr, gr_lager_default_tracer_counters, [{input,0},{filter,0},{output,0}]) at pid <0.78.0>
+2014-12-14 15:07:37.502 [info] <0.7.0> Application lager started on node 'p02_db_disc_1@192.168.1.104'
+2014-12-14 15:07:37.521 [debug] <0.2.0>@main:server_start:42 Lager Config [{async_threshold_window,5},{crash_log_date,"$D0"},{crash_log,"/home/li/server_p02/logs/p02_db_disc_1@192.168.1.104/server-crash.log"},{colors,[{debug,"\e[0;38m"},{info,"\e[1;37m"},{notice,"\e[1;36m"},{warning,"\e[1;33m"},{error,"\e[1;31m"},{critical,"\e[1;35m"},{alert,"\e[1;44m"},{emergency,"\e[1;41m"}]},{crash_log_count,5},{async_threshold,20},{crash_log_size,10485760},{crash_log_msg_size,65536},{colored,true},{log_level,debug},{handlers,[{lager_console_backend,[debug,{lager_default_formatter,[date," ",time,color," [",severity,"] <",pid,">@",module,":",function,":",line," ",message,"\e[0m\r\n"]}]},{lager_file_backend,[{level,debug},{date,"$W0D23"},{count,20},{file,"/home/li/server_p02/logs/p02_db_disc_1@192.168.1.104/server.log"}]}]},{error_logger_hwm,50},{error_logger_redirect,true},{included_applications,[]}]
+2014-12-14 15:07:37.521 [debug] <0.2.0>@main:server_start:44 mod_counter start 
+2014-12-14 15:07:37.559 [info] <0.2.0>@mnesia_upgrade:maybe_upgrade_mnesia:111 not upgrade mnesia
+2014-12-14 15:07:37.563 [debug] <0.94.0> Supervisor hstdlib_sup started hmod_timer:start_link() at pid <0.95.0>
+2014-12-14 15:07:37.578 [debug] <0.94.0> Supervisor hstdlib_sup started hmod_rand:start_link() at pid <0.96.0>
+2014-12-14 15:07:37.578 [info] <0.7.0> Application hstdlib started on node 'p02_db_disc_1@192.168.1.104'
+2014-12-14 15:07:37.580 [info] <0.7.0> Application mysql started on node 'p02_db_disc_1@192.168.1.104'
+2014-12-14 15:07:37.594 [info] <0.7.0> Application crypto started on node 'p02_db_disc_1@192.168.1.104'
+2014-12-14 15:07:37.601 [debug] <0.102.0> Supervisor emysql_sup started emysql_statements:start_link() at pid <0.103.0>
+2014-12-14 15:07:37.604 [debug] <0.102.0> Supervisor emysql_sup started emysql_conn_mgr:start_link() at pid <0.104.0>
+2014-12-14 15:07:37.604 [info] <0.7.0> Application emysql started on node 'p02_db_disc_1@192.168.1.104'
+2014-12-14 15:07:37.607 [info] <0.107.0> leshu_db_stated: StartArgs [fuck_rebar]
+
+2014-12-14 15:07:37.607 [info] <0.107.0> leshu_db_env: {ok,[{ip,"0.0.0.0"}]}
+
+2014-12-14 15:07:37.609 [info] <0.7.0> Application leshu_db started on node 'p02_db_disc_1@192.168.1.104'
+2014-12-14 15:07:37.618 [debug] <0.112.0> Supervisor mnesia_sup started mnesia_sup:start_event() at pid <0.113.0>
+2014-12-14 15:07:37.630 [debug] <0.114.0> Supervisor mnesia_kernel_sup started mnesia_monitor:start() at pid <0.115.0>
+2014-12-14 15:07:37.653 [debug] <0.114.0> Supervisor mnesia_kernel_sup started mnesia_subscr:start() at pid <0.116.0>
+2014-12-14 15:07:37.668 [debug] <0.114.0> Supervisor mnesia_kernel_sup started mnesia_locker:start() at pid <0.117.0>
+2014-12-14 15:07:37.678 [debug] <0.114.0> Supervisor mnesia_kernel_sup started mnesia_recover:start() at pid <0.118.0>
+2014-12-14 15:07:37.711 [debug] <0.67.0>@lager_handler_watcher:94 Lager installed handler lager_backend_throttle into lager_event
+2014-12-14 15:07:37.714 [debug] <0.35.0> Supervisor kernel_safe_sup started dets_sup:start_link() at pid <0.120.0>
+2014-12-14 15:07:37.714 [debug] <0.35.0> Supervisor kernel_safe_sup started dets_server:start_link() at pid <0.121.0>
+2014-12-14 15:07:37.766 [debug] <0.35.0> Supervisor kernel_safe_sup started disk_log_sup:start_link() at pid <0.125.0>
+2014-12-14 15:07:37.766 [debug] <0.35.0> Supervisor kernel_safe_sup started disk_log_server:start_link() at pid <0.126.0>
+2014-12-14 15:07:37.919 [debug] <0.114.0> Supervisor mnesia_kernel_sup started mnesia_tm:start() at pid <0.119.0>
+2014-12-14 15:07:37.926 [debug] <0.114.0> Supervisor mnesia_kernel_sup started mnesia_checkpoint_sup:start() at pid <0.142.0>
+2014-12-14 15:07:37.930 [debug] <0.114.0> Supervisor mnesia_kernel_sup started mnesia_snmp_sup:start() at pid <0.143.0>
+2014-12-14 15:07:37.930 [debug] <0.114.0> Supervisor mnesia_kernel_sup started mnesia_controller:start() at pid <0.144.0>
+2014-12-14 15:07:37.941 [debug] <0.114.0> Supervisor mnesia_kernel_sup started mnesia_late_loader:start() at pid <0.145.0>
+2014-12-14 15:07:37.941 [debug] <0.112.0> Supervisor mnesia_sup started mnesia_kernel_sup:start() at pid <0.114.0>
+2014-12-14 15:07:37.941 [info] <0.7.0> Application mnesia started on node 'p02_db_disc_1@192.168.1.104'
+2014-12-14 15:07:37.959 [info] <0.7.0> Application asn1 started on node 'p02_db_disc_1@192.168.1.104'
+2014-12-14 15:07:37.968 [info] <0.7.0> Application public_key started on node 'p02_db_disc_1@192.168.1.104'
+2014-12-14 15:07:38.014 [debug] <0.215.0> Supervisor ssl_sup started ssl_manager:start_link([]) at pid <0.231.0>
+2014-12-14 15:07:38.017 [debug] <0.215.0> Supervisor ssl_sup started tls_connection_sup:start_link() at pid <0.260.0>
+2014-12-14 15:07:38.020 [debug] <0.215.0> Supervisor ssl_sup started ssl_listen_tracker_sup:start_link() at pid <0.265.0>
+2014-12-14 15:07:38.021 [info] <0.7.0> Application ssl started on node 'p02_db_disc_1@192.168.1.104'
+2014-12-14 15:07:38.033 [debug] <0.279.0> Supervisor ibrowse_sup started ibrowse:start_link() at pid <0.292.0>
+2014-12-14 15:07:38.034 [info] <0.7.0> Application ibrowse started on node 'p02_db_disc_1@192.168.1.104'
+2014-12-14 15:07:38.058 [debug] <0.337.0> Supervisor os_mon_sup started disksup:start_link() at pid <0.355.0>
+2014-12-14 15:07:38.065 [debug] <0.337.0> Supervisor os_mon_sup started memsup:start_link() at pid <0.371.0>
+2014-12-14 15:07:38.070 [debug] <0.35.0> Supervisor kernel_safe_sup started timer:start_link() at pid <0.383.0>
+2014-12-14 15:07:38.073 [info] <0.42.0> alarm_handler: {set,{system_memory_high_watermark,[]}}
+2014-12-14 15:07:38.078 [debug] <0.337.0> Supervisor os_mon_sup started cpu_sup:start_link() at pid <0.386.0>
+2014-12-14 15:07:38.078 [info] <0.7.0> Application os_mon started on node 'p02_db_disc_1@192.168.1.104'
+2014-12-14 15:07:38.091 [debug] <0.404.0> Supervisor folsom_sup started folsom_sample_slide_sup:start_link() at pid <0.412.0>
+2014-12-14 15:07:38.093 [debug] <0.404.0> Supervisor folsom_sup started folsom_meter_timer_server:start_link() at pid <0.413.0>
+2014-12-14 15:07:38.098 [debug] <0.404.0> Supervisor folsom_sup started folsom_metrics_histogram_ets:start_link() at pid <0.424.0>
+2014-12-14 15:07:38.099 [info] <0.7.0> Application folsom started on node 'p02_db_disc_1@192.168.1.104'
+2014-12-14 15:07:38.119 [debug] <0.450.0> Supervisor gproc_sup started gproc:start_link() at pid <0.480.0>
+2014-12-14 15:07:38.121 [debug] <0.450.0> Supervisor gproc_sup started gproc_monitor:start_link() at pid <0.481.0>
+2014-12-14 15:07:38.123 [debug] <0.450.0> Supervisor gproc_sup started gproc_bcast:start_link() at pid <0.482.0>
+2014-12-14 15:07:38.126 [debug] <0.450.0> Supervisor gproc_sup started gproc_pool:start_link() at pid <0.483.0>
+2014-12-14 15:07:38.126 [info] <0.7.0> Application gproc started on node 'p02_db_disc_1@192.168.1.104'
+2014-12-14 15:07:38.142 [debug] <0.486.0>@mnesia_misc:init_from_config:37 TryNodes ['p02_db_disc_1@127.0.0.1'], NodeType disc
+2014-12-14 15:07:38.143 [debug] <0.489.0> Supervisor inet_gethost_native_sup started undefined at pid <0.490.0>
+2014-12-14 15:07:38.143 [debug] <0.35.0> Supervisor kernel_safe_sup started inet_gethost_native:start_link() at pid <0.489.0>
+2014-12-14 15:07:38.156 [info] <0.486.0>@mnesia_misc:init_from_config:50 First Disc Db Node Start
+2014-12-14 15:07:38.157 [debug] <0.486.0>@mnesia_misc:init_db:121 {Nodes, WasDiscNode, NodeType} {[],true,disc}
+2014-12-14 15:07:38.246 [debug] <0.42.0>@mod_alarm_handler:init:24 misc_alarm_handler init : [].
+2014-12-14 15:07:38.255 [debug] <0.487.0> Supervisor server_sup started mod_cache:start_link() at pid <0.498.0>
+2014-12-14 15:07:38.332 [info] <0.486.0>@server_app:start:59 acceptor_sup started 
+2014-12-14 15:07:38.332 [info] <0.486.0>@server_app:start:67 acceptor_sup started 
+2014-12-14 15:07:38.342 [debug] <0.503.0>@tcp_listener:init:35 Listen on port: 8801
+2014-12-14 15:07:38.359 [debug] <0.502.0> Supervisor tcp_client_handler_listener_sup started tcp_listener:start_link(8801, tcp_client_handler) at pid <0.503.0>
+2014-12-14 15:07:38.360 [debug] <0.502.0> Supervisor tcp_client_handler_listener_sup started supervisor:start_link({local,listener_sup_tcp_client_handler}, listener_sup, [tcp_client_handler]) at pid <0.509.0>
+2014-12-14 15:07:38.361 [info] <0.486.0>@server_app:start:79 listener_sup started for port: 8801 ... 
+2014-12-14 15:07:38.362 [debug] <0.511.0>@tcp_listener:init:35 Listen on port: 9801
+2014-12-14 15:07:38.363 [info] <0.486.0>@server_app:start:87 listener_sup started for port: 8801 ... 
+2014-12-14 15:07:38.363 [debug] <0.510.0> Supervisor tcp_room_handler_listener_sup started tcp_listener:start_link(9801, tcp_room_handler) at pid <0.511.0>
+2014-12-14 15:07:38.364 [debug] <0.510.0> Supervisor tcp_room_handler_listener_sup started supervisor:start_link({local,listener_sup_tcp_room_handler}, listener_sup, [tcp_room_handler]) at pid <0.517.0>
+2014-12-14 15:07:38.369 [info] <0.518.0>@httpd_handler:start:18 mochiweb start on: [{ip,{0,0,0,0}},{port,18801}]
+2014-12-14 15:07:38.376 [debug] <0.518.0> Supervisor h_httpd_sup started httpd_handler:start([{ip,{0,0,0,0}},{port,18801}]) at pid <0.519.0>
+2014-12-14 15:07:38.377 [warning] <0.486.0>@server_app:start:100 rank_sup start 
+2014-12-14 15:07:38.380 [debug] <0.537.0>@mod_counter:init:62 CenterList ['center@127.0.0.1']
+2014-12-14 15:07:38.385 [debug] <0.487.0> Supervisor server_sup started mod_counter:start_link() at pid <0.537.0>
+2014-12-14 15:07:38.391 [debug] <0.487.0> Supervisor server_sup started update:start_link() at pid <0.541.0>
+2014-12-14 15:07:38.395 [debug] <0.487.0> Supervisor server_sup started mod_boss_manage:start_link(1) at pid <0.542.0>
+2014-12-14 15:07:38.396 [debug] <0.487.0> Supervisor server_sup started mod_boss_manage:start_link(2) at pid <0.543.0>
+2014-12-14 15:07:38.396 [debug] <0.487.0> Supervisor server_sup started mod_boss_manage:start_link(3) at pid <0.544.0>
+2014-12-14 15:07:38.405 [debug] <0.487.0> Supervisor server_sup started mod_base_log:start_link(log_player_p, {log_state,{record_mysql_info,db_log,log_player,[id,player_id,event_id,arg1,arg2,timestamp],log_player,...},...}) at pid <0.545.0>
+2014-12-14 15:07:38.406 [debug] <0.487.0> Supervisor server_sup started mod_base_log:start_link(log_player_mini_p, {log_state,{record_mysql_info,db_log,log_player_mini,[player_id,acc_id,acc_name,nick_name],log_player_mini,...},...}) at pid <0.546.0>
+2014-12-14 15:07:38.406 [debug] <0.487.0> Supervisor server_sup started mod_base_log:start_link(log_player_feedback_p, {log_state,{record_mysql_info,db_log,log_player_feedback,[id,player_id,title,content,timestamp],...},...}) at pid <0.547.0>
+2014-12-14 15:07:38.409 [info] <0.545.0>@mod_base_log:available_table2:224 run CreateTableSQL Result 0, TableIndex 1
+2014-12-14 15:07:38.411 [debug] <0.487.0> Supervisor server_sup started mod_sys_acm:start_link(1) at pid <0.549.0>
+2014-12-14 15:07:38.411 [debug] <0.487.0> Supervisor server_sup started mod_sys_acm:start_link(2) at pid <0.550.0>
+2014-12-14 15:07:38.411 [debug] <0.487.0> Supervisor server_sup started mod_sys_acm:start_link(3) at pid <0.551.0>
+2014-12-14 15:07:38.416 [debug] <0.487.0> Supervisor server_sup started mod_player_rec:start_link(1) at pid <0.553.0>
+2014-12-14 15:07:38.416 [debug] <0.487.0> Supervisor server_sup started mod_player_rec:start_link(2) at pid <0.554.0>
+2014-12-14 15:07:38.416 [debug] <0.487.0> Supervisor server_sup started mod_player_rec:start_link(3) at pid <0.555.0>
+2014-12-14 15:07:38.419 [debug] <0.487.0> Supervisor server_sup started mod_table_clear:start_link() at pid <0.556.0>
+2014-12-14 15:07:38.446 [debug] <0.563.0> Supervisor gs_cron_sup started cron_agent_sup:start_link() at pid <0.564.0>
+2014-12-14 15:07:38.446 [info] <0.7.0> Application gs_cron started on node 'p02_db_disc_1@192.168.1.104'
+2014-12-14 15:07:38.446 [debug] <0.487.0> Supervisor server_sup started mod_timer:start_link() at pid <0.557.0>
+2014-12-14 15:07:38.450 [debug] <0.487.0> Supervisor server_sup started mod_dungeon_match:start_link() at pid <0.565.0>
+2014-12-14 15:07:38.457 [debug] <0.487.0> Supervisor server_sup started mod_selling_shop:start_link() at pid <0.566.0>
+2014-12-14 15:07:38.466 [debug] <0.487.0> Supervisor server_sup started mod_activity_shop:start_link() at pid <0.568.0>
+2014-12-14 15:07:38.471 [debug] <0.536.0> Supervisor rank_sup started mod_arena:start_link(async_arena_rank) at pid <0.575.0>
+2014-12-14 15:07:38.471 [debug] <0.536.0> Supervisor rank_sup started mod_arena:start_link(sync_arena_rank) at pid <0.576.0>
+2014-12-14 15:07:38.472 [debug] <0.568.0>@mod_activity_shop:handle_info:160 init_state ShopMsgList : []
+2014-12-14 15:07:38.475 [debug] <0.536.0> Supervisor rank_sup started mod_rank:start_link(mugen_rank, mugen_rank_1, 500, daily, 1) at pid <0.577.0>
+2014-12-14 15:07:38.475 [debug] <0.536.0> Supervisor rank_sup started mod_rank:start_link(mugen_rank, mugen_rank_2, 500, daily, 1) at pid <0.578.0>
+2014-12-14 15:07:38.475 [debug] <0.536.0> Supervisor rank_sup started mod_rank:start_link(mugen_rank, mugen_rank_3, 500, daily, 1) at pid <0.579.0>
+2014-12-14 15:07:38.475 [debug] <0.536.0> Supervisor rank_sup started mod_rank:start_link(super_battle_rank, super_battle_rank_1, 500, daily, 1) at pid <0.580.0>
+2014-12-14 15:07:38.475 [debug] <0.536.0> Supervisor rank_sup started mod_rank:start_link(super_battle_rank, super_battle_rank_2, 500, daily, 1) at pid <0.581.0>
+2014-12-14 15:07:38.475 [debug] <0.536.0> Supervisor rank_sup started mod_rank:start_link(super_battle_rank, super_battle_rank_3, 500, daily, 1) at pid <0.582.0>
+2014-12-14 15:07:38.476 [debug] <0.536.0> Supervisor rank_sup started mod_rank:start_link(battle_ability_rank, battle_ability_rank_1, 500, daily, 1) at pid <0.583.0>
+2014-12-14 15:07:38.476 [debug] <0.536.0> Supervisor rank_sup started mod_rank:start_link(battle_ability_rank, battle_ability_rank_2, 500, daily, 1) at pid <0.584.0>
+2014-12-14 15:07:38.476 [debug] <0.536.0> Supervisor rank_sup started mod_rank:start_link(battle_ability_rank, battle_ability_rank_3, 500, daily, 1) at pid <0.585.0>
+2014-12-14 15:07:38.476 [debug] <0.536.0> Supervisor rank_sup started mod_rank:start_link(cost_coin_rank, cost_coin_rank_1, 500, weekly, 1) at pid <0.586.0>
+2014-12-14 15:07:38.477 [debug] <0.536.0> Supervisor rank_sup started mod_rank:start_link(cost_coin_rank, cost_coin_rank_2, 500, weekly, 1) at pid <0.587.0>
+2014-12-14 15:07:38.477 [debug] <0.536.0> Supervisor rank_sup started mod_rank:start_link(cost_coin_rank, cost_coin_rank_3, 500, weekly, 1) at pid <0.588.0>
+2014-12-14 15:07:38.477 [debug] <0.536.0> Supervisor rank_sup started mod_rank:start_link(cost_gold_rank, cost_gold_rank_1, 500, weekly, 1) at pid <0.589.0>
+2014-12-14 15:07:38.477 [debug] <0.536.0> Supervisor rank_sup started mod_rank:start_link(cost_gold_rank, cost_gold_rank_2, 500, weekly, 1) at pid <0.590.0>
+2014-12-14 15:07:38.478 [warning] <0.568.0>@mod_activity_shop:handle_info:169 get_next_activity
+2014-12-14 15:07:38.491 [debug] <0.577.0>@mod_rank:handle_cast:129 mugen_rank_1 auto_reset 
+2014-12-14 15:07:38.491 [debug] <0.579.0>@mod_rank:handle_cast:129 mugen_rank_3 auto_reset 
+2014-12-14 15:07:38.491 [debug] <0.578.0>@mod_rank:handle_cast:129 mugen_rank_2 auto_reset 
+2014-12-14 15:07:38.491 [debug] <0.581.0>@mod_rank:handle_cast:129 super_battle_rank_2 auto_reset 
+2014-12-14 15:07:38.491 [debug] <0.580.0>@mod_rank:handle_cast:129 super_battle_rank_1 auto_reset 
+2014-12-14 15:07:38.491 [debug] <0.583.0>@mod_rank:handle_cast:129 battle_ability_rank_1 auto_reset 
+2014-12-14 15:07:38.491 [debug] <0.582.0>@mod_rank:handle_cast:129 super_battle_rank_3 auto_reset 
+2014-12-14 15:07:38.492 [debug] <0.584.0>@mod_rank:handle_cast:129 battle_ability_rank_2 auto_reset 
+2014-12-14 15:07:38.492 [debug] <0.588.0>@mod_rank:handle_cast:129 cost_coin_rank_3 auto_reset 
+2014-12-14 15:07:38.492 [debug] <0.585.0>@mod_rank:handle_cast:129 battle_ability_rank_3 auto_reset 
+2014-12-14 15:07:38.492 [debug] <0.586.0>@mod_rank:handle_cast:129 cost_coin_rank_1 auto_reset 
+2014-12-14 15:07:38.492 [debug] <0.589.0>@mod_rank:handle_cast:129 cost_gold_rank_1 auto_reset 
+2014-12-14 15:07:38.492 [debug] <0.587.0>@mod_rank:handle_cast:129 cost_coin_rank_2 auto_reset 
+2014-12-14 15:07:38.492 [debug] <0.590.0>@mod_rank:handle_cast:129 cost_gold_rank_2 auto_reset 
+2014-12-14 15:07:38.492 [debug] <0.596.0>@mod_rank:handle_cast:129 async_arena_rank_2 auto_reset 
+2014-12-14 15:07:38.492 [debug] <0.597.0>@mod_rank:handle_cast:129 async_arena_rank_3 auto_reset 
+2014-12-14 15:07:38.492 [debug] <0.591.0>@mod_rank:handle_cast:129 cost_gold_rank_3 auto_reset 
+2014-12-14 15:07:38.492 [debug] <0.593.0>@mod_rank:handle_cast:129 world_boss_rank_2 auto_reset 
+2014-12-14 15:07:38.492 [debug] <0.594.0>@mod_rank:handle_cast:129 world_boss_rank_3 auto_reset 
+2014-12-14 15:07:38.492 [debug] <0.595.0>@mod_rank:handle_cast:129 async_arena_rank_1 auto_reset 
+2014-12-14 15:07:38.495 [debug] <0.592.0>@mod_rank:handle_cast:129 world_boss_rank_1 auto_reset 
+2014-12-14 15:07:38.503 [warning] <0.568.0>@mod_activity_shop:handle_info:189 All Activity End!
+2014-12-14 15:07:39.504 [debug] <0.568.0>@mod_activity_shop:handle_info:209 timeout: []
+2014-12-14 15:07:39.504 [debug] <0.568.0>@mod_activity_shop:save_to_db:347 activity shop save_to_db
+2014-12-14 15:07:49.950 [debug] <0.644.0>@tcp_client_handler:init:119 {ok,[{sndbuf,2625280},{recbuf,1058928},{packet,2},{header,11},{active,199},{nodelay,false},{keepalive,true},{priority,0},{tos,0},{buffer,1460},{delay_send,true},{packet_size,0},{high_watermark,8192},{low_watermark,4096},{sndbuf,2625280},{exit_on_close,true},{send_timeout,infinity},{packet_size,0},{high_msgq_watermark,8192},{low_msgq_watermark,4096}]}
+2014-12-14 15:07:49.950 [debug] <0.644.0>@tcp_client_handler:init:129 IP {127,0,0,1} connected, for socket #Port<0.11902> on 55904.
+2014-12-14 15:07:49.950 [warning] <0.504.0>@tcp_acceptor:start_client:96 listener_sup:start_child Success 
+2014-12-14 15:07:49.953 [debug] <0.644.0>@pt:unpack:89 Cmd  15510 
+2014-12-14 15:07:49.962 [warning] <0.644.0>@mod_player:get_session:823 Not Player Pid, PlayerId 30000003
+2014-12-14 15:07:49.976 [debug] <0.644.0>@pt:pack:167 pack 10030: {pbid32,1}
+2014-12-14 15:07:49.976 [debug] <0.644.0>@pt:pack:168 Cmd :10030 size : 2 bytes
+2014-12-14 15:07:49.979 [debug] <0.644.0>@packet_misc:send_packet:117 Bin <<35,42,0,4,39,46,8,1>>, 8
+2014-12-14 15:07:49.979 [debug] <0.644.0>@packet_misc:send:124 SendData Success Total Size 8 bytes 
+2014-12-14 15:08:17.962 [debug] <0.644.0>@pt:unpack:89 Cmd  15510 
+2014-12-14 15:08:17.962 [warning] <0.644.0>@mod_player:get_session:823 Not Player Pid, PlayerId 30000003
+2014-12-14 15:08:17.962 [debug] <0.644.0>@pt:pack:167 pack 10030: {pbid32,1}
+2014-12-14 15:08:17.962 [debug] <0.644.0>@pt:pack:168 Cmd :10030 size : 2 bytes
+2014-12-14 15:08:17.962 [debug] <0.644.0>@packet_misc:send_packet:117 Bin <<35,42,0,4,39,46,8,1>>, 8
+2014-12-14 15:08:17.962 [debug] <0.644.0>@packet_misc:send:124 SendData Success Total Size 8 bytes 
+2014-12-14 15:08:30.987 [debug] <0.644.0>@pt:unpack:89 Cmd  15510 
+2014-12-14 15:08:30.987 [warning] <0.644.0>@mod_player:get_session:823 Not Player Pid, PlayerId 30000003
+2014-12-14 15:08:30.987 [debug] <0.644.0>@pt:pack:167 pack 10030: {pbid32,1}
+2014-12-14 15:08:30.987 [debug] <0.644.0>@pt:pack:168 Cmd :10030 size : 2 bytes
+2014-12-14 15:08:30.987 [debug] <0.644.0>@packet_misc:send_packet:117 Bin <<35,42,0,4,39,46,8,1>>, 8
+2014-12-14 15:08:30.987 [debug] <0.644.0>@packet_misc:send:124 SendData Success Total Size 8 bytes 
+2014-12-14 15:09:15.816 [debug] <0.644.0>@pt:unpack:89 Cmd  15000 
+2014-12-14 15:09:15.826 [warning] <0.644.0>@mod_player:get_session:823 Not Player Pid, PlayerId 30000003
+2014-12-14 15:09:15.826 [debug] <0.644.0>@pt:pack:167 pack 10030: {pbid32,1}
+2014-12-14 15:09:15.826 [debug] <0.644.0>@pt:pack:168 Cmd :10030 size : 2 bytes
+2014-12-14 15:09:15.826 [debug] <0.644.0>@packet_misc:send_packet:117 Bin <<35,42,0,4,39,46,8,1>>, 8
+2014-12-14 15:09:15.826 [debug] <0.644.0>@packet_misc:send:124 SendData Success Total Size 8 bytes 
+2014-12-14 16:00:00.470 [warning] <0.668.0>@mod_boss_manage:sys_open_boss:43 sys_open_boss DbSn 3 BossId 3
+2014-12-14 16:00:00.470 [warning] <0.669.0>@mod_boss_manage:sys_open_boss:43 sys_open_boss DbSn 2 BossId 3
+2014-12-14 16:00:00.470 [warning] <0.670.0>@mod_boss_manage:sys_open_boss:43 sys_open_boss DbSn 1 BossId 3
+2014-12-14 17:00:28.667 [warning] <0.673.0>@mod_boss:terminate:260 mod_boss terminate Reason normal
+2014-12-14 17:00:28.667 [warning] <0.671.0>@mod_boss:terminate:260 mod_boss terminate Reason normal
+2014-12-14 17:00:28.667 [warning] <0.672.0>@mod_boss:terminate:260 mod_boss terminate Reason normal
+2014-12-14 20:34:14.390 [warning] <0.817.0>@mod_boss_manage:sys_open_boss:43 sys_open_boss DbSn 2 BossId 1
+2014-12-14 20:34:14.391 [warning] <0.818.0>@mod_boss_manage:sys_open_boss:43 sys_open_boss DbSn 1 BossId 1
+2014-12-14 20:34:14.391 [warning] <0.821.0>@mod_boss_manage:sys_open_boss:43 sys_open_boss DbSn 3 BossId 1
+2014-12-14 20:59:45.087 [warning] <0.833.0>@mod_boss_manage:sys_open_boss:43 sys_open_boss DbSn 2 BossId 1
+2014-12-14 20:59:45.087 [warning] <0.834.0>@mod_boss_manage:sys_open_boss:43 sys_open_boss DbSn 1 BossId 1
+2014-12-14 20:59:45.087 [warning] <0.837.0>@mod_boss_manage:sys_open_boss:43 sys_open_boss DbSn 3 BossId 1
+2014-12-14 20:59:59.940 [warning] <0.840.0>@mod_boss_manage:sys_open_boss:43 sys_open_boss DbSn 2 BossId 1
+2014-12-14 20:59:59.940 [warning] <0.841.0>@mod_boss_manage:sys_open_boss:43 sys_open_boss DbSn 1 BossId 1
+2014-12-14 20:59:59.941 [warning] <0.844.0>@mod_boss_manage:sys_open_boss:43 sys_open_boss DbSn 3 BossId 1
+2014-12-14 21:03:56.572 [warning] <0.819.0>@mod_boss:terminate:260 mod_boss terminate Reason normal
+2014-12-14 21:03:56.573 [warning] <0.820.0>@mod_boss:terminate:260 mod_boss terminate Reason normal
+2014-12-14 21:03:56.573 [warning] <0.822.0>@mod_boss:terminate:260 mod_boss terminate Reason normal
+2014-12-14 21:29:27.268 [warning] <0.835.0>@mod_boss:terminate:260 mod_boss terminate Reason normal
+2014-12-14 21:29:27.269 [warning] <0.838.0>@mod_boss:terminate:260 mod_boss terminate Reason normal
+2014-12-14 21:29:27.269 [warning] <0.836.0>@mod_boss:terminate:260 mod_boss terminate Reason normal
+2014-12-14 21:29:42.122 [warning] <0.843.0>@mod_boss:terminate:260 mod_boss terminate Reason normal
+2014-12-14 21:29:42.122 [warning] <0.842.0>@mod_boss:terminate:260 mod_boss terminate Reason normal
+2014-12-14 21:29:42.123 [warning] <0.845.0>@mod_boss:terminate:260 mod_boss terminate Reason normal
+2014-12-14 21:33:38.753 [warning] <0.971.0>@mod_boss_manage:sys_open_boss:43 sys_open_boss DbSn 3 BossId 3
+2014-12-14 21:33:38.753 [warning] <0.972.0>@mod_boss_manage:sys_open_boss:43 sys_open_boss DbSn 2 BossId 3
+2014-12-14 21:33:38.753 [warning] <0.973.0>@mod_boss_manage:sys_open_boss:43 sys_open_boss DbSn 1 BossId 3
+2014-12-14 21:59:45.093 [warning] <0.987.0>@mod_boss_manage:sys_open_boss:43 sys_open_boss DbSn 3 BossId 3
+2014-12-14 21:59:45.093 [warning] <0.988.0>@mod_boss_manage:sys_open_boss:43 sys_open_boss DbSn 2 BossId 3
+2014-12-14 21:59:45.093 [warning] <0.989.0>@mod_boss_manage:sys_open_boss:43 sys_open_boss DbSn 1 BossId 3
+2014-12-14 21:59:59.946 [warning] <0.994.0>@mod_boss_manage:sys_open_boss:43 sys_open_boss DbSn 3 BossId 3
+2014-12-14 21:59:59.946 [warning] <0.995.0>@mod_boss_manage:sys_open_boss:43 sys_open_boss DbSn 2 BossId 3
+2014-12-14 21:59:59.946 [warning] <0.996.0>@mod_boss_manage:sys_open_boss:43 sys_open_boss DbSn 1 BossId 3
+2014-12-14 22:03:20.934 [warning] <0.975.0>@mod_boss:terminate:260 mod_boss terminate Reason normal
+2014-12-14 22:03:20.935 [warning] <0.974.0>@mod_boss:terminate:260 mod_boss terminate Reason normal
+2014-12-14 22:03:20.935 [warning] <0.976.0>@mod_boss:terminate:260 mod_boss terminate Reason normal
+2014-12-14 22:29:27.274 [warning] <0.991.0>@mod_boss:terminate:260 mod_boss terminate Reason normal
+2014-12-14 22:29:27.274 [warning] <0.992.0>@mod_boss:terminate:260 mod_boss terminate Reason normal
+2014-12-14 22:29:27.274 [warning] <0.990.0>@mod_boss:terminate:260 mod_boss terminate Reason normal
+2014-12-14 22:29:42.128 [warning] <0.997.0>@mod_boss:terminate:260 mod_boss terminate Reason normal
+2014-12-14 22:29:42.128 [warning] <0.999.0>@mod_boss:terminate:260 mod_boss terminate Reason normal
+2014-12-14 22:29:42.129 [warning] <0.998.0>@mod_boss:terminate:260 mod_boss terminate Reason normal
+2014-12-15 09:16:25.855 [warning] <0.1038.0>@mod_boss_manage:sys_open_boss:43 sys_open_boss DbSn 2 BossId 1
+2014-12-15 09:16:25.855 [warning] <0.1039.0>@mod_boss_manage:sys_open_boss:43 sys_open_boss DbSn 1 BossId 1
+2014-12-15 09:16:25.856 [warning] <0.1042.0>@mod_boss_manage:sys_open_boss:43 sys_open_boss DbSn 3 BossId 1
+2014-12-15 16:31:42.718 [debug] <0.644.0>@pt:unpack:89 Cmd  15000 
+2014-12-15 16:31:42.718 [warning] <0.644.0>@mod_player:get_session:823 Not Player Pid, PlayerId 30000003
+2014-12-15 16:31:42.718 [debug] <0.644.0>@pt:pack:167 pack 10030: {pbid32,1}
+2014-12-15 16:31:42.719 [debug] <0.644.0>@pt:pack:168 Cmd :10030 size : 2 bytes
+2014-12-15 16:31:42.719 [debug] <0.644.0>@packet_misc:send_packet:117 Bin <<35,42,0,4,39,46,8,1>>, 8
+2014-12-15 16:31:42.719 [debug] <0.644.0>@packet_misc:send:124 SendData Success Total Size 8 bytes 
+2014-12-15 16:32:08.346 [debug] <0.644.0>@pt:unpack:89 Cmd  15510 
+2014-12-15 16:32:08.346 [warning] <0.644.0>@mod_player:get_session:823 Not Player Pid, PlayerId 30000003
+2014-12-15 16:32:08.346 [debug] <0.644.0>@pt:pack:167 pack 10030: {pbid32,1}
+2014-12-15 16:32:08.346 [debug] <0.644.0>@pt:pack:168 Cmd :10030 size : 2 bytes
+2014-12-15 16:32:08.346 [debug] <0.644.0>@packet_misc:send_packet:117 Bin <<35,42,0,4,39,46,8,1>>, 8
+2014-12-15 16:32:08.347 [debug] <0.644.0>@packet_misc:send:124 SendData Success Total Size 8 bytes 
+2014-12-15 16:32:33.472 [warning] <0.1041.0>@mod_boss:terminate:260 mod_boss terminate Reason normal
+2014-12-15 16:32:33.473 [warning] <0.1040.0>@mod_boss:terminate:260 mod_boss terminate Reason normal
+2014-12-15 16:32:33.473 [warning] <0.1043.0>@mod_boss:terminate:260 mod_boss terminate Reason normal
+2014-12-15 16:33:02.430 [debug] <0.1208.0>@tcp_client_handler:init:119 {ok,[{sndbuf,2625280},{recbuf,1058928},{packet,2},{header,11},{active,200},{nodelay,false},{keepalive,true},{priority,0},{tos,0},{buffer,1460},{delay_send,true},{packet_size,0},{high_watermark,8192},{low_watermark,4096},{sndbuf,2625280},{exit_on_close,true},{send_timeout,infinity},{packet_size,0},{high_msgq_watermark,8192},{low_msgq_watermark,4096}]}
+2014-12-15 16:33:02.431 [debug] <0.1208.0>@tcp_client_handler:init:129 IP {127,0,0,1} connected, for socket #Port<0.14078> on 45575.
+2014-12-15 16:33:02.431 [warning] <0.505.0>@tcp_acceptor:start_client:96 listener_sup:start_child Success 
+2014-12-15 16:33:02.442 [debug] <0.1208.0>@pt:unpack:89 Cmd  15000 
+2014-12-15 16:33:02.442 [warning] <0.1208.0>@mod_player:get_session:823 Not Player Pid, PlayerId 123456789
+2014-12-15 16:33:02.442 [debug] <0.1208.0>@pt:pack:167 pack 10030: {pbid32,1}
+2014-12-15 16:33:02.442 [debug] <0.1208.0>@pt:pack:168 Cmd :10030 size : 2 bytes
+2014-12-15 16:33:02.442 [debug] <0.1208.0>@packet_misc:send_packet:117 Bin <<35,42,0,4,39,46,8,1>>, 8
+2014-12-15 16:33:02.442 [debug] <0.1208.0>@packet_misc:send:124 SendData Success Total Size 8 bytes 
+2014-12-15 16:33:53.473 [debug] <0.1208.0>@tcp_client_handler:handle_info:289 IP {127,0,0,1} disconnected
+2014-12-15 16:33:53.473 [warning] <0.1208.0>@tcp_client_handler:terminate:322 tcp_client_handler stop Reason normal
+2014-12-15 16:34:07.448 [debug] <0.644.0>@tcp_client_handler:handle_info:289 IP {127,0,0,1} disconnected
+2014-12-15 16:34:07.448 [warning] <0.644.0>@tcp_client_handler:terminate:322 tcp_client_handler stop Reason normal
+2014-12-15 16:40:22.969 [warning] <0.566.0>@mod_selling_shop:terminate:184 ShopList []
+2014-12-15 16:40:22.970 [warning] <0.486.0>@server_app:stop:113 server_app stopping.
+2014-12-15 16:40:22.989 [warning] <0.6.0> lager_error_logger_h dropped 10 messages in the last second that exceeded the limit of 50 messages/sec
+2014-12-15 16:40:22.989 [info] <0.42.0> alarm_handler: {clear,system_memory_high_watermark}
+2015-05-04 08:29:05.282 [debug] <0.71.0>@lager_handler_watcher:94 Lager installed handler {lager_file_backend,
+                            "/home/li/server_p02/logs/p02_db_disc_1@192.168.1.104/server.log"} into lager_event
+2015-05-04 08:29:05.282 [debug] <0.73.0>@lager_handler_watcher:94 Lager installed handler error_logger_lager_h into error_logger
+2015-05-04 08:29:05.339 [debug] <0.58.0> Supervisor gr_param_sup started gr_param:start_link(gr_lager_default_tracer_params) at pid <0.75.0>
+2015-05-04 08:29:05.339 [debug] <0.57.0> Supervisor gr_counter_sup started gr_counter:start_link(gr_lager_default_tracer_counters) at pid <0.76.0>
+2015-05-04 08:29:05.340 [debug] <0.59.0> Supervisor gr_manager_sup started gr_manager:start_link(gr_lager_default_tracer_params_mgr, gr_lager_default_tracer_params, []) at pid <0.77.0>
+2015-05-04 08:29:05.340 [debug] <0.59.0> Supervisor gr_manager_sup started gr_manager:start_link(gr_lager_default_tracer_counters_mgr, gr_lager_default_tracer_counters, [{input,0},{filter,0},{output,0}]) at pid <0.78.0>
+2015-05-04 08:29:05.587 [info] <0.7.0> Application lager started on node 'p02_db_disc_1@192.168.1.104'
+2015-05-04 08:29:05.697 [debug] <0.94.0> Supervisor gproc_sup started gproc:start_link() at pid <0.95.0>
+2015-05-04 08:29:05.724 [debug] <0.94.0> Supervisor gproc_sup started gproc_dist:start_link({['p02_db_disc_1@192.168.1.145'],[{vardir,"/home/li/server_p02/logs/gproc/"},{workers,['p02_db_disc_1@192.168.1.104']}]}) at pid <0.96.0>
+2015-05-04 08:29:05.725 [debug] <0.98.0> Supervisor inet_gethost_native_sup started undefined at pid <0.99.0>
+2015-05-04 08:29:05.726 [debug] <0.35.0> Supervisor kernel_safe_sup started inet_gethost_native:start_link() at pid <0.98.0>
+2015-05-04 08:29:05.738 [debug] <0.94.0> Supervisor gproc_sup started gproc_monitor:start_link() at pid <0.100.0>
+2015-05-04 08:29:05.763 [debug] <0.94.0> Supervisor gproc_sup started gproc_bcast:start_link() at pid <0.102.0>
+2015-05-04 08:29:05.767 [debug] <0.67.0>@lager_handler_watcher:94 Lager installed handler lager_backend_throttle into lager_event
+2015-05-04 08:29:05.768 [debug] <0.94.0> Supervisor gproc_sup started gproc_pool:start_link() at pid <0.103.0>
+2015-05-04 08:29:05.769 [info] <0.7.0> Application gproc started on node 'p02_db_disc_1@192.168.1.104'
+2015-05-04 08:29:05.769 [debug] <0.2.0>@main:server_start:45 Lager Config [{async_threshold_window,5},{crash_log_date,"$D0"},{crash_log,"/home/li/server_p02/logs/p02_db_disc_1@192.168.1.104/server-crash.log"},{colors,[{debug,"\e[0;38m"},{info,"\e[1;37m"},{notice,"\e[1;36m"},{warning,"\e[1;33m"},{error,"\e[1;31m"},{critical,"\e[1;35m"},{alert,"\e[1;44m"},{emergency,"\e[1;41m"}]},{crash_log_count,5},{async_threshold,20},{crash_log_size,10485760},{crash_log_msg_size,65536},{colored,true},{log_level,debug},{handlers,[{lager_console_backend,[debug,{lager_default_formatter,[date," ",time,color," [",severity,"] <",pid,">@",module,":",function,":",line," ",message,"\e[0m\r\n"]}]},{lager_file_backend,[{level,debug},{date,"$W0D23"},{count,20},{file,"/home/li/server_p02/logs/p02_db_disc_1@192.168.1.104/server.log"}]}]},{error_logger_hwm,50},{error_logger_redirect,true},{included_applications,[]}]
+2015-05-04 08:29:05.769 [debug] <0.2.0>@main:server_start:47 mod_counter start 
+2015-05-04 08:29:05.886 [info] <0.2.0>@mnesia_upgrade:maybe_upgrade_mnesia:105 first run mnesia
+2015-05-04 08:29:05.988 [debug] <0.108.0> Supervisor hstdlib_sup started hmod_timer:start_link() at pid <0.109.0>
+2015-05-04 08:29:06.023 [debug] <0.108.0> Supervisor hstdlib_sup started hmod_rand:start_link() at pid <0.110.0>
+2015-05-04 08:29:06.023 [info] <0.7.0> Application hstdlib started on node 'p02_db_disc_1@192.168.1.104'
+2015-05-04 08:29:06.024 [info] <0.7.0> Application mysql started on node 'p02_db_disc_1@192.168.1.104'
+2015-05-04 08:29:06.031 [info] <0.7.0> Application crypto started on node 'p02_db_disc_1@192.168.1.104'
+2015-05-04 08:29:06.080 [debug] <0.116.0> Supervisor emysql_sup started emysql_statements:start_link() at pid <0.117.0>
+2015-05-04 08:29:06.087 [debug] <0.116.0> Supervisor emysql_sup started emysql_conn_mgr:start_link() at pid <0.118.0>
+2015-05-04 08:29:06.088 [info] <0.7.0> Application emysql started on node 'p02_db_disc_1@192.168.1.104'
+2015-05-04 08:29:06.093 [info] <0.121.0> leshu_db_stated: StartArgs [fuck_rebar]
+
+2015-05-04 08:29:06.093 [info] <0.121.0> leshu_db_env: {ok,[{ip,"0.0.0.0"}]}
+
+2015-05-04 08:29:06.095 [info] <0.7.0> Application leshu_db started on node 'p02_db_disc_1@192.168.1.104'
+2015-05-04 08:29:06.140 [debug] <0.126.0> Supervisor mnesia_sup started mnesia_sup:start_event() at pid <0.127.0>
+2015-05-04 08:29:06.152 [debug] <0.128.0> Supervisor mnesia_kernel_sup started mnesia_monitor:start() at pid <0.129.0>
+2015-05-04 08:29:06.159 [debug] <0.128.0> Supervisor mnesia_kernel_sup started mnesia_subscr:start() at pid <0.130.0>
+2015-05-04 08:29:06.170 [debug] <0.128.0> Supervisor mnesia_kernel_sup started mnesia_locker:start() at pid <0.131.0>
+2015-05-04 08:29:06.177 [debug] <0.128.0> Supervisor mnesia_kernel_sup started mnesia_recover:start() at pid <0.132.0>
+2015-05-04 08:29:06.240 [debug] <0.128.0> Supervisor mnesia_kernel_sup started mnesia_tm:start() at pid <0.133.0>
+2015-05-04 08:29:06.244 [debug] <0.128.0> Supervisor mnesia_kernel_sup started mnesia_checkpoint_sup:start() at pid <0.134.0>
+2015-05-04 08:29:06.247 [debug] <0.128.0> Supervisor mnesia_kernel_sup started mnesia_snmp_sup:start() at pid <0.135.0>
+2015-05-04 08:29:06.253 [debug] <0.128.0> Supervisor mnesia_kernel_sup started mnesia_controller:start() at pid <0.136.0>
+2015-05-04 08:29:06.264 [debug] <0.128.0> Supervisor mnesia_kernel_sup started mnesia_late_loader:start() at pid <0.137.0>
+2015-05-04 08:29:06.264 [debug] <0.126.0> Supervisor mnesia_sup started mnesia_kernel_sup:start() at pid <0.128.0>
+2015-05-04 08:29:06.264 [info] <0.7.0> Application mnesia started on node 'p02_db_disc_1@192.168.1.104'
+2015-05-04 08:29:06.289 [info] <0.7.0> Application asn1 started on node 'p02_db_disc_1@192.168.1.104'
+2015-05-04 08:29:06.311 [info] <0.7.0> Application public_key started on node 'p02_db_disc_1@192.168.1.104'
+2015-05-04 08:29:06.419 [debug] <0.144.0> Supervisor ssl_sup started ssl_manager:start_link([]) at pid <0.145.0>
+2015-05-04 08:29:06.429 [debug] <0.144.0> Supervisor ssl_sup started tls_connection_sup:start_link() at pid <0.146.0>
+2015-05-04 08:29:06.436 [debug] <0.144.0> Supervisor ssl_sup started ssl_listen_tracker_sup:start_link() at pid <0.147.0>
+2015-05-04 08:29:06.437 [info] <0.7.0> Application ssl started on node 'p02_db_disc_1@192.168.1.104'
+2015-05-04 08:29:06.481 [debug] <0.151.0> Supervisor ibrowse_sup started ibrowse:start_link() at pid <0.152.0>
+2015-05-04 08:29:06.481 [info] <0.7.0> Application ibrowse started on node 'p02_db_disc_1@192.168.1.104'
+2015-05-04 08:29:06.519 [debug] <0.157.0> Supervisor os_mon_sup started disksup:start_link() at pid <0.158.0>
+2015-05-04 08:29:06.549 [debug] <0.157.0> Supervisor os_mon_sup started memsup:start_link() at pid <0.159.0>
+2015-05-04 08:29:06.568 [debug] <0.157.0> Supervisor os_mon_sup started cpu_sup:start_link() at pid <0.161.0>
+2015-05-04 08:29:06.568 [info] <0.7.0> Application os_mon started on node 'p02_db_disc_1@192.168.1.104'
+2015-05-04 08:29:06.597 [debug] <0.35.0> Supervisor kernel_safe_sup started timer:start_link() at pid <0.164.0>
+2015-05-04 08:29:06.625 [debug] <0.168.0> Supervisor folsom_sup started folsom_sample_slide_sup:start_link() at pid <0.169.0>
+2015-05-04 08:29:06.630 [debug] <0.168.0> Supervisor folsom_sup started folsom_meter_timer_server:start_link() at pid <0.170.0>
+2015-05-04 08:29:06.633 [debug] <0.168.0> Supervisor folsom_sup started folsom_metrics_histogram_ets:start_link() at pid <0.171.0>
+2015-05-04 08:29:06.634 [info] <0.7.0> Application folsom started on node 'p02_db_disc_1@192.168.1.104'
+2015-05-04 08:29:06.692 [debug] <0.175.0> Supervisor inets_sup started ftp_sup:start_link() at pid <0.176.0>
+2015-05-04 08:29:06.755 [debug] <0.178.0> Supervisor httpc_profile_sup started httpc_manager:start_link(default, only_session_cookies, inets) at pid <0.179.0>
+2015-05-04 08:29:06.755 [debug] <0.177.0> Supervisor httpc_sup started httpc_profile_sup:start_link([{httpc,{default,only_session_cookies}}]) at pid <0.178.0>
+2015-05-04 08:29:06.770 [debug] <0.177.0> Supervisor httpc_sup started httpc_handler_sup:start_link() at pid <0.180.0>
+2015-05-04 08:29:06.770 [debug] <0.175.0> Supervisor inets_sup started httpc_sup:start_link([{httpc,{default,only_session_cookies}}]) at pid <0.177.0>
+2015-05-04 08:29:06.787 [debug] <0.175.0> Supervisor inets_sup started httpd_sup:start_link([]) at pid <0.181.0>
+2015-05-04 08:29:06.793 [debug] <0.175.0> Supervisor inets_sup started tftp_sup:start_link([]) at pid <0.182.0>
+2015-05-04 08:29:06.793 [info] <0.7.0> Application inets started on node 'p02_db_disc_1@192.168.1.104'
+2015-05-04 08:29:06.825 [debug] <0.186.0> Supervisor g17_sup started g17_server:start_link([{address,"http://localhost:14800/"},{game_id,1},{server_id,1},{money_key,"money_key"},{simple_key,...}]) at pid <0.187.0>
+2015-05-04 08:29:06.825 [info] <0.7.0> Application g17 started on node 'p02_db_disc_1@192.168.1.104'
+2015-05-04 08:29:06.842 [debug] <0.190.0>@mnesia_misc:init_from_config:39 TryNodes ['p02_db_disc_1@192.168.1.145'], NodeType disc
+2015-05-04 08:29:08.757 [info] <0.190.0>@mnesia_misc:init_from_config:52 First Disc Db Node Start
+2015-05-04 08:29:08.758 [debug] <0.190.0>@mnesia_misc:init_db:123 {Nodes, WasDiscNode, NodeType} {[],false,disc}
+2015-05-04 08:29:08.758 [info] <0.190.0>@mnesia_misc:init_db:132 RAM -> disc will create_schema
+2015-05-04 08:29:08.793 [info] <0.7.0> Application mnesia exited with reason: stopped
+2015-05-04 08:29:08.851 [debug] <0.35.0> Supervisor kernel_safe_sup started disk_log_sup:start_link() at pid <0.196.0>
+2015-05-04 08:29:08.851 [debug] <0.35.0> Supervisor kernel_safe_sup started disk_log_server:start_link() at pid <0.197.0>
+2015-05-04 08:29:08.991 [debug] <0.209.0> Supervisor mnesia_sup started mnesia_sup:start_event() at pid <0.210.0>
+2015-05-04 08:29:08.993 [debug] <0.211.0> Supervisor mnesia_kernel_sup started mnesia_monitor:start() at pid <0.212.0>
+2015-05-04 08:29:08.993 [debug] <0.211.0> Supervisor mnesia_kernel_sup started mnesia_subscr:start() at pid <0.213.0>
+2015-05-04 08:29:08.993 [debug] <0.211.0> Supervisor mnesia_kernel_sup started mnesia_locker:start() at pid <0.214.0>
+2015-05-04 08:29:08.994 [debug] <0.211.0> Supervisor mnesia_kernel_sup started mnesia_recover:start() at pid <0.215.0>
+2015-05-04 08:29:09.034 [debug] <0.35.0> Supervisor kernel_safe_sup started dets_sup:start_link() at pid <0.219.0>
+2015-05-04 08:29:09.034 [debug] <0.35.0> Supervisor kernel_safe_sup started dets_server:start_link() at pid <0.220.0>
+2015-05-04 08:29:09.062 [debug] <0.211.0> Supervisor mnesia_kernel_sup started mnesia_tm:start() at pid <0.216.0>
+2015-05-04 08:29:09.063 [debug] <0.211.0> Supervisor mnesia_kernel_sup started mnesia_checkpoint_sup:start() at pid <0.229.0>
+2015-05-04 08:29:09.064 [debug] <0.211.0> Supervisor mnesia_kernel_sup started mnesia_snmp_sup:start() at pid <0.230.0>
+2015-05-04 08:29:09.064 [debug] <0.211.0> Supervisor mnesia_kernel_sup started mnesia_controller:start() at pid <0.231.0>
+2015-05-04 08:29:09.065 [debug] <0.211.0> Supervisor mnesia_kernel_sup started mnesia_late_loader:start() at pid <0.232.0>
+2015-05-04 08:29:09.065 [debug] <0.209.0> Supervisor mnesia_sup started mnesia_kernel_sup:start() at pid <0.211.0>
+2015-05-04 08:29:09.066 [info] <0.7.0> Application mnesia started on node 'p02_db_disc_1@192.168.1.104'
+2015-05-04 08:29:17.290 [debug] <0.42.0>@mod_alarm_handler:init:24 misc_alarm_handler init : [].
+2015-05-04 08:29:17.309 [debug] <0.191.0> Supervisor server_sup started mod_cache:start_link() at pid <0.929.0>
+2015-05-04 08:29:17.491 [debug] <0.190.0>@server_app:start:51 update league data begin
+2015-05-04 08:29:17.514 [debug] <0.190.0>@server_app:start:53 update league data ok
+2015-05-04 08:29:17.558 [info] <0.7.0> Application server started on node 'p02_db_disc_1@192.168.1.104'
+2015-05-04 08:30:25.778 [warning] <0.190.0>@server_app:stop:61 server_app stopping.

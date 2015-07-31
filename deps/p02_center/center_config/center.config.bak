@@ -1,0 +1,12 @@
+% -*- mode: erlang -*-
+[
+ {kernel,
+  [{distributed, [{p02_center, 0, ['center@192.168.1.122', 
+                                    {'center_bak@192.168.1.122'}]}]},
+   %{sync_nodes_mandatory, ['center_bak@192.168.1.122']},
+   {sync_nodes_timeout, 10000}
+  ]},
+ {p02_center,
+  [{port, 8800}
+  ]}
+].

@@ -1,0 +1,53 @@
+-ifndef(DEFINE_INFO_12_HRL).
+-define(DEFINE_INFO_12_HRL, true).
+
+-include("define_info_0.hrl").
+
+
+-define(INFO_DUNGEON_DUNGEON_NOT_EXIST,         12001).   %% 关卡不存在
+-define(INFO_DUNGEON_TAKEN_REWARD,              12002).   %% 已经领过奖励了
+-define(INFO_DUNGEON_ONT_ENABLE,                12003).   %% 关卡还未开启
+-define(INFO_DUNGEON_IN_TIME,                   12004).   %% 时间未到，关卡尚未开启
+-define(INFO_SUPER_BATTLE_OUT_OF_TIMES,         12006).   %% 挑战次数不足
+-define(INFO_DUNGEON_NEED_PREV,                 12007).   %% 前置难度副本没有完成
+-define(INFO_DUNGEON_NO_DAILY,                  12008).   %% 没有可打的日常副本
+-define(INFO_DUNGEON_DAILY_OUT_OF_TIMES,        12009).   %% 没有日常副本挑战次数
+-define(INFO_DUNGEON_SOURCE_OUT_OF_TIMES,       12010).   %% 该类资源副本次数已耗光
+-define(INFO_DUNGEON_NEED_PREV_TASK,            12011).   %% 需要完成前置任务
+-define(INFO_DUNGEON_MUGEN_PASS_ALL,            12020).   %% 通天塔已全部通关
+-define(INFO_DUNGEON_MUGEN_CAN_NOT_SKIP,        12021).   %% 通天塔当前关数不能使用跳关功能
+-define(INFO_DUNGEON_MUGEN_CHALLENGE_MAX,       12025).   %% 通天塔挑战好友数量已达到最高
+-define(INFO_DUNGEON_MUGEN_CHALLENGE_LIMIT,     12026).   %% 没有通天塔挑战次数
+-define(INFO_DUNGEON_MUGEN_CHALLENGE_LESS,      12027).   %% 不能挑战通关次数比你低的好友
+-define(INFO_DUNGEON_MUGEN_LUCKY_COIN_LIMIT,    12028).   %% 今天投放的幸运币已达到上限
+-define(INFO_DUNGEON_LUCKY_COIN_DUNPLICATE,     12029).   %% 你已经投放过幸运币给该好友
+-define(INFO_DUNGEON_RECV_LUCKY_COIN_LIMIT,     12030).   %% 目标好友接收的幸运币已经达到上限
+-define(INFO_DUNGEON_SUPER_BATTLE_BUY_LIMIT,    12031).   %% 公平竞技购买次数用光
+-define(INFO_KING_DUNGEON_BUY_TIMES_LIMIT,      12040).   %% 王者副本购买次数用光
+-define(INFO_TYPE_NOT_KING_DUNGEON,             12041).   %% 非王者副本类型，无法操作
+-define(INFO_DUNGEON_CANNOT_MOP_UP,             12042).   %% 达到S级以上的副本才能使用扫荡功能
+-define(INFO_DUNGEON_DUNGEON_DATA_NOT_FOUND,    12109).   %% 对应副本数据未找到，无法进行挂机
+-define(INFO_DUNGEON_FULL_OF_BAG,               12110).   %% 包裹已满，请先整理包裹后再尝试挂机
+-define(INFO_DUNGEON_RAID_INFO_NOT_FOUND,       12111).   %% 挂机数据获取失败
+-define(INFO_DUNGEON_ENTER_SUCCESS,             12120).   %% 副本可以进入
+-define(INFO_DUNGEON_ENTER_FAILED,              12121).   %% 副本进入失败
+-define(INFO_DUNGEON_ENTER_OUT_OF_TIMES,        12122).   %% 极限挑战大赛次数已经使用完毕，无法进入
+-define(INFO_DUNGEON_NOT_ALLOW_ENTER,           12123).   %% 不可进入的副本，无法进入
+-define(INFO_CANNOT_HELP,                       12124).   %% 助战冷却中，不可选择
+-define(INFO_DUNGEON_ELITE_RESET_SUCCESS,       12130).   %% 重置精英副本成功
+-define(INFO_DUNGEON_ELITE_RESET_FAILED,        12131).   %% 重置精英副本失败
+-define(INFO_DUNGEON_ELITE_OPENED,              12132).   %% 精英副本激活中，无需重置
+-define(INFO_DUNGEON_ELITE_OUT_OF_RESET,        12133).   %% 重置次数使用完毕，请改日再来
+-define(INFO_DUNGEON_ROUTE_ERROR,               12222).   %% 副本路径出错
+-define(INFO_DUNGEON_REWARD_ERROR,              12223).   %% 奖励信息错误
+-define(INFO_DUNGEON_NOT_ALLOW_EXTRA,           12224).   %% 不允许的额外奖励
+-define(INFO_DUNGEON_SUPER_BATTLE_DEAD,         12225).   %% 目前状态不能继续挑战,请先重置副本
+-define(INFO_FLIP_CARD_REWARD_NOT_MATCH,        12300).   %% 翻牌奖励和副本不匹配
+-define(INFO_FLIP_CARD_TIMES_OUT,               12301).   %% 没有翻牌次数了
+-define(INFO_FLIP_CARD_NO_REWARD,               12302).   %% 翻牌奖励不存在
+-define(INFO_FLIP_CARD_ERROR_TYPE,              12303).   %% 翻牌类型错误
+-define(INFO_RELIVE_TIMES_OUT,                  12400).   %% 复活次数不足
+-define(INFO_TEAM_DUNGEON_LESS_MEMBER,          12404).   %% 队伍人数不足，不能进入FB
+
+-endif.
+

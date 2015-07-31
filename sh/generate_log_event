@@ -1,0 +1,5 @@
+#!/bin/bash
+. `dirname $0`/tools_env
+[ -f `dirname $0`/custom_tools_env ] && . `dirname $0`/custom_tools_env
+
+erl -pa $SERVER_EBIN_ROOT -sname log_event -s generate_log_event start

@@ -1,0 +1,39 @@
+#/bin/bash
+
+# compile libraknet.a:
+echo compile *.cpp to libraknet.a ...
+g++ -c *.cpp
+ar rc libraknet.a *.o
+echo compile done!
+
+echo
+echo compile *.cpp to libraknet.so.0.0.0
+g++ -shared -O3 -fPIC -o libraknet.so.0.0.0 *.cpp
+echo cmpile done!
+
+# cp .so .a to /usr/local/lib
+echo
+echo cp .so and .a to /usr/local/lib/ ...
+cp libraknet.so.0.0.0 libraknet.a /usr/local/lib/
+echo cp done!
+
+# ln -s
+echo
+if [ -L /usr/locallib/libraknet.so ];
+then
+    echo link file to /usr/local/lib/libraknet.so
+    ln -s /usr/local/lib/libraknet.so.0.0.0 /usr/local/lib/libraknet.so.0
+    ln -s /usr/local/lib/libraknet.so.0.0.0 /usr/local/lib/libraknet.so
+fi
+
+# for include
+echo
+echo cp *.h to /usr/local/include/raknet ... 
+mkdir -p /usr/local/include/raknet
+cp *.h  /usr/local/include/raknet
+ldconfig
+echo cp done!
+
+echo
+echo all done, good luck!
+

@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Source\ReplicaManager">
+      <UniqueIdentifier>{7c275a40-56ad-4c22-a84c-eb11640a3aef}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="stdafx.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="server_type.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="ReplicaManager\ClientCreatibleClientReplica.h">
+      <Filter>Source\ReplicaManager</Filter>
+    </ClInclude>
+    <ClInclude Include="ReplicaManager\ClientCreatibleServerReplica.h">
+      <Filter>Source\ReplicaManager</Filter>
+    </ClInclude>
+    <ClInclude Include="ReplicaManager\LeshuConnectionManager.h">
+      <Filter>Source\ReplicaManager</Filter>
+    </ClInclude>
+    <ClInclude Include="ReplicaManager\LeshuReplica.h">
+      <Filter>Source\ReplicaManager</Filter>
+    </ClInclude>
+    <ClInclude Include="ReplicaManager\LeshuReplicaManager.h">
+      <Filter>Source\ReplicaManager</Filter>
+    </ClInclude>
+    <ClInclude Include="ReplicaManager\P2PReplica.h">
+      <Filter>Source\ReplicaManager</Filter>
+    </ClInclude>
+    <ClInclude Include="ReplicaManager\ServerCreatedClientReplica.h">
+      <Filter>Source\ReplicaManager</Filter>
+    </ClInclude>
+    <ClInclude Include="ReplicaManager\ServerCreatedServerReplica.h">
+      <Filter>Source\ReplicaManager</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObject\Character.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+    <ClInclude Include="GameObject\TransformationHistory.h">
+      <Filter>Source</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="CombatServer.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="ReplicaManager\ClientCreatibleClientReplica.cpp">
+      <Filter>Source\ReplicaManager</Filter>
+    </ClCompile>
+    <ClCompile Include="ReplicaManager\ClientCreatibleServerReplica.cpp">
+      <Filter>Source\ReplicaManager</Filter>
+    </ClCompile>
+    <ClCompile Include="ReplicaManager\LeshuConnectionManager.cpp">
+      <Filter>Source\ReplicaManager</Filter>
+    </ClCompile>
+    <ClCompile Include="ReplicaManager\LeshuReplica.cpp">
+      <Filter>Source\ReplicaManager</Filter>
+    </ClCompile>
+    <ClCompile Include="ReplicaManager\LeshuReplicaManager.cpp">
+      <Filter>Source\ReplicaManager</Filter>
+    </ClCompile>
+    <ClCompile Include="ReplicaManager\P2PReplica.cpp">
+      <Filter>Source\ReplicaManager</Filter>
+    </ClCompile>
+    <ClCompile Include="ReplicaManager\ServerCreatedClientReplica.cpp">
+      <Filter>Source\ReplicaManager</Filter>
+    </ClCompile>
+    <ClCompile Include="ReplicaManager\ServerCreatedServerReplica.cpp">
+      <Filter>Source\ReplicaManager</Filter>
+    </ClCompile>
+    <ClCompile Include="GameObject\Character.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+    <ClCompile Include="GameObject\TransformationHistory.cpp">
+      <Filter>Source</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

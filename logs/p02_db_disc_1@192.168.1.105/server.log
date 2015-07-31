@@ -1,0 +1,295 @@
+2014-11-30 11:10:31.093 [debug] <0.71.0>@lager_handler_watcher:94 Lager installed handler {lager_file_backend,
+                            "/home/li/server_p02/logs/p02_db_disc_1@192.168.1.105/server.log"} into lager_event
+2014-11-30 11:10:31.093 [debug] <0.73.0>@lager_handler_watcher:94 Lager installed handler error_logger_lager_h into error_logger
+2014-11-30 11:10:31.138 [debug] <0.58.0> Supervisor gr_param_sup started gr_param:start_link(gr_lager_default_tracer_params) at pid <0.75.0>
+2014-11-30 11:10:31.138 [debug] <0.57.0> Supervisor gr_counter_sup started gr_counter:start_link(gr_lager_default_tracer_counters) at pid <0.76.0>
+2014-11-30 11:10:31.139 [debug] <0.59.0> Supervisor gr_manager_sup started gr_manager:start_link(gr_lager_default_tracer_params_mgr, gr_lager_default_tracer_params, []) at pid <0.77.0>
+2014-11-30 11:10:31.139 [debug] <0.59.0> Supervisor gr_manager_sup started gr_manager:start_link(gr_lager_default_tracer_counters_mgr, gr_lager_default_tracer_counters, [{input,0},{filter,0},{output,0}]) at pid <0.78.0>
+2014-11-30 11:10:31.561 [debug] <0.67.0>@lager_handler_watcher:94 Lager installed handler lager_backend_throttle into lager_event
+2014-11-30 11:10:31.678 [info] <0.7.0> Application lager started on node 'p02_db_disc_1@192.168.1.105'
+2014-11-30 11:10:31.726 [debug] <0.2.0>@main:server_start:42 Lager Config [{async_threshold_window,5},{crash_log_date,"$D0"},{crash_log,"/home/li/server_p02/logs/p02_db_disc_1@192.168.1.105/server-crash.log"},{colors,[{debug,"\e[0;38m"},{info,"\e[1;37m"},{notice,"\e[1;36m"},{warning,"\e[1;33m"},{error,"\e[1;31m"},{critical,"\e[1;35m"},{alert,"\e[1;44m"},{emergency,"\e[1;41m"}]},{crash_log_count,5},{async_threshold,20},{crash_log_size,10485760},{crash_log_msg_size,65536},{colored,true},{log_level,debug},{handlers,[{lager_console_backend,[debug,{lager_default_formatter,[date," ",time,color," [",severity,"] <",pid,">@",module,":",function,":",line," ",message,"\e[0m\r\n"]}]},{lager_file_backend,[{level,debug},{date,"$W0D23"},{count,20},{file,"/home/li/server_p02/logs/p02_db_disc_1@192.168.1.105/server.log"}]}]},{error_logger_hwm,50},{error_logger_redirect,true},{included_applications,[]}]
+2014-11-30 11:10:31.726 [debug] <0.2.0>@main:server_start:44 mod_counter start 
+2014-11-30 11:10:31.815 [info] <0.2.0>@mnesia_upgrade:maybe_upgrade_mnesia:105 first run mnesia
+2014-11-30 11:10:31.917 [debug] <0.94.0> Supervisor hstdlib_sup started hmod_timer:start_link() at pid <0.95.0>
+2014-11-30 11:10:31.939 [debug] <0.94.0> Supervisor hstdlib_sup started hmod_rand:start_link() at pid <0.96.0>
+2014-11-30 11:10:31.939 [info] <0.7.0> Application hstdlib started on node 'p02_db_disc_1@192.168.1.105'
+2014-11-30 11:10:31.962 [info] <0.7.0> Application mysql started on node 'p02_db_disc_1@192.168.1.105'
+2014-11-30 11:10:31.998 [info] <0.7.0> Application crypto started on node 'p02_db_disc_1@192.168.1.105'
+2014-11-30 11:10:32.039 [debug] <0.102.0> Supervisor emysql_sup started emysql_statements:start_link() at pid <0.103.0>
+2014-11-30 11:10:32.043 [debug] <0.102.0> Supervisor emysql_sup started emysql_conn_mgr:start_link() at pid <0.104.0>
+2014-11-30 11:10:32.044 [info] <0.7.0> Application emysql started on node 'p02_db_disc_1@192.168.1.105'
+2014-11-30 11:10:32.047 [info] <0.107.0> leshu_db_stated: StartArgs [fuck_rebar]
+
+2014-11-30 11:10:32.047 [info] <0.107.0> leshu_db_env: {ok,[{ip,"0.0.0.0"}]}
+
+2014-11-30 11:10:32.054 [info] <0.7.0> Application leshu_db started on node 'p02_db_disc_1@192.168.1.105'
+2014-11-30 11:10:32.102 [debug] <0.112.0> Supervisor mnesia_sup started mnesia_sup:start_event() at pid <0.113.0>
+2014-11-30 11:10:32.128 [debug] <0.114.0> Supervisor mnesia_kernel_sup started mnesia_monitor:start() at pid <0.115.0>
+2014-11-30 11:10:32.135 [debug] <0.114.0> Supervisor mnesia_kernel_sup started mnesia_subscr:start() at pid <0.116.0>
+2014-11-30 11:10:32.145 [debug] <0.114.0> Supervisor mnesia_kernel_sup started mnesia_locker:start() at pid <0.117.0>
+2014-11-30 11:10:32.150 [debug] <0.114.0> Supervisor mnesia_kernel_sup started mnesia_recover:start() at pid <0.118.0>
+2014-11-30 11:10:32.205 [debug] <0.114.0> Supervisor mnesia_kernel_sup started mnesia_tm:start() at pid <0.119.0>
+2014-11-30 11:10:32.209 [debug] <0.114.0> Supervisor mnesia_kernel_sup started mnesia_checkpoint_sup:start() at pid <0.120.0>
+2014-11-30 11:10:32.212 [debug] <0.114.0> Supervisor mnesia_kernel_sup started mnesia_snmp_sup:start() at pid <0.121.0>
+2014-11-30 11:10:32.217 [debug] <0.114.0> Supervisor mnesia_kernel_sup started mnesia_controller:start() at pid <0.122.0>
+2014-11-30 11:10:32.228 [debug] <0.114.0> Supervisor mnesia_kernel_sup started mnesia_late_loader:start() at pid <0.123.0>
+2014-11-30 11:10:32.228 [debug] <0.112.0> Supervisor mnesia_sup started mnesia_kernel_sup:start() at pid <0.114.0>
+2014-11-30 11:10:32.228 [info] <0.7.0> Application mnesia started on node 'p02_db_disc_1@192.168.1.105'
+2014-11-30 11:10:32.248 [info] <0.7.0> Application asn1 started on node 'p02_db_disc_1@192.168.1.105'
+2014-11-30 11:10:32.269 [info] <0.7.0> Application public_key started on node 'p02_db_disc_1@192.168.1.105'
+2014-11-30 11:10:32.356 [debug] <0.130.0> Supervisor ssl_sup started ssl_manager:start_link([]) at pid <0.131.0>
+2014-11-30 11:10:32.365 [debug] <0.130.0> Supervisor ssl_sup started tls_connection_sup:start_link() at pid <0.132.0>
+2014-11-30 11:10:32.369 [debug] <0.130.0> Supervisor ssl_sup started ssl_listen_tracker_sup:start_link() at pid <0.133.0>
+2014-11-30 11:10:32.369 [info] <0.7.0> Application ssl started on node 'p02_db_disc_1@192.168.1.105'
+2014-11-30 11:10:32.440 [debug] <0.137.0> Supervisor ibrowse_sup started ibrowse:start_link() at pid <0.138.0>
+2014-11-30 11:10:32.440 [info] <0.7.0> Application ibrowse started on node 'p02_db_disc_1@192.168.1.105'
+2014-11-30 11:10:32.478 [debug] <0.143.0> Supervisor os_mon_sup started disksup:start_link() at pid <0.144.0>
+2014-11-30 11:10:32.489 [debug] <0.143.0> Supervisor os_mon_sup started memsup:start_link() at pid <0.145.0>
+2014-11-30 11:10:32.501 [debug] <0.143.0> Supervisor os_mon_sup started cpu_sup:start_link() at pid <0.147.0>
+2014-11-30 11:10:32.501 [info] <0.7.0> Application os_mon started on node 'p02_db_disc_1@192.168.1.105'
+2014-11-30 11:10:32.564 [debug] <0.35.0> Supervisor kernel_safe_sup started timer:start_link() at pid <0.153.0>
+2014-11-30 11:10:32.598 [debug] <0.154.0> Supervisor folsom_sup started folsom_sample_slide_sup:start_link() at pid <0.155.0>
+2014-11-30 11:10:32.601 [debug] <0.154.0> Supervisor folsom_sup started folsom_meter_timer_server:start_link() at pid <0.156.0>
+2014-11-30 11:10:32.603 [debug] <0.154.0> Supervisor folsom_sup started folsom_metrics_histogram_ets:start_link() at pid <0.157.0>
+2014-11-30 11:10:32.604 [info] <0.7.0> Application folsom started on node 'p02_db_disc_1@192.168.1.105'
+2014-11-30 11:10:32.671 [debug] <0.161.0> Supervisor gproc_sup started gproc:start_link() at pid <0.162.0>
+2014-11-30 11:10:32.673 [debug] <0.161.0> Supervisor gproc_sup started gproc_monitor:start_link() at pid <0.163.0>
+2014-11-30 11:10:32.675 [debug] <0.161.0> Supervisor gproc_sup started gproc_bcast:start_link() at pid <0.164.0>
+2014-11-30 11:10:32.679 [debug] <0.161.0> Supervisor gproc_sup started gproc_pool:start_link() at pid <0.165.0>
+2014-11-30 11:10:32.679 [info] <0.7.0> Application gproc started on node 'p02_db_disc_1@192.168.1.105'
+2014-11-30 11:10:32.694 [debug] <0.168.0>@mnesia_misc:init_from_config:37 TryNodes ['p02_db_disc_1@127.0.0.1'], NodeType disc
+2014-11-30 11:10:32.695 [debug] <0.171.0> Supervisor inet_gethost_native_sup started undefined at pid <0.172.0>
+2014-11-30 11:10:32.695 [debug] <0.35.0> Supervisor kernel_safe_sup started inet_gethost_native:start_link() at pid <0.171.0>
+2014-11-30 11:10:32.708 [info] <0.168.0>@mnesia_misc:init_from_config:50 First Disc Db Node Start
+2014-11-30 11:10:32.708 [debug] <0.168.0>@mnesia_misc:init_db:121 {Nodes, WasDiscNode, NodeType} {[],false,disc}
+2014-11-30 11:10:32.708 [info] <0.168.0>@mnesia_misc:init_db:130 RAM -> disc will create_schema
+2014-11-30 11:10:32.739 [info] <0.7.0> Application mnesia exited with reason: stopped
+2014-11-30 11:10:32.789 [debug] <0.35.0> Supervisor kernel_safe_sup started disk_log_sup:start_link() at pid <0.178.0>
+2014-11-30 11:10:32.790 [debug] <0.35.0> Supervisor kernel_safe_sup started disk_log_server:start_link() at pid <0.179.0>
+2014-11-30 11:10:32.930 [debug] <0.191.0> Supervisor mnesia_sup started mnesia_sup:start_event() at pid <0.192.0>
+2014-11-30 11:10:32.932 [debug] <0.193.0> Supervisor mnesia_kernel_sup started mnesia_monitor:start() at pid <0.194.0>
+2014-11-30 11:10:32.933 [debug] <0.193.0> Supervisor mnesia_kernel_sup started mnesia_subscr:start() at pid <0.195.0>
+2014-11-30 11:10:32.933 [debug] <0.193.0> Supervisor mnesia_kernel_sup started mnesia_locker:start() at pid <0.196.0>
+2014-11-30 11:10:32.934 [debug] <0.193.0> Supervisor mnesia_kernel_sup started mnesia_recover:start() at pid <0.197.0>
+2014-11-30 11:10:32.982 [debug] <0.35.0> Supervisor kernel_safe_sup started dets_sup:start_link() at pid <0.201.0>
+2014-11-30 11:10:32.982 [debug] <0.35.0> Supervisor kernel_safe_sup started dets_server:start_link() at pid <0.202.0>
+2014-11-30 11:10:33.009 [debug] <0.193.0> Supervisor mnesia_kernel_sup started mnesia_tm:start() at pid <0.198.0>
+2014-11-30 11:10:33.009 [debug] <0.193.0> Supervisor mnesia_kernel_sup started mnesia_checkpoint_sup:start() at pid <0.211.0>
+2014-11-30 11:10:33.010 [debug] <0.193.0> Supervisor mnesia_kernel_sup started mnesia_snmp_sup:start() at pid <0.212.0>
+2014-11-30 11:10:33.010 [debug] <0.193.0> Supervisor mnesia_kernel_sup started mnesia_controller:start() at pid <0.213.0>
+2014-11-30 11:10:33.010 [debug] <0.193.0> Supervisor mnesia_kernel_sup started mnesia_late_loader:start() at pid <0.214.0>
+2014-11-30 11:10:33.010 [debug] <0.191.0> Supervisor mnesia_sup started mnesia_kernel_sup:start() at pid <0.193.0>
+2014-11-30 11:10:33.011 [info] <0.7.0> Application mnesia started on node 'p02_db_disc_1@192.168.1.105'
+2014-11-30 11:10:37.349 [debug] <0.42.0>@mod_alarm_handler:init:24 misc_alarm_handler init : [].
+2014-11-30 11:10:37.356 [debug] <0.169.0> Supervisor server_sup started mod_cache:start_link() at pid <0.658.0>
+2014-11-30 11:10:37.625 [info] <0.168.0>@server_app:start:59 acceptor_sup started 
+2014-11-30 11:10:37.626 [info] <0.168.0>@server_app:start:67 acceptor_sup started 
+2014-11-30 11:10:37.630 [debug] <0.663.0>@tcp_listener:init:35 Listen on port: 8801
+2014-11-30 11:10:37.633 [debug] <0.662.0> Supervisor tcp_client_handler_listener_sup started tcp_listener:start_link(8801, tcp_client_handler) at pid <0.663.0>
+2014-11-30 11:10:37.633 [debug] <0.662.0> Supervisor tcp_client_handler_listener_sup started supervisor:start_link({local,listener_sup_tcp_client_handler}, listener_sup, [tcp_client_handler]) at pid <0.669.0>
+2014-11-30 11:10:37.633 [info] <0.168.0>@server_app:start:79 listener_sup started for port: 8801 ... 
+2014-11-30 11:10:37.633 [debug] <0.671.0>@tcp_listener:init:35 Listen on port: 9801
+2014-11-30 11:10:37.634 [debug] <0.670.0> Supervisor tcp_room_handler_listener_sup started tcp_listener:start_link(9801, tcp_room_handler) at pid <0.671.0>
+2014-11-30 11:10:37.634 [debug] <0.670.0> Supervisor tcp_room_handler_listener_sup started supervisor:start_link({local,listener_sup_tcp_room_handler}, listener_sup, [tcp_room_handler]) at pid <0.677.0>
+2014-11-30 11:10:37.634 [info] <0.168.0>@server_app:start:87 listener_sup started for port: 8801 ... 
+2014-11-30 11:10:37.638 [info] <0.678.0>@httpd_handler:start:18 mochiweb start on: [{ip,{0,0,0,0}},{port,18801}]
+2014-11-30 11:10:37.665 [debug] <0.678.0> Supervisor h_httpd_sup started httpd_handler:start([{ip,{0,0,0,0}},{port,18801}]) at pid <0.679.0>
+2014-11-30 11:10:37.684 [warning] <0.168.0>@server_app:start:100 rank_sup start 
+2014-11-30 11:10:37.694 [debug] <0.697.0>@mod_counter:init:62 CenterList ['center@127.0.0.1']
+2014-11-30 11:10:37.711 [error] <0.697.0> CRASH REPORT Process <0.697.0> with 0 neighbours exited with reason: no match of right hand value false in mod_counter:init/1 line 64 in gen_server:init_it/6 line 330
+2014-11-30 11:10:37.713 [error] <0.167.0> CRASH REPORT Process <0.167.0> with 0 neighbours exited with reason: no match of right hand value {error,{{{badmatch,false},[{mod_counter,init,1,[{file,"src/mod/mod_counter.erl"},{line,64}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,306}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]},{child,undefined,mod_counter,{mod_counter,start_link,[]},permanent,10000,worker,[mod_counter]}}} in server_sup:start_child/2 line 41 in application_master:init/4 line 133
+2014-11-30 11:12:01.943 [debug] <0.71.0>@lager_handler_watcher:94 Lager installed handler {lager_file_backend,
+                            "/home/li/server_p02/logs/p02_db_disc_1@192.168.1.105/server.log"} into lager_event
+2014-11-30 11:12:01.943 [debug] <0.73.0>@lager_handler_watcher:94 Lager installed handler error_logger_lager_h into error_logger
+2014-11-30 11:12:01.958 [debug] <0.58.0> Supervisor gr_param_sup started gr_param:start_link(gr_lager_default_tracer_params) at pid <0.75.0>
+2014-11-30 11:12:01.958 [debug] <0.57.0> Supervisor gr_counter_sup started gr_counter:start_link(gr_lager_default_tracer_counters) at pid <0.76.0>
+2014-11-30 11:12:01.958 [debug] <0.59.0> Supervisor gr_manager_sup started gr_manager:start_link(gr_lager_default_tracer_params_mgr, gr_lager_default_tracer_params, []) at pid <0.77.0>
+2014-11-30 11:12:01.958 [debug] <0.59.0> Supervisor gr_manager_sup started gr_manager:start_link(gr_lager_default_tracer_counters_mgr, gr_lager_default_tracer_counters, [{input,0},{filter,0},{output,0}]) at pid <0.78.0>
+2014-11-30 11:12:02.190 [info] <0.7.0> Application lager started on node 'p02_db_disc_1@192.168.1.105'
+2014-11-30 11:12:02.207 [debug] <0.2.0>@main:server_start:42 Lager Config [{async_threshold_window,5},{crash_log_date,"$D0"},{crash_log,"/home/li/server_p02/logs/p02_db_disc_1@192.168.1.105/server-crash.log"},{colors,[{debug,"\e[0;38m"},{info,"\e[1;37m"},{notice,"\e[1;36m"},{warning,"\e[1;33m"},{error,"\e[1;31m"},{critical,"\e[1;35m"},{alert,"\e[1;44m"},{emergency,"\e[1;41m"}]},{crash_log_count,5},{async_threshold,20},{crash_log_size,10485760},{crash_log_msg_size,65536},{colored,true},{log_level,debug},{handlers,[{lager_console_backend,[debug,{lager_default_formatter,[date," ",time,color," [",severity,"] <",pid,">@",module,":",function,":",line," ",message,"\e[0m\r\n"]}]},{lager_file_backend,[{level,debug},{date,"$W0D23"},{count,20},{file,"/home/li/server_p02/logs/p02_db_disc_1@192.168.1.105/server.log"}]}]},{error_logger_hwm,50},{error_logger_redirect,true},{included_applications,[]}]
+2014-11-30 11:12:02.208 [debug] <0.2.0>@main:server_start:44 mod_counter start 
+2014-11-30 11:12:02.248 [info] <0.2.0>@mnesia_upgrade:maybe_upgrade_mnesia:111 not upgrade mnesia
+2014-11-30 11:12:02.255 [debug] <0.94.0> Supervisor hstdlib_sup started hmod_timer:start_link() at pid <0.95.0>
+2014-11-30 11:12:02.261 [debug] <0.94.0> Supervisor hstdlib_sup started hmod_rand:start_link() at pid <0.96.0>
+2014-11-30 11:12:02.261 [info] <0.7.0> Application hstdlib started on node 'p02_db_disc_1@192.168.1.105'
+2014-11-30 11:12:02.262 [info] <0.7.0> Application mysql started on node 'p02_db_disc_1@192.168.1.105'
+2014-11-30 11:12:02.274 [info] <0.7.0> Application crypto started on node 'p02_db_disc_1@192.168.1.105'
+2014-11-30 11:12:02.281 [debug] <0.102.0> Supervisor emysql_sup started emysql_statements:start_link() at pid <0.103.0>
+2014-11-30 11:12:02.285 [debug] <0.102.0> Supervisor emysql_sup started emysql_conn_mgr:start_link() at pid <0.104.0>
+2014-11-30 11:12:02.285 [info] <0.7.0> Application emysql started on node 'p02_db_disc_1@192.168.1.105'
+2014-11-30 11:12:02.287 [info] <0.107.0> leshu_db_stated: StartArgs [fuck_rebar]
+
+2014-11-30 11:12:02.287 [info] <0.107.0> leshu_db_env: {ok,[{ip,"0.0.0.0"}]}
+
+2014-11-30 11:12:02.289 [info] <0.7.0> Application leshu_db started on node 'p02_db_disc_1@192.168.1.105'
+2014-11-30 11:12:02.300 [debug] <0.112.0> Supervisor mnesia_sup started mnesia_sup:start_event() at pid <0.113.0>
+2014-11-30 11:12:02.307 [debug] <0.114.0> Supervisor mnesia_kernel_sup started mnesia_monitor:start() at pid <0.115.0>
+2014-11-30 11:12:02.311 [debug] <0.114.0> Supervisor mnesia_kernel_sup started mnesia_subscr:start() at pid <0.116.0>
+2014-11-30 11:12:02.322 [debug] <0.114.0> Supervisor mnesia_kernel_sup started mnesia_locker:start() at pid <0.117.0>
+2014-11-30 11:12:02.328 [debug] <0.114.0> Supervisor mnesia_kernel_sup started mnesia_recover:start() at pid <0.118.0>
+2014-11-30 11:12:02.364 [debug] <0.35.0> Supervisor kernel_safe_sup started dets_sup:start_link() at pid <0.120.0>
+2014-11-30 11:12:02.364 [debug] <0.35.0> Supervisor kernel_safe_sup started dets_server:start_link() at pid <0.121.0>
+2014-11-30 11:12:02.419 [debug] <0.35.0> Supervisor kernel_safe_sup started disk_log_sup:start_link() at pid <0.125.0>
+2014-11-30 11:12:02.419 [debug] <0.35.0> Supervisor kernel_safe_sup started disk_log_server:start_link() at pid <0.126.0>
+2014-11-30 11:12:02.434 [debug] <0.67.0>@lager_handler_watcher:94 Lager installed handler lager_backend_throttle into lager_event
+2014-11-30 11:12:02.604 [debug] <0.114.0> Supervisor mnesia_kernel_sup started mnesia_tm:start() at pid <0.119.0>
+2014-11-30 11:12:02.607 [debug] <0.114.0> Supervisor mnesia_kernel_sup started mnesia_checkpoint_sup:start() at pid <0.243.0>
+2014-11-30 11:12:02.610 [debug] <0.114.0> Supervisor mnesia_kernel_sup started mnesia_snmp_sup:start() at pid <0.244.0>
+2014-11-30 11:12:02.610 [debug] <0.114.0> Supervisor mnesia_kernel_sup started mnesia_controller:start() at pid <0.245.0>
+2014-11-30 11:12:02.614 [debug] <0.114.0> Supervisor mnesia_kernel_sup started mnesia_late_loader:start() at pid <0.246.0>
+2014-11-30 11:12:02.614 [debug] <0.112.0> Supervisor mnesia_sup started mnesia_kernel_sup:start() at pid <0.114.0>
+2014-11-30 11:12:02.614 [info] <0.7.0> Application mnesia started on node 'p02_db_disc_1@192.168.1.105'
+2014-11-30 11:12:02.639 [info] <0.7.0> Application asn1 started on node 'p02_db_disc_1@192.168.1.105'
+2014-11-30 11:12:02.657 [info] <0.7.0> Application public_key started on node 'p02_db_disc_1@192.168.1.105'
+2014-11-30 11:12:02.696 [debug] <0.336.0> Supervisor ssl_sup started ssl_manager:start_link([]) at pid <0.348.0>
+2014-11-30 11:12:02.699 [debug] <0.336.0> Supervisor ssl_sup started tls_connection_sup:start_link() at pid <0.366.0>
+2014-11-30 11:12:02.703 [debug] <0.336.0> Supervisor ssl_sup started ssl_listen_tracker_sup:start_link() at pid <0.378.0>
+2014-11-30 11:12:02.704 [info] <0.7.0> Application ssl started on node 'p02_db_disc_1@192.168.1.105'
+2014-11-30 11:12:02.717 [debug] <0.397.0> Supervisor ibrowse_sup started ibrowse:start_link() at pid <0.412.0>
+2014-11-30 11:12:02.717 [info] <0.7.0> Application ibrowse started on node 'p02_db_disc_1@192.168.1.105'
+2014-11-30 11:12:02.741 [debug] <0.450.0> Supervisor os_mon_sup started disksup:start_link() at pid <0.465.0>
+2014-11-30 11:12:02.750 [debug] <0.450.0> Supervisor os_mon_sup started memsup:start_link() at pid <0.484.0>
+2014-11-30 11:12:02.764 [debug] <0.35.0> Supervisor kernel_safe_sup started timer:start_link() at pid <0.511.0>
+2014-11-30 11:12:02.776 [debug] <0.450.0> Supervisor os_mon_sup started cpu_sup:start_link() at pid <0.553.0>
+2014-11-30 11:12:02.776 [info] <0.7.0> Application os_mon started on node 'p02_db_disc_1@192.168.1.105'
+2014-11-30 11:12:02.784 [debug] <0.567.0> Supervisor folsom_sup started folsom_sample_slide_sup:start_link() at pid <0.568.0>
+2014-11-30 11:12:02.787 [debug] <0.567.0> Supervisor folsom_sup started folsom_meter_timer_server:start_link() at pid <0.569.0>
+2014-11-30 11:12:02.789 [debug] <0.567.0> Supervisor folsom_sup started folsom_metrics_histogram_ets:start_link() at pid <0.570.0>
+2014-11-30 11:12:02.789 [info] <0.7.0> Application folsom started on node 'p02_db_disc_1@192.168.1.105'
+2014-11-30 11:12:02.805 [debug] <0.574.0> Supervisor gproc_sup started gproc:start_link() at pid <0.575.0>
+2014-11-30 11:12:02.807 [debug] <0.574.0> Supervisor gproc_sup started gproc_monitor:start_link() at pid <0.576.0>
+2014-11-30 11:12:02.808 [debug] <0.574.0> Supervisor gproc_sup started gproc_bcast:start_link() at pid <0.577.0>
+2014-11-30 11:12:02.814 [debug] <0.574.0> Supervisor gproc_sup started gproc_pool:start_link() at pid <0.578.0>
+2014-11-30 11:12:02.814 [info] <0.7.0> Application gproc started on node 'p02_db_disc_1@192.168.1.105'
+2014-11-30 11:12:02.818 [debug] <0.581.0>@mnesia_misc:init_from_config:37 TryNodes ['p02_db_disc_1@127.0.0.1'], NodeType disc
+2014-11-30 11:12:02.819 [debug] <0.584.0> Supervisor inet_gethost_native_sup started undefined at pid <0.585.0>
+2014-11-30 11:12:02.820 [debug] <0.35.0> Supervisor kernel_safe_sup started inet_gethost_native:start_link() at pid <0.584.0>
+2014-11-30 11:12:02.832 [info] <0.581.0>@mnesia_misc:init_from_config:50 First Disc Db Node Start
+2014-11-30 11:12:02.832 [debug] <0.581.0>@mnesia_misc:init_db:121 {Nodes, WasDiscNode, NodeType} {[],true,disc}
+2014-11-30 11:12:02.924 [debug] <0.42.0>@mod_alarm_handler:init:24 misc_alarm_handler init : [].
+2014-11-30 11:12:02.927 [debug] <0.582.0> Supervisor server_sup started mod_cache:start_link() at pid <0.593.0>
+2014-11-30 11:12:02.988 [info] <0.581.0>@server_app:start:59 acceptor_sup started 
+2014-11-30 11:12:02.988 [info] <0.581.0>@server_app:start:67 acceptor_sup started 
+2014-11-30 11:12:02.991 [debug] <0.598.0>@tcp_listener:init:35 Listen on port: 8801
+2014-11-30 11:12:02.994 [debug] <0.597.0> Supervisor tcp_client_handler_listener_sup started tcp_listener:start_link(8801, tcp_client_handler) at pid <0.598.0>
+2014-11-30 11:12:02.994 [info] <0.581.0>@server_app:start:79 listener_sup started for port: 8801 ... 
+2014-11-30 11:12:02.994 [debug] <0.597.0> Supervisor tcp_client_handler_listener_sup started supervisor:start_link({local,listener_sup_tcp_client_handler}, listener_sup, [tcp_client_handler]) at pid <0.604.0>
+2014-11-30 11:12:02.994 [debug] <0.606.0>@tcp_listener:init:35 Listen on port: 9801
+2014-11-30 11:12:02.994 [debug] <0.605.0> Supervisor tcp_room_handler_listener_sup started tcp_listener:start_link(9801, tcp_room_handler) at pid <0.606.0>
+2014-11-30 11:12:02.994 [info] <0.581.0>@server_app:start:87 listener_sup started for port: 8801 ... 
+2014-11-30 11:12:02.995 [debug] <0.605.0> Supervisor tcp_room_handler_listener_sup started supervisor:start_link({local,listener_sup_tcp_room_handler}, listener_sup, [tcp_room_handler]) at pid <0.612.0>
+2014-11-30 11:12:02.998 [info] <0.613.0>@httpd_handler:start:18 mochiweb start on: [{ip,{0,0,0,0}},{port,18801}]
+2014-11-30 11:12:03.004 [debug] <0.613.0> Supervisor h_httpd_sup started httpd_handler:start([{ip,{0,0,0,0}},{port,18801}]) at pid <0.614.0>
+2014-11-30 11:12:03.006 [warning] <0.581.0>@server_app:start:100 rank_sup start 
+2014-11-30 11:12:03.008 [debug] <0.632.0>@mod_counter:init:62 CenterList ['center@127.0.0.1']
+2014-11-30 11:12:03.021 [debug] <0.582.0> Supervisor server_sup started mod_counter:start_link() at pid <0.632.0>
+2014-11-30 11:12:03.037 [debug] <0.582.0> Supervisor server_sup started update:start_link() at pid <0.636.0>
+2014-11-30 11:12:03.044 [debug] <0.582.0> Supervisor server_sup started mod_boss_manage:start_link(1) at pid <0.637.0>
+2014-11-30 11:12:03.044 [debug] <0.582.0> Supervisor server_sup started mod_boss_manage:start_link(2) at pid <0.638.0>
+2014-11-30 11:12:03.044 [debug] <0.582.0> Supervisor server_sup started mod_boss_manage:start_link(3) at pid <0.639.0>
+2014-11-30 11:12:03.051 [debug] <0.582.0> Supervisor server_sup started mod_base_log:start_link(log_player_p, {log_state,{record_mysql_info,db_log,log_player,[id,player_id,event_id,arg1,arg2,timestamp],log_player,...},...}) at pid <0.640.0>
+2014-11-30 11:12:03.052 [debug] <0.582.0> Supervisor server_sup started mod_base_log:start_link(log_player_mini_p, {log_state,{record_mysql_info,db_log,log_player_mini,[player_id,acc_id,acc_name,nick_name],log_player_mini,...},...}) at pid <0.641.0>
+2014-11-30 11:12:03.052 [debug] <0.582.0> Supervisor server_sup started mod_base_log:start_link(log_player_feedback_p, {log_state,{record_mysql_info,db_log,log_player_feedback,[id,player_id,title,content,timestamp],...},...}) at pid <0.642.0>
+2014-11-30 11:12:03.095 [debug] <0.582.0> Supervisor server_sup started mod_sys_acm:start_link(1) at pid <0.644.0>
+2014-11-30 11:12:03.095 [debug] <0.582.0> Supervisor server_sup started mod_sys_acm:start_link(2) at pid <0.645.0>
+2014-11-30 11:12:03.095 [debug] <0.582.0> Supervisor server_sup started mod_sys_acm:start_link(3) at pid <0.646.0>
+2014-11-30 11:12:03.105 [debug] <0.582.0> Supervisor server_sup started mod_player_rec:start_link(1) at pid <0.647.0>
+2014-11-30 11:12:03.105 [debug] <0.582.0> Supervisor server_sup started mod_player_rec:start_link(2) at pid <0.648.0>
+2014-11-30 11:12:03.105 [debug] <0.582.0> Supervisor server_sup started mod_player_rec:start_link(3) at pid <0.649.0>
+2014-11-30 11:12:03.118 [debug] <0.582.0> Supervisor server_sup started mod_table_clear:start_link() at pid <0.650.0>
+2014-11-30 11:12:03.128 [info] <0.640.0>@mod_base_log:available_table2:224 run CreateTableSQL Result 0, TableIndex 1
+2014-11-30 11:12:03.194 [debug] <0.658.0> Supervisor gs_cron_sup started cron_agent_sup:start_link() at pid <0.659.0>
+2014-11-30 11:12:03.194 [info] <0.7.0> Application gs_cron started on node 'p02_db_disc_1@192.168.1.105'
+2014-11-30 11:12:03.194 [debug] <0.582.0> Supervisor server_sup started mod_timer:start_link() at pid <0.651.0>
+2014-11-30 11:12:03.211 [debug] <0.582.0> Supervisor server_sup started mod_dungeon_match:start_link() at pid <0.660.0>
+2014-11-30 11:12:03.228 [debug] <0.582.0> Supervisor server_sup started mod_selling_shop:start_link() at pid <0.661.0>
+2014-11-30 11:12:03.234 [debug] <0.582.0> Supervisor server_sup started mod_activity_shop:start_link() at pid <0.663.0>
+2014-11-30 11:12:03.240 [debug] <0.663.0>@mod_activity_shop:handle_info:160 init_state ShopMsgList : []
+2014-11-30 11:12:03.246 [warning] <0.663.0>@mod_activity_shop:handle_info:169 get_next_activity
+2014-11-30 11:12:03.259 [debug] <0.631.0> Supervisor rank_sup started mod_arena:start_link(async_arena_rank) at pid <0.670.0>
+2014-11-30 11:12:03.259 [debug] <0.631.0> Supervisor rank_sup started mod_arena:start_link(sync_arena_rank) at pid <0.671.0>
+2014-11-30 11:12:03.288 [warning] <0.663.0>@mod_activity_shop:handle_info:189 All Activity End!
+2014-11-30 11:12:03.307 [debug] <0.631.0> Supervisor rank_sup started mod_rank:start_link(mugen_rank, mugen_rank_1, 500, daily, 1) at pid <0.672.0>
+2014-11-30 11:12:03.307 [debug] <0.631.0> Supervisor rank_sup started mod_rank:start_link(mugen_rank, mugen_rank_2, 500, daily, 1) at pid <0.673.0>
+2014-11-30 11:12:03.307 [debug] <0.631.0> Supervisor rank_sup started mod_rank:start_link(mugen_rank, mugen_rank_3, 500, daily, 1) at pid <0.674.0>
+2014-11-30 11:12:03.307 [debug] <0.631.0> Supervisor rank_sup started mod_rank:start_link(super_battle_rank, super_battle_rank_1, 500, daily, 1) at pid <0.675.0>
+2014-11-30 11:12:03.307 [debug] <0.631.0> Supervisor rank_sup started mod_rank:start_link(super_battle_rank, super_battle_rank_2, 500, daily, 1) at pid <0.676.0>
+2014-11-30 11:12:03.308 [debug] <0.631.0> Supervisor rank_sup started mod_rank:start_link(super_battle_rank, super_battle_rank_3, 500, daily, 1) at pid <0.677.0>
+2014-11-30 11:12:03.308 [debug] <0.631.0> Supervisor rank_sup started mod_rank:start_link(battle_ability_rank, battle_ability_rank_1, 500, daily, 1) at pid <0.678.0>
+2014-11-30 11:12:03.308 [debug] <0.631.0> Supervisor rank_sup started mod_rank:start_link(battle_ability_rank, battle_ability_rank_2, 500, daily, 1) at pid <0.679.0>
+2014-11-30 11:12:03.308 [debug] <0.631.0> Supervisor rank_sup started mod_rank:start_link(battle_ability_rank, battle_ability_rank_3, 500, daily, 1) at pid <0.680.0>
+2014-11-30 11:12:03.309 [debug] <0.631.0> Supervisor rank_sup started mod_rank:start_link(cost_coin_rank, cost_coin_rank_1, 500, weekly, 1) at pid <0.681.0>
+2014-11-30 11:12:03.309 [debug] <0.631.0> Supervisor rank_sup started mod_rank:start_link(cost_coin_rank, cost_coin_rank_2, 500, weekly, 1) at pid <0.682.0>
+2014-11-30 11:12:03.309 [debug] <0.631.0> Supervisor rank_sup started mod_rank:start_link(cost_coin_rank, cost_coin_rank_3, 500, weekly, 1) at pid <0.683.0>
+2014-11-30 11:12:03.309 [debug] <0.631.0> Supervisor rank_sup started mod_rank:start_link(cost_gold_rank, cost_gold_rank_1, 500, weekly, 1) at pid <0.684.0>
+2014-11-30 11:12:03.309 [debug] <0.631.0> Supervisor rank_sup started mod_rank:start_link(cost_gold_rank, cost_gold_rank_2, 500, weekly, 1) at pid <0.685.0>
+2014-11-30 11:12:03.309 [debug] <0.631.0> Supervisor rank_sup started mod_rank:start_link(cost_gold_rank, cost_gold_rank_3, 500, weekly, 1) at pid <0.686.0>
+2014-11-30 11:12:03.309 [debug] <0.631.0> Supervisor rank_sup started mod_rank:start_link(world_boss_rank, world_boss_rank_1, 500, weekly, 1) at pid <0.687.0>
+2014-11-30 11:12:03.310 [debug] <0.631.0> Supervisor rank_sup started mod_rank:start_link(world_boss_rank, world_boss_rank_2, 500, weekly, 1) at pid <0.688.0>
+2014-11-30 11:12:03.310 [debug] <0.631.0> Supervisor rank_sup started mod_rank:start_link(world_boss_rank, world_boss_rank_3, 500, weekly, 1) at pid <0.689.0>
+2014-11-30 11:12:03.310 [debug] <0.631.0> Supervisor rank_sup started mod_rank:start_link(async_arena_rank, async_arena_rank_1, 500, daily, 1) at pid <0.690.0>
+2014-11-30 11:12:03.310 [debug] <0.631.0> Supervisor rank_sup started mod_rank:start_link(async_arena_rank, async_arena_rank_2, 500, daily, 1) at pid <0.691.0>
+2014-11-30 11:12:03.310 [debug] <0.631.0> Supervisor rank_sup started mod_rank:start_link(async_arena_rank, async_arena_rank_3, 500, daily, 1) at pid <0.692.0>
+2014-11-30 11:12:03.322 [debug] <0.672.0>@mod_rank:handle_cast:129 mugen_rank_1 auto_reset 
+2014-11-30 11:12:03.322 [debug] <0.673.0>@mod_rank:handle_cast:129 mugen_rank_2 auto_reset 
+2014-11-30 11:12:03.322 [debug] <0.674.0>@mod_rank:handle_cast:129 mugen_rank_3 auto_reset 
+2014-11-30 11:12:03.322 [debug] <0.675.0>@mod_rank:handle_cast:129 super_battle_rank_1 auto_reset 
+2014-11-30 11:12:03.323 [debug] <0.676.0>@mod_rank:handle_cast:129 super_battle_rank_2 auto_reset 
+2014-11-30 11:12:03.323 [debug] <0.677.0>@mod_rank:handle_cast:129 super_battle_rank_3 auto_reset 
+2014-11-30 11:12:03.323 [debug] <0.678.0>@mod_rank:handle_cast:129 battle_ability_rank_1 auto_reset 
+2014-11-30 11:12:03.323 [debug] <0.679.0>@mod_rank:handle_cast:129 battle_ability_rank_2 auto_reset 
+2014-11-30 11:12:03.323 [debug] <0.680.0>@mod_rank:handle_cast:129 battle_ability_rank_3 auto_reset 
+2014-11-30 11:12:03.323 [debug] <0.681.0>@mod_rank:handle_cast:129 cost_coin_rank_1 auto_reset 
+2014-11-30 11:12:03.323 [debug] <0.682.0>@mod_rank:handle_cast:129 cost_coin_rank_2 auto_reset 
+2014-11-30 11:12:03.323 [debug] <0.683.0>@mod_rank:handle_cast:129 cost_coin_rank_3 auto_reset 
+2014-11-30 11:12:03.323 [debug] <0.684.0>@mod_rank:handle_cast:129 cost_gold_rank_1 auto_reset 
+2014-11-30 11:12:03.323 [debug] <0.685.0>@mod_rank:handle_cast:129 cost_gold_rank_2 auto_reset 
+2014-11-30 11:12:03.323 [debug] <0.686.0>@mod_rank:handle_cast:129 cost_gold_rank_3 auto_reset 
+2014-11-30 11:12:03.323 [debug] <0.687.0>@mod_rank:handle_cast:129 world_boss_rank_1 auto_reset 
+2014-11-30 11:12:03.323 [debug] <0.688.0>@mod_rank:handle_cast:129 world_boss_rank_2 auto_reset 
+2014-11-30 11:12:03.323 [debug] <0.689.0>@mod_rank:handle_cast:129 world_boss_rank_3 auto_reset 
+2014-11-30 11:12:03.323 [debug] <0.690.0>@mod_rank:handle_cast:129 async_arena_rank_1 auto_reset 
+2014-11-30 11:12:03.323 [debug] <0.691.0>@mod_rank:handle_cast:129 async_arena_rank_2 auto_reset 
+2014-11-30 11:12:03.324 [debug] <0.692.0>@mod_rank:handle_cast:129 async_arena_rank_3 auto_reset 
+2014-11-30 11:12:03.337 [info] <0.581.0> mochi_get error Key center_node_port
+
+2014-11-30 11:12:03.345 [debug] <0.717.0> Supervisor ranch_sup started ranch_server:start_link() at pid <0.718.0>
+2014-11-30 11:12:03.345 [info] <0.7.0> Application ranch started on node 'p02_db_disc_1@192.168.1.105'
+2014-11-30 11:12:03.352 [info] <0.7.0> Application cowlib started on node 'p02_db_disc_1@192.168.1.105'
+2014-11-30 11:12:03.362 [debug] <0.723.0> Supervisor cowboy_sup started cowboy_clock:start_link() at pid <0.724.0>
+2014-11-30 11:12:03.362 [info] <0.7.0> Application cowboy started on node 'p02_db_disc_1@192.168.1.105'
+2014-11-30 11:12:03.379 [debug] <0.725.0> Supervisor {<0.725.0>,ranch_listener_sup} started ranch_conns_sup:start_link(http, worker, 5000, ranch_tcp, 5000, cowboy_protocol) at pid <0.726.0>
+2014-11-30 11:12:03.384 [debug] <0.727.0> Supervisor {<0.727.0>,ranch_acceptors_sup} started ranch_acceptor:start_link(#Port<0.11877>, ranch_tcp, <0.726.0>) at pid <0.728.0>
+2014-11-30 11:12:03.385 [debug] <0.727.0> Supervisor {<0.727.0>,ranch_acceptors_sup} started ranch_acceptor:start_link(#Port<0.11877>, ranch_tcp, <0.726.0>) at pid <0.729.0>
+2014-11-30 11:12:03.385 [debug] <0.727.0> Supervisor {<0.727.0>,ranch_acceptors_sup} started ranch_acceptor:start_link(#Port<0.11877>, ranch_tcp, <0.726.0>) at pid <0.730.0>
+2014-11-30 11:12:03.385 [debug] <0.727.0> Supervisor {<0.727.0>,ranch_acceptors_sup} started ranch_acceptor:start_link(#Port<0.11877>, ranch_tcp, <0.726.0>) at pid <0.731.0>
+2014-11-30 11:12:03.385 [debug] <0.727.0> Supervisor {<0.727.0>,ranch_acceptors_sup} started ranch_acceptor:start_link(#Port<0.11877>, ranch_tcp, <0.726.0>) at pid <0.732.0>
+2014-11-30 11:12:03.385 [debug] <0.727.0> Supervisor {<0.727.0>,ranch_acceptors_sup} started ranch_acceptor:start_link(#Port<0.11877>, ranch_tcp, <0.726.0>) at pid <0.733.0>
+2014-11-30 11:12:03.385 [debug] <0.727.0> Supervisor {<0.727.0>,ranch_acceptors_sup} started ranch_acceptor:start_link(#Port<0.11877>, ranch_tcp, <0.726.0>) at pid <0.734.0>
+2014-11-30 11:12:03.386 [debug] <0.727.0> Supervisor {<0.727.0>,ranch_acceptors_sup} started ranch_acceptor:start_link(#Port<0.11877>, ranch_tcp, <0.726.0>) at pid <0.735.0>
+2014-11-30 11:12:03.386 [debug] <0.727.0> Supervisor {<0.727.0>,ranch_acceptors_sup} started ranch_acceptor:start_link(#Port<0.11877>, ranch_tcp, <0.726.0>) at pid <0.736.0>
+2014-11-30 11:12:03.386 [debug] <0.727.0> Supervisor {<0.727.0>,ranch_acceptors_sup} started ranch_acceptor:start_link(#Port<0.11877>, ranch_tcp, <0.726.0>) at pid <0.737.0>
+2014-11-30 11:12:03.386 [debug] <0.725.0> Supervisor {<0.725.0>,ranch_listener_sup} started ranch_acceptors_sup:start_link(http, 10, ranch_tcp, [{port,7801},{max_connections,3000}]) at pid <0.727.0>
+2014-11-30 11:12:03.386 [debug] <0.717.0> Supervisor ranch_sup started ranch_listener_sup:start_link(http, 10, ranch_tcp, [{port,7801},{max_connections,3000}], cowboy_protocol, [{env,[{dispatch,[{'_',[],[{[<<"get_server_list">>],[],http_handler,[center_node]},{'_',[],http_handler,...}]}]}]}]) at pid <0.725.0>
+2014-11-30 11:12:03.392 [debug] <0.582.0> Supervisor server_sup started player_sup:start_link() at pid <0.738.0>
+2014-11-30 11:12:03.407 [warning] <0.632.0>@mod_counter:rpc_get_counter:198 update uid UidType player_uid, OldRangeId undefined NewRangeId 2
+2014-11-30 11:12:03.408 [warning] <0.632.0>@mod_counter:rpc_get_counter:198 update uid UidType dungeon_uid, OldRangeId undefined NewRangeId 2
+2014-11-30 11:12:03.409 [warning] <0.632.0>@mod_counter:rpc_get_counter:198 update uid UidType fashion_uid, OldRangeId undefined NewRangeId 2
+2014-11-30 11:12:03.410 [warning] <0.632.0>@mod_counter:rpc_get_counter:198 update uid UidType mails_uid, OldRangeId undefined NewRangeId 2
+2014-11-30 11:12:03.411 [warning] <0.632.0>@mod_counter:rpc_get_counter:198 update uid UidType chats_private_uid, OldRangeId undefined NewRangeId 2
+2014-11-30 11:12:03.412 [warning] <0.632.0>@mod_counter:rpc_get_counter:198 update uid UidType chats_world_uid, OldRangeId undefined NewRangeId 2
+2014-11-30 11:12:03.413 [warning] <0.632.0>@mod_counter:rpc_get_counter:198 update uid UidType goods_uid, OldRangeId undefined NewRangeId 2
+2014-11-30 11:12:03.414 [warning] <0.632.0>@mod_counter:rpc_get_counter:198 update uid UidType player_skill_uid, OldRangeId undefined NewRangeId 2
+2014-11-30 11:12:03.414 [warning] <0.632.0>@mod_counter:rpc_get_counter:198 update uid UidType task_uid, OldRangeId undefined NewRangeId 2
+2014-11-30 11:12:03.419 [warning] <0.632.0>@mod_counter:rpc_get_counter:198 update uid UidType dungeon_schedule_uid, OldRangeId undefined NewRangeId 2
+2014-11-30 11:12:03.419 [warning] <0.632.0>@mod_counter:rpc_get_counter:198 update uid UidType team_uid, OldRangeId undefined NewRangeId 2
+2014-11-30 11:12:03.423 [warning] <0.632.0>@mod_counter:rpc_get_counter:198 update uid UidType mugen_reward_uid, OldRangeId undefined NewRangeId 2
+2014-11-30 11:12:03.424 [warning] <0.632.0>@mod_counter:rpc_get_counter:198 update uid UidType base_operators_mail_uid, OldRangeId undefined NewRangeId 2
+2014-11-30 11:12:03.440 [info] <0.7.0> Application server started on node 'p02_db_disc_1@192.168.1.105'
+2014-11-30 11:12:04.289 [debug] <0.663.0>@mod_activity_shop:handle_info:209 timeout: []
+2014-11-30 11:12:04.289 [debug] <0.663.0>@mod_activity_shop:save_to_db:347 activity shop save_to_db
+2014-11-30 12:00:00.239 [warning] <0.772.0>@mod_boss_manage:sys_open_boss:43 sys_open_boss DbSn 1 BossId 3
+2014-11-30 12:00:00.240 [warning] <0.773.0>@mod_boss_manage:sys_open_boss:43 sys_open_boss DbSn 3 BossId 3
+2014-11-30 12:00:00.240 [warning] <0.774.0>@mod_boss_manage:sys_open_boss:43 sys_open_boss DbSn 2 BossId 3
+2014-11-30 12:05:49.116 [warning] <0.661.0>@mod_selling_shop:terminate:184 ShopList []
+2014-11-30 12:05:49.116 [warning] <0.581.0>@server_app:stop:113 server_app stopping.

@@ -1,0 +1,18 @@
+#!/bin/sh
+. `dirname $0`/tools_env
+[ -f `dirname $0`/custom_tools_env ] && . `dirname $0`/custom_tools_env
+## 可以修改服务器和端口，文件名就是robot的账户
+ServerIP=192.168.1.149
+Port=8802
+
+exec ${ERL_DIR}erl \
+    -pa $SERVER_EBIN_ROOT \
+    -args_file $VMARGS_PATH \
+    -name $SCRIPT_NAME@127.0.0.1 \
+    -boot start_clean \
+    -s reloader \
+    -s robot \
+    -extra --accname $SCRIPT_NAME --server_ip $ServerIP --port $Port
+
+
+

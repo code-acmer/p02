@@ -1,0 +1,251 @@
+
+ 
+1、重定义基本职业表：base_career
+	id					int		自增id
+	career_id			tinyint	职业id
+	career_name			txt		职业名称 
+	init_genius			int		天赋
+	init_skill_id		BIGINT	技能id
+	init_coin			int		不绑定铜钱
+	init_bcoin			int		绑定铜钱
+	init_gold			int		不绑定元宝
+	init_bgold			int		绑定元宝
+	init_cash			int		礼券
+	init_scene			BIGINT	诞生场景
+	init_x				int		诞生x
+	init_y				int		诞生y
+    init_max_team_num	int		最大队伍人数
+	
+
+
+2、修改 角色表 player:
+	id				bigint		角色id（自增）
+	accid			bigint		平台id
+	accname			txt			平台账号名
+	nickname		txt			角色名称
+	sex				tinyint		性别
+	title			txt			称号，存储形式:[223,222,123]，其中第一个是当前称号。
+	realm			tinyint		门派
+	guild_id		bigint		帮派id
+	guild_name		txt			帮派名称
+	guild_position	tinyint		帮派职位
+	quit_guild_time	int			最近一次退出帮派时间
+	guild_title		txt			帮派称号
+	guild_depart_name	txt		所属堂名
+	guild_depart_id	int			所属堂ID
+	career			tinyint		职业 1，2，3，4（分别是天行、武尊、羽芒和方士）
+	skill_id		bigint		技能id
+	speed			smallint	速度
+	prestige		int			声望
+	honor			int			荣誉
+	charm			int			魅力
+	coin			int			不绑定铜钱
+	bcoin			int			绑定铜钱
+	coin_sum		int			铜钱总和
+	gold			int			不绑定元宝
+	bgold			int			绑定元宝
+	gold_sum		int			元宝总和
+	physical_strength	int		现有体力
+	lv				int			等级
+	exp				int			经验
+	experience		int			历练
+	soul_force		int			魂力
+	five_phases		tinyint		五行1、金，2、木，3、土，4、水，5、火
+	genius			int			天赋
+	force			int			总武力值
+	magic			int			总法术值
+	stunt			int			总绝技值
+	trained_force	int			培养武力
+	trained_magic	int			培养法术
+	trained_stunt	int			培养绝技
+	hp				int			实时生命
+	hp_lim			int			生命上限
+	attack			int			攻击
+	magic_attack	int			法术攻击
+	stunt_attack	int			绝技攻击
+	def				int			防御
+	magic_def		int			法术防御
+	stunt_def		int			绝技防御
+	hit				int			命中
+	dodge			int			闪避
+	crit			int			暴击
+	parry			int			格挡
+	counter			int			反击
+	morale			int			气势
+	pk_mode			tinyint		pk模式	
+	pk_value		int			pk值
+	pk_time			int			pk用的时间，暂未定具体用途，因为pk系统还未出（远古遗留字段）
+	max_team_num	tinyint		最大队伍人数
+	follow_parter	bigint		跟随伙伴id
+	scene			tinyint		所在场景ID
+	x				int			x坐标
+	y				int			y坐标
+	status			tinyint		角色状态（0、正常；1、禁止；6、单修中；7、双修中；10、挂机中；11、温泉中）
+	reg_time		int			注册时间
+	last_login_time	int			最后登录时间
+	last_login_ip	int			最后登录ip
+	cell_num		tinyint		背包格子数
+	store_num		tinyint		仓库格子数
+	mount			bigint		坐骑id
+	quickbar		txt			快捷栏
+	vip				tinyint		vip等级，0是没有vip，然后分1-10级
+	vip_value		int			vip值，超过一定值即为不同级别的vip。此值可有多种途径增加，充值是途径之一
+	online_flag		tinyint		在线标记
+	sn				tinyint		服务器标识
+	state			smallint	玩家身份1普通玩家，2指导员，3gm
+	other			smallint	其它数据集
+	
+	待删：
+	
+	  vip_time		int			vip时间
+      arena_score = 0,                        %% 竞技场积分	
+      arena = 0,                              %% 竞技场状态，0没报名、1竞技中、2已报名竞技场、3竞技场死亡状态	
+
+      
+3、增加伙伴基础表 base_parter:
+
+	id				int			自增id
+	parter_id		int			伙伴id
+	parter_name		txt			伙伴名称
+	type			tinyint		伙伴类型，1剧情伙伴，2声望伙伴。
+	career			tinyint		职业类型，1天行、2武尊、3羽芒、4方士。
+	sex				tinyint		性别，1男、2女。
+	skill_id		bigint		技能id
+	five_phases		tinyint		五行，1、金，2、木，3、土，4、水，5、火
+	genius			smallint	初始天赋
+	force			smallint	初始武力
+	magic			smallint	初始法术
+	stunt			smallint	初始绝技
+	coin			int			招募所需铜钱
+	prestige		int			招募所需声望
+	prestige_lim	int			插入招募列表所需声望
+
+
+4、增加伙伴表 parter:
+
+	id				bigint		自增id
+	player_id		bigint		玩家id
+	parter_id		int			parter表的伙伴id = 玩家id + base_parter表的parter_id
+	parter_name		txt			伙伴名称
+	sex				tinyint		性别
+	type			tinyint		类型（0剧情，1声望）
+	career			tinyint		职业
+	lv				smallint	等级
+	exp				int			经验
+	hp				int			实时生命
+	hp_lim			int			生命上限
+	skill_id		bigint		技能id
+	five_phases		tinyint		五行，1、金，2、木，3、土，4、水，5、火
+	genius			smallint	天赋
+	force			smallint	总武力值
+	magic			smallint	总法术值
+	stunt			smallint	总绝技值
+	base_force		smallint	基础武力值
+	base_magic		smallint	基础法术值
+	base_stunt		smallint	基础绝技值
+	trained_force	smallint	培养武力值
+	trained_magic	smallint	培养法术值
+	trained_stunt	smallint	培养绝技值
+	attack			int			总的攻击值
+	magic_attack	int			总的法术攻击值
+	stunt_attack	int			总的绝技攻击值
+	def				int			总的防御值
+	magic_def		int			总的法术防御值
+	stunt_def		int			总的绝技防御值
+	hit				int			总的命中值
+	dodge			int			总的闪避值
+	crit			int			总的暴击值
+	parry			int			总的格挡值
+	counter			int			总的反击值
+	morale			int			气势
+	coin			int			招募所需铜钱
+	prestige		int			招募所需声望
+	prestige_lim	int			插入招募列表所需声望
+	state			tinyint		状态（0正常，1出战，2药园）
+	team			tinyint		队伍（0不在队伍中，1在队伍中，2可归队）
+	other			smallint	其它附加数据集 
+	
+5、基础buff表base_buff:
+	id				bigint		自增id
+	buff_id			bigint		buff的id
+	res_id			bigint		图标、效果等
+	unique_id		int			唯一码。唯一码相同的buff不能叠加
+	name			txt			buff名称
+	describe		txt			buff说明
+	type			tinyint		buff类型，	1、自动恢复生命
+											2、N倍收益，特别说明，在配的时候配整数，实际计算时除以100，比如配150，实际计算时就是1.5倍
+											3、单体属性增益
+											4、群体属性增益
+											5、体力增加
+	attribute		tinyint		所影响的属性，
+											1、生命上限hp_lim
+											2、攻击attack
+											3、防御def
+											4、法术攻击magic_attack
+											5、法术防御magic_def
+											6、绝技攻击stunt_attack
+											7、绝技防御stunt_def
+											8、命中hit
+											9、闪避dodge
+											10、暴击crit
+											11、格挡parry
+											12、反击counter
+											13、武力force
+											14、法术magic
+											15、绝技stunt
+											16、体力（酒足饭饱）
+											17、生命（气血包）
+											18、经验
+											19、铜钱
+											20、历练
+	value			int			改变的值
+	times			int			最大使用次数，某些物品有使用次数。没有请设0，以战斗次数计
+	
+	
+6、玩家buff表 player_buff
+	id				bigint		自增id
+	player_id		bigint		玩家id
+	buff_id			bigint		base_buff表的buff_id  
+	unique_id		int			唯一码，唯一码相同的buff不能叠加
+	type			tinyint		同表base_buff
+	attribute		tinyint		同表base_buff
+	value_rem		int			剩余的值（如果是2、3、4类型，则此值不会变）
+	times_rem		int			剩余的次数（如果是1、5类型，则此值无意义）
+	
+7、玩家系统设置表 player_sys_setting
+	增加字段：
+	function_open	txt			玩家的功能开启记录（包括NPC的一些功能），erlang的记录的结构:function_open记录
+								id与功能的对应看协议34002
+									
+8、增加玩家vip_value（vip值）增加记录
+	表名：log_vip
+	id			bigint			自增id
+	player_id	bigint			玩家id
+	add_time	int				增加vip值的时间
+	add_value	int				增加的值
+	add_type	tinyint			增加vip值的途径，暂定三种：1、充值，2、gm命令，3、后台操作。
+								
+9、增加玩家个人信息系统表
+	表名：player_info
+	id				bigint			自增id
+	cash_id			int				缓存（ets）使用的id
+	player_id		bigint			玩家id
+	info_type		tinyint			信息类型，各系统自定
+	icon_type		tinyint			信息图标类型，各系统自定
+	is_keep			tinyint			离线是否保存，1、保存，0、不保存
+	receive_time	int				以秒计的接收时间
+	keep_time		int				以秒计算的信息保留时间，超过时间则自动处理（在线情况下）
+	info_content	txt				各系统自己的信息参数，erlang的term
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

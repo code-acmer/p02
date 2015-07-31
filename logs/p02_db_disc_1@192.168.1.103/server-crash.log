@@ -1,0 +1,256 @@
+2015-07-02 15:28:39 =CRASH REPORT====
+  crasher:
+    initial call: mod_player:init/1
+    pid: <0.3934.0>
+    registered_name: []
+    exception exit: {{timeout,{gen_leader,leader_call,[gproc_dist,{reg,{n,g,{player,1}},undefined,<0.3934.0>}]}},[{gen_leader,leader_call,2,[{file,"src/gen_leader.erl"},{line,359}]},{gproc_dist,leader_call,1,[{file,"src/gproc_dist.erl"},{line,825}]},{gproc,reg,1,[{file,"src/gproc.erl"},{line,610}]},{gproc,register_name,2,[{file,"src/gproc.erl"},{line,1200}]},{gen,name_register,1,[{file,"gen.erl"},{line,299}]},{gen,init_it,7,[{file,"gen.erl"},{line,126}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [player_sup_1,player_center_sup,server_sup,server]
+    messages: []
+    links: [<0.2352.0>]
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 987
+    stack_size: 27
+    reductions: 123
+  neighbours:
+2015-07-02 15:31:07 =ERROR REPORT====
+** Generic server <0.3454.0> terminating 
+** Last message in was {tcp,#Port<0.16701>,[0,0,0,1,63,85,43,254,39,16,24|<<91,166,114,212,89,219,178,218,186,26,214,174,51,246,39,200,145,247,134,51,133,109,17,144,42,157,222,129,51,248,203,105,207,166,166,63,113,71,84,151,31,60,119,3,91,229,72,115,184,255,206,42,199,166,247,228,225,106,107,73,56,107,101,52,176>>]}
+** When Server state == {client,undefined,0,0,0,undefined,0,1,#Port<0.16701>,{127,0,0,1},undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,<0.3454.0>,1435822264,[]}
+** Reason for termination == 
+** {function_clause,[{crypto,do_stream_decrypt,[undefined,<<91,166,114,212,89,219,178,218,186,26,214,174,51,246,39,200,145,247,134,51,133,109,17,144,42,157,222,129,51,248,203,105,207,166,166,63,113,71,84,151,31,60,119,3,91,229,72,115,184,255,206,42,199,166,247,228,225,106,107,73,56,107,101,52,176>>],[{file,"crypto.erl"},{line,1345}]},{tcp_client_handler,inner_unpack,3,[{file,"src/listener/tcp_client_handler.erl"},{line,494}]},{tcp_client_handler,handle_info,2,[{file,"src/listener/tcp_client_handler.erl"},{line,218}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,599}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+2015-07-02 15:31:07 =CRASH REPORT====
+  crasher:
+    initial call: tcp_client_handler:init/1
+    pid: <0.3454.0>
+    registered_name: []
+    exception exit: {{function_clause,[{crypto,do_stream_decrypt,[undefined,<<91,166,114,212,89,219,178,218,186,26,214,174,51,246,39,200,145,247,134,51,133,109,17,144,42,157,222,129,51,248,203,105,207,166,166,63,113,71,84,151,31,60,119,3,91,229,72,115,184,255,206,42,199,166,247,228,225,106,107,73,56,107,101,52,176>>],[{file,"crypto.erl"},{line,1345}]},{tcp_client_handler,inner_unpack,3,[{file,"src/listener/tcp_client_handler.erl"},{line,494}]},{tcp_client_handler,handle_info,2,[{file,"src/listener/tcp_client_handler.erl"},{line,218}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,599}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]},[{gen_server,terminate,6,[{file,"gen_server.erl"},{line,746}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [listener_sup_tcp_client_handler,tcp_client_handler_listener_sup,server]
+    messages: []
+    links: [<0.3142.0>]
+    dictionary: [{rc4_key,undefined}]
+    trap_exit: true
+    status: running
+    heap_size: 4185
+    stack_size: 27
+    reductions: 6513
+  neighbours:
+2015-07-02 15:31:07 =SUPERVISOR REPORT====
+     Supervisor: {local,listener_sup_tcp_client_handler}
+     Context:    child_terminated
+     Reason:     {function_clause,[{crypto,do_stream_decrypt,[undefined,<<91,166,114,212,89,219,178,218,186,26,214,174,51,246,39,200,145,247,134,51,133,109,17,144,42,157,222,129,51,248,203,105,207,166,166,63,113,71,84,151,31,60,119,3,91,229,72,115,184,255,206,42,199,166,247,228,225,106,107,73,56,107,101,52,176>>],[{file,"crypto.erl"},{line,1345}]},{tcp_client_handler,inner_unpack,3,[{file,"src/listener/tcp_client_handler.erl"},{line,494}]},{tcp_client_handler,handle_info,2,[{file,"src/listener/tcp_client_handler.erl"},{line,218}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,599}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+     Offender:   [{pid,<0.3454.0>},{name,undefined},{mfargs,{tcp_client_handler,start_link,undefined}},{restart_type,temporary},{shutdown,2000},{child_type,worker}]
+
+2015-07-02 15:31:11 =ERROR REPORT====
+** Generic server <0.3455.0> terminating 
+** Last message in was {tcp,#Port<0.16762>,[0,0,0,1,63,85,43,254,39,16,25|<<91,166,114,212,89,219,178,218,186,26,214,174,51,246,35,200,145,247,134,51,133,109,17,146,122,158,134,129,99,241,159,105,204,163,160,50,43,29,6,196,75,105,33,86,14,184,64,115,234,255,154,127,151,247,251,228,225,106,107,73,56,107,101,52,176>>]}
+** When Server state == {client,undefined,0,0,0,undefined,0,1,#Port<0.16762>,{127,0,0,1},undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,<0.3455.0>,1435822271,[]}
+** Reason for termination == 
+** {function_clause,[{crypto,do_stream_decrypt,[undefined,<<91,166,114,212,89,219,178,218,186,26,214,174,51,246,35,200,145,247,134,51,133,109,17,146,122,158,134,129,99,241,159,105,204,163,160,50,43,29,6,196,75,105,33,86,14,184,64,115,234,255,154,127,151,247,251,228,225,106,107,73,56,107,101,52,176>>],[{file,"crypto.erl"},{line,1345}]},{tcp_client_handler,inner_unpack,3,[{file,"src/listener/tcp_client_handler.erl"},{line,494}]},{tcp_client_handler,handle_info,2,[{file,"src/listener/tcp_client_handler.erl"},{line,218}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,599}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+2015-07-02 15:31:11 =CRASH REPORT====
+  crasher:
+    initial call: tcp_client_handler:init/1
+    pid: <0.3455.0>
+    registered_name: []
+    exception exit: {{function_clause,[{crypto,do_stream_decrypt,[undefined,<<91,166,114,212,89,219,178,218,186,26,214,174,51,246,35,200,145,247,134,51,133,109,17,146,122,158,134,129,99,241,159,105,204,163,160,50,43,29,6,196,75,105,33,86,14,184,64,115,234,255,154,127,151,247,251,228,225,106,107,73,56,107,101,52,176>>],[{file,"crypto.erl"},{line,1345}]},{tcp_client_handler,inner_unpack,3,[{file,"src/listener/tcp_client_handler.erl"},{line,494}]},{tcp_client_handler,handle_info,2,[{file,"src/listener/tcp_client_handler.erl"},{line,218}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,599}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]},[{gen_server,terminate,6,[{file,"gen_server.erl"},{line,746}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [listener_sup_tcp_client_handler,tcp_client_handler_listener_sup,server]
+    messages: []
+    links: [<0.3142.0>]
+    dictionary: [{rc4_key,undefined}]
+    trap_exit: true
+    status: running
+    heap_size: 4185
+    stack_size: 27
+    reductions: 6507
+  neighbours:
+2015-07-02 15:31:11 =SUPERVISOR REPORT====
+     Supervisor: {local,listener_sup_tcp_client_handler}
+     Context:    child_terminated
+     Reason:     {function_clause,[{crypto,do_stream_decrypt,[undefined,<<91,166,114,212,89,219,178,218,186,26,214,174,51,246,35,200,145,247,134,51,133,109,17,146,122,158,134,129,99,241,159,105,204,163,160,50,43,29,6,196,75,105,33,86,14,184,64,115,234,255,154,127,151,247,251,228,225,106,107,73,56,107,101,52,176>>],[{file,"crypto.erl"},{line,1345}]},{tcp_client_handler,inner_unpack,3,[{file,"src/listener/tcp_client_handler.erl"},{line,494}]},{tcp_client_handler,handle_info,2,[{file,"src/listener/tcp_client_handler.erl"},{line,218}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,599}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+     Offender:   [{pid,<0.3455.0>},{name,undefined},{mfargs,{tcp_client_handler,start_link,undefined}},{restart_type,temporary},{shutdown,2000},{child_type,worker}]
+
+2015-07-02 15:32:21 =CRASH REPORT====
+  crasher:
+    initial call: mod_player:init/1
+    pid: <0.3459.0>
+    registered_name: []
+    exception exit: {{timeout,{gen_leader,leader_call,[gproc_dist,{reg,{n,g,{player,2}},undefined,<0.3459.0>}]}},[{gen_leader,leader_call,2,[{file,"src/gen_leader.erl"},{line,359}]},{gproc_dist,leader_call,1,[{file,"src/gproc_dist.erl"},{line,825}]},{gproc,reg,1,[{file,"src/gproc.erl"},{line,610}]},{gproc,register_name,2,[{file,"src/gproc.erl"},{line,1200}]},{gen,name_register,1,[{file,"gen.erl"},{line,299}]},{gen,init_it,7,[{file,"gen.erl"},{line,126}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [player_sup_10,player_center_sup,server_sup,server]
+    messages: []
+    links: [<0.3192.0>]
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 987
+    stack_size: 27
+    reductions: 123
+  neighbours:
+2015-07-02 15:35:00 =CRASH REPORT====
+  crasher:
+    initial call: mod_player:init/1
+    pid: <0.3842.0>
+    registered_name: []
+    exception exit: {{timeout,{gen_leader,leader_call,[gproc_dist,{reg,{n,g,{player,2}},undefined,<0.3842.0>}]}},[{gen_leader,leader_call,2,[{file,"src/gen_leader.erl"},{line,359}]},{gproc_dist,leader_call,1,[{file,"src/gproc_dist.erl"},{line,825}]},{gproc,reg,1,[{file,"src/gproc.erl"},{line,610}]},{gproc,register_name,2,[{file,"src/gproc.erl"},{line,1200}]},{gen,name_register,1,[{file,"gen.erl"},{line,299}]},{gen,init_it,7,[{file,"gen.erl"},{line,126}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [player_sup_10,player_center_sup,server_sup,server]
+    messages: []
+    links: [<0.3192.0>]
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 987
+    stack_size: 27
+    reductions: 123
+  neighbours:
+2015-07-02 15:40:44 =CRASH REPORT====
+  crasher:
+    initial call: mod_player:init/1
+    pid: <0.3847.0>
+    registered_name: []
+    exception exit: {{timeout,{gen_leader,leader_call,[gproc_dist,{reg,{n,g,{player,2}},undefined,<0.3847.0>}]}},[{gen_leader,leader_call,2,[{file,"src/gen_leader.erl"},{line,359}]},{gproc_dist,leader_call,1,[{file,"src/gproc_dist.erl"},{line,825}]},{gproc,reg,1,[{file,"src/gproc.erl"},{line,610}]},{gproc,register_name,2,[{file,"src/gproc.erl"},{line,1200}]},{gen,name_register,1,[{file,"gen.erl"},{line,299}]},{gen,init_it,7,[{file,"gen.erl"},{line,126}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [player_sup_10,player_center_sup,server_sup,server]
+    messages: []
+    links: [<0.3192.0>]
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 987
+    stack_size: 27
+    reductions: 123
+  neighbours:
+2015-07-02 16:07:17 =CRASH REPORT====
+  crasher:
+    initial call: mod_player:init/1
+    pid: <0.3888.0>
+    registered_name: []
+    exception exit: {{timeout,{gen_leader,leader_call,[gproc_dist,{reg,{n,g,{player,2}},undefined,<0.3888.0>}]}},[{gen_leader,leader_call,2,[{file,"src/gen_leader.erl"},{line,359}]},{gproc_dist,leader_call,1,[{file,"src/gproc_dist.erl"},{line,825}]},{gproc,reg,1,[{file,"src/gproc.erl"},{line,610}]},{gproc,register_name,2,[{file,"src/gproc.erl"},{line,1200}]},{gen,name_register,1,[{file,"gen.erl"},{line,299}]},{gen,init_it,7,[{file,"gen.erl"},{line,126}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [player_sup_10,player_center_sup,server_sup,server]
+    messages: []
+    links: [<0.3192.0>]
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 987
+    stack_size: 27
+    reductions: 123
+  neighbours:
+2015-07-02 16:07:59 =CRASH REPORT====
+  crasher:
+    initial call: mod_player:init/1
+    pid: <0.3891.0>
+    registered_name: []
+    exception exit: {{timeout,{gen_leader,leader_call,[gproc_dist,{reg,{n,g,{player,2}},undefined,<0.3891.0>}]}},[{gen_leader,leader_call,2,[{file,"src/gen_leader.erl"},{line,359}]},{gproc_dist,leader_call,1,[{file,"src/gproc_dist.erl"},{line,825}]},{gproc,reg,1,[{file,"src/gproc.erl"},{line,610}]},{gproc,register_name,2,[{file,"src/gproc.erl"},{line,1200}]},{gen,name_register,1,[{file,"gen.erl"},{line,299}]},{gen,init_it,7,[{file,"gen.erl"},{line,126}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [player_sup_10,player_center_sup,server_sup,server]
+    messages: []
+    links: [<0.3192.0>]
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 987
+    stack_size: 27
+    reductions: 123
+  neighbours:
+2015-07-02 16:08:04 =CRASH REPORT====
+  crasher:
+    initial call: mod_player:init/1
+    pid: <0.3893.0>
+    registered_name: []
+    exception exit: {{timeout,{gen_leader,leader_call,[gproc_dist,{reg,{n,g,{player,2}},undefined,<0.3893.0>}]}},[{gen_leader,leader_call,2,[{file,"src/gen_leader.erl"},{line,359}]},{gproc_dist,leader_call,1,[{file,"src/gproc_dist.erl"},{line,825}]},{gproc,reg,1,[{file,"src/gproc.erl"},{line,610}]},{gproc,register_name,2,[{file,"src/gproc.erl"},{line,1200}]},{gen,name_register,1,[{file,"gen.erl"},{line,299}]},{gen,init_it,7,[{file,"gen.erl"},{line,126}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [player_sup_10,player_center_sup,server_sup,server]
+    messages: []
+    links: [<0.3192.0>]
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 987
+    stack_size: 27
+    reductions: 123
+  neighbours:
+2015-07-02 16:24:17 =CRASH REPORT====
+  crasher:
+    initial call: mod_player:init/1
+    pid: <0.3903.0>
+    registered_name: []
+    exception exit: {{timeout,{gen_leader,leader_call,[gproc_dist,{reg,{n,g,{player,2}},undefined,<0.3903.0>}]}},[{gen_leader,leader_call,2,[{file,"src/gen_leader.erl"},{line,359}]},{gproc_dist,leader_call,1,[{file,"src/gproc_dist.erl"},{line,825}]},{gproc,reg,1,[{file,"src/gproc.erl"},{line,610}]},{gproc,register_name,2,[{file,"src/gproc.erl"},{line,1200}]},{gen,name_register,1,[{file,"gen.erl"},{line,299}]},{gen,init_it,7,[{file,"gen.erl"},{line,126}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [player_sup_10,player_center_sup,server_sup,server]
+    messages: []
+    links: [<0.3192.0>]
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 987
+    stack_size: 27
+    reductions: 123
+  neighbours:
+2015-07-02 16:33:52 =ERROR REPORT====
+** Generic server <0.2734.0> terminating 
+** Last message in was {tcp,#Port<0.16161>,[0,0,0,2,14,122,198,193,39,16,76|<<134,47,184,194,248,155,108,237,44,243,207,128,7,227,248,134,27,60,66,47,231,194,110,194,80,210,248,149,122,100,209,199,200,227,118,139,201,107,29,69,172,83,40,81,22,26,192,246,114,117,19,90,42,236,221,248,161,70,56,93,195,183,105,136,14>>]}
+** When Server state == {client,undefined,0,0,0,undefined,0,1,#Port<0.16161>,{127,0,0,1},undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,<0.2734.0>,1435826032,[]}
+** Reason for termination == 
+** {function_clause,[{crypto,do_stream_decrypt,[undefined,<<134,47,184,194,248,155,108,237,44,243,207,128,7,227,248,134,27,60,66,47,231,194,110,194,80,210,248,149,122,100,209,199,200,227,118,139,201,107,29,69,172,83,40,81,22,26,192,246,114,117,19,90,42,236,221,248,161,70,56,93,195,183,105,136,14>>],[{file,"crypto.erl"},{line,1345}]},{tcp_client_handler,inner_unpack,3,[{file,"src/listener/tcp_client_handler.erl"},{line,494}]},{tcp_client_handler,handle_info,2,[{file,"src/listener/tcp_client_handler.erl"},{line,218}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,599}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+2015-07-02 16:33:52 =CRASH REPORT====
+  crasher:
+    initial call: tcp_client_handler:init/1
+    pid: <0.2734.0>
+    registered_name: []
+    exception exit: {{function_clause,[{crypto,do_stream_decrypt,[undefined,<<134,47,184,194,248,155,108,237,44,243,207,128,7,227,248,134,27,60,66,47,231,194,110,194,80,210,248,149,122,100,209,199,200,227,118,139,201,107,29,69,172,83,40,81,22,26,192,246,114,117,19,90,42,236,221,248,161,70,56,93,195,183,105,136,14>>],[{file,"crypto.erl"},{line,1345}]},{tcp_client_handler,inner_unpack,3,[{file,"src/listener/tcp_client_handler.erl"},{line,494}]},{tcp_client_handler,handle_info,2,[{file,"src/listener/tcp_client_handler.erl"},{line,218}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,599}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]},[{gen_server,terminate,6,[{file,"gen_server.erl"},{line,746}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [listener_sup_tcp_client_handler,tcp_client_handler_listener_sup,server]
+    messages: []
+    links: [<0.2421.0>]
+    dictionary: [{rc4_key,undefined}]
+    trap_exit: true
+    status: running
+    heap_size: 4185
+    stack_size: 27
+    reductions: 6435
+  neighbours:
+2015-07-02 16:33:52 =SUPERVISOR REPORT====
+     Supervisor: {local,listener_sup_tcp_client_handler}
+     Context:    child_terminated
+     Reason:     {function_clause,[{crypto,do_stream_decrypt,[undefined,<<134,47,184,194,248,155,108,237,44,243,207,128,7,227,248,134,27,60,66,47,231,194,110,194,80,210,248,149,122,100,209,199,200,227,118,139,201,107,29,69,172,83,40,81,22,26,192,246,114,117,19,90,42,236,221,248,161,70,56,93,195,183,105,136,14>>],[{file,"crypto.erl"},{line,1345}]},{tcp_client_handler,inner_unpack,3,[{file,"src/listener/tcp_client_handler.erl"},{line,494}]},{tcp_client_handler,handle_info,2,[{file,"src/listener/tcp_client_handler.erl"},{line,218}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,599}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+     Offender:   [{pid,<0.2734.0>},{name,undefined},{mfargs,{tcp_client_handler,start_link,undefined}},{restart_type,temporary},{shutdown,2000},{child_type,worker}]
+
+2015-07-02 16:33:59 =ERROR REPORT====
+** Generic server <0.2735.0> terminating 
+** Last message in was {tcp,#Port<0.16222>,[0,0,0,2,14,122,198,193,39,16,108|<<134,47,184,194,248,155,108,237,44,243,207,128,7,227,255,134,27,60,66,47,231,194,110,206,89,223,255,198,123,102,211,155,194,179,112,143,153,60,64,17,163,92,127,0,68,28,198,161,113,126,18,92,40,238,135,248,161,70,56,93,195,183,105,136,14>>]}
+** When Server state == {client,undefined,0,0,0,undefined,0,1,#Port<0.16222>,{127,0,0,1},undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,undefined,<0.2735.0>,1435826039,[]}
+** Reason for termination == 
+** {function_clause,[{crypto,do_stream_decrypt,[undefined,<<134,47,184,194,248,155,108,237,44,243,207,128,7,227,255,134,27,60,66,47,231,194,110,206,89,223,255,198,123,102,211,155,194,179,112,143,153,60,64,17,163,92,127,0,68,28,198,161,113,126,18,92,40,238,135,248,161,70,56,93,195,183,105,136,14>>],[{file,"crypto.erl"},{line,1345}]},{tcp_client_handler,inner_unpack,3,[{file,"src/listener/tcp_client_handler.erl"},{line,494}]},{tcp_client_handler,handle_info,2,[{file,"src/listener/tcp_client_handler.erl"},{line,218}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,599}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+2015-07-02 16:33:59 =CRASH REPORT====
+  crasher:
+    initial call: tcp_client_handler:init/1
+    pid: <0.2735.0>
+    registered_name: []
+    exception exit: {{function_clause,[{crypto,do_stream_decrypt,[undefined,<<134,47,184,194,248,155,108,237,44,243,207,128,7,227,255,134,27,60,66,47,231,194,110,206,89,223,255,198,123,102,211,155,194,179,112,143,153,60,64,17,163,92,127,0,68,28,198,161,113,126,18,92,40,238,135,248,161,70,56,93,195,183,105,136,14>>],[{file,"crypto.erl"},{line,1345}]},{tcp_client_handler,inner_unpack,3,[{file,"src/listener/tcp_client_handler.erl"},{line,494}]},{tcp_client_handler,handle_info,2,[{file,"src/listener/tcp_client_handler.erl"},{line,218}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,599}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]},[{gen_server,terminate,6,[{file,"gen_server.erl"},{line,746}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [listener_sup_tcp_client_handler,tcp_client_handler_listener_sup,server]
+    messages: []
+    links: [<0.2421.0>]
+    dictionary: [{rc4_key,undefined}]
+    trap_exit: true
+    status: running
+    heap_size: 4185
+    stack_size: 27
+    reductions: 6365
+  neighbours:
+2015-07-02 16:33:59 =SUPERVISOR REPORT====
+     Supervisor: {local,listener_sup_tcp_client_handler}
+     Context:    child_terminated
+     Reason:     {function_clause,[{crypto,do_stream_decrypt,[undefined,<<134,47,184,194,248,155,108,237,44,243,207,128,7,227,255,134,27,60,66,47,231,194,110,206,89,223,255,198,123,102,211,155,194,179,112,143,153,60,64,17,163,92,127,0,68,28,198,161,113,126,18,92,40,238,135,248,161,70,56,93,195,183,105,136,14>>],[{file,"crypto.erl"},{line,1345}]},{tcp_client_handler,inner_unpack,3,[{file,"src/listener/tcp_client_handler.erl"},{line,494}]},{tcp_client_handler,handle_info,2,[{file,"src/listener/tcp_client_handler.erl"},{line,218}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,599}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+     Offender:   [{pid,<0.2735.0>},{name,undefined},{mfargs,{tcp_client_handler,start_link,undefined}},{restart_type,temporary},{shutdown,2000},{child_type,worker}]
+
+2015-07-02 16:34:32 =CRASH REPORT====
+  crasher:
+    initial call: mod_player:init/1
+    pid: <0.2737.0>
+    registered_name: []
+    exception exit: {{timeout,{gen_leader,leader_call,[gproc_dist,{reg,{n,g,{player,1}},undefined,<0.2737.0>}]}},[{gen_leader,leader_call,2,[{file,"src/gen_leader.erl"},{line,359}]},{gproc_dist,leader_call,1,[{file,"src/gproc_dist.erl"},{line,825}]},{gproc,reg,1,[{file,"src/gproc.erl"},{line,610}]},{gproc,register_name,2,[{file,"src/gproc.erl"},{line,1200}]},{gen,name_register,1,[{file,"gen.erl"},{line,299}]},{gen,init_it,7,[{file,"gen.erl"},{line,126}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [player_sup_1,player_center_sup,server_sup,server]
+    messages: []
+    links: [<0.2462.0>]
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 987
+    stack_size: 27
+    reductions: 123
+  neighbours:

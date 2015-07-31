@@ -1,0 +1,656 @@
+2014-11-25 17:19:50 =CRASH REPORT====
+  crasher:
+    initial call: application_master:init/4
+    pid: <0.170.0>
+    registered_name: []
+    exception exit: {{bad_return,{{server_app,start,[normal,[]]},{failed_to_connect_to_database,econnrefused}}},[{application_master,init,4,[{file,"application_master.erl"},{line,133}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [<0.169.0>]
+    messages: [{'EXIT',<0.171.0>,normal}]
+    links: [<0.169.0>,<0.7.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 987
+    stack_size: 27
+    reductions: 155
+  neighbours:
+2014-11-25 17:20:02 =CRASH REPORT====
+  crasher:
+    initial call: application_master:init/4
+    pid: <0.638.0>
+    registered_name: []
+    exception exit: {{bad_return,{{server_app,start,[normal,[]]},{failed_to_connect_to_database,econnrefused}}},[{application_master,init,4,[{file,"application_master.erl"},{line,133}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [<0.637.0>]
+    messages: [{'EXIT',<0.639.0>,normal}]
+    links: [<0.637.0>,<0.7.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 987
+    stack_size: 27
+    reductions: 155
+  neighbours:
+2014-11-25 17:34:13 =ERROR REPORT====
+** Generic server mod_timer terminating 
+** Last message in was init_job
+** When Server state == {state}
+** Reason for termination == 
+** {'module could not be loaded',[{data_base_dungeon_world_boss,sys_boss_id,[],[]},{mod_timer,sys_boss_job,0,[{file,"src/mod/mod_timer.erl"},{line,153}]},{mod_timer,handle_info,2,[{file,"src/mod/mod_timer.erl"},{line,104}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,599}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+2014-11-25 17:34:13 =CRASH REPORT====
+  crasher:
+    initial call: mod_timer:init/1
+    pid: <0.835.0>
+    registered_name: mod_timer
+    exception exit: {{undef,[{data_base_dungeon_world_boss,sys_boss_id,[],[]},{mod_timer,sys_boss_job,0,[{file,"src/mod/mod_timer.erl"},{line,153}]},{mod_timer,handle_info,2,[{file,"src/mod/mod_timer.erl"},{line,104}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,599}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]},[{gen_server,terminate,6,[{file,"gen_server.erl"},{line,746}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [server_sup,server]
+    messages: []
+    links: [<0.769.0>]
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 987
+    stack_size: 27
+    reductions: 1911
+  neighbours:
+2014-11-25 17:34:13 =SUPERVISOR REPORT====
+     Supervisor: {local,server_sup}
+     Context:    child_terminated
+     Reason:     {undef,[{data_base_dungeon_world_boss,sys_boss_id,[],[]},{mod_timer,sys_boss_job,0,[{file,"src/mod/mod_timer.erl"},{line,153}]},{mod_timer,handle_info,2,[{file,"src/mod/mod_timer.erl"},{line,104}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,599}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+     Offender:   [{pid,<0.835.0>},{name,mod_timer},{mfargs,{mod_timer,start_link,[]}},{restart_type,permanent},{shutdown,10000},{child_type,worker}]
+
+2014-11-25 17:34:13 =ERROR REPORT====
+** Generic server async_arena_rank terminating 
+** Last message in was init
+** When Server state == {state,async_arena_rank}
+** Reason for termination == 
+** {'module could not be loaded',[{data_base_pvp_robot_attribute,get_all_id,[],[]},{mod_arena,init_table,1,[{file,"src/mod/mod_arena.erl"},{line,153}]},{mod_arena,handle_info,2,[{file,"src/mod/mod_arena.erl"},{line,116}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,599}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+2014-11-25 17:34:13 =ERROR REPORT====
+** Generic server mod_timer terminating 
+** Last message in was init_job
+** When Server state == {state}
+** Reason for termination == 
+** {'module could not be loaded',[{data_base_dungeon_world_boss,sys_boss_id,[],[]},{mod_timer,sys_boss_job,0,[{file,"src/mod/mod_timer.erl"},{line,153}]},{mod_timer,handle_info,2,[{file,"src/mod/mod_timer.erl"},{line,104}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,599}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+2014-11-25 17:34:13 =CRASH REPORT====
+  crasher:
+    initial call: mod_arena:init/1
+    pid: <0.847.0>
+    registered_name: async_arena_rank
+    exception exit: {{undef,[{data_base_pvp_robot_attribute,get_all_id,[],[]},{mod_arena,init_table,1,[{file,"src/mod/mod_arena.erl"},{line,153}]},{mod_arena,handle_info,2,[{file,"src/mod/mod_arena.erl"},{line,116}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,599}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]},[{gen_server,terminate,6,[{file,"gen_server.erl"},{line,746}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [rank_sup,server]
+    messages: []
+    links: [<0.814.0>]
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 610
+    stack_size: 27
+    reductions: 171
+  neighbours:
+2014-11-25 17:34:13 =CRASH REPORT====
+  crasher:
+    initial call: mod_timer:init/1
+    pid: <0.848.0>
+    registered_name: mod_timer
+    exception exit: {{undef,[{data_base_dungeon_world_boss,sys_boss_id,[],[]},{mod_timer,sys_boss_job,0,[{file,"src/mod/mod_timer.erl"},{line,153}]},{mod_timer,handle_info,2,[{file,"src/mod/mod_timer.erl"},{line,104}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,599}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]},[{gen_server,terminate,6,[{file,"gen_server.erl"},{line,746}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [server_sup,server]
+    messages: []
+    links: [<0.769.0>]
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 987
+    stack_size: 27
+    reductions: 1905
+  neighbours:
+2014-11-25 17:34:13 =SUPERVISOR REPORT====
+     Supervisor: {local,rank_sup}
+     Context:    child_terminated
+     Reason:     {undef,[{data_base_pvp_robot_attribute,get_all_id,[],[]},{mod_arena,init_table,1,[{file,"src/mod/mod_arena.erl"},{line,153}]},{mod_arena,handle_info,2,[{file,"src/mod/mod_arena.erl"},{line,116}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,599}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+     Offender:   [{pid,<0.847.0>},{name,async_arena_rank},{mfargs,{mod_arena,start_link,[async_arena_rank]}},{restart_type,permanent},{shutdown,10000},{child_type,worker}]
+
+2014-11-25 17:34:13 =SUPERVISOR REPORT====
+     Supervisor: {local,server_sup}
+     Context:    child_terminated
+     Reason:     {undef,[{data_base_dungeon_world_boss,sys_boss_id,[],[]},{mod_timer,sys_boss_job,0,[{file,"src/mod/mod_timer.erl"},{line,153}]},{mod_timer,handle_info,2,[{file,"src/mod/mod_timer.erl"},{line,104}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,599}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+     Offender:   [{pid,<0.848.0>},{name,mod_timer},{mfargs,{mod_timer,start_link,[]}},{restart_type,permanent},{shutdown,10000},{child_type,worker}]
+
+2014-11-25 17:34:13 =ERROR REPORT====
+** Generic server mod_activity_shop terminating 
+** Last message in was get_next_activity
+** When Server state == {state,[],[],0,[]}
+** Reason for termination == 
+** {'module could not be loaded',[{data_base_shop_activity,get_all_id,[],[]},{mod_activity_shop,get_activity,1,[{file,"src/mod/mod_activity_shop.erl"},{line,260}]},{mod_activity_shop,handle_info,2,[{file,"src/mod/mod_activity_shop.erl"},{line,171}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,599}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+2014-11-25 17:34:13 =CRASH REPORT====
+  crasher:
+    initial call: mod_activity_shop:init/1
+    pid: <0.846.0>
+    registered_name: mod_activity_shop
+    exception exit: {{undef,[{data_base_shop_activity,get_all_id,[],[]},{mod_activity_shop,get_activity,1,[{file,"src/mod/mod_activity_shop.erl"},{line,260}]},{mod_activity_shop,handle_info,2,[{file,"src/mod/mod_activity_shop.erl"},{line,171}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,599}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]},[{gen_server,terminate,6,[{file,"gen_server.erl"},{line,746}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [server_sup,server]
+    messages: []
+    links: [<0.769.0>]
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 610
+    stack_size: 27
+    reductions: 2360
+  neighbours:
+2014-11-25 17:34:13 =SUPERVISOR REPORT====
+     Supervisor: {local,server_sup}
+     Context:    child_terminated
+     Reason:     {undef,[{data_base_shop_activity,get_all_id,[],[]},{mod_activity_shop,get_activity,1,[{file,"src/mod/mod_activity_shop.erl"},{line,260}]},{mod_activity_shop,handle_info,2,[{file,"src/mod/mod_activity_shop.erl"},{line,171}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,599}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+     Offender:   [{pid,<0.846.0>},{name,mod_activity_shop},{mfargs,{mod_activity_shop,start_link,[]}},{restart_type,permanent},{shutdown,10000},{child_type,worker}]
+
+2014-11-25 17:34:13 =ERROR REPORT====
+** Generic server async_arena_rank terminating 
+** Last message in was init
+** When Server state == {state,async_arena_rank}
+** Reason for termination == 
+** {'module could not be loaded',[{data_base_pvp_robot_attribute,get_all_id,[],[]},{mod_arena,init_table,1,[{file,"src/mod/mod_arena.erl"},{line,153}]},{mod_arena,handle_info,2,[{file,"src/mod/mod_arena.erl"},{line,116}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,599}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+2014-11-25 17:34:13 =ERROR REPORT====
+** Generic server mod_boss_manage_3 terminating 
+** Last message in was init_boss_manage
+** When Server state == {state,undefined}
+** Reason for termination == 
+** {'module could not be loaded',[{data_base_dungeon_world_boss,sys_boss_id,[],[]},{lib_boss,all_boss_id,0,[{file,"src/lib/lib_boss.erl"},{line,24}]},{mod_boss_manage,handle_info,2,[{file,"src/mod/mod_boss_manage.erl"},{line,153}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,599}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+2014-11-25 17:34:13 =CRASH REPORT====
+  crasher:
+    initial call: mod_arena:init/1
+    pid: <0.866.0>
+    registered_name: async_arena_rank
+    exception exit: {{undef,[{data_base_pvp_robot_attribute,get_all_id,[],[]},{mod_arena,init_table,1,[{file,"src/mod/mod_arena.erl"},{line,153}]},{mod_arena,handle_info,2,[{file,"src/mod/mod_arena.erl"},{line,116}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,599}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]},[{gen_server,terminate,6,[{file,"gen_server.erl"},{line,746}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [rank_sup,server]
+    messages: []
+    links: [<0.814.0>]
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 610
+    stack_size: 27
+    reductions: 183
+  neighbours:
+2014-11-25 17:34:13 =SUPERVISOR REPORT====
+     Supervisor: {local,rank_sup}
+     Context:    child_terminated
+     Reason:     {undef,[{data_base_pvp_robot_attribute,get_all_id,[],[]},{mod_arena,init_table,1,[{file,"src/mod/mod_arena.erl"},{line,153}]},{mod_arena,handle_info,2,[{file,"src/mod/mod_arena.erl"},{line,116}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,599}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+     Offender:   [{pid,<0.866.0>},{name,async_arena_rank},{mfargs,{mod_arena,start_link,[async_arena_rank]}},{restart_type,permanent},{shutdown,10000},{child_type,worker}]
+
+2014-11-25 17:34:13 =CRASH REPORT====
+  crasher:
+    initial call: mod_boss_manage:init/1
+    pid: <0.822.0>
+    registered_name: mod_boss_manage_3
+    exception exit: {{undef,[{data_base_dungeon_world_boss,sys_boss_id,[],[]},{lib_boss,all_boss_id,0,[{file,"src/lib/lib_boss.erl"},{line,24}]},{mod_boss_manage,handle_info,2,[{file,"src/mod/mod_boss_manage.erl"},{line,153}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,599}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]},[{gen_server,terminate,6,[{file,"gen_server.erl"},{line,746}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [server_sup,server]
+    messages: []
+    links: [<0.769.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 610
+    stack_size: 27
+    reductions: 190
+  neighbours:
+2014-11-25 17:34:13 =SUPERVISOR REPORT====
+     Supervisor: {local,server_sup}
+     Context:    child_terminated
+     Reason:     {undef,[{data_base_dungeon_world_boss,sys_boss_id,[],[]},{lib_boss,all_boss_id,0,[{file,"src/lib/lib_boss.erl"},{line,24}]},{mod_boss_manage,handle_info,2,[{file,"src/mod/mod_boss_manage.erl"},{line,153}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,599}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+     Offender:   [{pid,<0.822.0>},{name,mod_boss_manage_3},{mfargs,{mod_boss_manage,start_link,[3]}},{restart_type,permanent},{shutdown,10000},{child_type,worker}]
+
+2014-11-25 17:34:13 =ERROR REPORT====
+** Generic server mod_boss_manage_2 terminating 
+** Last message in was init_boss_manage
+** When Server state == {state,undefined}
+** Reason for termination == 
+** {'module could not be loaded',[{data_base_dungeon_world_boss,sys_boss_id,[],[]},{lib_boss,all_boss_id,0,[{file,"src/lib/lib_boss.erl"},{line,24}]},{mod_boss_manage,handle_info,2,[{file,"src/mod/mod_boss_manage.erl"},{line,153}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,599}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+2014-11-25 17:34:13 =CRASH REPORT====
+  crasher:
+    initial call: mod_boss_manage:init/1
+    pid: <0.821.0>
+    registered_name: mod_boss_manage_2
+    exception exit: {{undef,[{data_base_dungeon_world_boss,sys_boss_id,[],[]},{lib_boss,all_boss_id,0,[{file,"src/lib/lib_boss.erl"},{line,24}]},{mod_boss_manage,handle_info,2,[{file,"src/mod/mod_boss_manage.erl"},{line,153}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,599}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]},[{gen_server,terminate,6,[{file,"gen_server.erl"},{line,746}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [server_sup,server]
+    messages: []
+    links: [<0.769.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 610
+    stack_size: 27
+    reductions: 210
+  neighbours:
+2014-11-25 17:34:13 =ERROR REPORT====
+** Generic server mod_boss_manage_1 terminating 
+** Last message in was init_boss_manage
+** When Server state == {state,undefined}
+** Reason for termination == 
+** {'module could not be loaded',[{data_base_dungeon_world_boss,sys_boss_id,[],[]},{lib_boss,all_boss_id,0,[{file,"src/lib/lib_boss.erl"},{line,24}]},{mod_boss_manage,handle_info,2,[{file,"src/mod/mod_boss_manage.erl"},{line,153}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,599}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+2014-11-25 17:34:13 =CRASH REPORT====
+  crasher:
+    initial call: mod_boss_manage:init/1
+    pid: <0.820.0>
+    registered_name: mod_boss_manage_1
+    exception exit: {{undef,[{data_base_dungeon_world_boss,sys_boss_id,[],[]},{lib_boss,all_boss_id,0,[{file,"src/lib/lib_boss.erl"},{line,24}]},{mod_boss_manage,handle_info,2,[{file,"src/mod/mod_boss_manage.erl"},{line,153}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,599}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]},[{gen_server,terminate,6,[{file,"gen_server.erl"},{line,746}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [server_sup,server]
+    messages: []
+    links: [<0.769.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 610
+    stack_size: 27
+    reductions: 218
+  neighbours:
+2014-11-25 17:34:13 =SUPERVISOR REPORT====
+     Supervisor: {local,server_sup}
+     Context:    child_terminated
+     Reason:     {undef,[{data_base_dungeon_world_boss,sys_boss_id,[],[]},{lib_boss,all_boss_id,0,[{file,"src/lib/lib_boss.erl"},{line,24}]},{mod_boss_manage,handle_info,2,[{file,"src/mod/mod_boss_manage.erl"},{line,153}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,599}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+     Offender:   [{pid,<0.821.0>},{name,mod_boss_manage_2},{mfargs,{mod_boss_manage,start_link,[2]}},{restart_type,permanent},{shutdown,10000},{child_type,worker}]
+
+2014-11-25 17:34:13 =SUPERVISOR REPORT====
+     Supervisor: {local,server_sup}
+     Context:    child_terminated
+     Reason:     {undef,[{data_base_dungeon_world_boss,sys_boss_id,[],[]},{lib_boss,all_boss_id,0,[{file,"src/lib/lib_boss.erl"},{line,24}]},{mod_boss_manage,handle_info,2,[{file,"src/mod/mod_boss_manage.erl"},{line,153}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,599}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+     Offender:   [{pid,<0.820.0>},{name,mod_boss_manage_1},{mfargs,{mod_boss_manage,start_link,[1]}},{restart_type,permanent},{shutdown,10000},{child_type,worker}]
+
+2014-11-25 17:34:13 =SUPERVISOR REPORT====
+     Supervisor: {local,server_sup}
+     Context:    shutdown
+     Reason:     reached_max_restart_intensity
+     Offender:   [{pid,<0.820.0>},{name,mod_boss_manage_1},{mfargs,{mod_boss_manage,start_link,[1]}},{restart_type,permanent},{shutdown,10000},{child_type,worker}]
+
+2014-11-25 17:34:13 =ERROR REPORT====
+** Generic server async_arena_rank terminating 
+** Last message in was init
+** When Server state == {state,async_arena_rank}
+** Reason for termination == 
+** {'module could not be loaded',[{data_base_pvp_robot_attribute,get_all_id,[],[]},{mod_arena,init_table,1,[{file,"src/mod/mod_arena.erl"},{line,153}]},{mod_arena,handle_info,2,[{file,"src/mod/mod_arena.erl"},{line,116}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,599}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+2014-11-25 17:34:13 =CRASH REPORT====
+  crasher:
+    initial call: mod_arena:init/1
+    pid: <0.889.0>
+    registered_name: async_arena_rank
+    exception exit: {{undef,[{data_base_pvp_robot_attribute,get_all_id,[],[]},{mod_arena,init_table,1,[{file,"src/mod/mod_arena.erl"},{line,153}]},{mod_arena,handle_info,2,[{file,"src/mod/mod_arena.erl"},{line,116}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,599}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]},[{gen_server,terminate,6,[{file,"gen_server.erl"},{line,746}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [rank_sup,server]
+    messages: []
+    links: [<0.814.0>]
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 610
+    stack_size: 27
+    reductions: 247
+  neighbours:
+2014-11-25 17:34:13 =SUPERVISOR REPORT====
+     Supervisor: {local,rank_sup}
+     Context:    child_terminated
+     Reason:     {undef,[{data_base_pvp_robot_attribute,get_all_id,[],[]},{mod_arena,init_table,1,[{file,"src/mod/mod_arena.erl"},{line,153}]},{mod_arena,handle_info,2,[{file,"src/mod/mod_arena.erl"},{line,116}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,599}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+     Offender:   [{pid,<0.889.0>},{name,async_arena_rank},{mfargs,{mod_arena,start_link,[async_arena_rank]}},{restart_type,permanent},{shutdown,10000},{child_type,worker}]
+
+2014-11-25 17:34:13 =ERROR REPORT====
+** Generic server async_arena_rank terminating 
+** Last message in was init
+** When Server state == {state,async_arena_rank}
+** Reason for termination == 
+** {'module could not be loaded',[{data_base_pvp_robot_attribute,get_all_id,[],[]},{mod_arena,init_table,1,[{file,"src/mod/mod_arena.erl"},{line,153}]},{mod_arena,handle_info,2,[{file,"src/mod/mod_arena.erl"},{line,116}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,599}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+2014-11-25 17:34:13 =CRASH REPORT====
+  crasher:
+    initial call: mod_arena:init/1
+    pid: <0.913.0>
+    registered_name: async_arena_rank
+    exception exit: {{undef,[{data_base_pvp_robot_attribute,get_all_id,[],[]},{mod_arena,init_table,1,[{file,"src/mod/mod_arena.erl"},{line,153}]},{mod_arena,handle_info,2,[{file,"src/mod/mod_arena.erl"},{line,116}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,599}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]},[{gen_server,terminate,6,[{file,"gen_server.erl"},{line,746}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [rank_sup,server]
+    messages: []
+    links: [<0.814.0>]
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 610
+    stack_size: 27
+    reductions: 171
+  neighbours:
+2014-11-25 17:34:13 =SUPERVISOR REPORT====
+     Supervisor: {local,rank_sup}
+     Context:    child_terminated
+     Reason:     {undef,[{data_base_pvp_robot_attribute,get_all_id,[],[]},{mod_arena,init_table,1,[{file,"src/mod/mod_arena.erl"},{line,153}]},{mod_arena,handle_info,2,[{file,"src/mod/mod_arena.erl"},{line,116}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,599}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+     Offender:   [{pid,<0.913.0>},{name,async_arena_rank},{mfargs,{mod_arena,start_link,[async_arena_rank]}},{restart_type,permanent},{shutdown,10000},{child_type,worker}]
+
+2014-11-25 17:34:13 =ERROR REPORT====
+** Generic server async_arena_rank terminating 
+** Last message in was init
+** When Server state == {state,async_arena_rank}
+** Reason for termination == 
+** {'module could not be loaded',[{data_base_pvp_robot_attribute,get_all_id,[],[]},{mod_arena,init_table,1,[{file,"src/mod/mod_arena.erl"},{line,153}]},{mod_arena,handle_info,2,[{file,"src/mod/mod_arena.erl"},{line,116}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,599}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+2014-11-25 17:34:14 =CRASH REPORT====
+  crasher:
+    initial call: mod_arena:init/1
+    pid: <0.917.0>
+    registered_name: async_arena_rank
+    exception exit: {{undef,[{data_base_pvp_robot_attribute,get_all_id,[],[]},{mod_arena,init_table,1,[{file,"src/mod/mod_arena.erl"},{line,153}]},{mod_arena,handle_info,2,[{file,"src/mod/mod_arena.erl"},{line,116}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,599}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]},[{gen_server,terminate,6,[{file,"gen_server.erl"},{line,746}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [rank_sup,server]
+    messages: []
+    links: [<0.814.0>]
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 610
+    stack_size: 27
+    reductions: 171
+  neighbours:
+2014-11-25 17:34:14 =SUPERVISOR REPORT====
+     Supervisor: {local,rank_sup}
+     Context:    child_terminated
+     Reason:     {undef,[{data_base_pvp_robot_attribute,get_all_id,[],[]},{mod_arena,init_table,1,[{file,"src/mod/mod_arena.erl"},{line,153}]},{mod_arena,handle_info,2,[{file,"src/mod/mod_arena.erl"},{line,116}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,599}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+     Offender:   [{pid,<0.917.0>},{name,async_arena_rank},{mfargs,{mod_arena,start_link,[async_arena_rank]}},{restart_type,permanent},{shutdown,10000},{child_type,worker}]
+
+2014-11-25 17:34:14 =ERROR REPORT====
+** Generic server async_arena_rank terminating 
+** Last message in was init
+** When Server state == {state,async_arena_rank}
+** Reason for termination == 
+** {'module could not be loaded',[{data_base_pvp_robot_attribute,get_all_id,[],[]},{mod_arena,init_table,1,[{file,"src/mod/mod_arena.erl"},{line,153}]},{mod_arena,handle_info,2,[{file,"src/mod/mod_arena.erl"},{line,116}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,599}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+2014-11-25 17:34:14 =CRASH REPORT====
+  crasher:
+    initial call: mod_arena:init/1
+    pid: <0.920.0>
+    registered_name: async_arena_rank
+    exception exit: {{undef,[{data_base_pvp_robot_attribute,get_all_id,[],[]},{mod_arena,init_table,1,[{file,"src/mod/mod_arena.erl"},{line,153}]},{mod_arena,handle_info,2,[{file,"src/mod/mod_arena.erl"},{line,116}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,599}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]},[{gen_server,terminate,6,[{file,"gen_server.erl"},{line,746}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [rank_sup,server]
+    messages: []
+    links: [<0.814.0>]
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 610
+    stack_size: 27
+    reductions: 195
+  neighbours:
+2014-11-25 17:34:14 =SUPERVISOR REPORT====
+     Supervisor: {local,rank_sup}
+     Context:    child_terminated
+     Reason:     {undef,[{data_base_pvp_robot_attribute,get_all_id,[],[]},{mod_arena,init_table,1,[{file,"src/mod/mod_arena.erl"},{line,153}]},{mod_arena,handle_info,2,[{file,"src/mod/mod_arena.erl"},{line,116}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,599}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+     Offender:   [{pid,<0.920.0>},{name,async_arena_rank},{mfargs,{mod_arena,start_link,[async_arena_rank]}},{restart_type,permanent},{shutdown,10000},{child_type,worker}]
+
+2014-11-25 17:34:14 =SUPERVISOR REPORT====
+     Supervisor: {local,rank_sup}
+     Context:    shutdown
+     Reason:     reached_max_restart_intensity
+     Offender:   [{pid,<0.920.0>},{name,async_arena_rank},{mfargs,{mod_arena,start_link,[async_arena_rank]}},{restart_type,permanent},{shutdown,10000},{child_type,worker}]
+
+2014-11-25 17:34:14 =CRASH REPORT====
+  crasher:
+    initial call: application_master:init/4
+    pid: <0.767.0>
+    registered_name: []
+    exception exit: {{bad_return,{{server_app,start,[normal,[]]},{'EXIT',{noproc,{gen_server,call,[server_sup,{start_child,{player_sup,{player_sup,start_link,[]},permanent,infinity,supervisor,[player_sup]}},infinity]}}}}},[{application_master,init,4,[{file,"application_master.erl"},{line,133}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [<0.766.0>]
+    messages: [{'EXIT',<0.768.0>,normal}]
+    links: [<0.766.0>,<0.7.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 987
+    stack_size: 27
+    reductions: 155
+  neighbours:
+2014-11-25 17:35:14 =ERROR REPORT====
+** Generic server mod_timer terminating 
+** Last message in was init_job
+** When Server state == {state}
+** Reason for termination == 
+** {'module could not be loaded',[{data_base_dungeon_world_boss,sys_boss_id,[],[]},{mod_timer,sys_boss_job,0,[{file,"src/mod/mod_timer.erl"},{line,153}]},{mod_timer,handle_info,2,[{file,"src/mod/mod_timer.erl"},{line,104}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,599}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+2014-11-25 17:35:14 =CRASH REPORT====
+  crasher:
+    initial call: mod_timer:init/1
+    pid: <0.541.0>
+    registered_name: mod_timer
+    exception exit: {{undef,[{data_base_dungeon_world_boss,sys_boss_id,[],[]},{mod_timer,sys_boss_job,0,[{file,"src/mod/mod_timer.erl"},{line,153}]},{mod_timer,handle_info,2,[{file,"src/mod/mod_timer.erl"},{line,104}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,599}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]},[{gen_server,terminate,6,[{file,"gen_server.erl"},{line,746}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [server_sup,server]
+    messages: []
+    links: [<0.475.0>]
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 987
+    stack_size: 27
+    reductions: 1910
+  neighbours:
+2014-11-25 17:35:14 =SUPERVISOR REPORT====
+     Supervisor: {local,server_sup}
+     Context:    child_terminated
+     Reason:     {undef,[{data_base_dungeon_world_boss,sys_boss_id,[],[]},{mod_timer,sys_boss_job,0,[{file,"src/mod/mod_timer.erl"},{line,153}]},{mod_timer,handle_info,2,[{file,"src/mod/mod_timer.erl"},{line,104}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,599}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+     Offender:   [{pid,<0.541.0>},{name,mod_timer},{mfargs,{mod_timer,start_link,[]}},{restart_type,permanent},{shutdown,10000},{child_type,worker}]
+
+2014-11-25 17:38:14 =ERROR REPORT====
+** Generic server mod_timer terminating 
+** Last message in was init_job
+** When Server state == {state}
+** Reason for termination == 
+** {'module could not be loaded',[{data_base_dungeon_world_boss,sys_boss_id,[],[]},{mod_timer,sys_boss_job,0,[{file,"src/mod/mod_timer.erl"},{line,153}]},{mod_timer,handle_info,2,[{file,"src/mod/mod_timer.erl"},{line,104}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,599}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+2014-11-25 17:38:14 =CRASH REPORT====
+  crasher:
+    initial call: mod_timer:init/1
+    pid: <0.552.0>
+    registered_name: mod_timer
+    exception exit: {{undef,[{data_base_dungeon_world_boss,sys_boss_id,[],[]},{mod_timer,sys_boss_job,0,[{file,"src/mod/mod_timer.erl"},{line,153}]},{mod_timer,handle_info,2,[{file,"src/mod/mod_timer.erl"},{line,104}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,599}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]},[{gen_server,terminate,6,[{file,"gen_server.erl"},{line,746}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [server_sup,server]
+    messages: []
+    links: [<0.486.0>]
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 987
+    stack_size: 27
+    reductions: 1910
+  neighbours:
+2014-11-25 17:38:14 =SUPERVISOR REPORT====
+     Supervisor: {local,server_sup}
+     Context:    child_terminated
+     Reason:     {undef,[{data_base_dungeon_world_boss,sys_boss_id,[],[]},{mod_timer,sys_boss_job,0,[{file,"src/mod/mod_timer.erl"},{line,153}]},{mod_timer,handle_info,2,[{file,"src/mod/mod_timer.erl"},{line,104}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,599}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+     Offender:   [{pid,<0.552.0>},{name,mod_timer},{mfargs,{mod_timer,start_link,[]}},{restart_type,permanent},{shutdown,10000},{child_type,worker}]
+
+2014-11-25 17:51:15 =ERROR REPORT====
+** Generic server <0.638.0> terminating 
+** Last message in was {tcp,#Port<0.11875>,[0,0,0,0,121,240,99,102,39,19,0|<<18,8,54,97,99,49,53,49,99,49,56,1,74,8,52,57,53,48,53,50,50,55,82,11,112,48,51,95,114,111,98,111,116,95,49>>]}
+** When Server state == {client,undefined,0,1,"49505227","p03_robot_1",0,undefined,0,0,1,#Port<0.11875>,{127,0,0,1},2045797222,1416909074,<0.638.0>,1416909037}
+** Reason for termination == 
+** {{badmatch,[]},[{lib_dungeon,create_role,1,[{file,"src/lib/lib_dungeon.erl"},{line,70}]},{pp_account,post_role_created,1,[{file,"src/pp/pp_account.erl"},{line,520}]},{pp_account,create_role,2,[{file,"src/pp/pp_account.erl"},{line,492}]},{pp_account,handle,3,[{file,"src/pp/pp_account.erl"},{line,87}]},{tcp_client_handler,handle_info,2,[{file,"src/listener/tcp_client_handler.erl"},{line,236}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,599}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+2014-11-25 17:51:15 =CRASH REPORT====
+  crasher:
+    initial call: tcp_client_handler:init/1
+    pid: <0.638.0>
+    registered_name: []
+    exception exit: {{{badmatch,[]},[{lib_dungeon,create_role,1,[{file,"src/lib/lib_dungeon.erl"},{line,70}]},{pp_account,post_role_created,1,[{file,"src/pp/pp_account.erl"},{line,520}]},{pp_account,create_role,2,[{file,"src/pp/pp_account.erl"},{line,492}]},{pp_account,handle,3,[{file,"src/pp/pp_account.erl"},{line,87}]},{tcp_client_handler,handle_info,2,[{file,"src/listener/tcp_client_handler.erl"},{line,236}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,599}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]},[{gen_server,terminate,6,[{file,"gen_server.erl"},{line,746}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [listener_sup_tcp_client_handler,tcp_client_handler_listener_sup,server]
+    messages: []
+    links: [<0.496.0>]
+    dictionary: [{hmisc_rand_seed,{7788,509,20576}},{last_send_packet,{10000,[<<39,16>>,[[<<0,20>>,[<<39,16>>,[["\b",[1]],[],[],["\"","\b",<<"49505227">>],["(",[230,198,193,207,7]]]]]]]}}]
+    trap_exit: true
+    status: running
+    heap_size: 4185
+    stack_size: 27
+    reductions: 18255
+  neighbours:
+2014-11-25 17:51:15 =SUPERVISOR REPORT====
+     Supervisor: {local,listener_sup_tcp_client_handler}
+     Context:    child_terminated
+     Reason:     {{badmatch,[]},[{lib_dungeon,create_role,1,[{file,"src/lib/lib_dungeon.erl"},{line,70}]},{pp_account,post_role_created,1,[{file,"src/pp/pp_account.erl"},{line,520}]},{pp_account,create_role,2,[{file,"src/pp/pp_account.erl"},{line,492}]},{pp_account,handle,3,[{file,"src/pp/pp_account.erl"},{line,87}]},{tcp_client_handler,handle_info,2,[{file,"src/listener/tcp_client_handler.erl"},{line,236}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,599}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+     Offender:   [{pid,<0.638.0>},{name,undefined},{mfargs,{tcp_client_handler,start_link,undefined}},{restart_type,temporary},{shutdown,2000},{child_type,worker}]
+
+2014-11-25 19:02:18 =ERROR REPORT====
+** Generic server <0.646.0> terminating 
+** Last message in was {tcp,#Port<0.11878>,[0,0,0,0,44,89,209,90,39,19,0|<<18,8,49,100,97,55,99,101,99,50,56,1,74,8,52,57,53,48,53,50,50,55,82,11,112,48,51,95,114,111,98,111,116,95,49>>]}
+** When Server state == {client,undefined,0,1,"49505227","p03_robot_1",0,undefined,0,0,1,#Port<0.11878>,{127,0,0,1},744083802,1416913338,<0.646.0>,1416913308}
+** Reason for termination == 
+** {{badmatch,[]},[{lib_dungeon,create_role,1,[{file,"src/lib/lib_dungeon.erl"},{line,70}]},{pp_account,post_role_created,1,[{file,"src/pp/pp_account.erl"},{line,520}]},{pp_account,create_role,2,[{file,"src/pp/pp_account.erl"},{line,492}]},{pp_account,handle,3,[{file,"src/pp/pp_account.erl"},{line,87}]},{tcp_client_handler,handle_info,2,[{file,"src/listener/tcp_client_handler.erl"},{line,236}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,599}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+2014-11-25 19:02:18 =CRASH REPORT====
+  crasher:
+    initial call: tcp_client_handler:init/1
+    pid: <0.646.0>
+    registered_name: []
+    exception exit: {{{badmatch,[]},[{lib_dungeon,create_role,1,[{file,"src/lib/lib_dungeon.erl"},{line,70}]},{pp_account,post_role_created,1,[{file,"src/pp/pp_account.erl"},{line,520}]},{pp_account,create_role,2,[{file,"src/pp/pp_account.erl"},{line,492}]},{pp_account,handle,3,[{file,"src/pp/pp_account.erl"},{line,87}]},{tcp_client_handler,handle_info,2,[{file,"src/listener/tcp_client_handler.erl"},{line,236}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,599}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]},[{gen_server,terminate,6,[{file,"gen_server.erl"},{line,746}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [listener_sup_tcp_client_handler,tcp_client_handler_listener_sup,server]
+    messages: []
+    links: [<0.502.0>]
+    dictionary: [{hmisc_rand_seed,{28225,27075,15788}},{last_send_packet,{10000,[<<39,16>>,[[<<0,20>>,[<<39,16>>,[["\b",[1]],[],[],["\"","\b",<<"49505227">>],["(",[218,162,231,226,2]]]]]]]}}]
+    trap_exit: true
+    status: running
+    heap_size: 4185
+    stack_size: 27
+    reductions: 18193
+  neighbours:
+2014-11-25 19:02:18 =SUPERVISOR REPORT====
+     Supervisor: {local,listener_sup_tcp_client_handler}
+     Context:    child_terminated
+     Reason:     {{badmatch,[]},[{lib_dungeon,create_role,1,[{file,"src/lib/lib_dungeon.erl"},{line,70}]},{pp_account,post_role_created,1,[{file,"src/pp/pp_account.erl"},{line,520}]},{pp_account,create_role,2,[{file,"src/pp/pp_account.erl"},{line,492}]},{pp_account,handle,3,[{file,"src/pp/pp_account.erl"},{line,87}]},{tcp_client_handler,handle_info,2,[{file,"src/listener/tcp_client_handler.erl"},{line,236}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,599}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+     Offender:   [{pid,<0.646.0>},{name,undefined},{mfargs,{tcp_client_handler,start_link,undefined}},{restart_type,temporary},{shutdown,2000},{child_type,worker}]
+
+2014-11-26 10:17:08 =ERROR REPORT====
+** Generic server <0.680.0> terminating 
+** Last message in was {tcp,#Port<0.11949>,[0,0,0,0,115,51,125,71,39,19,0|<<18,8,101,54,51,99,102,52,101,57,56,1,74,8,52,57,53,48,53,50,50,55,82,11,112,48,51,95,114,111,98,111,116,95,49>>]}
+** When Server state == {client,undefined,0,1,"49505227","p03_robot_1",0,undefined,0,0,1,#Port<0.11949>,{127,0,0,1},1932754247,1416968228,<0.680.0>,1416968148}
+** Reason for termination == 
+** {{badmatch,[]},[{lib_dungeon,create_role,1,[{file,"src/lib/lib_dungeon.erl"},{line,70}]},{pp_account,post_role_created,1,[{file,"src/pp/pp_account.erl"},{line,520}]},{pp_account,create_role,2,[{file,"src/pp/pp_account.erl"},{line,492}]},{pp_account,handle,3,[{file,"src/pp/pp_account.erl"},{line,87}]},{tcp_client_handler,handle_info,2,[{file,"src/listener/tcp_client_handler.erl"},{line,236}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,599}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+2014-11-26 10:17:08 =CRASH REPORT====
+  crasher:
+    initial call: tcp_client_handler:init/1
+    pid: <0.680.0>
+    registered_name: []
+    exception exit: {{{badmatch,[]},[{lib_dungeon,create_role,1,[{file,"src/lib/lib_dungeon.erl"},{line,70}]},{pp_account,post_role_created,1,[{file,"src/pp/pp_account.erl"},{line,520}]},{pp_account,create_role,2,[{file,"src/pp/pp_account.erl"},{line,492}]},{pp_account,handle,3,[{file,"src/pp/pp_account.erl"},{line,87}]},{tcp_client_handler,handle_info,2,[{file,"src/listener/tcp_client_handler.erl"},{line,236}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,599}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]},[{gen_server,terminate,6,[{file,"gen_server.erl"},{line,746}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [listener_sup_tcp_client_handler,tcp_client_handler_listener_sup,server]
+    messages: []
+    links: [<0.502.0>]
+    dictionary: [{hmisc_rand_seed,{14919,29080,13573}},{last_send_packet,{10000,[<<39,16>>,[[<<0,20>>,[<<39,16>>,[["\b",[1]],[],[],["\"","\b",<<"49505227">>],["(",[199,250,205,153,7]]]]]]]}}]
+    trap_exit: true
+    status: running
+    heap_size: 4185
+    stack_size: 27
+    reductions: 18208
+  neighbours:
+2014-11-26 10:17:08 =SUPERVISOR REPORT====
+     Supervisor: {local,listener_sup_tcp_client_handler}
+     Context:    child_terminated
+     Reason:     {{badmatch,[]},[{lib_dungeon,create_role,1,[{file,"src/lib/lib_dungeon.erl"},{line,70}]},{pp_account,post_role_created,1,[{file,"src/pp/pp_account.erl"},{line,520}]},{pp_account,create_role,2,[{file,"src/pp/pp_account.erl"},{line,492}]},{pp_account,handle,3,[{file,"src/pp/pp_account.erl"},{line,87}]},{tcp_client_handler,handle_info,2,[{file,"src/listener/tcp_client_handler.erl"},{line,236}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,599}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+     Offender:   [{pid,<0.680.0>},{name,undefined},{mfargs,{tcp_client_handler,start_link,undefined}},{restart_type,temporary},{shutdown,2000},{child_type,worker}]
+
+2014-11-26 11:16:28 =ERROR REPORT====
+** Generic server <0.649.0> terminating 
+** Last message in was {tcp,#Port<0.11881>,[0,0,0,0,18,68,109,176,39,19,0|<<18,8,99,49,102,56,97,54,97,57,56,1,74,8,52,57,53,48,53,50,50,55,82,11,112,48,51,95,114,111,98,111,116,95,49>>]}
+** When Server state == {client,undefined,0,1,"49505227","p03_robot_1",0,undefined,0,0,1,#Port<0.11881>,{127,0,0,1},306474416,1416971788,<0.649.0>,1416971619}
+** Reason for termination == 
+** {{badmatch,[]},[{lib_dungeon,create_role,1,[{file,"src/lib/lib_dungeon.erl"},{line,70}]},{pp_account,post_role_created,1,[{file,"src/pp/pp_account.erl"},{line,520}]},{pp_account,create_role,2,[{file,"src/pp/pp_account.erl"},{line,492}]},{pp_account,handle,3,[{file,"src/pp/pp_account.erl"},{line,87}]},{tcp_client_handler,handle_info,2,[{file,"src/listener/tcp_client_handler.erl"},{line,236}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,599}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+2014-11-26 11:16:28 =CRASH REPORT====
+  crasher:
+    initial call: tcp_client_handler:init/1
+    pid: <0.649.0>
+    registered_name: []
+    exception exit: {{{badmatch,[]},[{lib_dungeon,create_role,1,[{file,"src/lib/lib_dungeon.erl"},{line,70}]},{pp_account,post_role_created,1,[{file,"src/pp/pp_account.erl"},{line,520}]},{pp_account,create_role,2,[{file,"src/pp/pp_account.erl"},{line,492}]},{pp_account,handle,3,[{file,"src/pp/pp_account.erl"},{line,87}]},{tcp_client_handler,handle_info,2,[{file,"src/listener/tcp_client_handler.erl"},{line,236}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,599}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]},[{gen_server,terminate,6,[{file,"gen_server.erl"},{line,746}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [listener_sup_tcp_client_handler,tcp_client_handler_listener_sup,server]
+    messages: []
+    links: [<0.510.0>]
+    dictionary: [{hmisc_rand_seed,{27632,2271,4697}},{last_send_packet,{10000,[<<39,16>>,[[<<0,20>>,[<<39,16>>,[["\b",[1]],[],[],["\"","\b",<<"49505227">>],["(",[176,219,145,146,1]]]]]]]}}]
+    trap_exit: true
+    status: running
+    heap_size: 4185
+    stack_size: 27
+    reductions: 18260
+  neighbours:
+2014-11-26 11:16:28 =SUPERVISOR REPORT====
+     Supervisor: {local,listener_sup_tcp_client_handler}
+     Context:    child_terminated
+     Reason:     {{badmatch,[]},[{lib_dungeon,create_role,1,[{file,"src/lib/lib_dungeon.erl"},{line,70}]},{pp_account,post_role_created,1,[{file,"src/pp/pp_account.erl"},{line,520}]},{pp_account,create_role,2,[{file,"src/pp/pp_account.erl"},{line,492}]},{pp_account,handle,3,[{file,"src/pp/pp_account.erl"},{line,87}]},{tcp_client_handler,handle_info,2,[{file,"src/listener/tcp_client_handler.erl"},{line,236}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,599}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+     Offender:   [{pid,<0.649.0>},{name,undefined},{mfargs,{tcp_client_handler,start_link,undefined}},{restart_type,temporary},{shutdown,2000},{child_type,worker}]
+
+2014-11-26 15:23:38 =ERROR REPORT====
+** Generic server <0.647.0> terminating 
+** Last message in was {tcp,#Port<0.11879>,[0,0,0,0,9,77,64,103,39,19,0|<<18,8,97,57,50,102,52,57,54,97,56,1,74,8,52,57,53,48,53,50,50,55,82,11,112,48,51,95,114,111,98,111,116,95,49>>]}
+** When Server state == {client,undefined,0,1,"49505227","p03_robot_1",0,undefined,0,0,1,#Port<0.11879>,{127,0,0,1},156057703,1416986618,<0.647.0>,1416986600}
+** Reason for termination == 
+** {{badmatch,[]},[{lib_dungeon,create_role,1,[{file,"src/lib/lib_dungeon.erl"},{line,70}]},{pp_account,post_role_created,1,[{file,"src/pp/pp_account.erl"},{line,520}]},{pp_account,create_role,2,[{file,"src/pp/pp_account.erl"},{line,492}]},{pp_account,handle,3,[{file,"src/pp/pp_account.erl"},{line,87}]},{tcp_client_handler,handle_info,2,[{file,"src/listener/tcp_client_handler.erl"},{line,236}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,599}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+2014-11-26 15:23:38 =CRASH REPORT====
+  crasher:
+    initial call: tcp_client_handler:init/1
+    pid: <0.647.0>
+    registered_name: []
+    exception exit: {{{badmatch,[]},[{lib_dungeon,create_role,1,[{file,"src/lib/lib_dungeon.erl"},{line,70}]},{pp_account,post_role_created,1,[{file,"src/pp/pp_account.erl"},{line,520}]},{pp_account,create_role,2,[{file,"src/pp/pp_account.erl"},{line,492}]},{pp_account,handle,3,[{file,"src/pp/pp_account.erl"},{line,87}]},{tcp_client_handler,handle_info,2,[{file,"src/listener/tcp_client_handler.erl"},{line,236}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,599}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]},[{gen_server,terminate,6,[{file,"gen_server.erl"},{line,746}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [listener_sup_tcp_client_handler,tcp_client_handler_listener_sup,server]
+    messages: []
+    links: [<0.508.0>]
+    dictionary: [{hmisc_rand_seed,{8777,7416,16314}},{last_send_packet,{10000,[<<39,16>>,[[<<0,19>>,[<<39,16>>,[["\b",[1]],[],[],["\"","\b",<<"49505227">>],["(",[231,128,181,74]]]]]]]}}]
+    trap_exit: true
+    status: running
+    heap_size: 2586
+    stack_size: 27
+    reductions: 18289
+  neighbours:
+2014-11-26 15:23:38 =SUPERVISOR REPORT====
+     Supervisor: {local,listener_sup_tcp_client_handler}
+     Context:    child_terminated
+     Reason:     {{badmatch,[]},[{lib_dungeon,create_role,1,[{file,"src/lib/lib_dungeon.erl"},{line,70}]},{pp_account,post_role_created,1,[{file,"src/pp/pp_account.erl"},{line,520}]},{pp_account,create_role,2,[{file,"src/pp/pp_account.erl"},{line,492}]},{pp_account,handle,3,[{file,"src/pp/pp_account.erl"},{line,87}]},{tcp_client_handler,handle_info,2,[{file,"src/listener/tcp_client_handler.erl"},{line,236}]},{gen_server,handle_msg,5,[{file,"gen_server.erl"},{line,599}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+     Offender:   [{pid,<0.647.0>},{name,undefined},{mfargs,{tcp_client_handler,start_link,undefined}},{restart_type,temporary},{shutdown,2000},{child_type,worker}]
+
+2014-11-27 10:11:20 =CRASH REPORT====
+  crasher:
+    initial call: mod_counter:init/1
+    pid: <0.571.0>
+    registered_name: []
+    exception exit: {{{badmatch,false},[{mod_counter,init,1,[{file,"src/mod/mod_counter.erl"},{line,64}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,306}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]},[{gen_server,init_it,6,[{file,"gen_server.erl"},{line,330}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [server_sup,server]
+    messages: []
+    links: [<0.521.0>]
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 610
+    stack_size: 27
+    reductions: 447
+  neighbours:
+2014-11-27 10:11:20 =CRASH REPORT====
+  crasher:
+    initial call: application_master:init/4
+    pid: <0.519.0>
+    registered_name: []
+    exception exit: {{bad_return,{{server_app,start,[normal,[]]},{'EXIT',{{badmatch,{error,{{{badmatch,false},[{mod_counter,init,1,[{file,"src/mod/mod_counter.erl"},{line,64}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,306}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]},{child,undefined,mod_counter,{mod_counter,start_link,[]},permanent,10000,worker,[mod_counter]}}}},[{server_sup,start_child,2,[{file,"src/server_sup.erl"},{line,41}]},{server_app,start_child_srv,0,[{file,"src/server_app.erl"},{line,153}]},{server_app,start,2,[{file,"src/server_app.erl"},{line,105}]},{application_master,start_it_old,4,[{file,"application_master.erl"},{line,272}]}]}}}},[{application_master,init,4,[{file,"application_master.erl"},{line,133}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [<0.518.0>]
+    messages: [{'EXIT',<0.520.0>,normal}]
+    links: [<0.518.0>,<0.7.0>]
+    dictionary: []
+    trap_exit: true
+    status: running
+    heap_size: 1598
+    stack_size: 27
+    reductions: 206
+  neighbours:
+2014-11-28 08:47:18 =CRASH REPORT====
+  crasher:
+    initial call: mod_counter:init/1
+    pid: <0.540.0>
+    registered_name: []
+    exception exit: {{{badmatch,false},[{mod_counter,init,1,[{file,"src/mod/mod_counter.erl"},{line,64}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,306}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]},[{gen_server,init_it,6,[{file,"gen_server.erl"},{line,330}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [server_sup,server]
+    messages: []
+    links: [<0.376.0>]
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 610
+    stack_size: 27
+    reductions: 435
+  neighbours:
+2014-12-31 11:39:33 =CRASH REPORT====
+  crasher:
+    initial call: mod_counter:init/1
+    pid: <0.738.0>
+    registered_name: []
+    exception exit: {{{badmatch,false},[{mod_counter,init,1,[{file,"src/mod/mod_counter.erl"},{line,64}]},{gen_server,init_it,6,[{file,"gen_server.erl"},{line,306}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]},[{gen_server,init_it,6,[{file,"gen_server.erl"},{line,330}]},{proc_lib,init_p_do_apply,3,[{file,"proc_lib.erl"},{line,239}]}]}
+    ancestors: [server_sup,server]
+    messages: []
+    links: [<0.690.0>]
+    dictionary: []
+    trap_exit: false
+    status: running
+    heap_size: 610
+    stack_size: 27
+    reductions: 437
+  neighbours:
